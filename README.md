@@ -32,7 +32,7 @@ Documentation for earthquake.science.upd.edu.ph
         3. How it works
         4. Changes 
         5. [CONTRIBUTING.md](http://CONTRIBUTING.md)
-    8. slink2dali
+    8. [Slink2Dali](https://upri-earthquake.github.io/slink2dali)
         1. Background
         2. What it does
         4. Changes 

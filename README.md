@@ -26,7 +26,7 @@ Documentation for earthquake.science.upd.edu.ph
     6. sender-frontend
         1. Views
         2. [CONTRIBUTING.md](http://contributing.md)
-    7. RingServer
+    7. [RingServer](https://upri-earthquake.github.io/ringserver)
         1. Background
         2. What it does
         3. How it works

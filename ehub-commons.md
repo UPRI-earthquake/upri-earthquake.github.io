@@ -40,7 +40,7 @@ SeisComP is a collection of *software modules* used to for seismic data transmis
 For further information about SeisComP check this [overview](https://www.seiscomp.de/doc/index.html) on how to get started with SeisComP.
 
 ### Backend Endpoints and Python Scripts 
-This repository exposes two Server-Sent-Event endpoints (`/messaging/restricted/new-pick` and `/messaging/restricted/new-event`) and run two Python scripts to interact with the processor. The two python scripts are run as services which publish `pick events` and `recorded seismic events` from SeisComP to the aforementioned endpoints.
+This repository exposes two Server-Sent-Event endpoints (`/messaging/restricted/new-pick` and `/messaging/restricted/new-event`) and run two Python scripts to interact with the processor. The two python scripts are run as systemd services which publish `pick events` and `recorded seismic events` from SeisComP to the aforementioned endpoints.
 
 ### MongoDB and Data Population
 We have included scripts to help initialize mongodb’s `events` collection with SeisComP event data in the scenario that you have an existing record of SeisComP detections that you want to migrate into your instance of EarthquakeHub.

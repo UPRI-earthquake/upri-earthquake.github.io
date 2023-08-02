@@ -11,8 +11,7 @@ Documentation for earthquake.science.upd.edu.ph
     5. Intro to SeisComP
     6. Docker cheatsheet
 3. Documentation
-    1. Overview
-        - System structure
+    1. [System Overview](https://upri-earthquake.github.io/system-overview)
     2. [earthquake-hub-commons](https://upri-earthquake.github.io/ehub-commons)
     3. earthquake-hub-backend
         1. API

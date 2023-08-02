@@ -18,6 +18,7 @@ A RingServer utilizes a given communication protocol to take in time-series data
     2. each new connection is put on a ClientThread, and there are three types of clients
     3. Data is written in the ring structure
         1. discriminate among: stream ids, stream, connection
+
 ## Changes 
 1. Authorization
         

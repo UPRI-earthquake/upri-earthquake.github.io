@@ -2,15 +2,14 @@
 Documentation for earthquake.science.upd.edu.ph
 
 ## Outline
-1. How it works? 
-2. Tutorials
+1. Tutorials
     1. How to connect to your raspberry pi via SSH
     2. Installing earthquake-hub rShake client
     3. Connecting to earthquake-hub Network: account registration, adding a device, device to account linking, adding a host
     4. How to use FDSNWS to download ground motion data
     5. Intro to SeisComP
     6. Docker cheatsheet
-3. Documentation
+2. Documentation
     1. [System Overview](https://upri-earthquake.github.io/system-overview)
     2. [earthquake-hub-commons](https://upri-earthquake.github.io/ehub-commons)
     3. earthquake-hub-backend

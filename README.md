@@ -9,6 +9,7 @@ Documentation for earthquake.science.upd.edu.ph
     3. Connecting to earthquake-hub Network: account registration, adding a device, device to account linking, adding a host
     4. How to use FDSNWS to download ground motion data
     5. Intro to SeisComP
+    6. Docker cheatsheet
 3. Documentation
     1. Overview
         - System structure

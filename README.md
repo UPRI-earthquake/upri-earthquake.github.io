@@ -13,10 +13,7 @@ Documentation for earthquake.science.upd.edu.ph
 3. Documentation
     1. Overview
         - System structure
-    2. earthquake-hub-commons
-       - What is the commons intended for?
-       - Server Deployment via Docker Compose
-       - Local Deployment
+    2. [earthquake-hub-commons](https://upri-earthquake.github.io/ehub-commons)
     3. earthquake-hub-backend
         1. API
         2. [CONTRIBUTING.md](http://Contributing.md)

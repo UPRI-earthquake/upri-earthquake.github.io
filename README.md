@@ -16,13 +16,13 @@ Documentation for earthquake.science.upd.edu.ph
     3. earthquake-hub-backend
         - [Overview](https://upri-earthquake.github.io/ehub-backend/overview)
         - [API](https://upri-earthquake.github.io/ehub-backend/api-docs)
-        - [CONTRIBUTING.md](http://Contributing.md)
-    4. [earthquake-hub-frontend/CONTRIBUTING.md](http://contributing.md)
+        - [CONTRIBUTING.md](https://github.com/UPRI-earthquake/earthquake-hub-backend/blob/refactorAndLog/CONTRIBUTING.md)
+    4. [earthquake-hub-frontend/CONTRIBUTING.md](https://github.com/UPRI-earthquake/earthquake-hub-frontend/blob/refactorAndLog/CONTRIBUTING.md)
     5. sender-backend
         - [Overview](https://upri-earthquake.github.io/sender-backend/overview)
         - [API](https://upri-earthquake.github.io/sender-backend/api-docs)
-        - [CONTRIBUTING.md](http://contributing.md)
-    6. [sender-frontend/CONTRIBUTING.md](http://contributing.md)
+        - [CONTRIBUTING.md](https://github.com/UPRI-earthquake/sender-backend/blob/codeRefactor/CONTRIBUTING.md)
+    6. [sender-frontend/CONTRIBUTING.md](https://github.com/UPRI-earthquake/sender-frontend/blob/codeRefactor/CONTRIBUTING.md)
     7. RingServer
         - [Deep Dive](https://upri-earthquake.github.io/ringserver)
         - [CONTRIBUTING.md](http://CONTRIBUTING.md)

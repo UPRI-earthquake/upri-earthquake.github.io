@@ -1,4 +1,4 @@
-# Git Workflow: Creating New Feature
+# Git Workflow
 
 For all repositories in the EarthquakeHub suite, the following guidelines are used for developer contributions. However, make sure to also check the CONTRIBUTING.md of the specific repository you're contributing to. 
 

@@ -9,15 +9,25 @@ The [SeedLink](https://www.seiscomp.de/seiscomp3/doc/applications/seedlink.html)
     
 RingServer is one example of a server that utilizes the DataLink protocol as a server of time-series data. On the other hand, slink2dali and dalitool are examples of DataLink clients. 
     
-## What it does
+## What It Does
     
 A RingServer utilizes a given communication protocol to take in time-series data, write it on a ring buffer, and serve that data (or diagnostics of such data) towards the clients. It can perform these via SeedLink, DataLink, or HTTP (WebSocket) protocols. 
     
-## How it works (to follow)
-    1. main thread is the listening thread (?)
-    2. each new connection is put on a ClientThread, and there are three types of clients
-    3. Data is written in the ring structure
-        1. discriminate among: stream ids, stream, connection
+## How It Works
+1. Running the program will start the main thread called ListenThread which listens on a socket waiting for a TCP client to connect. 
+2. Each new connection is handled on a new thread called ClientThread where the responses to the requests or commands from the client are handled mostly by that new thread. There are three types of clients, one for each protocol: DataLink, SeedLink, and HTTP. 
+3. In the case that a client sends a command to write a packet via the DataLink protocol, the execution will call `HandleWrite()` where the command message and the packet itself will undergo some checks before being written into the ring buffer via the `RingWrite()` function. 
+
+To have a better grasp of how this works, it’s important to understand the data structure used (ring buffer) and how it is used in this application.
+
+In particular, the ring buffer is chosen as the data structure in which incoming packets are to be stored. In the context of our use case, it suffices to think of it simply as an array where the end wraps around to the beginning, creating a circular structure. This is such that when we write data into this array and reach the end, we then start overwriting what had been previously written on the beginning of the array.  This can be achieved via modulo addressing, meaning given an index value that is sequentially incremented to access the array values, when this value exceeds the length of the array, using modulo addressing would instead result for the index value to return to the beginning. 
+
+We can see how this results to a desirable property as a temporary receptacle (buffer) for non-stop data streams: the ring structure can be given a size that wouldn’t grow over time as we write more data due to the built-in feature of overwriting old data. 
+
+![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/8100756f-3713-4c3c-a6e6-c9fca4ee453f)
+
+
+Lastly, this ring is treated as a shared memory between threads who write into and read from it. A connection from a client corresponds to a single thread, and a single thread can write multiple packets into the ring buffer. In particular, the data in the ring buffer is organized into streams, identified by a unique `streamid` with the format NET_STAT_LOC_CHANNEL. Each stream represents a time-series data recording of a single axis of motion from a station belonging to a network. To represent a stream of data within the ring buffer, a linked-list data structure is used. Each value in the linked-list points to the location in the ring buffer where the next data point of that specific stream is stored.
 
 ## Changes 
 1. Authorization

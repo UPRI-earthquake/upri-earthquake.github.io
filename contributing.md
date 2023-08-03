@@ -9,7 +9,7 @@ The `main` branch of a repository is the branch deployed to the servers, while t
 git checkout -b feature/new-feature
 ```
 
-## 2. Commit & Push:
+## 2. Commit & Push
 
 Commit your changes with a descriptive commit message then push to upstream. Please refer to the following tags to name your commit messages and pull request titles:
 1. draft - to be completed PR/commit
@@ -17,12 +17,6 @@ Commit your changes with a descriptive commit message then push to upstream. Ple
 3. fix - bug fixes
 4. test - unit tests
 5. chore - (aka housekeeping) cleaning/styling/refactor code, documentations, adding comments
-
-```bash
-git add .
-git commit -m "<commit-message-tag>: Short description of the change you want to commit"
-git push --upstream origin feature/new-feature
-```
 
 ## 3. Create a Pull Request
 

@@ -1,5 +1,5 @@
 ## What is the earthquake-hub-commons intended for
-This repository integrates all the essential programs necessary for hosting a citizen science network of ground motion sensors(footnote: such as but not limited to raspberryshakes). It enables data transmission, archiving, and allows feeding the network data to earthquake detection software(footnote: such as but not limited to SeisComP).
+This repository integrates all the essential programs necessary for hosting a citizen science network of ground motion sensors(footnote: such as but not limited to raspberryshakes). It enables data transmission, archiving, and allows feeding the network data to earthquake detection software(footnote: such as but not limited to SeisComP).  
 A version of this repository is deployed live on [earthquake.science.upd.edu.ph](https://earthquake.science.upd.edu.ph)
 
 ## Server Deployment via Docker Compose

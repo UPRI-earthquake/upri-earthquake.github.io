@@ -9,6 +9,7 @@ Documentation for earthquake.science.upd.edu.ph
     4. How to use FDSNWS to download ground motion data
     5. Intro to SeisComP
     6. Docker cheatsheet
+    7. [Developer Guide: Contributing](https://upri-earthquake.github.io/contributing)
 2. Documentation
     1. [System Overview](https://upri-earthquake.github.io/system-overview)
     2. [earthquake-hub-commons](https://upri-earthquake.github.io/ehub-commons)

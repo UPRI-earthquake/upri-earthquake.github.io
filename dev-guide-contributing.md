@@ -1,6 +1,6 @@
 # Development Workflow (Creating New Feature)
 
-For all repositories in the EarthquakeHub suite, the following guidelines are used for developer contributions.
+For all repositories in the EarthquakeHub suite, the following guidelines are used for developer contributions. However, make sure to also check the CONTRIBUTING.md of the specific repository you're contributing to. 
 
 ## 1. Create New Branch from `dev`
 
@@ -22,6 +22,6 @@ Commit your changes with a descriptive commit message then push to upstream. Ple
 
 Navigate to UPRI-earthquake's GitHub repository and switch to the new branch. Click the "New Pull Request" button. Be sure to follow the pull request template for each repository and the Pull Request Title format: `type: [TASK ID] SHORTENED TASK TITLE`
 
-## 4. Review and Merge
+## 4. Review & Merge
 
 Another team member will be assigned to review your pull request and to provide feedback if necessary. Once the changes you have made are approved, they will be merged into the dev branch. Final testing will be done before the new-feature is added into the `main` branch and deployed to the online servers. 

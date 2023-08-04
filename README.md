@@ -25,7 +25,7 @@ Documentation for earthquake.science.upd.edu.ph
     6. [sender-frontend/CONTRIBUTING.md](https://github.com/UPRI-earthquake/sender-frontend/blob/codeRefactor/CONTRIBUTING.md)
     7. RingServer
         - [Deep Dive](https://upri-earthquake.github.io/ringserver)
-        - [CONTRIBUTING.md](http://CONTRIBUTING.md)
+        - [CONTRIBUTING.md](https://github.com/UPRI-earthquake/receiver-ringserver/blob/dev/CONTRIBUTING.md)
     8. Slink2Dali
         - [Deep Dive](https://upri-earthquake.github.io/slink2dali)
-        - [CONTRIBUTING.md](http://CONTRIBUTING.md)
+        - [CONTRIBUTING.md](https://github.com/UPRI-earthquake/sender-slink2dali/blob/dev/CONTRIBUTING.md)

@@ -4,7 +4,7 @@ To enable your Raspberry Shake device to send data to the EarthquakeHub network,
 
 ## 1. Connect to Your Device via SSH
 
-Before you begin the installation, make sure you can access your Raspberry Shake device via SSH. If you're new to SSH, you can find instructions on how to connect in [this tutorial link](https://upri-earthquake.github.io/connect-to-rshake).
+Before you begin the installation, make sure you can access your Raspberry Shake device via SSH. If you're new to SSH, you can find instructions on how to connect in [this tutorial](https://upri-earthquake.github.io/connect-to-rshake).
 
 ## 2. Run the Installation Script
 

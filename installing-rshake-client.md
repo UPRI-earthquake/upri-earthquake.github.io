@@ -16,8 +16,12 @@ bash <(curl [URL])
 
 The script will perform the installation. As it progresses, check that each status message displays "OK" instead of "ERROR." Once the installation is complete, you'll receive a prompt. Respond with "y" to initiate a restart of your Raspberry Shake device.
 
+> add screenshot of prompt
+
 ## 3. Access the EarthquakeHub Client
 
 After about 5 minutes, your device will finish initialization. Open a web browser and enter the address [rs.local:3000](rs.local:3000). You should see the EarthquakeHub client interface. Congratulations, you've successfully installed the client software!
+
+> add screenshot of client interface
 
 Next, proceed to the next tutorial to learn how to send data to the EarthquakeHub network.

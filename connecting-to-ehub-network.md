@@ -13,7 +13,7 @@ EarthquakeHub Network is a citizen science network of ground motion sensors (suc
      - Longitute (in degree coordinates)
      - Latitude (in degree coordinate)
 3. **Device to Account Linking:**  
-   Linking your physical device to your registered account in the network is a necessary step to ensure integrity of data collected in the network. This step will be done via the `sender web app` accessible through your local area network via [rs.local:3000](rs.local:3000). To link your device, just click the `Link` button and input the account name and password you registered in the earthquake-hub web app.
+   Linking your physical device to your registered account in the network is a necessary step to ensure integrity of data collected in the network. This step will be done via the `sender web app` accessible through your local area network via [rs.local:3000](rs.local:3000). To link your device, just click the `Link` button and input the account name and password you registered in the earthquake-hub web app.  
 4. **Adding a Host:**  
    This step will also be done via the [sender web app](rs.local:3000). To do this, click the `Add Server` button. Input the following details, then click submit button: 
      - Target ringserver's url

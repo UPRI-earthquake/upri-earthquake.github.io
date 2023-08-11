@@ -21,7 +21,10 @@ There are two different docker-compose files written for two scenarios, *(1)* fo
     ```bash
     docker compose --env-file .dep-test.env up --build
     ```
-    > Note: If ever you encounter an error saying you are unauthorized to pull image, follow this guide on how to [authenticate with personal access token from `ghcr.io`](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic).
+    > ℹ️ Note: If ever you encounter an error saying you are unauthorized to pull image, follow this guide on how to [authenticate with personal access token from `ghcr.io`](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic).
+    >
+    > ℹ️ Note: To get the certificates using `certbot`, First up the nginx-proxy container but with the https server in the nginx.conf file commented out. Second, fill this in via certbot: `docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d <your-webapp-url>.org .`. Lastly, add the 443 (or https) config for the nginx and restart that container.
+    Within a few months, the certificate will expire. To renew using certbot, use docker compose run --rm certbot renew
     > 
     The docker compose command will start the following containers:
     - **Nginx Proxy:** This acts as a reverse proxy server which handles incoming HTTP/HTTPS traffic and distributes it to the corresponding services within the Docker network.

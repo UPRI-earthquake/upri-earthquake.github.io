@@ -7,18 +7,23 @@ There are two different docker-compose files written for two scenarios, *(1)* fo
 1. **Clone the repository:** Begin by cloning [this repository](https://github.com/UPRI-earthquake/earthquake-hub-commons.git) to your local machine using the git clone command.
 2. **Install Docker:** Make sure you have [Docker](https://docs.docker.com/get-docker/) installed on your system. Docker Compose is essential for managing multi-container Docker applications.
 3. **Configure env variables:** Create a file named .env in the root of the repository, and add the necessary configuration variables. You can find an example of these variables in the .env.example file.
-4. **Configure ringserver:** Make sure that ringserver-configs/auth/secret.key exists (contains brgy token to AuthServer). Then set the *AuthServer* value in ringserver-configs/ring.conf to the AuthServer API address (i.e. http://172.21.0.3:5000 or https://earthquake.science.upd.edu.ph/api).
-5. **Set up nginx certificates:** For this, there will be another series of steps to be done. These steps will only be done during development/testing to replicate the deployment server enviroment into your local machine; to ensure that you have valid SSL certificates for Nginx.
+4. **Set up nginx certificates:** For this, there will be another series of steps to be done. These steps will only be done during development/testing to replicate the deployment server enviroment into your local machine; to ensure that you have valid SSL certificates for Nginx.
     - Create a locally trusted self-signed SSL certificate (you may use [mkcert](https://www.howtoforge.com/how-to-create-locally-trusted-ssl-certificates-with-mkcert-on-ubuntu/) to do this). And store the `pem` files in `https_data/certbot/conf/live/<server-name>/` 
     - Configure the [nginx configuration file](https_data/nginx.dep-test.d/nginx.dep-test.conf):
         > ℹ️ If you name your `pem` files as `localhost.pem` and `localhost-key.pem`, and then store them in the folder `https_data/certbot/conf/live/localhost/`, then you shouldn't have to alter the nginx configuration file.
         * `server_name` must match the one set for the certificates
         * `ssl_certificate` and `ssl_certificate_key` should both correspond to the location and filenames of the previously generated `pem` files.
-6. **Run the containers:** Once the setup is configured, run the following Docker Compose command to start all the necessary containers:
+5. **Create MongoDB volume:** Run the following command to create a docker volume for mongodb data:
+    ```bash
+    docker volume create earthquake-hub-mongodb-data
+    ```
+5. **Run the containers:** Once the setup is configured, run the following Docker Compose command to start all the necessary containers:
     ```bash
     docker compose --env-file .dep-test.env up --build
     ```
-    This command will start the following containers:
+    > Note: If ever you encounter an error saying you are unauthorized to pull image, follow this guide on how to [authenticate with personal access token from `ghcr.io`](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic).
+    > 
+    The docker compose command will start the following containers:
     - **Nginx Proxy:** This acts as a reverse proxy server which handles incoming HTTP/HTTPS traffic and distributes it to the corresponding services within the Docker network.
     - **Earthquake-hub-frontend:** This hosts the front-end application for the earthquake-hub network which serves the user interface and interacts with the backend services to display data and handle user requests.
     - **Earthquake-hub-backend:** This hosts the back-end application for the earthquake-hub network. It handles various functionalities, such as user authentication, data processing, and database interactions, to support the front-end application and process incoming data from the sensors.
@@ -32,7 +37,21 @@ There are two different docker-compose files written for two scenarios, *(1)* fo
     - ***Geoserve:** This is a service that provides geographic information for the earthquake-hub network. It is used to convert latitude and longitude values into names of places, such as their city name, region, and country name.
         > ℹ️ *Note that Certbot and Geoserve are not used in local development/testing. The two will only be run using the docker compose which is intended for deploying in a server.  
         ** Certbot needs to renew the SSL certificates every three (3) months.
-
+        >
+6. **Configure ringserver:** Make sure that ringserver-configs/auth/secret.key exists (contains brgy token to AuthServer). Then set the *AuthServer* value in ringserver-configs/ring.conf to the AuthServer API address (i.e. http://172.21.0.3:5000 or https://earthquake.science.upd.edu.ph/api).
+   - You may use curl to request an accessToken using:
+     ```bash
+     curl -X POST -H "Content-Type: application/json" -d '{"username": "<USERNAME>","password": "<PASSWORD>","role": "brgy"}' https://<EARTHQUAKE-HUB-BACKEND-URL>/accounts/authenticate
+     ```
+   - or you may use Postman to send a POST request to `/accounts/authenticate` endpoint of the `earthquake-hub-backend` url with the the following body:
+       ```json
+       {
+        "username": <USERNAME>,
+        "password": <PASSWORD>,
+        "role": "brgy"
+       }
+       ```
+       > Please change the `<USERNAME>` and `<PASSWORD>` parameters with your credentials.
 ## Interfacing with a processor
 ### SeisComP
 The earthquake-hub-commons repository allows easy interfacing with earthquake processing softwares such as SeisComP (Seismic Communication Processor) which is a widely used earthquake detection  and seismic data processing software. 

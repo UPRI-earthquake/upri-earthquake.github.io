@@ -52,9 +52,21 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
    - After you have completed your purpose for connecting to the device, you may close the SSH connection by simply typing `exit` to the prompt. This should exit the terminal window and you are effectively disconnected from the device.
 
 ## How to SSH via Mac
-   - Navigate to Applications > Utilities, and open the Terminal application.
+   - Navigate to Applications > Utilities (or Other), and open the Terminal application. You may also pres Cmd+Space and type "Terminal"
+   <img width="1440" alt="Screen Shot 2023-08-29 at 3 04 26 PM" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/ad82216a-7f83-46e2-b58f-148b24606182">
+
    - Enter this SSH command: `ssh myshake@rs.local`
-   - You will be prompted to enter a password. The default password is `shakeme`. Usually, it wouldn't show any characters as you type, but simply type your password and press <ENTER> afterwards. 
+     <img width="793" alt="Screen Shot 2023-08-29 at 3 10 25 PM" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/3a32a500-c33f-4123-8dfb-f01231cd7aba">
+
+   - You will be prompted to enter a password. The default password is `shakeme`. Usually, it wouldn't show any characters as you type, but simply type your password and press <ENTER> afterwards.
+     <img width="794" alt="Screen Shot 2023-08-29 at 3 11 09 PM" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/62192209-f7f9-421f-b16e-f4069d7b155b">
+   - Once successfully connected, the terminal you are in is now controlling the system of your Raspberry Shake device. You may try the `myshake` command to get a status log of your device. In this case, my test device has a network-station code of `AM_RE722`, this should be different from the code of your device.
+     <img width="795" alt="Screen Shot 2023-08-29 at 3 12 43 PM" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/16431c3b-ddba-48f6-bfa9-3b12ba2cb45a">
+
+   - After you have completed your purpose for connecting to the device, you may close the SSH connection by simply typing `exit` to the prompt. This would return you to the normal terminal prompt for your macOS.
+     <img width="795" alt="Screen Shot 2023-08-29 at 3 13 25 PM" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/89a555a1-df80-4479-b599-6c6590218a3b">
+
+
 
 
 ## How to SSH via Ubuntu

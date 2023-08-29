@@ -8,6 +8,7 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
    - Wait for the [Raspberry Shake's ethernet LED indicators](https://manual.raspberryshake.org/specifications.html#led-behavior) to behave as follows:
        - Green light (flashing repeatedly)
        - Orange light (solid)
+     
      This means that the ethernet port is working as it should.
 
 ## How to SSH via Windows Powershell

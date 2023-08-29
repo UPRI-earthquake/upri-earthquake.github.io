@@ -38,6 +38,7 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
      
 
    - Click Open, and enter Raspberry Shake username and password. By default, these are `myshake` and `shakeme`, respectively. If it asks about trusting the host, simply click Accept.
+
      ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/3fa1adbc-11d0-48c1-afd5-18377b17fa7b)
 
    -  Once successfully connected, the terminal you are in is now controlling the system of your Raspberry Shake device. You may try the `myshake` command to get a status log of your device. In this case, my test device has a network-station code of `AM_RE722`, this should be different from the code of your device.

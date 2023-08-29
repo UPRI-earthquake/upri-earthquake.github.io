@@ -6,17 +6,26 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
    - Connect the power brick to your Raspberry Shake to power it on.
    - Connect one end of an ethernet cable to your Raspberry Shake and plug the other end into an ethernet port on the back of your router.
 
+## How to SSH via Windows Powershell
+   - To open PowerShell, either press Ctrl + Shift + P, or hit the Windows key and manually search for PowerShell.
+     ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/83d6967d-1881-4531-89d0-4454865feb3f)
+
+   - Enter this SSH command: `ssh myshake@rs.local` which means to connect the user `myshake` to the device accessible via the address `rs.local` (which is your Raspberry Shake device in your local network). If it asks to validate the authenticity of the host, simply type "yes"
+     ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/f77266ea-514a-4186-9660-bbe5733bacc9)
+
+   - You will be prompted to enter a password. The default password is `shakeme`. Usually, it wouldn't show any characters as you type, but simply type your password and press <ENTER> afterwards.
+     ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/7ad5d336-7a5a-4e24-bf79-dcb2c4dcd6d6)
+
+   - Once successfully connected, the terminal you are in is now controlling the system of your Raspberry Shake device. You may try the `myshake` command to get a status log of your device. In this case, my test device has a station code of `RE722`, this should be different from the code of your device.
+     ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/d361ed0a-cbd6-4ddd-8660-bd69fda7c96c)
+
 ## How to SSH via Windows PuTTY
    - To open the PuTTY application, press the Windows key and search for "putty".
+     > If PuTTY is not yet installed, you may following [this link](https://putty.org/) to download and install the application, or you may try connecting via Powershell instead which comes pre-installed in most Windows operating systems. 
    - Under Host Name (or IP address), enter your Raspberry Shake’s address, by default this is `rs.local`.
    - Make sure that Port is set to 22.
    - Under Connection type, select SSH.
    - Select Open, and enter Raspberry Shake username and password. By default, these are `myshake` and `shakeme`, respectively.
-
-## How to SSH via Windows Powershell
-   - To open PowerShell, either press Ctrl + Shift + P, or hit the Windows key and manually search for PowerShell.
-   - Enter this SSH command: `ssh myshake@rs.local` which means to connect the user `myshake` to the device accessible via the address `rs.local` (which is your Raspberry Shake device in your local network).
-   - You will be prompted to enter a password. The default password is `shakeme`. Usually, it wouldn't show any characters as you type, but simply type your password and press <ENTER> afterwards.
 
 ## How to SSH via Mac
    - Navigate to Applications > Utilities, and open the Terminal application.

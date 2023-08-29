@@ -13,7 +13,7 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
    - Enter this SSH command: `ssh myshake@rs.local` which means to connect the user `myshake` to the device accessible via the address `rs.local` (which is your Raspberry Shake device in your local network). If it asks to validate the authenticity of the host, simply type "yes"
      ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/f77266ea-514a-4186-9660-bbe5733bacc9)
 
-   - You will be prompted to enter a password. The default password is `shakeme`. Usually, it wouldn't show any characters as you type, but simply type your password and press <ENTER> afterwards.
+   - You will be prompted to enter a password. The default password is `shakeme`. Usually, it wouldn't show any characters as you type, but simply type your password and press ENTER afterwards.
      ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/7ad5d336-7a5a-4e24-bf79-dcb2c4dcd6d6)
 
    - Once successfully connected, the terminal you are in is now controlling the system of your Raspberry Shake device. You may try the `myshake` command to get a status log of your device. In this case, my test device has a network-station code of `AM_RE722`, this should be different from the code of your device.

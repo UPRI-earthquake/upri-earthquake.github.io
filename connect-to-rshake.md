@@ -5,6 +5,10 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
 ## Hardware Setup
    - Connect the power brick to your Raspberry Shake to power it on.
    - Connect one end of an ethernet cable to your Raspberry Shake and plug the other end into an ethernet port on the back of your router.
+   - Wait for the [Raspberry Shake's ethernet LED indicators](https://manual.raspberryshake.org/specifications.html#led-behavior) to behave as follows:
+       - Green light (flashing repeatedly)
+       - Orange light (solid)
+     This means that the ethernet port is working as it should.
 
 ## How to SSH via Windows Powershell
    - To open PowerShell, either press Ctrl + Shift + P, or hit the Windows key and manually search for PowerShell.

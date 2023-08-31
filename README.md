@@ -7,7 +7,7 @@ Documentation for earthquake.science.upd.edu.ph
     2. [Installing EarthquakeHub Client on Raspberry Shake](https://upri-earthquake.github.io/installing-rshake-client)
     3. [Sending Data to EarthquakeHub Network](https://upri-earthquake.github.io/sending-data-to-ehub-network)
     4. How to use FDSNWS to download ground motion data
-    5. Intro to SeisComP
+    5. [Intro to SeisComP](https://upri-earthquake.github.io/intro-to-seiscomp)
     6. [Developer Guide: Contributing](https://upri-earthquake.github.io/dev-guide-contributing)
     7. [Developer Guide: Docker Cheatsheet](https://upri-earthquake.github.io/docker-cheatsheet)
 2. Documentation

@@ -13,6 +13,7 @@ In your SSH terminal, execute the following command:
 ```bash
 bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/main/install.sh)
 ```
+> Note: To uninstall, simply change the link above from ".../install.sh" to ".../uninstall.sh"
 
 The script will perform the installation. As it progresses, check that each status message displays "OK" instead of "ERROR." Once the installation is complete, you'll receive a prompt. Respond with "y" to initiate a restart of your Raspberry Shake device.
 

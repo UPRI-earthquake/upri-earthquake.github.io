@@ -2,7 +2,7 @@
 Documentation for earthquake.science.upd.edu.ph
 
 ## Outline
-#### Tutorials
+### Tutorials
 1. [How to connect to your raspberry pi via SSH](https://upri-earthquake.github.io/connect-to-rshake)
 2. [Installing EarthquakeHub Client on Raspberry Shake](https://upri-earthquake.github.io/installing-rshake-client)
 3. [Sending Data to EarthquakeHub Network](https://upri-earthquake.github.io/sending-data-to-ehub-network)
@@ -11,7 +11,7 @@ Documentation for earthquake.science.upd.edu.ph
 6. [Developer Guide: Contributing](https://upri-earthquake.github.io/dev-guide-contributing)
 7. [Developer Guide: Docker Cheatsheet](https://upri-earthquake.github.io/docker-cheatsheet)
 
-#### Documentation
+### Documentation
 1. [System Overview](https://upri-earthquake.github.io/system-overview)
 2. [earthquake-hub-commons](https://upri-earthquake.github.io/ehub-commons)
 3. earthquake-hub-backend

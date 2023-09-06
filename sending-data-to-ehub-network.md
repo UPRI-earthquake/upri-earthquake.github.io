@@ -14,8 +14,11 @@ For a citizen scientist to contribute their real-time Raspberry Shake data to th
 1. **Adding a Device:**
    ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/80037186/4194cf1e-a808-4b5b-8548-fda84b6c7b4a)
 
-   
    After submitting the sign-up form, your Dashboard page shall appear.In order for your device to stream data to the network, you should first add a record of your device into your account. To do so, still in the [earthquake-hub web app](https://earthquake.science.upd.edu.ph), click the `Add Device` button on the Dashboard and provide the following details:
+   > Note: You  may acquire the `Network Code` and `Station Code` by going to [http://rs.local](http://rs.local). The first two (2) letters is the Network Code. The next five (5) characters is your device's Station Code. In this example, the network code is _AM_ and the station code is _RE722_.
+   > 
+   > ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/80037186/a18a873b-252a-4d84-9b0d-abf5def51da5)
+   > 
      - Network code
      - Station code
      - Elevation (in meters)

@@ -1,4 +1,4 @@
-## Sending Data to EarthquakeHub Network:
+![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/80037186/6d641eeb-617f-48fa-8255-5cf6a5ade9ff)## Sending Data to EarthquakeHub Network:
 For a citizen scientist to contribute their real-time Raspberry Shake data to the EarthquakeHub network here are the steps to follow:
 
 > Note: Make sure that you have already [installed the EarthquakeHub client on your Raspberry Shake device](upri-earthquake.github.io/client-installation) before following this tutorial.
@@ -12,7 +12,8 @@ For a citizen scientist to contribute their real-time Raspberry Shake data to th
      - Account password
 
 1. **Device to Account Linking:**
-   ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/80037186/4194cf1e-a808-4b5b-8548-fda84b6c7b4a)
+   ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/80037186/335d9ec4-cf26-497f-8d82-c2dde262fba2)
+
 
    In order for your device to stream data to the network, you should first link your device into your account.  This step will be done via the EarthquakeHub rShake client accessible via [rs.local:3000](rs.local:3000). To link your device, just click the `Link` button and input the account credentials you registered in Step 1, and the location information of your device:
    

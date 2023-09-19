@@ -25,4 +25,4 @@ After about 5 minutes, your device will finish initialization. Open a web browse
 ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/80037186/a4473f93-df31-4d65-b92d-73db3b8cdafc)
 
 
-Next, proceed to the next tutorial to learn how to send data to the EarthquakeHub network.
+Next, proceed to the [next tutorial](https://upri-earthquake.github.io/sending-data-to-ehub-network) to learn how to send data to the EarthquakeHub network.

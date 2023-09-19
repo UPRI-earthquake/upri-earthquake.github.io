@@ -11,27 +11,14 @@ For a citizen scientist to contribute their real-time Raspberry Shake data to th
      - A valid email address
      - Account password
 
-1. **Adding a Device:**
+1. **Device to Account Linking:**
    ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/80037186/4194cf1e-a808-4b5b-8548-fda84b6c7b4a)
 
-   After submitting the sign-up form, your Dashboard page shall appear.In order for your device to stream data to the network, you should first add a record of your device into your account. To do so, still in the [earthquake-hub web app](https://earthquake.science.upd.edu.ph), click the `Add Device` button on the Dashboard and provide the following details:
+   In order for your device to stream data to the network, you should first link your device into your account.  This step will be done via the EarthquakeHub rShake client accessible via [rs.local:3000](rs.local:3000). To link your device, just click the `Link` button and input the account credentials you registered in Step 1, and the location information of your device:
    
-     - Network code
-     - Station code
      - Elevation (in meters)
      - Longitute (in degree coordinates)
      - Latitude (in degree coordinate)
-
-      > Note: You  may acquire the `Network Code` and `Station Code` by going to [http://rs.local](http://rs.local). The first two (2) letters is the Network Code. The next five (5) characters is your device's Station Code. In this example, the network code is _AM_ and the station code is _RE722_.
-      > 
-      > ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/80037186/a18a873b-252a-4d84-9b0d-abf5def51da5)
-      >
-
-1. **Device to Account Linking:**
-   ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/80037186/5905a34b-f8dd-4eb0-b231-6a4c7372764a)
-
-   
-   To ensure that the device record added on your account corresponds to an actual physical device, device linking must be performed. This step will be done via the EarthquakeHub rShake client accessible via [rs.local:3000](rs.local:3000). To link your device, just click the `Link` button and input the account credentials you registered in Step 1.  
 
 1. **Adding a Host:**
    ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/80037186/2da5092e-f397-4319-b558-c9a295c53ad0)

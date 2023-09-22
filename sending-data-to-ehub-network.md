@@ -20,6 +20,10 @@ For a citizen scientist to contribute their real-time Raspberry Shake data to th
      - Elevation (in meters)
      - Longitute (in degree coordinates)
      - Latitude (in degree coordinate)
+  
+     > You may use [Google Maps](https://google.com/maps) to search your location on the map. Get the latitude and longitude coordinates by right clicking your pinned location on the map. ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/80037186/4ed9f828-5325-43d1-8b7a-b590ffc13231)
+
+
 
 1. **Adding a Host:**
    ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/80037186/2da5092e-f397-4319-b558-c9a295c53ad0)

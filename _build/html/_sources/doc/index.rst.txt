@@ -7,7 +7,7 @@ Welcome to UPRI EarthquakeHub's documentation!
 ==============================================
 
 
-Outline
+Outlinessss
 
 ----------------
 Tutorial

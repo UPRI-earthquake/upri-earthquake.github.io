@@ -13,8 +13,8 @@ Outline
 ----------------
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Tutorials
+   :maxdepth: 2
+   :caption: Tutorial
 
    connect-to-rshake.md
    installing-rshake-client.md
@@ -26,18 +26,6 @@ Outline
 
 
 
-----------------
-----------------
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Documentation
-
-   system-overview.md
-   ehub-commons.md
-   ehub-backend/overview.md
-   ehub-backend/api-docs
-   earthquake-hub-backend/blob/refactorAndLog/CONTRIBUTING.md
 
 
 

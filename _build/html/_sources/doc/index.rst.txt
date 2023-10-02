@@ -17,7 +17,7 @@ Tutorial
    :maxdepth: 2
    :caption: Tutorial
 
-   doc/connect-to-rshake.md
+   connect-to-rshake.md
    installing-rshake-client.md
    sending-data-to-ehub-network.md
    fdsnws.md

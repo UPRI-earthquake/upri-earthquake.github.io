@@ -28,14 +28,16 @@ Outline
 =====================
 ======================
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Documentation
 
    system-overview.md
    ehub-commons.md
+
+   .. toctree::
+   :maxdepth: 2
+
    ehub-backend/overview.md
-   ehub-backend/api-docs
-   earthquake-hub-backend/blob/refactorAndLog/CONTRIBUTING.md
 
 
 Indices and tables

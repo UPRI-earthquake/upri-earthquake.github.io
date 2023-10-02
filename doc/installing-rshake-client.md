@@ -1,4 +1,5 @@
-# Installing EarthquakeHub Client on Raspberry Shake
+Installing EarthquakeHub Client on Raspberry Shake
+======================================================
 
 To enable your Raspberry Shake device to send data to the EarthquakeHub network, you need to install the EarthquakeHub client software. This guide will walk you through the installation process.
 

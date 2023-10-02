@@ -1,5 +1,5 @@
 Developer Guide\: Docker Cheatsheet
-
+---------------------------------------
 
 # Docker Cheat Sheet
 Docker containerization is used heavily in the EarthquakeHub software suite for both development and deployment. The main reason for this is that it provides a uniform environment among developers (ie. Linux vs Windows vs macOS) and across deployment servers (ie. one container is run on a raspberry pi while another is run on an actual server). The following are a summary of important details to get you up to speed with using docker.

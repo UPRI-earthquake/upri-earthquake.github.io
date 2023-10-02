@@ -1,1 +1,2 @@
-## How to use FDSNWS to download ground motion data
+How to use FDSNWS to download ground motion data
+------------------------------------------------------------

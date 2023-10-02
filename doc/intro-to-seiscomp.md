@@ -1,5 +1,5 @@
-## Intro To SeisComp
-
+Intro To SeisComp
+------------------------------------
 SeisComP is a seismological software that has been developed collaboratively by the GEOFON Program at Helmholtz Centre Potsdam GFZ German Research Centre for Geosciences and gempa GmbH. It plays a vital role in various aspects of seismological operations, encompassing data acquisition, processing, distribution, and interactive analysis. While SeisComP is employed by the EarthquakeHub Network for processing seismic data sourced through citizen science efforts, it's important to note that its use is not an absolute requirement within the EarthquakeHub Network. Alternative data processing software capable of handling miniseed data can also be employed for processing network data.
 
 SeisComP encompasses a suite of modular components, each dedicated to specific tasks, including:
@@ -11,7 +11,7 @@ SeisComP encompasses a suite of modular components, each dedicated to specific t
 6. Utilities: Offers various auxiliary tools for enhanced functionality.
 
 
-## Installation from Pre-Compiled Release Package
+# Installation from Pre-Compiled Release Package
 This guide provides instructions for installing SeisComP packages on machines running Ubuntu. These guide works for Ubuntu 20.04 and 22.04, as of this writing. For more comprehensive installation details, please consult the [official documentation](https://www.seiscomp.de/doc/base/installation.html).
 
 1. Begin by creating a directory where you intend to download and install SeisComP packages.
@@ -66,7 +66,7 @@ This guide provides instructions for installing SeisComP packages on machines ru
       ./seiscomp/bin/seiscomp install-deps mysql-server
       ```
 
-## Getting Started
+# Getting Started
 After installing seiscomp packages and configuring database, the next step is to setup seiscomp using `seiscomp setup` or the wizard from within scconfig.
 1. Execute setup via:
     > Note: In seiscomp setup default values are given in brackets []:
@@ -137,7 +137,7 @@ After installing seiscomp packages and configuring database, the next step is to
     Command? [P]:
     ```
 
-## Adding New Station
+# Adding New Station
 In order to process seismic data within SeisComP, it's essential to define a data source, which is typically represented by a station. Follow these steps to add a new station to your SeisComP setup:
 1. You will need `inventory` of the new station to be added. This information is typically stored in `.yml` format. To acquire the inventory, you can refer to the guide on [how to fetch inventory using FDSNWS]().
 2. Once you have acquired the inventory data, the next step is to import it into SeisComP. Navigate to the terminal where SeisComP is installed and execute the following command:
@@ -160,10 +160,10 @@ In order to process seismic data within SeisComP, it's essential to define a dat
     seiscomp update-config
     ```
 
-## Getting Real-time Data from a Remote Seedlink Server
+# Getting Real-time Data from a Remote Seedlink Server
 https://www.seiscomp.de/doc/base/tutorials/waveforms.html
 
-## Important concepts to know about seiscomp
+# Important concepts to know about seiscomp
 - reference: https://www.seiscomp.de/doc/base/concepts.html#concepts
 - Messaging: Exchanging information in real-time processing
 - Database: Storing meta data, configurations and data products

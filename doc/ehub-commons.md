@@ -1,11 +1,11 @@
 earthquake-hub-commons
 =======================
 
-# What is the earthquake-hub-commons intended for
+### What is the earthquake-hub-commons intended for
 This repository integrates all the essential programs necessary for hosting a citizen science network of ground motion sensors(footnote: such as but not limited to raspberryshakes). It enables data transmission, archiving, and allows feeding the network data to earthquake detection software(footnote: such as but not limited to SeisComP).
 A version of this repository is deployed live on [earthquake.science.upd.edu.ph](https://earthquake.science.upd.edu.ph)
 
-# Server Deployment via Docker Compose
+### Server Deployment via Docker Compose
 There are two different docker-compose files written for two scenarios, *(1)* for *deploying in a server* and *(2)* for *development/testing* in your local machine.
 1. **Clone the repository:** Begin by cloning [this repository](https://github.com/UPRI-earthquake/earthquake-hub-commons.git) to your local machine using the git clone command.
 2. **Install Docker:** Make sure you have [Docker](https://docs.docker.com/get-docker/) installed on your system. Docker Compose is essential for managing multi-container Docker applications.
@@ -58,14 +58,14 @@ There are two different docker-compose files written for two scenarios, *(1)* fo
        }
        ```
        > Please change the `<USERNAME>` and `<PASSWORD>` parameters with your credentials.
-## Interfacing with a processor
-### SeisComP
+### Interfacing with a processor
+#### SeisComP
 The earthquake-hub-commons repository allows easy interfacing with earthquake processing softwares such as SeisComP (Seismic Communication Processor) which is a widely used earthquake detection  and seismic data processing software.
 SeisComP is a collection of *software modules* used to for seismic data transmission, processing, analysis, monitoring, and archiving. These functions can be done in both real-time and offline.
 For further information about SeisComP check this [overview](https://www.seiscomp.de/doc/index.html) on how to get started with SeisComP.
 
-### Backend Endpoints and Python Scripts
+#### Backend Endpoints and Python Scripts
 This repository exposes two Server-Sent-Event endpoints (`/messaging/restricted/new-pick` and `/messaging/restricted/new-event`) and run two Python scripts to interact with the processor. The two python scripts are run as systemd services which publish `pick events` and `recorded seismic events` from SeisComP to the aforementioned endpoints.
 
-### MongoDB and Data Population
+#### MongoDB and Data Population
 We have included scripts to help initialize mongodb’s `events` collection with SeisComP event data in the scenario that you have an existing record of SeisComP detections that you want to migrate into your instance of EarthquakeHub.

@@ -1,6 +1,10 @@
+Developer Guide\: Contributing
+--------------------------------
+
+
 # Git Workflow
 
-For all repositories in the EarthquakeHub suite, the following guidelines are used for developer contributions. However, make sure to also check the CONTRIBUTING.md of the specific repository you're contributing to. 
+For all repositories in the EarthquakeHub suite, the following guidelines are used for developer contributions. However, make sure to also check the CONTRIBUTING.md of the specific repository you're contributing to.
 
 ## 1. Create New Branch from `dev`
 
@@ -25,4 +29,4 @@ Navigate to UPRI-earthquake's GitHub repository and switch to the new branch. Cl
 
 ## 4. Review & Merge
 
-Another team member will be assigned to review your pull request and to provide feedback if necessary. Once the changes you have made are approved, they will be merged into the dev branch. Final testing will be done before the new-feature is added into the `main` branch and deployed to the online servers. 
+Another team member will be assigned to review your pull request and to provide feedback if necessary. Once the changes you have made are approved, they will be merged into the dev branch. Final testing will be done before the new-feature is added into the `main` branch and deployed to the online servers.

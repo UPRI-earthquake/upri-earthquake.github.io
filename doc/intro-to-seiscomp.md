@@ -1,4 +1,5 @@
-## SeisComP
+## Intro To SeisComp
+
 SeisComP is a seismological software that has been developed collaboratively by the GEOFON Program at Helmholtz Centre Potsdam GFZ German Research Centre for Geosciences and gempa GmbH. It plays a vital role in various aspects of seismological operations, encompassing data acquisition, processing, distribution, and interactive analysis. While SeisComP is employed by the EarthquakeHub Network for processing seismic data sourced through citizen science efforts, it's important to note that its use is not an absolute requirement within the EarthquakeHub Network. Alternative data processing software capable of handling miniseed data can also be employed for processing network data.
 
 SeisComP encompasses a suite of modular components, each dedicated to specific tasks, including:
@@ -30,7 +31,7 @@ This guide provides instructions for installing SeisComP packages on machines ru
     tar xzf seiscomp-4.0.0-doc.tar.gz
     ```
     > Note: For some packages, documentations are already included in the downloaded seiscomp package so there is no need to download and unpack the documentation.
-    > 
+    >
     You may check that all files are properly unpacked by running the `ls` command:
     ```bash
     ls seiscomp
@@ -40,7 +41,7 @@ This guide provides instructions for installing SeisComP packages on machines ru
     ```bash
     ./seiscomp/bin/seiscomp install-deps base
     ```
-    > **Note**: Depending on your Ubuntu version, additional steps may be required to address specific dependencies:  
+    > **Note**: Depending on your Ubuntu version, additional steps may be required to address specific dependencies:
     - On Ubuntu 18: Install Python and related libraries:
       ```bash
       sudo apt-get install python libqtgui4
@@ -49,13 +50,13 @@ This guide provides instructions for installing SeisComP packages on machines ru
       ```bash
       sudo apt-get install libpython3-dev
       ```
-    - Alternatively, for Mint 18 (Ubuntu 16.04): 
+    - Alternatively, for Mint 18 (Ubuntu 16.04):
       ```bash
       sudo apt-get update
       sudo apt-get install libxml2 libboost-filesystem1.58.0 libboost-iostreams1.58.0 libboost-thread1.58.0 libboost-program-options1.58.0 libboost-regex1.58.0 libboost-signals1.58.0 libboost-system1.58.0 libssl1.0.0 libncurses5 libmysqlclient20 libpq5 libpython2.7 python-numpy mysql-server mysql-client libqtgui4 libqt4-xml libqt4-opengl libqt4-sql-sqlite
       ```
 6. Configure the database. You may choose to use either MariaDB or a MySQL for the database.
-    - For a MariaDB installation: 
+    - For a MariaDB installation:
       ```bash
       ./seiscomp/bin/seiscomp install-deps mariadb-server
       ```
@@ -76,21 +77,21 @@ After installing seiscomp packages and configuring database, the next step is to
     ====================================================================
     seiscomp setup
     ====================================================================
-    
+
     This initializes the configuration of your installation.
     If you already made adjustments to the configuration files
     be warned that this setup will overwrite existing parameters
     with default values. This is not a configurator for all
     options of your setup but helps to setup initial standard values.
-    
+
     --------------------------------------------------------------------
     Hint: Entered values starting with a dot (.) are handled
           as commands. Available commands are:
-    
+
           quit: Quit setup without modification to your configuration.
           back: Go back to the previous parameter.
           help: Show help about the current parameter (if available).
-    
+
           If you need to enter a value with a leading dot, escape it
           with backslash, e.g. "\.value".
     --------------------------------------------------------------------
@@ -129,7 +130,7 @@ After installing seiscomp packages and configuring database, the next step is to
     ```bash
     Finished setup
     --------------
-    
+
     P) Proceed to apply configuration
     B) Back to last parameter
     Q) Quit without changes

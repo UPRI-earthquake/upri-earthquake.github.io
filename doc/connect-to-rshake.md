@@ -1,4 +1,4 @@
-# How to Connect to Your Raspberry Shake via SSH
+# blah blah How to Connect to Your Raspberry Shake via SSH
 
 Connecting to your Raspberry Shake using SSH allows you to access and manage your device remotely. The following is a step by step guide to setup and connect to your Raspberry Shake from Windows (using either PuTTY or Powershell), from Mac, and from Ubuntu.
 
@@ -8,7 +8,7 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
    - Wait for the [Raspberry Shake's ethernet LED indicators](https://manual.raspberryshake.org/specifications.html#led-behavior) to behave as follows:
        - Green light (flashing repeatedly)
        - Orange light (solid)
-     
+
      This means that the ethernet port is working as it should.
 
 ## How to SSH via Windows Powershell
@@ -35,12 +35,12 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
      > If PuTTY is not yet installed, you may follow [this link to get the application via Microsoft Store.](https://apps.microsoft.com/store/detail/putty/XPFNZKSKLBP7RJ) Or if you prefer not to download anything, you may try connecting via Powershell instead which comes pre-installed in most Windows operating systems.
 
    - Input the following:
-     
+
      ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/2c18f9c4-ad07-44b2-ad94-78034c5bd5a6)
        - Under Host Name (or IP address), enter your Raspberry Shake’s address, by default this is `rs.local`.
        - Make sure that Port is set to 22.
        - Under Connection type, select SSH.
-     
+
 
    - Click Open, and enter Raspberry Shake username and password. By default, these are `myshake` and `shakeme`, respectively. If it asks about trusting the host, simply click Accept.
 
@@ -73,6 +73,6 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
    - Press Ctrl + Alt + T to open a terminal.
    - Enter this SSH command: `ssh myshake@rs.local`
    - You will be prompted to enter a password. Type the default password `shakeme` and press <ENTER>.
-     
+
 ___
-**Note:** For improved security, it's highly recommended to change the default password of your Raspberry Shake. To learn how to update your password and access essential guidelines for securing your device effectively, refer to this [guide](https://manual.raspberryshake.org/hacked.html#hacked). 
+**Note:** For improved security, it's highly recommended to change the default password of your Raspberry Shake. To learn how to update your password and access essential guidelines for securing your device effectively, refer to this [guide](https://manual.raspberryshake.org/hacked.html#hacked).

@@ -29,7 +29,7 @@ Outline
 ======================
 .. toctree::
    :maxdepth: 2
-   :caption: Tutorial
+   :caption: Documentation
 
    system-overview.md
    ehub-commons.md

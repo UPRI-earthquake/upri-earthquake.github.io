@@ -7,7 +7,7 @@ Welcome to UPRI EarthquakeHub's documentation!
 ==============================================
 
 Outline
------------
+
 
 .. toctree::
    :maxdepth: 1

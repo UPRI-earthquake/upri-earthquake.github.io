@@ -6,8 +6,11 @@
 Welcome to UPRI EarthquakeHub's documentation!
 ==============================================
 
-Outline for all seasons
 
+Outlinessss ito ang test if from main nagdedeploy
+
+
+Tutorial
 
 .. toctree::
    :maxdepth: 1
@@ -20,17 +23,6 @@ Outline for all seasons
    doc/intro-to-seiscomp.md
    doc/dev-guide-contributing.md
    doc/docker-cheatsheet.md
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Documentation
-
-   doc/system-overview.md
-   doc/ehub-commons.md
-   doc/ehub-backend/overview.md
-   doc/ehub-backend/api-docs
-   doc/earthquake-hub-backend/blob/refactorAndLog/CONTRIBUTING.md
-
 
 
 Indices and tables

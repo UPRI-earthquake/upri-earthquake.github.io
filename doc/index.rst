@@ -7,10 +7,8 @@ Welcome to UPRI EarthquakeHub's documentation!
 ==============================================
 
 
-Outlinessss ito ang test if from main nagdedeploy
+Outline
 
-
-Tutorial
 
 .. toctree::
    :maxdepth: 1

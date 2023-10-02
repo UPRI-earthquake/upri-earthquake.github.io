@@ -7,21 +7,23 @@ Welcome to UPRI EarthquakeHub's documentation!
 ==============================================
 
 
-Outlinesdddd
+Outlinessss ito ang test if from
+
+----------------
+Tutorial
+----------------
 
 .. toctree::
    :maxdepth: 2
    :caption: Tutorial
 
-   connect-to-rshake.md
+   doc/connect-to-rshake.md
    installing-rshake-client.md
    sending-data-to-ehub-network.md
    fdsnws.md
    intro-to-seiscomp.md
    dev-guide-contributing.md
    docker-cheatsheet.md
-
-
 
 
 Indices and tables

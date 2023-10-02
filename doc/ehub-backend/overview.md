@@ -1,7 +1,7 @@
 earthquake-hub-backend
 ==========================
 
-##Overview
+# Overview
 
 EarthquakeHub network is comprised of `rshake devices` that are used for transmission of real-time sensor data and `a central server` which processes and serves the received data for various purposes, including data archiving, earthquake detection, and public showcasing through the web application. `earthquake-hub-backend` is the server-side component of that web application. This is run within a docker container inside a dedicated server.
 
@@ -13,7 +13,7 @@ There are two main tasks performed by the earthquake-hub-backend:
 2. **Storage of Account Details, Device Information and Seismic Data**
   As a central server, earthquake-hub-backend houses the shared data of the whole network. Information regarding the account of those who registered in the network, device information such as location and name, and seismic-event information are all saved in the database.
 
-##API
-##CONTRIBUTING.md
+# API
+# CONTRIBUTING.md
 
     /ehub-backend/blob/codeRefactor/CONTRIBUTING.md

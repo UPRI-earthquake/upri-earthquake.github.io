@@ -35,8 +35,7 @@ Outline
    ehub-commons.md
 
    .. toctree::
-   :maxdepth: 2
-
+   :maxdepth: 3
    ehub-backend/overview.md
 
 

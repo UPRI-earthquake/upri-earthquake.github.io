@@ -25,6 +25,18 @@ Outline
    dev-guide-contributing.md
    docker-cheatsheet.md
 
+=====================
+======================
+.. toctree::
+   :maxdepth: 2
+   :caption: Tutorial
+
+   system-overview.md
+   ehub-commons.md
+   ehub-backend/overview.md
+   ehub-backend/api-docs
+   earthquake-hub-backend/blob/refactorAndLog/CONTRIBUTING.md
+
 
 Indices and tables
 ==================

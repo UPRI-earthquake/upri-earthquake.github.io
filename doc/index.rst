@@ -7,20 +7,21 @@ Welcome to UPRI EarthquakeHub's documentation!
 ==============================================
 
 
-Outline
-
+Outlinesdddd
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Tutorial
 
-   doc/connect-to-rshake.md
-   doc/installing-rshake-client.md
-   doc/sending-data-to-ehub-network.md
-   doc/fdsnws.md
-   doc/intro-to-seiscomp.md
-   doc/dev-guide-contributing.md
-   doc/docker-cheatsheet.md
+   connect-to-rshake.md
+   installing-rshake-client.md
+   sending-data-to-ehub-network.md
+   fdsnws.md
+   intro-to-seiscomp.md
+   dev-guide-contributing.md
+   docker-cheatsheet.md
+
+
 
 
 Indices and tables

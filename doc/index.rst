@@ -6,7 +6,7 @@
 Welcome to UPRI EarthquakeHub's documentation!
 ==============================================
 
-Outline
+Outline for all seasons
 
 
 .. toctree::
@@ -20,6 +20,17 @@ Outline
    doc/intro-to-seiscomp.md
    doc/dev-guide-contributing.md
    doc/docker-cheatsheet.md
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Documentation
+
+   doc/system-overview.md
+   doc/ehub-commons.md
+   doc/ehub-backend/overview.md
+   doc/ehub-backend/api-docs
+   doc/earthquake-hub-backend/blob/refactorAndLog/CONTRIBUTING.md
+
 
 
 Indices and tables

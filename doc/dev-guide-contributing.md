@@ -1,5 +1,5 @@
-#Developer Guide\: Contributing
-
+Developer Guide\: Contributing
+===============================
 
 
 ## Git Workflow

@@ -1,9 +1,8 @@
 Intro To SeisComp
 ========================
 
-*************
-SeisComP
-*************
+## SeisComP
+
 is a seismological software that has been developed collaboratively by the GEOFON Program at Helmholtz Centre Potsdam GFZ German Research Centre for Geosciences and gempa GmbH. It plays a vital role in various aspects of seismological operations, encompassing data acquisition, processing, distribution, and interactive analysis. While SeisComP is employed by the EarthquakeHub Network for processing seismic data sourced through citizen science efforts, it's important to note that its use is not an absolute requirement within the EarthquakeHub Network. Alternative data processing software capable of handling miniseed data can also be employed for processing network data.
 
 SeisComP encompasses a suite of modular components, each dedicated to specific tasks, including:
@@ -15,7 +14,7 @@ SeisComP encompasses a suite of modular components, each dedicated to specific t
 6. Utilities: Offers various auxiliary tools for enhanced functionality.
 
 
-# Installation from Pre-Compiled Release Package
+## Installation from Pre-Compiled Release Package
 This guide provides instructions for installing SeisComP packages on machines running Ubuntu. These guide works for Ubuntu 20.04 and 22.04, as of this writing. For more comprehensive installation details, please consult the [official documentation](https://www.seiscomp.de/doc/base/installation.html).
 
 1. Begin by creating a directory where you intend to download and install SeisComP packages.

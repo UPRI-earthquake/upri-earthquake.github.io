@@ -1,4 +1,6 @@
-# How to Connect to Your Raspberry Shake via SSH
+How to Connect to Your Raspberry Shake via SSH
+================================================
+
 
 Connecting to your Raspberry Shake using SSH allows you to access and manage your device remotely. The following is a step by step guide to setup and connect to your Raspberry Shake from Windows (using either PuTTY or Powershell), from Mac, and from Ubuntu.
 

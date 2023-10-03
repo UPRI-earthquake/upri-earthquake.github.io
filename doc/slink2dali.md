@@ -3,7 +3,7 @@ Slink2Dali
 
 This documentation aims to introduce the application of slink2dali in the earthquake-hub citizen science network. See the [system overview here](add link here). This is a fork of [iris-edu/slink2dali](https://github.com/iris-edu/slink2dali). See their [original documentation here](https://github.com/iris-edu/slink2dali/blob/main/doc/slink2dali.md).
 
-## Background
+### Background
 
 MiniSeed and Datalink packets are two of the many data types that are used in digitally transmitting ground motion data.  A data type is simply a data format standardized to be used within a communication protocol. In this case, MiniSeed is used within the SeedLink protocol, and datalink packet within the DataLink protocol. These two protocols are specifically developed to be application-level protocols (in the context of TCP/IP), following the Server-Client model, and streams time series data in near-real time. SeedLink is designed to transmit ground motion time-series payloads, whereas DataLink is more generally designed to transmit any time series payloads.
 
@@ -11,7 +11,7 @@ An important distinction between the two protocols is the direction that the tim
 
 In citizen science application, this means that the DataLink protocol allows for citizen scientists to send data to a central server. This isn’t possible using SeedLink alone since a seedlink client (in this case the citizen scientists) can only receive data from a server and not send it to a server.
 
-## What It Does
+### What It Does
 
 What slink2dali does is serve as the middleman between a seedlink and a datalink server. Specifically, it will receive a packet from a seedlink server, package that miniseed as a payload within a datalink packet, and finally send it over to a datalink server. It will do this packaging and forwarding for every packet sent by the seedlink server.
 
@@ -19,7 +19,7 @@ __ show diagram here (seedlink, s2d, datalink)__
 
 This is important since most ground motion micro-computers (such as raspberryshake devices), come with an internal SeedLink server. Meaning instead of only being able to read data from this device’s SeedLink server, we can use slink2dali to extend the functionality of such a device by also making it able to send its real-time data to some remote DataLink server.
 
-## Changes
+### Changes
 
 1. Authorization
 
@@ -35,5 +35,10 @@ This is important since most ground motion micro-computers (such as raspberrysha
 
    Lastly, the main loop that forwards each packet has been refactored to accommodate the changes stated above. Specifically, `createDLconnection()` was created and `sendrecord()` was edited in order to expose the response code as return status of `dl_authorize()` and `dl_write()`, and make the code execution flow depend on these return status codes.
 
-   * `DeepDive <https://upri-earthquake.github.io/slink2dali>`_
-   * `CONTRIBUTING.md <https://github.com/UPRI-earthquake/sender-slink2dali/blob/dev/CONTRIBUTING.md>`_
+##DeepDive
+https://upri-earthquake.github.io/slink2dali
+
+##CONTRIBUTING.md
+https://github.com/UPRI-earthquake/sender-slink2dali/blob/dev/CONTRIBUTING.md
+
+`OpenAI <https://www.openai.com>`_

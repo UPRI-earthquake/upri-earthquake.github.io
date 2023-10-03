@@ -44,5 +44,3 @@ https://github.com/UPRI-earthquake/sender-slink2dali/blob/dev/CONTRIBUTING.md
 `OpenAI <https://www.openai.com>`_
 
 `A cool website`_
-
-.. _A cool website: http://sphinx-doc.org

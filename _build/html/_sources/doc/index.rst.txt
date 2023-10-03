@@ -8,9 +8,6 @@ Welcome to UPRI EarthquakeHub's documentation!
 ==============================================
 
 
-Outline
-~~~~~~~~
-
 =====================
 ======================
 .. toctree::

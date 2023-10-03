@@ -151,3 +151,7 @@ Lastly, this ring is treated as a shared memory between threads who write into a
 4. Docker & Dependency Additions
 
    The features added in this fork required additional dependencies, namely `jansson` and `curl`. We have opted to include these as built-in dependencies to simplify the process of building this forked version from source. This decision also makes it easier to build it into a docker image, which is particularly beneficial for our application, as we utilize Docker Compose for both development and deployment of our microservices.
+
+
+#CONTRIBUTING.md
+This is the link for [CONTRIBUTING.md](https://github.com/UPRI-earthquake/receiver-ringserver/blob/dev/CONTRIBUTING.md)

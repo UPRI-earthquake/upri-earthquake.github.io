@@ -34,3 +34,6 @@ This is important since most ground motion micro-computers (such as raspberrysha
 3. Code execution
 
    Lastly, the main loop that forwards each packet has been refactored to accommodate the changes stated above. Specifically, `createDLconnection()` was created and `sendrecord()` was edited in order to expose the response code as return status of `dl_authorize()` and `dl_write()`, and make the code execution flow depend on these return status codes.
+
+   * `DeepDive <https://upri-earthquake.github.io/slink2dali>`_
+   * `CONTRIBUTING.md <https://github.com/UPRI-earthquake/sender-slink2dali/blob/dev/CONTRIBUTING.md>`_

@@ -30,10 +30,11 @@ Welcome to UPRI EarthquakeHub's documentation!
 
    system-overview.md
    ehub-commons.md
-
-   .. toctree::
-   :maxdepth: 3
    ehub-backend/overview.md
+   sender-backend/overview.md
+   ringserver.md
+   slink2dali.md
+
 
 
 Indices and tables

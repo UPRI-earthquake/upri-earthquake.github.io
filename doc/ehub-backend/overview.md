@@ -16,4 +16,4 @@ There are two main tasks performed by the earthquake-hub-backend:
 ## API
 ## CONTRIBUTING.md
 
-    /ehub-backend/blob/codeRefactor/CONTRIBUTING.md
+    `<https://github.com/UPRI-earthquake/earthquake-hub-backend/blob/main/CONTRIBUTING.md>`_

@@ -16,4 +16,4 @@ There are two main tasks performed by the earthquake-hub-backend:
 ## API
 ## CONTRIBUTING.md
 
-    `<https://github.com/UPRI-earthquake/earthquake-hub-backend/blob/main/CONTRIBUTING.md>`_
+    `<https://github.com/UPRI-earthquake/earthquake-hub-backend/blob/main/CONTRIBUTING.md>`_.

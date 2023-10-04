@@ -86,5 +86,5 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
 
 ___
 
-> [!NOTE]
-> For improved security, it's highly recommended to change the default password of your Raspberry Shake. To learn how to update your password and access essential guidelines for securing your device effectively, refer to this [guide](https://manual.raspberryshake.org/hacked.html#hacked).
+[!NOTE]
+For improved security, it's highly recommended to change the default password of your Raspberry Shake. To learn how to update your password and access essential guidelines for securing your device effectively, refer to this [guide](https://manual.raspberryshake.org/hacked.html#hacked).

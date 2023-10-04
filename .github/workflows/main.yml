@@ -14,9 +14,11 @@ jobs:
       - name: Install dependencies
         run: |
           pip install sphinx sphinx_rtd_theme myst_parser
+
       - name: Sphinx build
         run: |
           sphinx-build doc _build
+
       - name: Check for JSON files
         id: check-json
         run: |
@@ -26,10 +28,11 @@ jobs:
             echo "::set-output name=json_found::false"
           fi
         shell: bash
+
       - name: Run HTML if JSON found
         if: steps.check-json.outputs.json_found == 'true'
         run: |
-            python -m https://upri-earthquake.github.io/ehub-backend/api-docs/
+            python -m https://upri-earthquake.github.io/ehub-backend/api-docs/index.html
           # Add your HTML execution command here
           # For example: python run_html.py
 

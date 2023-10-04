@@ -33,13 +33,8 @@ jobs:
 
       - name: Build Swagger documentation
         run: |
-          # Replace with the actual path to your Swagger JSON file
           swagger_json_path="https://github.com/alyssapatricia/ui/blob/main/doc/ehub-backend/api-docs/ehub-backend-api-docs.json"
-
-          # Build the Swagger documentation using Sphinx
           sphinx-build -b html . _build
-
-          # Copy the Swagger documentation to the _build directory
           cp -r _build/html/* _build/
 
       - name: Deploy Swagger documentation to GitHub Pages

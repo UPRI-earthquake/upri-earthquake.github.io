@@ -14,12 +14,9 @@ jobs:
       - name: Install dependencies
         run: |
           pip install sphinx sphinx_rtd_theme myst_parser
-          pip install sphinxcontrib-swaggerdoc
-          pip install sphinxcontrib-httpdomain
       - name: Sphinx build
         run: |
           sphinx-build doc _build
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
@@ -30,13 +27,15 @@ jobs:
           force_orphan: true
 
       # Add the Swagger documentation build and deployment steps below
-
+      - name: Install additional dependencies for Swagger
+        run: |
+          pip install sphinxcontrib-swaggerdoc
+          pip install sphinxcontrib-httpdomain
       - name: Build Swagger documentation
         run: |
           export swagger_json_path="https://github.com/alyssapatricia/ui/blob/main/doc/ehub-backend/api-docs/ehub-backend-api-docs.json"
           sphinx-build -b html . _build
           cp -r _build/html/* _build/
-
       - name: Deploy Swagger documentation to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}

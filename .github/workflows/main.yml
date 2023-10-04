@@ -1,16 +1,24 @@
 name: main
 
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
       - name: Install dependencies
         run: |
           pip install sphinx sphinx_rtd_theme myst_parser
@@ -19,22 +27,21 @@ jobs:
         run: |
           sphinx-build doc _build
 
-      - name: Check for JSON files
-        id: check-json
-        run: |
-          if ls **/*.json >/dev/null 2>&1; then
-            echo "::set-output name=json_found::true"
-          else
-            echo "::set-output name=json_found::false"
-          fi
-        shell: bash
+  deploy_html_and_json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-      - name: Run HTML if JSON found
-        if: steps.check-json.outputs.json_found == 'true'
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Deploy HTML and JSON
         run: |
-            python -m https://upri-earthquake.github.io/ehub-backend/api-docs/index.html
-          # Add your HTML execution command here
-          # For example: python run_html.py
+          cp index.html doc/ehub-backend/api-docs/
+          cp ehub-backend-api-docs.json doc/ehub-backend/api-docs/
 
 
       - name: Deploy to GitHub Pages
@@ -42,6 +49,5 @@ jobs:
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
           publish_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _build/
-          force_orphan: true
+          github_token: ${{ secrets.GH_PAGES_TOKEN }}
+          publish_dir: _build

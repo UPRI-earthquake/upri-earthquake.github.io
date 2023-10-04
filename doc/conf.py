@@ -14,7 +14,20 @@ release = '0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['myst_parser']
+extensions = ['myst_parser',
+              'sphinxcontrib.swaggerdoc']
+
+              # Add the 'sphinxcontrib.httpdomain' extension to your extensions list
+extensions = ['myst_parser',
+              'sphinxcontrib.swaggerdoc',
+              'sphinxcontrib.httpdomain']  # Include the 'sphinxcontrib.httpdomain' extension
+
+# Add the path to your Swagger JSON file as a configuration option
+swaggerdoc_api_spec = 'https://github.com/alyssapatricia/ui/blob/main/doc/ehub-backend/api-docs/ehub-backend-api-docs.json'
+
+# Set the base URL for your Swagger documentation (GitHub Pages URL)
+swaggerdoc_basepath = '/ui/'  # Replace '<repository-name>' with your GitHub repository name
+
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -26,3 +39,5 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+https://github.com/alyssapatricia/ui/blob/main/doc/ehub-backend/api-docs/ehub-backend-api-docs.json

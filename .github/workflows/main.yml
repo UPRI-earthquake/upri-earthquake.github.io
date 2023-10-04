@@ -1,53 +1,52 @@
 name: main
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-  workflow_dispatch:
+on: [push, pull_request, workflow_dispatch]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
           pip install sphinx sphinx_rtd_theme myst_parser
-
       - name: Sphinx build
         run: |
           sphinx-build doc _build
-
-  deploy_html_and_json:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Deploy HTML and JSON
-        run: |
-          cp index.html doc/ehub-backend/api-docs/
-          cp ehub-backend-api-docs.json doc/ehub-backend/api-docs/
-
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
           publish_branch: gh-pages
-          github_token: ${{ secrets.GH_PAGES_TOKEN }}
-          publish_dir: _build
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _build/
+          force_orphan: true
+
+      # Add the Swagger documentation build and deployment steps below
+      - name: Install additional dependencies for Swagger
+        run: |
+          pip install sphinxcontrib-httpdomain
+
+      - name: Build Swagger documentation
+        run: |
+          # Replace with the actual path to your Swagger JSON file
+          swagger_json_path="https://github.com/alyssapatricia/ui/blob/main/doc/ehub-backend/api-docs/ehub-backend-api-docs.json"
+
+          # Build the Swagger documentation using Sphinx
+          sphinx-build -b html . _build
+
+          # Copy the Swagger documentation to the _build directory
+          cp -r _build/html/* _build/
+
+      - name: Deploy Swagger documentation to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _build/
+          force_orphan: true

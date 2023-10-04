@@ -1,44 +1,44 @@
 name: main
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-  workflow_dispatch:
+on: [push, pull_request, workflow_dispatch]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
           pip install sphinx sphinx_rtd_theme myst_parser
-
       - name: Sphinx build
         run: |
           sphinx-build doc _build
-          sphinx-build doc _build/api-docs
-
-
-      - name: Copy JSON and HTML files
+      - name: Check for JSON files
+        id: check-json
         run: |
-          # Copy your existing JSON and HTML files into the _build directory.
-          cp -R doc/ehub-backend/api-docs _build/api-docs
+          if ls **/*.json >/dev/null 2>&1; then
+            echo "::set-output name=json_found::true"
+          else
+            echo "::set-output name=json_found::false"
+          fi
+        shell: bash
+      - name: Run HTML if JSON found
+        if: steps.check-json.outputs.json_found == 'true'
+        run: |
+            python -m https://upri-earthquake.github.io/ehub-backend/api-docs/
+          # Add your HTML execution command here
+          # For example: python run_html.py
+
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
           publish_branch: gh-pages
-          github_token: ${{ secrets.GH_PAGES_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: _build/
           force_orphan: true

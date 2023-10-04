@@ -14,6 +14,9 @@ There are two main tasks performed by the earthquake-hub-backend:
   As a central server, earthquake-hub-backend houses the shared data of the whole network. Information regarding the account of those who registered in the network, device information such as location and name, and seismic-event information are all saved in the database.
 
 ## API
-## CONTRIBUTING.md
 
-`This is a hyperlink text <https://github.com/UPRI-earthquake/earthquake-hub-backend/blob/main/CONTRIBUTING.md>`_
+This is the link for the [API Docs](https://upri-earthquake.github.io/ehub-backend/api-docs/)
+
+
+## CONTRIBUTING.md
+This is the link for [CONTRIBUTING.md](https://github.com/UPRI-earthquake/earthquake-hub-backend/blob/main/CONTRIBUTING.md)

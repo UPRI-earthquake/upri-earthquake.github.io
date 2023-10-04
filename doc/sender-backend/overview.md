@@ -17,4 +17,8 @@ There are two main tasks performed by the sender-backend:
 
 ## API
 
+This is the link for [API](https://upri-earthquake.github.io/sender-backend/api-docs/)
+
+
 ## CONTRIBUTING.md
+This is the link for [CONTRIBUTING.md](https://github.com/UPRI-earthquake/sender-backend/blob/main/CONTRIBUTING.md)

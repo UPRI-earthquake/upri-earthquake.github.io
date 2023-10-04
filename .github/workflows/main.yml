@@ -1,6 +1,13 @@
 name: main
 
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -9,14 +16,18 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
       - name: Install dependencies
         run: |
           pip install sphinx sphinx_rtd_theme myst_parser
+
       - name: Sphinx build
         run: |
           sphinx-build doc _build
+          cp -R doc/ehub-backend/api-docs _build/api-docs
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}

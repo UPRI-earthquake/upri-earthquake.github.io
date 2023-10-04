@@ -17,8 +17,8 @@ release = '0.1'
 
               # Add the 'sphinxcontrib.httpdomain' extension to your extensions list
 extensions = ['myst_parser',
-              'sphinxcontrib.swaggerdoc',
-              'sphinxcontrib.httpdomain']  # Include the 'sphinxcontrib.httpdomain' extension
+              'sphinxcontrib-swaggerdoc',
+              'sphinxcontrib-httpdomain']  # Include the 'sphinxcontrib.httpdomain' extension
 
 # Add the path to your Swagger JSON file as a configuration option
 swaggerdoc_api_spec = 'https://github.com/alyssapatricia/ui/blob/main/doc/ehub-backend/api-docs/ehub-backend-api-docs.json'

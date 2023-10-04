@@ -29,6 +29,7 @@ jobs:
       # Add the Swagger documentation build and deployment steps below
       - name: Install additional dependencies for Swagger
         run: |
+          pip install sphinxcontrib-swaggerdoc
           pip install sphinxcontrib-httpdomain
 
       - name: Build Swagger documentation

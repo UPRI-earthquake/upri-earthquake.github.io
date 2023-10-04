@@ -33,7 +33,7 @@ jobs:
 
       - name: Build Swagger documentation
         run: |
-          swagger_json_path="https://github.com/alyssapatricia/ui/blob/main/doc/ehub-backend/api-docs/ehub-backend-api-docs.json"
+          export swagger_json_path="https://github.com/alyssapatricia/ui/blob/main/doc/ehub-backend/api-docs/ehub-backend-api-docs.json"
           sphinx-build -b html . _build
           cp -r _build/html/* _build/
 

@@ -14,8 +14,6 @@ release = '0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['myst_parser',
-              'sphinxcontrib.swaggerdoc']
 
               # Add the 'sphinxcontrib.httpdomain' extension to your extensions list
 extensions = ['myst_parser',

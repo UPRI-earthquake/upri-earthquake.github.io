@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   docs:
@@ -26,6 +26,10 @@ jobs:
       - name: Sphinx build
         run: |
           sphinx-build doc _build
+
+      - name: Copy JSON and HTML files
+        run: |
+          # Copy your existing JSON and HTML files into the _build directory.
           cp -R doc/ehub-backend/api-docs _build/api-docs
 
       - name: Deploy to GitHub Pages

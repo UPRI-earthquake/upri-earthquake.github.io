@@ -15,21 +15,25 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
 
 ## How to SSH via Windows Powershell
    - To open PowerShell, either press Ctrl + Shift + P, or hit the Windows key and manually search for PowerShell.
-     ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/83d6967d-1881-4531-89d0-4454865feb3f) <br>
-
+     ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/83d6967d-1881-4531-89d0-4454865feb3f)
+-----
 
    - Enter this SSH command: `ssh myshake@rs.local` which means to connect the user `myshake` to the device accessible via the address `rs.local` (which is your Raspberry Shake device in your local network). If it asks to validate the authenticity of the host, simply type "yes"
      ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/f77266ea-514a-4186-9660-bbe5733bacc9)
 
+-----
    - You will be prompted to enter a password. The default password is `shakeme`. Usually, it wouldn't show any characters as you type, but simply type your password and press ENTER afterwards.
      ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/7ad5d336-7a5a-4e24-bf79-dcb2c4dcd6d6)
 
+-----
    - Once successfully connected, the terminal you are in is now controlling the system of your Raspberry Shake device. You may try the `myshake` command to get a status log of your device. In this case, my test device has a network-station code of `AM_RE722`, this should be different from the code of your device.
      ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/d361ed0a-cbd6-4ddd-8660-bd69fda7c96c)
 
+-----
    - After you have completed your purpose for connecting to the device, you may close the SSH connection by simply typing `exit` to the prompt. This would return you to the normal terminal prompt for your PC.
      ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/b2f6693c-bd00-4bad-ae6d-8c8764ee1681)
 
+-----
 
 ## How to SSH via Windows PuTTY
    - To open the PuTTY application, press the Windows key and search for "putty".

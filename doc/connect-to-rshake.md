@@ -98,6 +98,7 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
    - Press Ctrl + Alt + T to open a terminal.
    - Enter this SSH command: `ssh myshake@rs.local`
    - You will be prompted to enter a password. Type the default password `shakeme` and press <ENTER>.
+   - test
 
 ___
 

@@ -35,7 +35,4 @@ Welcome to UPRI EarthquakeHub's documentation!
    ringserver.md
    slink2dali.md
 
-==========================================================================================
-testing makikita ba to .. openapi:: ehub-backend/api-docs/ehub-backend-api-docs.json
-========================================================================================
-
+.. openapi:: doc/sender-backend/api-docs/sender-backend-api-docs.json

@@ -37,12 +37,3 @@ Welcome to UPRI EarthquakeHub's documentation!
 
 
 
-
-
-
-
-
-
-
-* :ref:`search`
-

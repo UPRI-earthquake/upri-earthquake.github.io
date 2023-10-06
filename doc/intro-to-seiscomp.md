@@ -1,7 +1,7 @@
 Introduction To SeisComp
 ========================
 
-*SeisComp* is a seismological software that has been developed collaboratively by the GEOFON Program at Helmholtz Centre Potsdam GFZ German Research Centre for Geosciences and gempa GmbH. It plays a vital role in various aspects of seismological operations, encompassing data acquisition, processing, distribution, and interactive analysis. While SeisComP is employed by the EarthquakeHub Network for processing seismic data sourced through citizen science efforts, it's important to note that its use is not an absolute requirement within the EarthquakeHub Network. Alternative data processing software capable of handling miniseed data can also be employed for processing network data.
+**SeisComp** is a seismological software that has been developed collaboratively by the GEOFON Program at Helmholtz Centre Potsdam GFZ German Research Centre for Geosciences and gempa GmbH. It plays a vital role in various aspects of seismological operations, encompassing data acquisition, processing, distribution, and interactive analysis. While SeisComP is employed by the EarthquakeHub Network for processing seismic data sourced through citizen science efforts, it's important to note that its use is not an absolute requirement within the EarthquakeHub Network. Alternative data processing software capable of handling miniseed data can also be employed for processing network data.
 
 SeisComP encompasses a suite of modular components, each dedicated to specific tasks, including:
 1. Global Parameters: Unified schema for configuring each modules.
@@ -31,7 +31,7 @@ This guide provides instructions for installing SeisComP packages on machines ru
     ```bash
     tar xzf seiscomp-4.0.0-doc.tar.gz
     ```
-    > Note: For some packages, documentations are already included in the downloaded seiscomp package so there is no need to download and unpack the documentation.
+    > **_NOTE:_** For some packages, documentations are already included in the downloaded seiscomp package so there is no need to download and unpack the documentation.
     >
     You may check that all files are properly unpacked by running the `ls` command:
     ```bash
@@ -42,7 +42,7 @@ This guide provides instructions for installing SeisComP packages on machines ru
     ```bash
     ./seiscomp/bin/seiscomp install-deps base
     ```
-    > **Note**: Depending on your Ubuntu version, additional steps may be required to address specific dependencies:
+    > **_NOTE:_** Depending on your Ubuntu version, additional steps may be required to address specific dependencies:
     - On Ubuntu 18: Install Python and related libraries:
       ```bash
       sudo apt-get install python libqtgui4
@@ -70,7 +70,7 @@ This guide provides instructions for installing SeisComP packages on machines ru
 ## Getting Started
 After installing seiscomp packages and configuring database, the next step is to setup seiscomp using `seiscomp setup` or the wizard from within scconfig.
 1. Execute setup via:
-    > Note: In seiscomp setup default values are given in brackets []:
+    > **_NOTE:_** In seiscomp setup default values are given in brackets []:
     ```bash
     seiscomp/bin/seiscomp setup
     ```
@@ -162,10 +162,10 @@ In order to process seismic data within SeisComP, it's essential to define a dat
     ```
 
 ## Getting Real-time Data from a Remote Seedlink Server
-[This link to Get Real-time Data from a Remote Seedlink Server](https://www.seiscomp.de/doc/base/tutorials/waveforms.html)
+[This is the link to Get Real-time Data from a Remote Seedlink Server](https://www.seiscomp.de/doc/base/tutorials/waveforms.html)
 
 ## Important concepts to know about seiscomp
-- [reference:](https://www.seiscomp.de/doc/base/concepts.html#concepts)
+- [SeisComP Reference](https://www.seiscomp.de/doc/base/concepts.html#concepts)
 - Messaging: Exchanging information in real-time processing
 - Database: Storing meta data, configurations and data products
 - Modules: Daemon programs and command-line tools

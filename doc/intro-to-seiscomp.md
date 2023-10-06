@@ -4,12 +4,12 @@ Introduction To SeisComp
 **SeisComp** is a seismological software that has been developed collaboratively by the GEOFON Program at Helmholtz Centre Potsdam GFZ German Research Centre for Geosciences and gempa GmbH. It plays a vital role in various aspects of seismological operations, encompassing data acquisition, processing, distribution, and interactive analysis. While SeisComP is employed by the EarthquakeHub Network for processing seismic data sourced through citizen science efforts, it's important to note that its use is not an absolute requirement within the EarthquakeHub Network. Alternative data processing software capable of handling miniseed data can also be employed for processing network data.
 
 SeisComP encompasses a suite of modular components, each dedicated to specific tasks, including:
-  1. Global Parameters: Unified schema for configuring each modules.
-  2. Acquisition: Responsible for data collection.
-  3. Inventory: Manages network information.
-  4. Messaging: Facilitates communication between system elements.
-  5. Processing: Executes advanced data analysis and interpretation.
-  6. Utilities: Offers various auxiliary tools for enhanced functionality.
+    1. Global Parameters: Unified schema for configuring each modules.
+    2. Acquisition: Responsible for data collection.
+    3. Inventory: Manages network information.
+    4. Messaging: Facilitates communication between system elements.
+    5. Processing: Executes advanced data analysis and interpretation.
+    6. Utilities: Offers various auxiliary tools for enhanced functionality.
 
 
 ## Installation from Pre-Compiled Release Package

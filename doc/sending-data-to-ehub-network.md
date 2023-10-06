@@ -1,4 +1,4 @@
-Sending Data to EarthquakeHub Network:
+Sending Data to EarthquakeHub Network
 =======================================
 
 For a citizen scientist to contribute their real-time Raspberry Shake data to the EarthquakeHub network, here are the steps to follow:

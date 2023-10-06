@@ -17,7 +17,7 @@ There are two main tasks performed by the sender-backend:
 
 ## API
 
-This is the link for the [API Docs](https://alyssapatricia.github.io/ui/ehub-backend/api-docs/)
+This is the link for the [API Docs](https://alyssapatricia.github.io/ui/sender-backend/api-docs/)
 
 
 ## CONTRIBUTING.md

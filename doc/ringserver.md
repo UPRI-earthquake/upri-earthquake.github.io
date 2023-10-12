@@ -1,6 +1,6 @@
 RingServer
 =====================
-This documentation aims to introduce the application of RingServer in the earthquake-hub citizen science network. See the [system overview here](add link here). This is a fork of [EarthScope/RingServer](https://github.com/EarthScope/ringserver). See their [original documentation here](https://github.com/EarthScope/ringserver/blob/main/doc/ringserver.md).
+This documentation aims to introduce the application of RingServer in the earthquake-hub citizen science network. See the [system overview here](https://alyssapatricia.github.io/ui/system-overview.html). This is a fork of [EarthScope/RingServer](https://github.com/EarthScope/ringserver). See their [original documentation here](https://github.com/EarthScope/ringserver/blob/main/doc/ringserver.md).
 
 ## Background
 
@@ -31,7 +31,7 @@ We can see how this results to a desirable property as a temporary receptacle (b
 Lastly, this ring is treated as a shared memory between threads who write into and read from it. A connection from a client corresponds to a single thread, and a single thread can write multiple packets into the ring buffer. In particular, the data in the ring buffer is organized into streams, identified by a unique `streamid` with the format NET_STAT_LOC_CHANNEL. Each stream represents a time-series data recording of a single axis of motion from a station belonging to a network. To represent a stream of data within the ring buffer, a linked-list data structure is used. Each value in the linked-list points to the location in the ring buffer where the next data point of that specific stream is stored.
 
 ## Changes
-1. Authorization
+1. **Authorization**
 
     Being able to control which clients can connect to a server is a useful feature in server management. More so when you allow clients to write data into your server, it is necessary to discriminate among clients based on whether they have write permissions or not. Originally, RingServer can discriminate client connections via manually written IP addresses in the server configuration file (see original `TrustedIP` configuration on original documentation). However, in citizen science application, there is no way to identify user IP address pre-connection since IP addresses are often dynamic and hidden behind Network Address Translation (NAT).
 
@@ -70,7 +70,7 @@ Lastly, this ring is treated as a shared memory between threads who write into a
 
    RingServer’s requesting token verification in behalf of a client should themselves also be registered through the Authentication API. This is done so as to maintain that all nodes (client or server) within the citizen science network are registered users that are all managed within the central Authentication Server.
 
-2. Redundant Connections
+2. **Redundant Connections**
 
    The dual nature of a DataLink connection allows for more complex network structures. Specifically in the citizen science network, a client can choose to send data to multiple publicly available RingServer’s which themselves can also forward their data to other RingServer’s. In such a scenario, a redundant connection is possible if a source of data establishes a direct and an indirect connection such as shown in [the diagram](link to diagram). Such a redundant connection is actually tolerated so as to improve network data resiliency and to allow more localized event detection(footnote: In the context of data processing softwares, a RingServer receiving data from a client geographically closer to it than another RingServer should be able to more quickly provide this data to a processor as compared to the other RingServer).
 
@@ -80,7 +80,7 @@ Lastly, this ring is treated as a shared memory between threads who write into a
 
    It should be mentioned that similar to the original RingServer, no packet re-ordering is performed in this fork. The packets that are coming are all received and written in the order they are received, with the difference that now we're dropping the packet if it fails the duplicate checking.
 
-3. Server-Sent-Events (SSE) Endpoints
+3. **Server-Sent-Events (SSE) Endpoints**
 
    Real-time monitoring of data and connection status is a useful feature in programs like the RingServer. The original implementation provided the `/streams` and `/connections` HTTP endpoints to serve stream data time ranges on the ring buffer and client connection diagnostics, respectively. These are available on a per-request basis, and hence if one wanted to perform real-time monitoring with these information, the simplest approach would be to perform polling on these endpoints.
 
@@ -148,7 +148,7 @@ Lastly, this ring is treated as a shared memory between threads who write into a
     \n\n
     ```
 
-4. Docker & Dependency Additions
+4. **Docker & Dependency Additions**
 
    The features added in this fork required additional dependencies, namely `jansson` and `curl`. We have opted to include these as built-in dependencies to simplify the process of building this forked version from source. This decision also makes it easier to build it into a docker image, which is particularly beneficial for our application, as we utilize Docker Compose for both development and deployment of our microservices.
 

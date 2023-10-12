@@ -1,32 +1,35 @@
 How to use FDSNWS to download ground motion data
 ------------------------------------------------------------
 
-## What is FDSNWS?
+### What is FDSNWS?
 
-fdsnws is a server that provides event and station information by FDSN Web Services from a SeisComP database and waveforms from a [RecordStream](https://www.seiscomp.de/doc/apps/global_recordstream.html#global-recordstream) source. Also it may be configured to serve data availability information.
+**FDSNWS** is a server that provides event and station information by FDSN Web Services from a SeisComP database and waveforms from a [RecordStream](https://www.seiscomp.de/doc/apps/global_recordstream.html#global-recordstream) source. Also it may be configured to serve data availability information.
 
-## Service Overview
+### Service Overview
 
 The following services are available:
 
 | Service | Provides | Provided format |
 | --- | --- | --- |
 | fdsnws-dataselect | time series data | miniSEED |
-| fdsnws-station | network, station, channel, response metadata | FDSN Station XML, StationXML, SCML |
-| fdsnws-event | earthquake origin and magnitude estimates | QuakeML, SCML |
+| fdsnws-station | network, station, channel, response metadata | FDSN Station XML, StationXML, SCML |
+| fdsnws-event | earthquake origin and magnitude estimates | QuakeML, SCML |
 | ext-availability | waveform data availability information | text, geocsv, json, sync, request (fdsnws-dataselect) |
+
+
 
 ### **DataSelect**
 
-### Purpose
+
+**Purpose:**
 
 To specify a web service interfaces for the exchange of time series data within the context of the International Federation of Digital Seismograph Networks (FDSN). The intention is to provide a specification that, when implemented at different FDSN data centers, can be used interchangeably by the same client software.
 
 - Provides time series data in miniSEED format
 - Request type: HTTP-GET, HTTP-POST
 
-### Service Methods
 
+**Service Methods:**
 The service should support these methods:
 
 - **query** – to submit a data request
@@ -34,22 +37,22 @@ The service should support these methods:
 - **version** – to request the full service version number
 - **application.wadl** – to request a WADL for the interface
 
-![Reference: https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf](https://prod-files-secure.s3.us-west-2.amazonaws.com/5f764407-9aec-438e-a113-422d896cf709/89dd3dc3-5785-452c-a21e-7d3285fce493/Untitled.png)
 
-Reference: https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf
+*Additional information for DataSelect [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf)*
+
 
 ### Station
 
-### Purpose
+**Purpose:**
 
 To specify a web service interface for the exchange of time series metadata within the context of the International Federation of Digital Seismograph Networks (FDSN). The intention is to provide a specification that, when implemented at different FDSN data centers, can be used interchangeably by the same client software.
 
 - Provides network, station, channel, response metadata
 - Request type: HTTP-GET, HTTP-POST
 - Stations may be filtered e.g. by geographic region and time, also the information depth level is selectable
-- Optionally handles time-based conditional HTTP-GET requests as specified by [RFC 7232](https://tools.ietf.org/html/rfc7232).
+- Optionally handles time-based conditional HTTP-GET requests as specified by [RFC 7232](https://tools.ietf.org/html/rfc7232).
 
-### Service methods
+**Service methods:**
 
 The service should support these methods:
 
@@ -57,13 +60,13 @@ The service should support these methods:
 - **version** – to request the full service version
 - **application.wadl** – to request a WADL for the interface
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/5f764407-9aec-438e-a113-422d896cf709/06b7a3b3-ce2a-496d-bc4c-852b7c193c9e/Untitled.png)
+[Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/5f764407-9aec-438e-a113-422d896cf709/06b7a3b3-ce2a-496d-bc4c-852b7c193c9e/Untitled.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/5f764407-9aec-438e-a113-422d896cf709/7bafc4f9-a8ad-40b4-a772-a72838dd5ffb/Untitled.png)
+[Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/5f764407-9aec-438e-a113-422d896cf709/7bafc4f9-a8ad-40b4-a772-a72838dd5ffb/Untitled.png)
 
 ### Event
 
-### Purpose
+**Purpose:**
 
 To specify a web service interface for the exchange of event parameter and related data within the context of the International Federation of Digital Seismograph Networks (FDSN). The intention is to
 provide a specification that, when implemented at different FDSN data centers, can be used interchangeably by the same client software.
@@ -72,10 +75,10 @@ provide a specification that, when implemented at different FDSN data centers, c
 - Request type: HTTP-GET
 - Events may be filtered e.g. by hypocenter, time and magnitude
 
-### Service Methods
+
+**Service methods:**
 
 The service should support these methods:
-
 - **query** – to submit a data request
 - **catalogs** – to submit a request for available catalogs
 - **contributors** – to submit a request for available contributors
@@ -88,14 +91,15 @@ The data availability web service returns detailed time span information of what
 
 The availability service is no official standard yet. This implementation aims to be compatible with the IRIS DMC availability FDSN Web Service (*IRIS DMC* [[12](https://www.seiscomp.de/doc/base/references.html#id135)]) implementation.
 
-### Purpose
+**Purpose:**
 
 To specify a web service interface for the exchange of time series data availability within the context of the International Federation of Digital Seismograph Networks (FDSN). The intention is to provide a specification that, when implemented at different FDSN data centers, can be used interchangeably by the same client software.
 
 - request type: HTTP-GET, HTTP-POST
 - results may be filtered e.g. by channel code, time and quality
 
-### Service Methods
+
+**Service Methods:**
 
 The following methods shall be supported by the service:
 
@@ -106,7 +110,9 @@ The following methods shall be supported by the service:
 - **version** – to request the full service version number
 - **application.wadl** – to request a WADL for the interface
 
-## How to Use FDSNWS (of our server) to Download Ground Motion Data and Station Metadata?
+-------------------------------------------------------
+
+### How to Use FDSNWS (of our server) to Download Ground Motion Data and Station Metadata?
 
 ### Downloading miniseed data:
 

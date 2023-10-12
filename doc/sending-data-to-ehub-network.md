@@ -29,7 +29,7 @@ For a citizen scientist to contribute their real-time Raspberry Shake data to th
 
 -----
 
-1. **Adding a Host:**
+3. **Adding a Host:**
    ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/80037186/2da5092e-f397-4319-b558-c9a295c53ad0)
 
    After having linked your device, you are now ready to send data to any available server on the network. This step will also be done via the [EarthquakeHub rShake client](rs.local:3000). To do this, click `Add Server` and choose your target ringserver  input the following details of the host you want to send your Raspberry Shake data to:

@@ -23,7 +23,6 @@ Sphinx is used to generate our project's documentation. To set up Sphinx and gen
 2. **Install Sphinx:** Use pip, the Python package manager, to install Sphinx. Run the following command in your terminal:
 ```
 pip install sphinx
-
 ```
 3.  **Download Additional Dependencies**
 
@@ -65,9 +64,7 @@ git clone https://github.com/your-project/repository.git
 
 ```
 cd repository/doc
-````
-
-=======
+```
 
 4. **Open the Documentation:** Depending on the format, you can access the documentation using a web browser for HTML-based documentation, or a text editor for Markdown, RST or other text-based formats.
 
@@ -78,34 +75,6 @@ To deploy your documentation on GitHub Pages, follow these steps:
 
 1. Configure GitHub Pages: In your Forked GitHub repository, go to the "Settings" tab and scroll down to the "GitHub Pages" section. Set the source branch to "gh-pages" and the "docs" folder. Save the changes.
 
-2. Access the Published Documentation: After a few moments, your documentation will be available at the URL mentioned in the GitHub Pages settings, typically in the format: https://<username>.github.io/<repository>/.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5. **View the Generated Documentation:**
-After the generation process is complete, you can open the generated HTML documentation in your web browser. It's typically located in the _build/html directory within the documentation folder.
-
-
-=======
 2. Access the Published Documentation: After a few moments, your documentation will be available at the URL mentioned in the GitHub Pages settings, typically in the format: https://<username>.github.io/<repository>/.
 
 

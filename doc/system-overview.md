@@ -1,5 +1,8 @@
-System Overview: Real-Time Sensor Data Collection and Processing
+System Overview
 =================================================================
+
+
+### Real-Time Sensor Data Collection and Processing
 
 ![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/79ff3d2c-b613-441b-8951-55d87b603bf1)
 

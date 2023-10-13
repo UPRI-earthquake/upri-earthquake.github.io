@@ -3,7 +3,7 @@ Developer Guide\: Contributing
 
 
 ## Git Workflow
-For all repositories in the EarthquakeHub suite, the following guidelines are used for developer contributions. However, make sure to also check the CONTRIBUTING.md of the specific repository you're contributing to.
+For all repositories in the EarthquakeHub suite, the following guidelines are used for developer contributions. However, make sure to also check the *CONTRIBUTING.md* of the specific repository you're contributing to.
 
 ## 1. Create New Branch from `dev`
 

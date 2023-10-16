@@ -1,4 +1,4 @@
-How to Use FDSNWS to Download Ground Motion Data
+How to Use FDSNWS to Download Ground Motion Data and Metadata
 ===============================================
 
 ### Introduction
@@ -31,7 +31,7 @@ More information about DataSelect [here](https://www.fdsn.org/webservices/fdsnws
 #### Event
 This service is designed to provide access to information about seismic events.
 
-Here are the following data you can gather from ```event``` service
+Here are the following data you can gather from the ```event``` service
 
 1. ***Earthquake Information:*** The event service gives you details about specific seismic events, particularly earthquakes. This includes where they happened, how strong they were, and when they occurred.
 
@@ -41,38 +41,101 @@ Here are the following data you can gather from ```event``` service
 
 More information about Event [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf)
 
+### Obtaining the Data
 
-### Steps to Download Ground Motion Data
+#### Steps to Download Ground Motion Data
 
-To obtain the Ground Motion Data, we will be using the "dataselect" service.
+To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
 
 1. Access the [UPRI Earthquake Hub SeisComP FDSNWS Web Service](https://earthquake.science.upd.edu.ph/fdsnws/)
 2. Choose the ```dataselect/``` web service
-**<PHOTO HERE>**
-
+**PHOTO HERE**
 3. Proceed by choosing ```1/```
-
-4. Select builder from the options to proceed to the URL Builder where you will input your information request.
-
+4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 5. Specify the parameters of the data you want to download. This includes:
-<time format>
+- **Network Code:** The abbreviation for the seismological network.
+- **Station Code:** The code for the specific seismic station.
+- **Location Code:** A two-character code specifying the location of the instrument at the station (usually "00" for the main channel).
+- **Channel Code:** The code for the specific channel of data (e.g., "BHZ" for a broadband horizontal component).
+- **Start Time:** The beginning time for the data you want. This cannot be the date at present or future.
+- **End Time:** The end time for the data you want.
 
-**Network Code:** The abbreviation for the seismological network.
-**Station Code:** The code for the specific seismic station.
-**Location Code:** A two-character code specifying the location of the instrument at the station (usually "00" for the main channel).
-**Channel Code:** The code for the specific channel of data (e.g., "BHZ" for a broadband horizontal component).
-**Start Time:** The beginning time for the data you want. This cannot be the date at present or future.
-**End Time:** The end time for the data you want.
+Refer [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf) for the query guide.
 
-> **_NOTE:_** The time is formatted **YYYY-MM-DDT-HH-MM-SS** The date and time is separated by the "T". The time is in 24-Hour (military time format).
+> **_NOTE:_** The time is formatted **YYYY-MM-DDT-HH-MM-SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
 
-> For example, we wanted to to obtain data starting from ``` October 11, 2023 at 11:30 pm till October 15, 2023 11:30 am``` start and end time should be ```2023-10-11T-23:30:00 and 2023-10-15T-11:30:00``` respectively.
+> For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30``` pm till ```October 15, 2023 11:30 am``` start time should be ```2023-10-11T-23:30:00``` and end time should be ```2023-10-15T-11:30:00```
 
-**Data Format:** For Ground Motion, the data is in **miniseed** format
+- **Data Format:** For Ground Motion, the data is in **miniseed** format
 
 5. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
+
+
+**PHOTO HERE**
+
+#### Steps to Download Metadata
+
+To obtain the Metadata, we will be using the ```event``` service.
+
+1. Access the [UPRI Earthquake Hub SeisComP FDSNWS Web Service](https://earthquake.science.upd.edu.ph/fdsnws/)
+2. Choose the ```event/``` web service
 **<PHOTO HERE>**
+3. Proceed by choosing ```1/```
+4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
+
+5. Specify the parameters of the data you want to download.
+This includes:
+
+1. Start Time and End Time:
+
+    - ```starttime```:Specifies the beginning time for the search
+    - ```endtime```: Specifies the end time for the search
+
+    > **_NOTE:_** The time is formatted **YYYY-MM-DDT-HH-MM-SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
+
+> For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30``` pm till ```October 15, 2023 11:30 am``` start time should be ```2023-10-11T-23:30:00``` and end time should be ```2023-10-15T-11:30:00```
+
+2. Geographical Region:
+
+    - ```minlatitude```: Defines the minimum latitude (southern boundary) for the search area.
+    - ```maxlatitude```: Defines the maximum latitude (northern boundary) for the search area.
+    - ```minlongitude```: Specifies the minimum longitude (western boundary) for the search area.
+    - ```maxlongitude```: Specifies the maximum longitude (eastern boundary) for the search area.
+
+3. Magnitude Range:
+
+    - ```minmagnitude```: Sets the minimum magnitude of the seismic events you want to retrieve.
+    - ```maxmagnitude```: Sets the maximum magnitude of the seismic events you want to retrieve.
+
+4. Event Depth Range:
+
+    - ```mindepth```: Specifies the minimum depth of the seismic events you want to retrieve.
+    - ```maxdepth```: Specifies the maximum depth of the seismic events you want to retrieve.
+
+5. Event Type:
+
+    - ```type```: Specifies the type of seismic events you're interested in, e.g., "earthquake," "explosion," "nuclear explosion," etc.
+
+6. Event ID:
+
+    - ```eventid```: Allows you to specify the unique identifier for a particular event.
+
+7. Catalog and Contributor:
+
+    - ```catalog```: Filters events based on the catalog they are part of.
+    - ```contributor```: Filters events based on the organization or entity that contributed the data.
+
+8. Event Limit:
+
+    - ```limit```: Sets the maximum number of events to return in the search results.
+
+Refer [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf) for the query guide
+
+
+5. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
+
+**PHOTO HERE**
 
 
 
@@ -80,29 +143,27 @@ To obtain the Ground Motion Data, we will be using the "dataselect" service.
 
 
 
--dataselect
-discuss the type of data
 
--event
 
--screenshots
 
-2. Select Data Parameters
-Specify the parameters of the data you want to download. This includes:
-<time format>
 
-**Network Code:** The abbreviation for the seismological network.
-**Station Code:** The code for the specific seismic station.
-**Location Code:** A two-character code specifying the location of the instrument at the station (usually "00" for the main channel).
-**Channel Code:** The code for the specific channel of data (e.g., "BHZ" for a broadband horizontal component).
-**Start Time:** The beginning time for the data you want.
-**End Time:** The end time for the data you want.
-**Data Format:** Choose the format you want the data in (MiniSEED).
 
-3. Access the FDSNWS Query
-Access the query URL written below the page **url sa fdsnws**
 
-**url**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 4. Use Software or Libraries
 You can use various software tools or libraries to retrieve data using the constructed query URL. Commonly used options include: **obspy**

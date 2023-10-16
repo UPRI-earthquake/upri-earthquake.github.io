@@ -26,7 +26,7 @@ Here are the following data you can gather from ```dataselect``` service
 3. ***Instrument Info:*** This service can also provide information about the tools (instruments) used to capture this seismic data. Understanding these instruments is crucial for correctly interpreting and using the data.
 
 
-More information about DataSelect [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf)
+More information about DataSelect service [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf)
 
 #### Event
 This service is designed to provide access to information about seismic events.
@@ -39,10 +39,12 @@ Here are the following data you can gather from the ```event``` service
 
 3. ***Station Details:*** This service also offers information about the stations that recorded data for a specific event. This helps in verifying the data's reliability and its sources.
 
-More information about Event [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf)
+More information about Event service [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf)
 
 ### Obtaining the Data
 
+
+/
 #### Steps to Download Ground Motion Data
 
 To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
@@ -53,26 +55,48 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 **PHOTO HERE**
 3. Proceed by choosing ```1/```
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
-5. Specify the parameters of the data you want to download. This includes:
-- **Network Code:** The abbreviation for the seismological network.
-- **Station Code:** The code for the specific seismic station.
-- **Location Code:** A two-character code specifying the location of the instrument at the station (usually "00" for the main channel).
-- **Channel Code:** The code for the specific channel of data (e.g., "BHZ" for a broadband horizontal component).
-- **Start Time:** The beginning time for the data you want. This cannot be the date at present or future.
-- **End Time:** The end time for the data you want.
+5. Specify the parameters of the data you want to download.
+  This includes:
+
+    - **Network and Station Information:**
+
+        - ```network```: Specifies the network code, which represents the seismological network you want data from.
+        - ```station```: Defines the station code, which identifies a specific seismic station.
+        - ```location```: Specifies the location code, typically a two-character code representing the location of the instrument at the station.
+      - ```channel```: Specifies the channel code, which identifies a specific data channel (e.g., "BHZ" for a broadband horizontal component).
+
+    - **Time Window:**
+
+        - ```starttime```: Specifies the beginning time of the data you want to retrieve, in the format "YYYY-MM-DDTHH:MM:SS."
+        - ```endtime```: Specifies the end time of the data you want to retrieve, also in the format "YYYY-MM-DDTHH:MM:SS."
+
+        > **_NOTE:_** The time is formatted **YYYY-MM-DDT-HH-MM-SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
+
+        > For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30``` pm till ```October 15, 2023 11:30 am``` start time should be ```2023-10-11T-23:30:00``` and end time should be ```2023-10-15T-11:30:00```
+
+    - **Data Format:**
+        - ```format```: Specifies the format in which you want to receive the data. The ground data is in **miniseed** format
+
+    - **Data Availability and Quality**:
+        - availability: Allows you to filter data based on its availability (e.g., "available," "not available," "all").
+        - quality: Filters data based on its quality (e.g., "D," "M," "Q," "R").
+
+    - **Data Limit:**
+        -  ```limit```: Sets the maximum number of data segments to return in the search results. This parameter is useful for limiting the amount of data you receive in a single request.
+    - Time Correction:
+        - ```updatedAfter```: Specifies the last time the data was updated. It allows you to request data that has been updated or added after a certain timestamp.
 
 Refer [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf) for the query guide.
 
-> **_NOTE:_** The time is formatted **YYYY-MM-DDT-HH-MM-SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
 
-> For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30``` pm till ```October 15, 2023 11:30 am``` start time should be ```2023-10-11T-23:30:00``` and end time should be ```2023-10-15T-11:30:00```
-
-- **Data Format:** For Ground Motion, the data is in **miniseed** format
 
 5. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
 
 
 **PHOTO HERE**
+
+
+
 
 #### Steps to Download Metadata
 
@@ -87,46 +111,46 @@ To obtain the Metadata, we will be using the ```event``` service.
 5. Specify the parameters of the data you want to download.
 This includes:
 
-    a. Start Time and End Time:
+    - **Start Time and End Time**:
 
         - ```starttime```:Specifies the beginning time for the search
         - ```endtime```: Specifies the end time for the search
 
         > **_NOTE:_** The time is formatted **YYYY-MM-DDT-HH-MM-SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
 
-    > For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30``` pm till ```October 15, 2023 11:30 am``` start time should be ```2023-10-11T-23:30:00``` and end time should be ```2023-10-15T-11:30:00```
+         > For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30``` pm till ```October 15, 2023 11:30 am``` start time should be ```2023-10-11T-23:30:00``` and end time should be ```2023-10-15T-11:30:00```
 
-    b. Geographical Region:
+    - Geographical Region:
 
         - ```minlatitude```: Defines the minimum latitude (southern boundary) for the search area.
         - ```maxlatitude```: Defines the maximum latitude (northern boundary) for the search area.
         - ```minlongitude```: Specifies the minimum longitude (western boundary) for the search area.
         - ```maxlongitude```: Specifies the maximum longitude (eastern boundary) for the search area.
 
-    c. Magnitude Range:
+    - Magnitude Range:
 
         - ```minmagnitude```: Sets the minimum magnitude of the seismic events you want to retrieve.
         - ```maxmagnitude```: Sets the maximum magnitude of the seismic events you want to retrieve.
 
-    d. Event Depth Range:
+    - Event Depth Range:
 
         - ```mindepth```: Specifies the minimum depth of the seismic events you want to retrieve.
         - ```maxdepth```: Specifies the maximum depth of the seismic events you want to retrieve.
 
-    e. Event Type:
+    - Event Type:
 
         - ```type```: Specifies the type of seismic events you're interested in, e.g., "earthquake," "explosion," "nuclear explosion," etc.
 
-    f. Event ID:
+    - Event ID:
 
         - ```eventid```: Allows you to specify the unique identifier for a particular event.
 
-    g. Catalog and Contributor:
+    - Catalog and Contributor:
 
         - ```catalog```: Filters events based on the catalog they are part of.
         - ```contributor```: Filters events based on the organization or entity that contributed the data.
 
-    h. Event Limit:
+    - Event Limit:
 
         - ```limit```: Sets the maximum number of events to return in the search results.
 

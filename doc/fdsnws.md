@@ -4,9 +4,9 @@ How to Use FDSNWS to Download Ground Motion Data and Metadata
 ### Introduction
 **FDSNWS** (Federation of Digital Seismograph Networks Web Services) is a set of web services that allow users to access and retrieve seismic data from various seismological networks and data centers. This documentation will guide you through the process of using FDSNWS to download ground motion data and its metadeta from the UPRI EarthquakeHub Network. Understanding the distinction among these two is essential to make interpretations more significant. In the context of FDSNWS,
 
-**Data:** This is the actual seismic information you're interested in, like the earthquake measurements, shaking patterns, and seismograph readings.
+    **Data:** This is the actual seismic information you're interested in, like the earthquake measurements, shaking patterns, and seismograph readings.
 
-**Metadata:** Metadata in FDSNWS provides important details about the data. It includes information such as when and where the seismic event occurred, how strong it was, and the equipment used to record the data. Think of metadata as helpful labels that give you context and understanding about the seismic data you're looking at.
+    **Metadata:** Metadata in FDSNWS provides important details about the data. It includes information such as when and where the seismic event occurred, how strong it was, and the equipment used to record the data. Think of metadata as helpful labels that give you context and understanding about the seismic data you're looking at.
 
 ### Service Overview
 
@@ -87,50 +87,50 @@ To obtain the Metadata, we will be using the ```event``` service.
 5. Specify the parameters of the data you want to download.
 This includes:
 
-1. Start Time and End Time:
+    a. Start Time and End Time:
 
-    - ```starttime```:Specifies the beginning time for the search
-    - ```endtime```: Specifies the end time for the search
+        - ```starttime```:Specifies the beginning time for the search
+        - ```endtime```: Specifies the end time for the search
 
-    > **_NOTE:_** The time is formatted **YYYY-MM-DDT-HH-MM-SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
+        > **_NOTE:_** The time is formatted **YYYY-MM-DDT-HH-MM-SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
 
-> For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30``` pm till ```October 15, 2023 11:30 am``` start time should be ```2023-10-11T-23:30:00``` and end time should be ```2023-10-15T-11:30:00```
+    > For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30``` pm till ```October 15, 2023 11:30 am``` start time should be ```2023-10-11T-23:30:00``` and end time should be ```2023-10-15T-11:30:00```
 
-2. Geographical Region:
+    b. Geographical Region:
 
-    - ```minlatitude```: Defines the minimum latitude (southern boundary) for the search area.
-    - ```maxlatitude```: Defines the maximum latitude (northern boundary) for the search area.
-    - ```minlongitude```: Specifies the minimum longitude (western boundary) for the search area.
-    - ```maxlongitude```: Specifies the maximum longitude (eastern boundary) for the search area.
+        - ```minlatitude```: Defines the minimum latitude (southern boundary) for the search area.
+        - ```maxlatitude```: Defines the maximum latitude (northern boundary) for the search area.
+        - ```minlongitude```: Specifies the minimum longitude (western boundary) for the search area.
+        - ```maxlongitude```: Specifies the maximum longitude (eastern boundary) for the search area.
 
-3. Magnitude Range:
+    c. Magnitude Range:
 
-    - ```minmagnitude```: Sets the minimum magnitude of the seismic events you want to retrieve.
-    - ```maxmagnitude```: Sets the maximum magnitude of the seismic events you want to retrieve.
+        - ```minmagnitude```: Sets the minimum magnitude of the seismic events you want to retrieve.
+        - ```maxmagnitude```: Sets the maximum magnitude of the seismic events you want to retrieve.
 
-4. Event Depth Range:
+    d. Event Depth Range:
 
-    - ```mindepth```: Specifies the minimum depth of the seismic events you want to retrieve.
-    - ```maxdepth```: Specifies the maximum depth of the seismic events you want to retrieve.
+        - ```mindepth```: Specifies the minimum depth of the seismic events you want to retrieve.
+        - ```maxdepth```: Specifies the maximum depth of the seismic events you want to retrieve.
 
-5. Event Type:
+    e. Event Type:
 
-    - ```type```: Specifies the type of seismic events you're interested in, e.g., "earthquake," "explosion," "nuclear explosion," etc.
+        - ```type```: Specifies the type of seismic events you're interested in, e.g., "earthquake," "explosion," "nuclear explosion," etc.
 
-6. Event ID:
+    f. Event ID:
 
-    - ```eventid```: Allows you to specify the unique identifier for a particular event.
+        - ```eventid```: Allows you to specify the unique identifier for a particular event.
 
-7. Catalog and Contributor:
+    g. Catalog and Contributor:
 
-    - ```catalog```: Filters events based on the catalog they are part of.
-    - ```contributor```: Filters events based on the organization or entity that contributed the data.
+        - ```catalog```: Filters events based on the catalog they are part of.
+        - ```contributor```: Filters events based on the organization or entity that contributed the data.
 
-8. Event Limit:
+    h. Event Limit:
 
-    - ```limit```: Sets the maximum number of events to return in the search results.
+        - ```limit```: Sets the maximum number of events to return in the search results.
 
-Refer [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf) for the query guide
+    Refer [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf) for the query guide
 
 
 5. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.

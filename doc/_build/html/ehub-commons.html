@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>earthquake-hub-commons &mdash; UPRI EarthquakeHub 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="earthquake-hub-backend" href="ehub-backend/overview.html" />
+    <link rel="prev" title="System Overview" href="system-overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            UPRI EarthquakeHub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="connect-to-rshake.html">How to Connect to Your Raspberry Shake via SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing-rshake-client.html">Installing EarthquakeHub Client on Raspberry Shake</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sending-data-to-ehub-network.html">Sending Data to EarthquakeHub Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fdsnws.html">How to Use FDSNWS to Download Ground Motion Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro-to-seiscomp.html">Introduction To SeisComp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev-guide-contributing.html">Developer Guide: Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker-cheatsheet.html">Developer Guide: Docker Cheatsheet</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="system-overview.html">System Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">earthquake-hub-commons</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-the-earthquake-hub-commons-intended-for">What is the earthquake-hub-commons intended for</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#server-deployment-via-docker-compose">Server Deployment via Docker Compose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interfacing-with-a-processor">Interfacing with a processor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#seiscomp">SeisComP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#backend-endpoints-and-python-scripts">Backend Endpoints and Python Scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mongodb-and-data-population">MongoDB and Data Population</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ehub-backend/overview.html">earthquake-hub-backend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sender-backend/overview.html">sender-backend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ringserver.html">RingServer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slink2dali.html">Slink2Dali</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">UPRI EarthquakeHub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">earthquake-hub-commons</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/ehub-commons.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="earthquake-hub-commons">
+<h1>earthquake-hub-commons<a class="headerlink" href="#earthquake-hub-commons" title="Link to this heading"></a></h1>
+<section id="what-is-the-earthquake-hub-commons-intended-for">
+<h2>What is the earthquake-hub-commons intended for<a class="headerlink" href="#what-is-the-earthquake-hub-commons-intended-for" title="Link to this heading"></a></h2>
+<p>This repository integrates all the essential programs necessary for hosting a citizen science network of ground motion sensors<a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>  It enables data transmission, archiving, and allows feeding the network data to earthquake detection softwareo<a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.
+A version of this repository is deployed live on <a class="reference external" href="https://earthquake.science.upd.edu.ph">earthquake.science.upd.edu.ph</a></p>
+</section>
+<section id="server-deployment-via-docker-compose">
+<h2>Server Deployment via Docker Compose<a class="headerlink" href="#server-deployment-via-docker-compose" title="Link to this heading"></a></h2>
+<p>There are two different docker-compose files written for two scenarios, <em>(1)</em> for <em>deploying in a server</em> and <em>(2)</em> for <em>development/testing</em> in your local machine.</p>
+<ol class="arabic">
+<li><p><strong>Clone the repository:</strong> Begin by cloning <a class="reference external" href="https://github.com/UPRI-earthquake/earthquake-hub-commons.git">this repository</a> to your local machine using the git clone command.</p></li>
+<li><p><strong>Install Docker:</strong> Make sure you have <a class="reference external" href="https://docs.docker.com/get-docker/">Docker</a> installed on your system. Docker Compose is essential for managing multi-container Docker applications.</p></li>
+<li><p><strong>Configure env variables:</strong> Create a file named .env in the root of the repository, and add the necessary configuration variables. You can find an example of these variables in the .env.example file.</p></li>
+<li><p><strong>Set up nginx certificates:</strong> For this, there will be another series of steps to be done. These steps will only be done during development/testing to replicate the deployment server enviroment into your local machine; to ensure that you have valid SSL certificates for Nginx.</p>
+<ul>
+<li><p>Create a locally trusted self-signed SSL certificate (you may use <a class="reference external" href="https://www.howtoforge.com/how-to-create-locally-trusted-ssl-certificates-with-mkcert-on-ubuntu/">mkcert</a> to do this). And store the <code class="docutils literal notranslate"><span class="pre">pem</span></code> files in <code class="docutils literal notranslate"><span class="pre">https_data/certbot/conf/live/&lt;server-name&gt;/</span></code></p></li>
+<li><p>Configure the <a class="reference internal" href="#https_data/nginx.dep-test.d/nginx.dep-test.conf"><span class="xref myst">nginx configuration file</span></a>:</p>
+<blockquote>
+<div><p>ℹ️ If you name your <code class="docutils literal notranslate"><span class="pre">pem</span></code> files as <code class="docutils literal notranslate"><span class="pre">localhost.pem</span></code> and <code class="docutils literal notranslate"><span class="pre">localhost-key.pem</span></code>, and then store them in the folder <code class="docutils literal notranslate"><span class="pre">https_data/certbot/conf/live/localhost/</span></code>, then you shouldn’t have to alter the nginx configuration file.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">server_name</span></code> must match the one set for the certificates</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl_certificate</span></code> and <code class="docutils literal notranslate"><span class="pre">ssl_certificate_key</span></code> should both correspond to the location and filenames of the previously generated <code class="docutils literal notranslate"><span class="pre">pem</span></code> files.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Create MongoDB volume:</strong> Run the following command to create a docker volume for mongodb data:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>earthquake-hub-mongodb-data
+</pre></div>
+</div>
+</li>
+<li><p><strong>Run the containers:</strong> Once the setup is configured, run the following Docker Compose command to start all the necessary containers:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>--env-file<span class="w"> </span>.dep-test.env<span class="w"> </span>up<span class="w"> </span>--build
+</pre></div>
+</div>
+<blockquote>
+<div><p>ℹ️ <strong><em>NOTE:</em></strong> If ever you encounter an error saying you are unauthorized to pull image, follow this guide on how to <a class="reference external" href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic">authenticate with personal access token from <code class="docutils literal notranslate"><span class="pre">ghcr.io</span></code></a>.</p>
+<p>ℹ️ <strong><em>NOTE:</em></strong> To get the certificates using <code class="docutils literal notranslate"><span class="pre">certbot</span></code>, First up the nginx-proxy container but with the https server in the nginx.conf file commented out. Second, fill this in via certbot: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">run</span> <span class="pre">--rm</span>&#160; <span class="pre">certbot</span> <span class="pre">certonly</span> <span class="pre">--webroot</span> <span class="pre">--webroot-path</span> <span class="pre">/var/www/certbot/</span> <span class="pre">-d</span> <span class="pre">&lt;your-webapp-url&gt;.org</span> <span class="pre">.</span></code>. Lastly, add the 443 (or https) config for the nginx and restart that container.
+Within a few months, the certificate will expire. To renew using certbot, use docker compose run –rm certbot renew</p>
+</div></blockquote>
+<p>The docker compose command will start the following containers:</p>
+<ul>
+<li><p><strong>Nginx Proxy:</strong> This acts as a reverse proxy server which handles incoming HTTP/HTTPS traffic and distributes it to the corresponding services within the Docker network.</p></li>
+<li><p><strong>Earthquake-hub-frontend:</strong> This hosts the front-end application for the earthquake-hub network which serves the user interface and interacts with the backend services to display data and handle user requests.</p></li>
+<li><p><strong>Earthquake-hub-backend:</strong> This hosts the back-end application for the earthquake-hub network. It handles various functionalities, such as user authentication, data processing, and database interactions, to support the front-end application and process incoming data from the sensors.</p></li>
+<li><p><strong>MongoDB:</strong> This is a NoSQL database used to store and manage data, such as account information, device information, and recorded seismic events, within the earthquake-hub network.</p></li>
+<li><p><strong>Ringserver:</strong> This is a TCP-based ring buffer designed for packetized streaming data which utilizes time-series data from various station, archive seismic data, and serve those data (or diagnostics of such data) towards the clients.</p></li>
+<li><p>*<strong>Certbot:</strong> This is a tool used to automatically obtain and manage SSL/TLS certificates from the Let’s Encrypt Certificate Authority that provides valid SSL certificate for the server’s domain which ensures secure communication between the server and its clients. You may refer to this <a class="reference external" href="https://mindsers.blog/post/https-using-nginx-certbot-docker/">post</a> on how to request SSL certificate using docker compose.</p>
+<ul>
+<li><p>ℹ️ <strong><em>NOTE:</em></strong> that Certbot needs to be renewed <code class="docutils literal notranslate"><span class="pre">every</span> <span class="pre">three</span> <span class="pre">(3)</span> <span class="pre">months</span></code> to keep the certificates valid and up-to-date. Certificate renewal process can easily be done using the following command:*</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>certbot<span class="w"> </span>renew
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>*<strong>Geoserve:</strong> This is a service that provides geographic information for the earthquake-hub network. It is used to convert latitude and longitude values into names of places, such as their city name, region, and country name.</p>
+<blockquote>
+<div><p>ℹ️ <strong><em>NOTE:</em></strong>  that Certbot and Geoserve are not used in local development/testing. The two will only be run using the docker compose which is intended for deploying in a server.
+** Certbot needs to renew the SSL certificates every three (3) months.</p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>Configure ringserver:</strong> Make sure that ringserver-configs/auth/secret.key exists (contains brgy token to AuthServer). Then set the <em>AuthServer</em> value in ringserver-configs/ring.conf to the AuthServer API address (i.e. http://172.21.0.3:5000 or https://earthquake.science.upd.edu.ph/api).</p>
+<ul>
+<li><p>You may use curl to request an accessToken using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;username&quot;: &quot;&lt;USERNAME&gt;&quot;,&quot;password&quot;: &quot;&lt;PASSWORD&gt;&quot;,&quot;role&quot;: &quot;brgy&quot;}&#39;</span><span class="w"> </span>https://&lt;EARTHQUAKE-HUB-BACKEND-URL&gt;/accounts/authenticate
+</pre></div>
+</div>
+</li>
+<li><p>or you may use Postman to send a POST request to <code class="docutils literal notranslate"><span class="pre">/accounts/authenticate</span></code> endpoint of the <code class="docutils literal notranslate"><span class="pre">earthquake-hub-backend</span></code> url with the the following body:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w"> </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;USERNAME&gt;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;PASSWORD&gt;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;brgy&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>Please change the <code class="docutils literal notranslate"><span class="pre">&lt;USERNAME&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;PASSWORD&gt;</span></code> parameters with your credentials.</p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="interfacing-with-a-processor">
+<h2>Interfacing with a processor<a class="headerlink" href="#interfacing-with-a-processor" title="Link to this heading"></a></h2>
+<section id="seiscomp">
+<h3>SeisComP<a class="headerlink" href="#seiscomp" title="Link to this heading"></a></h3>
+<p>The earthquake-hub-commons repository allows easy interfacing with earthquake processing softwares such as SeisComP (Seismic Communication Processor) which is a widely used earthquake detection  and seismic data processing software.
+SeisComP is a collection of <em>software modules</em> used to for seismic data transmission, processing, analysis, monitoring, and archiving. These functions can be done in both real-time and offline.
+For further information about SeisComP check this <a class="reference external" href="https://www.seiscomp.de/doc/index.html">overview</a> on how to get started with SeisComP.</p>
+</section>
+<section id="backend-endpoints-and-python-scripts">
+<h3>Backend Endpoints and Python Scripts<a class="headerlink" href="#backend-endpoints-and-python-scripts" title="Link to this heading"></a></h3>
+<p>This repository exposes two Server-Sent-Event endpoints (<code class="docutils literal notranslate"><span class="pre">/messaging/restricted/new-pick</span></code> and <code class="docutils literal notranslate"><span class="pre">/messaging/restricted/new-event</span></code>) and run two Python scripts to interact with the processor. The two python scripts are run as systemd services which publish <code class="docutils literal notranslate"><span class="pre">pick</span> <span class="pre">events</span></code> and <code class="docutils literal notranslate"><span class="pre">recorded</span> <span class="pre">seismic</span> <span class="pre">events</span></code> from SeisComP to the aforementioned endpoints.</p>
+</section>
+<section id="mongodb-and-data-population">
+<h3>MongoDB and Data Population<a class="headerlink" href="#mongodb-and-data-population" title="Link to this heading"></a></h3>
+<p>We have included scripts to help initialize mongodb’s <code class="docutils literal notranslate"><span class="pre">events</span></code> collection with SeisComP event data in the scenario that you have an existing record of SeisComP detections that you want to migrate into your instance of EarthquakeHub.</p>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>such as but not limited to raspberryshakes</p>
+</aside>
+<aside class="footnote brackets" id="id4" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>such as but not limited to SeisComP</p>
+</aside>
+</aside>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="system-overview.html" class="btn btn-neutral float-left" title="System Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ehub-backend/overview.html" class="btn btn-neutral float-right" title="earthquake-hub-backend" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPRI.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Guide: Docker Cheatsheet &mdash; UPRI EarthquakeHub 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="System Overview" href="system-overview.html" />
+    <link rel="prev" title="Developer Guide: Contributing" href="dev-guide-contributing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            UPRI EarthquakeHub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Tutorial</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="connect-to-rshake.html">How to Connect to Your Raspberry Shake via SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing-rshake-client.html">Installing EarthquakeHub Client on Raspberry Shake</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sending-data-to-ehub-network.html">Sending Data to EarthquakeHub Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fdsnws.html">How to Use FDSNWS to Download Ground Motion Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro-to-seiscomp.html">Introduction To SeisComp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev-guide-contributing.html">Developer Guide: Contributing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Guide: Docker Cheatsheet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#docker-cheat-sheet">Docker Cheat Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#concept">Concept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docker-commands">Docker commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docker-compose-commands">Docker Compose commands</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="system-overview.html">System Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ehub-commons.html">earthquake-hub-commons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ehub-backend/overview.html">earthquake-hub-backend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sender-backend/overview.html">sender-backend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ringserver.html">RingServer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slink2dali.html">Slink2Dali</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">UPRI EarthquakeHub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Developer Guide: Docker Cheatsheet</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/docker-cheatsheet.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="developer-guide-docker-cheatsheet">
+<h1>Developer Guide: Docker Cheatsheet<a class="headerlink" href="#developer-guide-docker-cheatsheet" title="Link to this heading"></a></h1>
+<section id="docker-cheat-sheet">
+<h2>Docker Cheat Sheet<a class="headerlink" href="#docker-cheat-sheet" title="Link to this heading"></a></h2>
+<p>Docker containerization is used heavily in the EarthquakeHub software suite for both development and deployment. The main reason for this is that it provides a uniform environment among developers (ie. Linux vs Windows vs macOS) and across deployment servers (ie. one container is run on a raspberry pi while another is run on an actual server). The following are a summary of important details to get you up to speed with using docker.</p>
+</section>
+<section id="concept">
+<h2>Concept<a class="headerlink" href="#concept" title="Link to this heading"></a></h2>
+<p>To have a better understanding of the commands, it is important to have the correct mental model of what containerization is. A sufficient model is to think of it as running a computer that is inside your computer, similar to how you can run a Windows virtual machine within your Linux computer. In this context we call the virtual machine the “container” and your real computer as the “host.”</p>
+<p>To be able to create a container, we first have to define what OS it runs, what packages it initially comes with, and other configurations. You can think of this to be similar to an installer disk/image of an operating system (ie Windows XP installer disk), which you can feed into your computer to create as many virtual machines as you want. In the context of containerization, we call this an “image,” specifically in docker, an image is defined in a Dockerfile. The Dockerfile is the source code of the image and is where the configurations for the image are defined.</p>
+<p>Once you have a <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code>, which you can <em>build</em> into an <code class="docutils literal notranslate"><span class="pre">image</span></code>, and from which you can create <code class="docutils literal notranslate"><span class="pre">container</span></code> instances, you can now run these containers on your host. This is similar to powering up a virtual machine. Depending on the Dockerfile or the command you used to run the container, certain programs can be made to run inside the container. These can be a nodejs server, a terminal prompt, or as simple as a short program that prints <a class="reference external" href="https://hub.docker.com/_/hello-world">“Hello from Docker!”</a>. An important concept to realize is that  you can enter a running container and perform normal terminal commands from inside it (see <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">exec</span> <span class="pre">..</span> <span class="pre">sh</span></code> below), similar to how you can perform tasks from within a virtual machine.</p>
+<p>Finally, when you are running microservices (ie. a set of containers that each runs a single program for you system, for instance, one is running only the database, another is the HTTP server, while another is a data processing engine), it can be a challenge to orchestrate and manage these individual containers. This is where <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span></code> comes in. Specifically, you can define a set of services inside <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> file. And in this file, you can set <a class="reference external" href="https://docs.docker.com/network/">how they communicate</a>, <a class="reference external" href="https://docs.docker.com/storage/volumes/">how they can share file storages</a>, and etc. By doing this, you can essentially treat the multiple containers as a group, instead of manually running and connecting each other containers. The convenience commands to interact with the group of containers defined in the <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> file all begin with <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span></code>. In contrast, when interacting with only a single container, single image, etc, the command only begines with <code class="docutils literal notranslate"><span class="pre">docker</span></code>.</p>
+</section>
+<section id="docker-commands">
+<h2>Docker commands<a class="headerlink" href="#docker-commands" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span> <span class="pre">-t</span> <span class="pre">&lt;image-name&gt;</span> <span class="pre">&lt;path-to-dockerfile&gt;</span></code></p>
+<ul class="simple">
+<li><p>Build a Docker image from the specified Dockerfile at the given path and tag it with the provided image name.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">buildx</span> <span class="pre">build</span> <span class="pre">--platform</span> <span class="pre">&lt;platform-name&gt;</span> <span class="pre">-t</span> <span class="pre">&lt;image-name&gt;</span> <span class="pre">&lt;path-to-dockerfile&gt;</span></code></p>
+<ul class="simple">
+<li><p>Build a platform-specific Docker image from the specified Dockerfile, targeting the given platform name, and tag it with the provided image name.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">&lt;container-name&gt;</span> <span class="pre">&lt;image-name&gt;</span></code></p>
+<ul class="simple">
+<li><p>Create and runs a new container from the specified image, giving it the provided container name.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-it</span> <span class="pre">--rm</span> <span class="pre">&lt;image-name&gt;</span></code></p>
+<ul class="simple">
+<li><p>Create a default-named container, run it interactively (you’ll be inside the container), and delete it once done (when you press ctrl+c).</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">exec</span> <span class="pre">-it</span> <span class="pre">&lt;container-name&gt;</span> <span class="pre">sh</span></code></p>
+<ul class="simple">
+<li><p>Enter the running container’s shell interactively (e.g., bash, sh) for manual debugging or running commands inside the container.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">inspect</span> <span class="pre">&lt;container-name&gt;</span></code></p>
+<ul class="simple">
+<li><p>Display detailed information about the specified container, including its configuration and network settings.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">inspect</span> <span class="pre">&lt;image-name&gt;</span></code></p>
+<ul class="simple">
+<li><p>Display detailed information about the specified image, including its layers, tags, and associated containers.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">logs</span> <span class="pre">-f</span> <span class="pre">&lt;container-name&gt;</span></code></p>
+<ul class="simple">
+<li><p>Displays the real-time logs of the specified container, and the <code class="docutils literal notranslate"><span class="pre">-f</span></code> flag follows the log output as it continues.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">ps</span> <span class="pre">-a</span></code></p>
+<ul class="simple">
+<li><p>Lists all containers in the system, both running and stopped, along with their respective details.</p></li>
+</ul>
+</li>
+<li><p>Listing</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">image</span> <span class="pre">ls</span></code></p>
+<ul>
+<li><p>Lists all available Docker images.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">volume</span> <span class="pre">ls</span></code></p>
+<ul>
+<li><p>Lists all Docker volumes.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">network</span> <span class="pre">ls</span></code></p>
+<ul>
+<li><p>Lists all Docker networks.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Removing</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">rm</span> <span class="pre">&lt;container-name&gt;</span></code></p>
+<ul>
+<li><p>Removes the specified container.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">rmi</span> <span class="pre">&lt;image-name&gt;</span></code></p>
+<ul>
+<li><p>Removes the specified image.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">volume</span> <span class="pre">rm</span> <span class="pre">&lt;volume-name&gt;</span></code></p>
+<ul>
+<li><p>Removes the specified volume.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">network</span> <span class="pre">rm</span> <span class="pre">&lt;network-name&gt;</span></code></p>
+<ul>
+<li><p>Removes the specified network.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span> <span class="pre">&lt;image-name&gt;</span></code></p>
+<ul class="simple">
+<li><p>Download an image from a remote repository (ie. ghcr.io) defined in the image name. This is in contrast to building it from source, ie a local Dockerfile.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">push</span> <span class="pre">&lt;image-name&gt;</span></code></p>
+<ul class="simple">
+<li><p>Upload a locally built image to a remote repository. You may need to <a class="reference external" href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry">authenticate to the remote repository, such as in ghcr.io</a></p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="docker-compose-commands">
+<h2>Docker Compose commands<a class="headerlink" href="#docker-compose-commands" title="Link to this heading"></a></h2>
+<p>All these commands assume that you are currently in a directory containing a docker-compose.yml</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">up</span></code></p>
+<ul class="simple">
+<li><p>Builds or pulls the required images, creates and starts the containers defined in the docker-compose file.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">down</span></code></p>
+<ul class="simple">
+<li><p>Stops and removes all containers, images, and networks defined in the docker-compose file.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">ps</span> <span class="pre">-a</span></code></p>
+<ul class="simple">
+<li><p>Lists all containers defined in the docker-compose file, along with their respective details.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dev-guide-contributing.html" class="btn btn-neutral float-left" title="Developer Guide: Contributing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="system-overview.html" class="btn btn-neutral float-right" title="System Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPRI.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

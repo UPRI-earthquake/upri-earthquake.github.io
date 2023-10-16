@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Connect to Your Raspberry Shake via SSH &mdash; UPRI EarthquakeHub 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installing EarthquakeHub Client on Raspberry Shake" href="installing-rshake-client.html" />
+    <link rel="prev" title="Welcome to UPRI EarthquakeHub’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            UPRI EarthquakeHub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Tutorial</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to Connect to Your Raspberry Shake via SSH</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hardware-setup">Hardware Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-ssh-via-windows-powershell">How to SSH via Windows Powershell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-ssh-via-windows-putty">How to SSH via Windows PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-ssh-via-mac">How to SSH via Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-ssh-via-ubuntu">How to SSH via Ubuntu</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installing-rshake-client.html">Installing EarthquakeHub Client on Raspberry Shake</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sending-data-to-ehub-network.html">Sending Data to EarthquakeHub Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fdsnws.html">How to Use FDSNWS to Download Ground Motion Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro-to-seiscomp.html">Introduction To SeisComp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev-guide-contributing.html">Developer Guide: Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker-cheatsheet.html">Developer Guide: Docker Cheatsheet</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="system-overview.html">System Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ehub-commons.html">earthquake-hub-commons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ehub-backend/overview.html">earthquake-hub-backend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sender-backend/overview.html">sender-backend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ringserver.html">RingServer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slink2dali.html">Slink2Dali</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">UPRI EarthquakeHub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">How to Connect to Your Raspberry Shake via SSH</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/connect-to-rshake.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-to-connect-to-your-raspberry-shake-via-ssh">
+<h1>How to Connect to Your Raspberry Shake via SSH<a class="headerlink" href="#how-to-connect-to-your-raspberry-shake-via-ssh" title="Link to this heading"></a></h1>
+<p>Connecting to your Raspberry Shake using SSH allows you to access and manage your device remotely. The following is a step by step guide to setup and connect to your Raspberry Shake from <strong>Windows (using either PuTTY or Powershell)</strong>, from <strong>Mac</strong>, and from <strong>Ubuntu</strong>.</p>
+<section id="hardware-setup">
+<h2>Hardware Setup<a class="headerlink" href="#hardware-setup" title="Link to this heading"></a></h2>
+<ul>
+<li><p>Connect the power brick to your Raspberry Shake to power it on.</p></li>
+<li><p>Connect one end of an ethernet cable to your Raspberry Shake and plug the other end into an ethernet port on the back of your router.</p></li>
+<li><p>Wait for the <a class="reference external" href="https://manual.raspberryshake.org/specifications.html#led-behavior">Raspberry Shake’s ethernet LED indicators</a> to behave as follows:</p>
+<ul class="simple">
+<li><p>Green light (flashing repeatedly)</p></li>
+<li><p>Orange light (solid)</p></li>
+</ul>
+<p><strong>This means that the ethernet port is working as it should.</strong></p>
+</li>
+</ul>
+</section>
+<section id="how-to-ssh-via-windows-powershell">
+<h2>How to SSH via Windows Powershell<a class="headerlink" href="#how-to-ssh-via-windows-powershell" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>To open PowerShell, either press Ctrl + Shift + P, or hit the Windows key and manually search for PowerShell.
+<img alt="image" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/83d6967d-1881-4531-89d0-4454865feb3f" /></p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Enter this SSH command: <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">myshake&#64;rs.local</span></code> which means to connect the user <code class="docutils literal notranslate"><span class="pre">myshake</span></code> to the device accessible via the address <code class="docutils literal notranslate"><span class="pre">rs.local</span></code> (which is your Raspberry Shake device in your local network). If it asks to validate the authenticity of the host, simply type “yes”
+<img alt="image" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/f77266ea-514a-4186-9660-bbe5733bacc9" /></p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>You will be prompted to enter a password. The default password is <code class="docutils literal notranslate"><span class="pre">shakeme</span></code>. Usually, it wouldn’t show any characters as you type, but simply type your password and press ENTER afterwards.
+<img alt="image" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/7ad5d336-7a5a-4e24-bf79-dcb2c4dcd6d6" /></p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Once successfully connected, the terminal you are in is now controlling the system of your Raspberry Shake device. You may try the <code class="docutils literal notranslate"><span class="pre">myshake</span></code> command to get a status log of your device. In this case, my test device has a network-station code of <code class="docutils literal notranslate"><span class="pre">AM_RE722</span></code>, this should be different from the code of your device.
+<img alt="image" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/d361ed0a-cbd6-4ddd-8660-bd69fda7c96c" /></p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>After you have completed your purpose for connecting to the device, you may close the SSH connection by simply typing <code class="docutils literal notranslate"><span class="pre">exit</span></code> to the prompt. This would return you to the normal terminal prompt for your PC.
+<img alt="image" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/b2f6693c-bd00-4bad-ae6d-8c8764ee1681" /></p></li>
+</ul>
+</section>
+<section id="how-to-ssh-via-windows-putty">
+<h2>How to SSH via Windows PuTTY<a class="headerlink" href="#how-to-ssh-via-windows-putty" title="Link to this heading"></a></h2>
+<ul>
+<li><p>To open the PuTTY application, press the Windows key and search for “putty”.
+<img alt="image" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/086ff76f-ce96-4c80-8c8b-e3191d84e35d" /></p>
+<blockquote>
+<div><p>If PuTTY is not yet installed, you may follow <a class="reference external" href="https://apps.microsoft.com/store/detail/putty/XPFNZKSKLBP7RJ">this link to get the application via Microsoft Store.</a> Or if you prefer not to download anything, you may try connecting via Powershell instead which comes pre-installed in most Windows operating systems.</p>
+</div></blockquote>
+</li>
+</ul>
+<hr class="docutils" />
+<ul>
+<li><p>Input the following:</p>
+<p><img alt="image" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/2c18f9c4-ad07-44b2-ad94-78034c5bd5a6" /></p>
+<ul class="simple">
+<li><p>Under Host Name (or IP address), enter your Raspberry Shake’s address, by default this is <code class="docutils literal notranslate"><span class="pre">rs.local</span></code>.</p></li>
+<li><p>Make sure that Port is set to 22.</p></li>
+<li><p>Under Connection type, select SSH.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ul>
+<li><p>Click Open, and enter Raspberry Shake username and password. By default, these are <code class="docutils literal notranslate"><span class="pre">myshake</span></code> and <code class="docutils literal notranslate"><span class="pre">shakeme</span></code>, respectively. If it asks about trusting the host, simply click Accept.</p>
+<p><img alt="image" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/3fa1adbc-11d0-48c1-afd5-18377b17fa7b" /></p>
+</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Once successfully connected, the terminal you are in is now controlling the system of your Raspberry Shake device. You may try the <code class="docutils literal notranslate"><span class="pre">myshake</span></code> command to get a status log of your device. In this case, my test device has a network-station code of <code class="docutils literal notranslate"><span class="pre">AM_RE722</span></code>, this should be different from the code of your device.
+<img alt="image" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/9a878ba2-2657-4c25-9ecc-31d56b670965" /></p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>After you have completed your purpose for connecting to the device, you may close the SSH connection by simply typing <code class="docutils literal notranslate"><span class="pre">exit</span></code> to the prompt. This should exit the terminal window and you are effectively disconnected from the device.</p></li>
+</ul>
+</section>
+<section id="how-to-ssh-via-mac">
+<h2>How to SSH via Mac<a class="headerlink" href="#how-to-ssh-via-mac" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Navigate to Applications &gt; Utilities (or Other), and open the Terminal application. You may also pres Cmd+Space and type “Terminal”
+<img width="1440" alt="Screen Shot 2023-08-29 at 3 04 26 PM" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/ad82216a-7f83-46e2-b58f-148b24606182"></p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Enter this SSH command: <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">myshake&#64;rs.local</span></code>
+<img width="793" alt="Screen Shot 2023-08-29 at 3 10 25 PM" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/3a32a500-c33f-4123-8dfb-f01231cd7aba"></p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>You will be prompted to enter a password. The default password is <code class="docutils literal notranslate"><span class="pre">shakeme</span></code>. Usually, it wouldn’t show any characters as you type, but simply type your password and press <ENTER> afterwards.
+<img width="794" alt="Screen Shot 2023-08-29 at 3 11 09 PM" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/62192209-f7f9-421f-b16e-f4069d7b155b"></p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Once successfully connected, the terminal you are in is now controlling the system of your Raspberry Shake device. You may try the <code class="docutils literal notranslate"><span class="pre">myshake</span></code> command to get a status log of your device. In this case, my test device has a network-station code of <code class="docutils literal notranslate"><span class="pre">AM_RE722</span></code>, this should be different from the code of your device.
+<img width="795" alt="Screen Shot 2023-08-29 at 3 12 43 PM" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/16431c3b-ddba-48f6-bfa9-3b12ba2cb45a"></p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>After you have completed your purpose for connecting to the device, you may close the SSH connection by simply typing <code class="docutils literal notranslate"><span class="pre">exit</span></code> to the prompt. This would return you to the normal terminal prompt for your macOS.
+<img width="795" alt="Screen Shot 2023-08-29 at 3 13 25 PM" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/89a555a1-df80-4479-b599-6c6590218a3b"></p></li>
+</ul>
+</section>
+<section id="how-to-ssh-via-ubuntu">
+<h2>How to SSH via Ubuntu<a class="headerlink" href="#how-to-ssh-via-ubuntu" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Press Ctrl + Alt + T to open a terminal.</p></li>
+<li><p>Enter this SSH command: <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">myshake&#64;rs.local</span></code></p></li>
+<li><p>You will be prompted to enter a password. Type the default password <code class="docutils literal notranslate"><span class="pre">shakeme</span></code> and press <ENTER>.</p></li>
+</ul>
+<hr class="docutils" />
+<blockquote>
+<div><p><strong><em>NOTE:</em></strong>  For improved security, it’s highly recommended to change the default password of your Raspberry Shake. To learn how to update your password and access essential guidelines for securing your device effectively, refer to this <a class="reference external" href="https://manual.raspberryshake.org/hacked.html#hacked">guide</a>.</p>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to UPRI EarthquakeHub’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="installing-rshake-client.html" class="btn btn-neutral float-right" title="Installing EarthquakeHub Client on Raspberry Shake" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPRI.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTTP Routing Table &mdash; UPRI EarthquakeHub 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+ 
+
+    <script>
+      DOCUMENTATION_OPTIONS.COLLAPSE_INDEX = true;
+    </script>
+
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            UPRI EarthquakeHub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="connect-to-rshake.html">How to Connect to Your Raspberry Shake via SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing-rshake-client.html">Installing EarthquakeHub Client on Raspberry Shake</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sending-data-to-ehub-network.html">Sending Data to EarthquakeHub Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fdsnws.html">How to Use FDSNWS to Download Ground Motion Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro-to-seiscomp.html">Introduction To SeisComp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev-guide-contributing.html">Developer Guide: Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker-cheatsheet.html">Developer Guide: Docker Cheatsheet</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="system-overview.html">System Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ehub-commons.html">earthquake-hub-commons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ehub-backend/overview.html">earthquake-hub-backend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sender-backend/overview.html">sender-backend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ringserver.html">RingServer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slink2dali.html">Slink2Dali</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">UPRI EarthquakeHub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">HTTP Routing Table</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+
+   <h1>HTTP Routing Table</h1>
+
+   <div class="modindex-jumpbox">
+   <a href="#cap-/accounts"><strong>/accounts</strong></a> | 
+   <a href="#cap-/device"><strong>/device</strong></a> | 
+   <a href="#cap-/eq-events"><strong>/eq-events</strong></a> | 
+   <a href="#cap-/messaging"><strong>/messaging</strong></a> | 
+   <a href="#cap-/notifications"><strong>/notifications</strong></a> | 
+   <a href="#cap-/servers"><strong>/servers</strong></a> | 
+   <a href="#cap-/stream"><strong>/stream</strong></a>
+   </div>
+
+   <table class="indextable modindextable">
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-/accounts"><td></td><td>
+       <strong>/accounts</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ehub-backend/api-docs/index.html#get--accounts-profile"><code class="xref">GET /accounts/profile</code></a></td><td>
+       <em>Return user information if accessToken is in cookie</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ehub-backend/api-docs/index.html#post--accounts-authenticate"><code class="xref">POST /accounts/authenticate</code></a></td><td>
+       <em>Return a JWT in exchange for username, password, &amp; role</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ehub-backend/api-docs/index.html#post--accounts-register"><code class="xref">POST /accounts/register</code></a></td><td>
+       <em>Create a new account given user information</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ehub-backend/api-docs/index.html#post--accounts-signout"><code class="xref">POST /accounts/signout</code></a></td><td>
+       <em>Clear citizen&#39;s accessToken in cookie</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ehub-backend/api-docs/index.html#post--accounts-verify-sensor-token"><code class="xref">POST /accounts/verify-sensor-token</code></a></td><td>
+       <em>Tell a brgy whether a sensor&#39;s JWT came from this server</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-/device"><td></td><td>
+       <strong>/device</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ehub-backend/api-docs/index.html#get--device-all"><code class="xref">GET /device/all</code></a></td><td>
+       <em>Return all added (not necessarily linked) devices with their location</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="sender-backend/api-docs/index.html#get--device-info"><code class="xref">GET /device/info</code></a></td><td>
+       <em>Read device information from a JSON file</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ehub-backend/api-docs/index.html#get--device-my-devices"><code class="xref">GET /device/my-devices</code></a></td><td>
+       <em>Return list of devices belonging to the authenticated (citizen) user</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ehub-backend/api-docs/index.html#get--device-status"><code class="xref">GET /device/status</code></a></td><td>
+       <em>Return the status of a specified device</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ehub-backend/api-docs/index.html#post--device-add"><code class="xref">POST /device/add</code></a></td><td>
+       <em>Add a device to the user&#39;s account</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="sender-backend/api-docs/index.html#post--device-link"><code class="xref">POST /device/link</code></a></td><td>
+       <em>Link the rshake device to a registered account in earthquake-hub network</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-/eq-events"><td></td><td>
+       <strong>/eq-events</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ehub-backend/api-docs/index.html#get--eq-events"><code class="xref">GET /eq-events</code></a></td><td>
+       <em>Get recorded seismic events in the network within a specific time range</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-/messaging"><td></td><td>
+       <strong>/messaging</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ehub-backend/api-docs/index.html#get--messaging"><code class="xref">GET /messaging</code></a></td><td>
+       <em>SSE endpoint to stream SC_PICK or SC_EVENT messages to the client.</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ehub-backend/api-docs/index.html#post--messaging-restricted-new-event"><code class="xref">POST /messaging/restricted/new-event</code></a></td><td>
+       <em>Add new EQevent as message in SSE, entry in DB, and notif to subscribed clients.</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ehub-backend/api-docs/index.html#post--messaging-restricted-new-pick"><code class="xref">POST /messaging/restricted/new-pick</code></a></td><td>
+       <em>Add new PICK as message to SSE.</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-/notifications"><td></td><td>
+       <strong>/notifications</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ehub-backend/api-docs/index.html#post--notifications-subscribe"><code class="xref">POST /notifications/subscribe</code></a></td><td>
+       <em>Subscribe to web-push notifications.</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-/servers"><td></td><td>
+       <strong>/servers</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="sender-backend/api-docs/index.html#get--servers-getList"><code class="xref">GET /servers/getList</code></a></td><td>
+       <em>Read list of servers saved in a JSON file</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="sender-backend/api-docs/index.html#post--servers-add"><code class="xref">POST /servers/add</code></a></td><td>
+       <em>Add a ringserver to the list</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-/stream"><td></td><td>
+       <strong>/stream</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="sender-backend/api-docs/index.html#get--stream-status"><code class="xref">GET /stream/status</code></a></td><td>
+       <em>Get streaming status to each server</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="sender-backend/api-docs/index.html#post--stream-start"><code class="xref">POST /stream/start</code></a></td><td>
+       <em>Start slink2dali streaming to specified servers in the local file store</em></td></tr>
+   </table>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UPRI.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

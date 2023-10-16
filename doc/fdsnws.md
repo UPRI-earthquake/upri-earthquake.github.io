@@ -42,9 +42,6 @@ Here are the following data you can gather from the ```event``` service
 More information about Event service [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf)
 
 ### Obtaining the Data
-
-
-/
 #### Steps to Download Ground Motion Data
 
 To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
@@ -67,19 +64,19 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
     - **Time Window:**
 
-        - ```starttime```: Specifies the beginning time of the data you want to retrieve, in the format "YYYY-MM-DDTHH:MM:SS."
-        - ```endtime```: Specifies the end time of the data you want to retrieve, also in the format "YYYY-MM-DDTHH:MM:SS."
+        - ```starttime```: Specifies the beginning time of the data you want to retrieve
+        - ```endtime```: Specifies the end time of the data you want to retrieve
 
-        > **_NOTE:_** The time is formatted **YYYY-MM-DDT-HH-MM-SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
+        > **_NOTE:_** The time is formatted **YYYY-MM-DDTHH-MM-SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
 
-        > For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30``` pm till ```October 15, 2023 11:30 am``` start time should be ```2023-10-11T-23:30:00``` and end time should be ```2023-10-15T-11:30:00```
+        > For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30``` pm till ```October 15, 2023 11:30 am``` start time should be ```2023-10-11T23:30:00``` and end time should be ```2023-10-15T11:30:00```
 
     - **Data Format:**
         - ```format```: Specifies the format in which you want to receive the data. The ground data is in **miniseed** format
 
     - **Data Availability and Quality**:
-        - availability: Allows you to filter data based on its availability (e.g., "available," "not available," "all").
-        - quality: Filters data based on its quality (e.g., "D," "M," "Q," "R").
+        - ```availability```: Allows you to filter data based on its availability (e.g., "available," "not available," "all").
+        - ```quality```: Filters data based on its quality (e.g., "D," "M," "Q," "R").
 
     - **Data Limit:**
         -  ```limit```: Sets the maximum number of data segments to return in the search results. This parameter is useful for limiting the amount of data you receive in a single request.
@@ -87,8 +84,6 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
         - ```updatedAfter```: Specifies the last time the data was updated. It allows you to request data that has been updated or added after a certain timestamp.
 
 Refer [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf) for the query guide.
-
-
 
 5. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
 
@@ -102,59 +97,57 @@ Refer [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf) for the
 
 To obtain the Metadata, we will be using the ```event``` service.
 
-1. Access the [UPRI Earthquake Hub SeisComP FDSNWS Web Service](https://earthquake.science.upd.edu.ph/fdsnws/)
-2. Choose the ```event/``` web service
-**<PHOTO HERE>**
-3. Proceed by choosing ```1/```
-4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
+    1. Access the [UPRI Earthquake Hub SeisComP FDSNWS Web Service](https://earthquake.science.upd.edu.ph/fdsnws/)
+    2. Choose the ```event/``` web service
+    **<PHOTO HERE>**
+    3. Proceed by choosing ```1/```
+    4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 
-5. Specify the parameters of the data you want to download.
-This includes:
+    5. Specify the parameters of the data you want to download.
+    This includes:
 
-    - **Start Time and End Time**:
+        - **Start Time and End Time**:
 
-        - ```starttime```:Specifies the beginning time for the search
-        - ```endtime```: Specifies the end time for the search
+            - ```starttime```:Specifies the beginning time for the search
+            - ```endtime```: Specifies the end time for the search
 
-        > **_NOTE:_** The time is formatted **YYYY-MM-DDT-HH-MM-SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
+            > **_NOTE:_** Refer to the instructions above regarding time formatting.
 
-         > For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30``` pm till ```October 15, 2023 11:30 am``` start time should be ```2023-10-11T-23:30:00``` and end time should be ```2023-10-15T-11:30:00```
+        - Geographical Region:
 
-    - Geographical Region:
+            - ```minlatitude```: Defines the minimum latitude (southern boundary) for the search area.
+            - ```maxlatitude```: Defines the maximum latitude (northern boundary) for the search area.
+            - ```minlongitude```: Specifies the minimum longitude (western boundary) for the search area.
+            - ```maxlongitude```: Specifies the maximum longitude (eastern boundary) for the search area.
 
-        - ```minlatitude```: Defines the minimum latitude (southern boundary) for the search area.
-        - ```maxlatitude```: Defines the maximum latitude (northern boundary) for the search area.
-        - ```minlongitude```: Specifies the minimum longitude (western boundary) for the search area.
-        - ```maxlongitude```: Specifies the maximum longitude (eastern boundary) for the search area.
+        - Magnitude Range:
 
-    - Magnitude Range:
+            - ```minmagnitude```: Sets the minimum magnitude of the seismic events you want to retrieve.
+            - ```maxmagnitude```: Sets the maximum magnitude of the seismic events you want to retrieve.
 
-        - ```minmagnitude```: Sets the minimum magnitude of the seismic events you want to retrieve.
-        - ```maxmagnitude```: Sets the maximum magnitude of the seismic events you want to retrieve.
+        - Event Depth Range:
 
-    - Event Depth Range:
+            - ```mindepth```: Specifies the minimum depth of the seismic events you want to retrieve.
+            - ```maxdepth```: Specifies the maximum depth of the seismic events you want to retrieve.
 
-        - ```mindepth```: Specifies the minimum depth of the seismic events you want to retrieve.
-        - ```maxdepth```: Specifies the maximum depth of the seismic events you want to retrieve.
+        - Event Type:
 
-    - Event Type:
+            - ```type```: Specifies the type of seismic events you're interested in, e.g., "earthquake," "explosion," "nuclear explosion," etc.
 
-        - ```type```: Specifies the type of seismic events you're interested in, e.g., "earthquake," "explosion," "nuclear explosion," etc.
+        - Event ID:
 
-    - Event ID:
+            - ```eventid```: Allows you to specify the unique identifier for a particular event.
 
-        - ```eventid```: Allows you to specify the unique identifier for a particular event.
+        - Catalog and Contributor:
 
-    - Catalog and Contributor:
+            - ```catalog```: Filters events based on the catalog they are part of.
+            - ```contributor```: Filters events based on the organization or entity that contributed the data.
 
-        - ```catalog```: Filters events based on the catalog they are part of.
-        - ```contributor```: Filters events based on the organization or entity that contributed the data.
+        - Event Limit:
 
-    - Event Limit:
+            - ```limit```: Sets the maximum number of events to return in the search results.
 
-        - ```limit```: Sets the maximum number of events to return in the search results.
-
-    Refer [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf) for the query guide
+        Refer [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf) for the query guide
 
 
 5. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.

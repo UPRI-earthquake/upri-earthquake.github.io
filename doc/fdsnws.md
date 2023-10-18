@@ -48,15 +48,20 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
 
 1. Access the [UPRI Earthquake Hub SeisComP FDSNWS Web Service](https://earthquake.science.upd.edu.ph/fdsnws/)
-   <img width="795" alt="Access UPRI" src="_build/html/assets/fdsnws/4.1.jpg">
-
-![This is an alt text.](_build/html/assets/fdsnws/4.1.jpg "This is a sample image.")
-
 
 2. Choose the ```dataselect/``` web service
-**PHOTO HERE**
+![access](_build/html/assets/fdsnws/4.1.jpg "access photo")
+
+
+
 3. Proceed by choosing ```1/```
+![dataselect](_build/html/assets/fdsnws/4.2.jpg "dataselect")
+<img src="_build/html/assets/fdsnws/4.2.jpg" alt="dataselect" width="300" height="200" />
+
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
+![builder](_build/html/assets/fdsnws/4.3.jpg "builder")
+
+
 5. Specify the parameters of the data you want to download.
   This includes:
 
@@ -91,11 +96,7 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 Refer [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf) for the query guide.
 
 5. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
-
-
-**PHOTO HERE**
-
-
+![url](_build/html/assets/fdsnws/4.5.jpg "url")
 
 
 #### Steps to Download Metadata
@@ -107,6 +108,9 @@ To obtain the Metadata, we will be using the ```event``` service.
 **<PHOTO HERE>**
 3. Proceed by choosing ```1/```
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
+
+
+
 
 5. Specify the parameters of the data you want to download.
 This includes:
@@ -157,11 +161,7 @@ This includes:
 
 5. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
 
-**PHOTO HERE**
-
-
-
-
+![url](_build/html/assets/fdsnws/4.3.jpg "builder")
 
 
 

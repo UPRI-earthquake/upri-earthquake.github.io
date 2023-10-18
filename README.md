@@ -49,7 +49,7 @@ The content of the documentation are written in different files. These files are
 1. Refer to the [Contributing Guide]() before making any changes.
 2.  Identify which part of the documentation you want to edit. You may find these files in the ```doc``` folder. You may use any text editor to configure the files. Refer to the list of Markdown files and their corresponding topics:
 
-** Tutorial**
+**Tutorial**
 
 - ```connect-to-rshake.md``` - How to Connect to Your Raspberry Shake via SSH
 - ```installing-rshake-client.md``` - Installing EarthquakeHub Client on Raspberry Shake
@@ -65,12 +65,12 @@ The content of the documentation are written in different files. These files are
 - ```ehub-commons.md``` - earthquake-hub-commons
 - ehub-backend/```overview.md``` -  earthquake-hub-backend
 
-        **API Docs**
+    **API Docs**
     - ehub-backend/api-docs/ ```index.rst```
 - sender-backend/```overview.md``` - sender-backend
 
 
-        **API Docs**
+    **API Docs**
     - sender-backend/api-docs/ ```index.rst```
 - ```ringserver.md``` - RingServer
 - ```skink2dali.md```- Slink2Dali

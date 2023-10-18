@@ -48,6 +48,11 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
 
 1. Access the [UPRI Earthquake Hub SeisComP FDSNWS Web Service](https://earthquake.science.upd.edu.ph/fdsnws/)
+   <img width="795" alt="Screen Shot 2023-08-29 at 3 12 43 PM" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/16431c3b-ddba-48f6-bfa9-3b12ba2cb45a">
+
+
+
+
 2. Choose the ```dataselect/``` web service
 **PHOTO HERE**
 3. Proceed by choosing ```1/```
@@ -97,57 +102,57 @@ Refer [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf) for the
 
 To obtain the Metadata, we will be using the ```event``` service.
 
-    1. Access the [UPRI Earthquake Hub SeisComP FDSNWS Web Service](https://earthquake.science.upd.edu.ph/fdsnws/)
-    2. Choose the ```event/``` web service
-    **<PHOTO HERE>**
-    3. Proceed by choosing ```1/```
-    4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
+1. Access the [UPRI Earthquake Hub SeisComP FDSNWS Web Service](https://earthquake.science.upd.edu.ph/fdsnws/)
+2. Choose the ```event/``` web service
+**<PHOTO HERE>**
+3. Proceed by choosing ```1/```
+4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 
-    5. Specify the parameters of the data you want to download.
-    This includes:
+5. Specify the parameters of the data you want to download.
+This includes:
 
-        - **Start Time and End Time**:
+    - **Start Time and End Time**:
 
-            - ```starttime```:Specifies the beginning time for the search
-            - ```endtime```: Specifies the end time for the search
+        - ```starttime```:Specifies the beginning time for the search
+        - ```endtime```: Specifies the end time for the search
 
-            > **_NOTE:_** Refer to the instructions above regarding time formatting.
+        > **_NOTE:_** Refer to the instructions above regarding time formatting.
 
-        - Geographical Region:
+    - Geographical Region:
 
-            - ```minlatitude```: Defines the minimum latitude (southern boundary) for the search area.
-            - ```maxlatitude```: Defines the maximum latitude (northern boundary) for the search area.
-            - ```minlongitude```: Specifies the minimum longitude (western boundary) for the search area.
-            - ```maxlongitude```: Specifies the maximum longitude (eastern boundary) for the search area.
+        - ```minlatitude```: Defines the minimum latitude (southern boundary) for the search area.
+        - ```maxlatitude```: Defines the maximum latitude (northern boundary) for the search area.
+        - ```minlongitude```: Specifies the minimum longitude (western boundary) for the search area.
+        - ```maxlongitude```: Specifies the maximum longitude (eastern boundary) for the search area.
 
-        - Magnitude Range:
+    - Magnitude Range:
 
-            - ```minmagnitude```: Sets the minimum magnitude of the seismic events you want to retrieve.
-            - ```maxmagnitude```: Sets the maximum magnitude of the seismic events you want to retrieve.
+        - ```minmagnitude```: Sets the minimum magnitude of the seismic events you want to retrieve.
+        - ```maxmagnitude```: Sets the maximum magnitude of the seismic events you want to retrieve.
 
-        - Event Depth Range:
+    - Event Depth Range:
 
-            - ```mindepth```: Specifies the minimum depth of the seismic events you want to retrieve.
-            - ```maxdepth```: Specifies the maximum depth of the seismic events you want to retrieve.
+        - ```mindepth```: Specifies the minimum depth of the seismic events you want to retrieve.
+        - ```maxdepth```: Specifies the maximum depth of the seismic events you want to retrieve.
 
-        - Event Type:
+    - Event Type:
 
-            - ```type```: Specifies the type of seismic events you're interested in, e.g., "earthquake," "explosion," "nuclear explosion," etc.
+        - ```type```: Specifies the type of seismic events you're interested in, e.g., "earthquake," "explosion," "nuclear explosion," etc.
 
-        - Event ID:
+    - Event ID:
 
-            - ```eventid```: Allows you to specify the unique identifier for a particular event.
+        - ```eventid```: Allows you to specify the unique identifier for a particular event.
 
-        - Catalog and Contributor:
+    - Catalog and Contributor:
 
-            - ```catalog```: Filters events based on the catalog they are part of.
-            - ```contributor```: Filters events based on the organization or entity that contributed the data.
+        - ```catalog```: Filters events based on the catalog they are part of.
+        - ```contributor```: Filters events based on the organization or entity that contributed the data.
 
-        - Event Limit:
+    - Event Limit:
 
-            - ```limit```: Sets the maximum number of events to return in the search results.
+        - ```limit```: Sets the maximum number of events to return in the search results.
 
-        Refer [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf) for the query guide
+    Refer [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf) for the query guide
 
 
 5. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.

@@ -5,42 +5,17 @@ Welcome to the UPRI EarthquakeHub Documentation Configuration! This document wil
 ### Table of Contents
 
 1. Introduction
-2. Setting Up Sphinx
-3. Accessing the Documentation
-4. Deploying on GitHub Pages
-5. Contributing
-6. Feedback and Support
+2. Accessing the Documentation
+3. Deploying on GitHub Pages
+4. Contributing
+5. Feedback and Support
 
 
 ### Introduction
 
 The [UPRI EarthquakeHub](https://upri-earthquake.github.io/) contains all the information you need to understand and work with our project. We use Sphinx to generate and maintain this documentation, and the following sections will guide you through the process of accessing it.
 
-### Setting Up Sphinx
-Sphinx is used to generate our project's documentation. To set up Sphinx and generate the documentation locally, you need to follow these steps:
 
-1. **Install Python:** If you don't already have Python installed on your system, you can download it from [python.org](https://www.python.org/)
-2. **Install Sphinx:** Use pip, the Python package manager, to install Sphinx. Run the following command in your terminal:
-```
-pip install sphinx
-```
-3.  **Download Additional Dependencies**
-
-    This project require specific Sphinx extensions listed below:
-    1. ```myst_partser``` to parse our .md to Sphinx compatible file format which is .rst. More information [here](https://pypi.org/project/myst-parser/)
-
-    ```
-    pip install myst-parser
-    ```
-    2. ```sphinxcontrib.openapi``` used for generating documentation from OpenAPI specifications. More information [here](https://pypi.org/project/sphinxcontrib-openapi/)
-
-    ```
-    pip install sphinxcontrib.openapi
-    ```
-    3.  ```sphinx_rtd_theme``` used as the main theme of the documenation.  More information [here](https://pypi.org/project/sphinx-rtd-theme/)
-
-    ```
-    pip install sphinx_rtd_theme
     ```
 
 ### Accessing the Documentation
@@ -73,7 +48,7 @@ cd repository/doc
 ## Deploying on GitHub Pages
 To deploy your documentation on GitHub Pages, follow these steps:
 
-1. Configure GitHub Pages: In your Forked GitHub repository, go to the "Settings" tab and scroll down to the "GitHub Pages" section. Set the source branch to "gh-pages" and the "docs" folder. Save the changes.
+1. Configure GitHub Pages: In your Forked GitHub repository, go to the "Settings" tab and scroll down to the "GitHub Pages" section. Set the source branch to "gh-pages" and the "root" folder. Save the changes.
 
 2. Access the Published Documentation: After a few moments, your documentation will be available at the URL mentioned in the GitHub Pages settings, typically in the format: https://<username>.github.io/<repository>/.
 

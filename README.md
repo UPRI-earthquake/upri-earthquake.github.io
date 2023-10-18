@@ -14,11 +14,11 @@ Welcome to the UPRI EarthquakeHub Documentation Configuration! This document wil
 6. Feedback and Support
 
 
-### Introduction
+### 1. Introduction
 
 The [UPRI EarthquakeHub](https://upri-earthquake.github.io/) contains all the information you need to understand and work with our project. We use Sphinx to generate and maintain this documentation, and the following sections will guide you through the process of accessing it.
 
-### Accessing the Documentation
+### 2. Accessing the Documentation
 To access the project documentation, follow these steps:
 
 1. **Fork the Documentation Repository:** Forking a repository is creating a personal copy of a project you want to work on independently. Follow the steps to fork:
@@ -44,7 +44,7 @@ cd repository/doc
 
 4. **Open the Documentation:** Depending on the format, you can access the documentation using a web browser for HTML-based documentation, or a text editor for Markdown, RST or other text-based formats.
 
-### File Directory
+### 3. File Directory
 The content of the documentation are written in different files. These files are deployed in the ```index.rst``` file. Should you wish to modify the content, follow the steps below:
 1. Refer to the [Contributing Guide]() before making any changes.
 2.  Identify which part of the documentation you want to edit. You may find these files in the ```doc``` folder. You may use any text editor to configure the files. Refer to the list of Markdown files and their corresponding topics:
@@ -79,19 +79,19 @@ The content of the documentation are written in different files. These files are
 Detailed instructions written [here](https://alyssapatricia.github.io/ui/dev-guide-contributing.html)
 
 
-### Deploying on GitHub Pages
+### 4. Deploying on GitHub Pages
 To deploy your documentation on GitHub Pages, follow these steps:
 
 1. Configure GitHub Pages: In your Forked GitHub repository, go to the "Settings" tab and scroll down to the "GitHub Pages" section. Set the source branch to "gh-pages" and the "docs" folder. Save the changes.
 2. Access the Published Documentation: After a few moments, your documentation will be available at the URL mentioned in the GitHub Pages settings, typically in the format: https://```<username>```.github.io/```<repository>```/.
 
 
-### Contributing
+### 5. Contributing
 If you find any issues with the documentation or would like to contribute to its improvement, please refer to the [Contributing file](https://alyssapatricia.github.io/ui/dev-guide-contributing.html) in the repository.
 It will provide guidance on how you can make updates or suggest improvements.
 
 
-### Feedback and Support
+### 6. Feedback and Support
 If you have any questions, encounter issues, or need support related to the project or its documentation, please reach out to our support team or open an issue on the project's repository.
 
 Thank you for using our project documentation. We hope it serves as a valuable resource for your work. If you have any suggestions for improvements or additional information, please don't hesitate to contribute or provide feedback. We appreciate your involvement in making this documentation even better.

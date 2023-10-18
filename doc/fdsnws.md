@@ -48,7 +48,9 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
 
 1. Access the [UPRI Earthquake Hub SeisComP FDSNWS Web Service](https://earthquake.science.upd.edu.ph/fdsnws/)
-![This is an alt text.](_build/html/assets/fdsnws/4.1.png "This is a sample image.")
+   <img width="795" alt="Access UPRI" src="_build/html/assets/fdsnws/4.1.jpg">
+
+![This is an alt text.](_build/html/assets/fdsnws/4.1.jpg "This is a sample image.")
 
 
 2. Choose the ```dataselect/``` web service

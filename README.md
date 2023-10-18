@@ -29,6 +29,7 @@ To access the project documentation, follow these steps:
 
 Congratulations! You are now have a copy of the project that is under your control, and you can make changes to it as you would with any other Git repository.
 
+
 2. **Clone the Repository:** If you haven't already, clone the project's repository to your local machine using Git. You can do this by running the following command:
 
 ```
@@ -49,6 +50,7 @@ The content of the documentation are written in different files. These files are
 2.  Identify which part of the documentation you want to edit. You may find these files in the ```doc``` folder. You may use any text editor to configure the files. Refer to the list of Markdown files and their corresponding topics:
 
 ** Tutorial**
+
 - ```connect-to-rshake.md``` - How to Connect to Your Raspberry Shake via SSH
 - ```installing-rshake-client.md``` - Installing EarthquakeHub Client on Raspberry Shake
 - ```sending-data-to-ehub-network.md``` - Sending Data to EarthquakeHub Network
@@ -56,6 +58,7 @@ The content of the documentation are written in different files. These files are
 - ```intro-to-seiscomp.md``` - Introduction To SeisComp
 - ```dev-guide-contributing.md``` - Developer Guide: Contributing
 - ```docker-cheatsheet.md``` - Developer Guide: Docker Cheatsheet
+
 **Documentation**
 
 - ```system-overview.md``` - System Overview

@@ -4,9 +4,9 @@ How to Use FDSNWS to Download Ground Motion Data and Metadata
 ### Introduction
 **FDSNWS** (Federation of Digital Seismograph Networks Web Services) is a set of web services that allow users to access and retrieve seismic data from various seismological networks and data centers. This documentation will guide you through the process of using FDSNWS to download ground motion data and its metadeta from the UPRI EarthquakeHub Network. Understanding the distinction among these two is essential to make interpretations more significant. In the context of FDSNWS,
 
-    **Data:** This is the actual seismic information you're interested in, like the earthquake measurements, shaking patterns, and seismograph readings.
+**Data:** This is the actual seismic information you're interested in, like the earthquake measurements, shaking patterns, and seismograph readings.
 
-    **Metadata:** Metadata in FDSNWS provides important details about the data. It includes information such as when and where the seismic event occurred, how strong it was, and the equipment used to record the data. Think of metadata as helpful labels that give you context and understanding about the seismic data you're looking at.
+**Metadata:** Metadata in FDSNWS provides important details about the data. It includes information such as when and where the seismic event occurred, how strong it was, and the equipment used to record the data. Think of metadata as helpful labels that give you context and understanding about the seismic data you're looking at.
 
 ### Service Overview
 
@@ -48,9 +48,9 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
 
 1. Access the [UPRI Earthquake Hub SeisComP FDSNWS Web Service](https://earthquake.science.upd.edu.ph/fdsnws/)
-   <img width="795" alt="Screen Shot 2023-08-29 at 3 12 43 PM" src="https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/16431c3b-ddba-48f6-bfa9-3b12ba2cb45a">
+   <img width="795" alt="Access UPRI" src="_build/html/assets/connecting-rshake/1.1.png">
 
-
+![This is an alt text.](_build/html/assets/connecting-rshake/1.1.png "This is a sample image.")
 
 
 2. Choose the ```dataselect/``` web service

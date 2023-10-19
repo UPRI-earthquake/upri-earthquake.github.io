@@ -92,7 +92,7 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
     - Time Correction:
         - ```updatedAfter```: Specifies the last time the data was updated. It allows you to request data that has been updated or added after a certain timestamp.
 
-Refer [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf) for the query guide.
+    Refer [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf) for the query guide.
 
     > Example: The following parameters of our test network are the following:
 
@@ -100,9 +100,10 @@ Refer [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf) for the
         - Station: R3B2D
         - Location: 00
         - Channel: EHZ
+
     The values vary according the the network you want to extract data from.
 
-![10](_build/html/assets/fdsnws/4.10.jpg "10")
+        ![10](_build/html/assets/fdsnws/4.10.jpg "10")
 
 5. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
 ![url](_build/html/assets/fdsnws/4.5.jpg "url")
@@ -120,6 +121,7 @@ To obtain the Metadata, we will be using the ```event``` service.
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 ![build](_build/html/assets/fdsnws/4.7.jpg "build")
 ![build](_build/html/assets/fdsnws/4.8.jpg "build query")
+
 
 5. Specify the parameters of the data you want to download.
 This includes:
@@ -168,9 +170,9 @@ This includes:
     Refer [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf) for the query guide
 
 
-After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
+    After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
 
-![url](_build/html/assets/fdsnws/4.9.jpg "url")
+    ![url](_build/html/assets/fdsnws/4.9.jpg "url")
 
 
 6. Process the Data

@@ -179,52 +179,52 @@ This includes:
  To use fetched seismic data for plotting or analysis, you can use ObsPy.
  Follow these steps:
 
-    1. **Install ObsPy:** Make sure ObsPy is installed:
+a. **Install ObsPy:** Make sure ObsPy is installed:
 
-    ```
-    pip install obspy
-    ```
-    2. Import the necessary modules:
+```
+pip install obspy
+```
+b. Import the necessary modules:
 
-    Create a Python file. You need to write a script that imports ObsPy modules for data processing and plotting:
+Create a Python file. You need to write a script that imports ObsPy modules for data processing and plotting:
 
-    ```
-    from obspy import read
-    import matplotlib.pyplot as plt
-    ```
+```
+from obspy import read
+import matplotlib.pyplot as plt
+```
 
-    3. Load your seismic data:
+c. Load your seismic data:
 
-    You can use the obspy.read() function to load your existing seismic data file. ObsPy can read various formats, such as MiniSEED, SAC, and more. Here's an example of how to load a MiniSEED file:
+You can use the obspy.read() function to load your existing seismic data file. ObsPy can read various formats, such as MiniSEED, SAC, and more. Here's an example of how to load a MiniSEED file:
 
-    ```
-    st = read('your_seismic_data.mseed')
-    ```
+```
+st = read('your_seismic_data.mseed')
+```
 
-    Replace 'your_seismic_data.mseed' with the actual file path.
+Replace 'your_seismic_data.mseed' with your actual file name.
 
     > Example: From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-15T11:30:00```, I've downloaded the MiniSeed data with the file name ```fdsnws.md```
 
-    ```
-    st = read('fdsnws.mseed')
-    ```
+```
+st = read('fdsnws.mseed')
+```
 
-    3. Plot the time series:
+d. Plot the time series:
 
-    You can use ObsPy to plot the loaded time series data using Matplotlib. Here's an example:
+You can use ObsPy to plot the loaded time series data using Matplotlib. Here's an example:
 
-    ```
-    st.plot(type="dayplot", title="Seismic Data", vertical_scaling_range=2000, color="black", size=(800, 600))
-    plt.show()
-    ```
+```
+st.plot(type="dayplot", title="Seismic Data", vertical_scaling_range=2000, color="black", size=(800, 600))
+plt.show()
+```
 
-    The type="dayplot" argument specifies the type of plot you want to create. You can adjust the other parameters as needed, such as title, scaling range, color, and figure size.
-    More plot features accessible [here](https://docs.obspy.org/packages/autogen/obspy.core.stream.Stream.plot.html)
+The type="dayplot" argument specifies the type of plot you want to create. You can adjust the other parameters as needed, such as title, scaling range, color, and figure size.
+More plot features accessible [here](https://docs.obspy.org/packages/autogen/obspy.core.stream.Stream.plot.html)
 
 
-    4. Save the plot file
+e. Save the plot file
 
-    Click the save icon below the plot
+Click the save icon below the plot
 
-    -Print Information from the metadata (obspy)
-    do the same from following the documentation
+-Print Information from the metadata (obspy)
+do the same from following the documentation

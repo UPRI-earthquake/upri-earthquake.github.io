@@ -175,16 +175,19 @@ This includes:
     ![url](_build/html/assets/fdsnws/4.9.jpg "url")
 
 
-7 . Process the Data
- To use fetched seismic data for plotting or analysis, you can use ObsPy.
+### Processing the Data
+
+#### From DataSelect Service:
+
+To use fetched seismic data for plotting or analysis, you can use ObsPy.
  Follow these steps:
 
-a. **Install ObsPy:** Make sure ObsPy is installed:
+1. **Install ObsPy:** Make sure ObsPy is installed:
 
 ```
 pip install obspy
 ```
-b. Import the necessary modules:
+2. **Import the necessary modules:**
 
 Create a Python file. You need to write a script that imports ObsPy modules for data processing and plotting:
 
@@ -193,7 +196,7 @@ from obspy import read
 import matplotlib.pyplot as plt
 ```
 
-c. Load your seismic data:
+3. **Load your seismic data**
 
 You can use the obspy.read() function to load your existing seismic data file. ObsPy can read various formats, such as MiniSEED, SAC, and more. Here's an example of how to load a MiniSEED file:
 
@@ -203,13 +206,13 @@ st = read('your_seismic_data.mseed')
 
 Replace 'your_seismic_data.mseed' with your actual file name.
 
-    > Example: From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-15T11:30:00```, I've downloaded the MiniSeed data with the file name ```fdsnws.md```
+> Example: From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-15T11:30:00```, I've downloaded the MiniSeed data with the file name ```fdsnws.md```
 
 ```
 st = read('fdsnws.mseed')
 ```
 
-d. Plot the time series:
+4. **Plot the time series:**
 
 You can use ObsPy to plot the loaded time series data using Matplotlib. Here's an example:
 
@@ -219,12 +222,25 @@ plt.show()
 ```
 
 The type="dayplot" argument specifies the type of plot you want to create. You can adjust the other parameters as needed, such as title, scaling range, color, and figure size.
+
 More plot features accessible [here](https://docs.obspy.org/packages/autogen/obspy.core.stream.Stream.plot.html)
 
+For windows, press CTRL + B to run your python code
 
-e. Save the plot file
+If your code ran successfully, a MatLab window containing your visualized miniSEED data will appear.
+
+![plot](_build/html/assets/fdsnws/4.11.jpg "plot")
+
+
+5. **Save the plot file**
 
 Click the save icon below the plot
 
+
+Congratulations! You now have a plot of the Seismic Data you just downloaded from FDSNWS!
+
+#### From Event Service
+
+1. :
 -Print Information from the metadata (obspy)
 do the same from following the documentation

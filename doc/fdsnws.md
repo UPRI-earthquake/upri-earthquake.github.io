@@ -6,7 +6,7 @@ How to Use FDSNWS to Download Ground Motion Data and Metadata
 
 **Data:** This is the actual seismic information you're interested in, like the earthquake measurements, shaking patterns, and seismograph readings.
 
-**Metadata:** Metadata in FDSNWS provides important details about the data. It includes information such as when and where the seismic event occurred, how strong it was, and the equipment used to record the data. Think of metadata as helpful labels that give you context and understanding about the seismic data you're looking at.
+**Metadata:** This provides important details *about* the data. It includes information such as when and where the seismic event occurred, how strong it was, and the equipment used to record the data. Think of metadata as helpful labels that give you context and understanding about the seismic data you're looking at.
 
 ### Service Overview
 
@@ -26,20 +26,19 @@ Here are the following data you can gather from ```dataselect``` service
 3. ***Instrument Info:*** This service can also provide information about the tools (instruments) used to capture this seismic data. Understanding these instruments is crucial for correctly interpreting and using the data.
 
 
-More information about DataSelect service [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf)
+    More information about DataSelect service [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf)
 
 #### Event
 This service is designed to provide access to information about seismic events.
 
 Here are the following data you can gather from the ```event``` service
-
 1. ***Earthquake Information:*** The event service gives you details about specific seismic events, particularly earthquakes. This includes where they happened, how strong they were, and when they occurred.
 
 2. ***Event Background:*** You can access additional information about the event's source, which helps in understanding what caused the event, whether it was a natural earthquake or something else.
 
 3. ***Station Details:*** This service also offers information about the stations that recorded data for a specific event. This helps in verifying the data's reliability and its sources.
 
-More information about Event service [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf)
+    More information about Event service [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf)
 
 ### Obtaining the Data
 #### Steps to Download Ground Motion Data
@@ -103,9 +102,9 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
     The values vary according the the network you want to extract data from.
 
-        ![10](_build/html/assets/fdsnws/4.10.jpg "10")
+    ![10](_build/html/assets/fdsnws/4.10.jpg "10")
 
-5. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
+6. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
 ![url](_build/html/assets/fdsnws/4.5.jpg "url")
 
 
@@ -120,6 +119,7 @@ To obtain the Metadata, we will be using the ```event``` service.
 
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 ![build](_build/html/assets/fdsnws/4.7.jpg "build")
+
 ![build](_build/html/assets/fdsnws/4.8.jpg "build query")
 
 
@@ -170,61 +170,61 @@ This includes:
     Refer [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf) for the query guide
 
 
-    After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
+6. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
 
     ![url](_build/html/assets/fdsnws/4.9.jpg "url")
 
 
-6. Process the Data
+7 . Process the Data
  To use fetched seismic data for plotting or analysis, you can use ObsPy.
  Follow these steps:
 
-1. **Install ObsPy:** Make sure ObsPy is installed:
+    1. **Install ObsPy:** Make sure ObsPy is installed:
 
-```
-pip install obspy
-```
-2. Import the necessary modules:
+    ```
+    pip install obspy
+    ```
+    2. Import the necessary modules:
 
-Create a Python file. You need to write a script that imports ObsPy modules for data processing and plotting:
+    Create a Python file. You need to write a script that imports ObsPy modules for data processing and plotting:
 
-```
-from obspy import read
-import matplotlib.pyplot as plt
-```
+    ```
+    from obspy import read
+    import matplotlib.pyplot as plt
+    ```
 
-3. Load your seismic data:
+    3. Load your seismic data:
 
-You can use the obspy.read() function to load your existing seismic data file. ObsPy can read various formats, such as MiniSEED, SAC, and more. Here's an example of how to load a MiniSEED file:
+    You can use the obspy.read() function to load your existing seismic data file. ObsPy can read various formats, such as MiniSEED, SAC, and more. Here's an example of how to load a MiniSEED file:
 
-```
-st = read('your_seismic_data.mseed')
-```
+    ```
+    st = read('your_seismic_data.mseed')
+    ```
 
-Replace 'your_seismic_data.mseed' with the actual file path.
+    Replace 'your_seismic_data.mseed' with the actual file path.
 
-> Example: From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-15T11:30:00```, I've downloaded the MiniSeed data with the file name ```fdsnws.md```
+    > Example: From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-15T11:30:00```, I've downloaded the MiniSeed data with the file name ```fdsnws.md```
 
-```
-st = read('fdsnws.mseed')
-```
+    ```
+    st = read('fdsnws.mseed')
+    ```
 
-3. Plot the time series:
+    3. Plot the time series:
 
-You can use ObsPy to plot the loaded time series data using Matplotlib. Here's an example:
+    You can use ObsPy to plot the loaded time series data using Matplotlib. Here's an example:
 
-```
-st.plot(type="dayplot", title="Seismic Data", vertical_scaling_range=2000, color="black", size=(800, 600))
-plt.show()
-```
+    ```
+    st.plot(type="dayplot", title="Seismic Data", vertical_scaling_range=2000, color="black", size=(800, 600))
+    plt.show()
+    ```
 
-The type="dayplot" argument specifies the type of plot you want to create. You can adjust the other parameters as needed, such as title, scaling range, color, and figure size.
-More plot features accessible [here](https://docs.obspy.org/packages/autogen/obspy.core.stream.Stream.plot.html)
+    The type="dayplot" argument specifies the type of plot you want to create. You can adjust the other parameters as needed, such as title, scaling range, color, and figure size.
+    More plot features accessible [here](https://docs.obspy.org/packages/autogen/obspy.core.stream.Stream.plot.html)
 
 
-4. Save the plot file
+    4. Save the plot file
 
-Click the save icon below the plot
+    Click the save icon below the plot
 
--Print Information from the metadata (obspy)
-do the same from following the documentation
+    -Print Information from the metadata (obspy)
+    do the same from following the documentation

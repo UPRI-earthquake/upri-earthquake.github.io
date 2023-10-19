@@ -56,11 +56,10 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
 3. Proceed by choosing ```1/```
 ![dataselect](_build/html/assets/fdsnws/4.2.jpg "dataselect")
-<img src="_build/html/assets/fdsnws/4.2.jpg" alt="dataselect" width="300" height="200" />
 
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 ![builder](_build/html/assets/fdsnws/4.3.jpg "builder")
-
+![builder query](_build/html/assets/fdsnws/4.4.jpg "builder query")
 
 5. Specify the parameters of the data you want to download.
   This includes:
@@ -79,7 +78,7 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
         > **_NOTE:_** The time is formatted **YYYY-MM-DDTHH-MM-SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
 
-        > For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30``` pm till ```October 15, 2023 11:30 am``` start time should be ```2023-10-11T23:30:00``` and end time should be ```2023-10-15T11:30:00```
+        > For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30``` pm till ```October 12, 2023 11:30 am``` start time should be ```2023-10-11T23:30:00``` and end time should be ```2023-10-12T11:30:00```
 
     - **Data Format:**
         - ```format```: Specifies the format in which you want to receive the data. The ground data is in **miniseed** format
@@ -95,6 +94,16 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
 Refer [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf) for the query guide.
 
+    > Example: The following parameters of our test network are the following:
+
+        - Network: AM
+        - Station: R3B2D
+        - Location: 00
+        - Channel: EHZ
+    The values vary according the the network you want to extract data from.
+
+![10](_build/html/assets/fdsnws/4.10.jpg "10")
+
 5. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
 ![url](_build/html/assets/fdsnws/4.5.jpg "url")
 
@@ -105,12 +114,12 @@ To obtain the Metadata, we will be using the ```event``` service.
 
 1. Access the [UPRI Earthquake Hub SeisComP FDSNWS Web Service](https://earthquake.science.upd.edu.ph/fdsnws/)
 2. Choose the ```event/``` web service
-**<PHOTO HERE>**
 3. Proceed by choosing ```1/```
+![/1](_build/html/assets/fdsnws/4.6.jpg "/1")
+
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
-
-
-
+![build](_build/html/assets/fdsnws/4.7.jpg "build")
+![build](_build/html/assets/fdsnws/4.8.jpg "build query")
 
 5. Specify the parameters of the data you want to download.
 This includes:
@@ -159,41 +168,61 @@ This includes:
     Refer [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf) for the query guide
 
 
-5. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
+After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
 
-![url](_build/html/assets/fdsnws/4.3.jpg "builder")
-
-
+![url](_build/html/assets/fdsnws/4.9.jpg "url")
 
 
+6. Process the Data
+ To use fetched seismic data for plotting or analysis, you can use ObsPy.
+ Follow these steps:
+
+1. **Install ObsPy:** Make sure ObsPy is installed:
+
+```
+pip install obspy
+```
+2. Import the necessary modules:
+
+Create a Python file. You need to write a script that imports ObsPy modules for data processing and plotting:
+
+```
+from obspy import read
+import matplotlib.pyplot as plt
+```
+
+3. Load your seismic data:
+
+You can use the obspy.read() function to load your existing seismic data file. ObsPy can read various formats, such as MiniSEED, SAC, and more. Here's an example of how to load a MiniSEED file:
+
+```
+st = read('your_seismic_data.mseed')
+```
+
+Replace 'your_seismic_data.mseed' with the actual file path.
+
+> Example: From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-15T11:30:00```, I've downloaded the MiniSeed data with the file name ```fdsnws.md```
+
+```
+st = read('fdsnws.mseed')
+```
+
+3. Plot the time series:
+
+You can use ObsPy to plot the loaded time series data using Matplotlib. Here's an example:
+
+```
+st.plot(type="dayplot", title="Seismic Data", vertical_scaling_range=2000, color="black", size=(800, 600))
+plt.show()
+```
+
+The type="dayplot" argument specifies the type of plot you want to create. You can adjust the other parameters as needed, such as title, scaling range, color, and figure size.
+More plot features accessible [here](https://docs.obspy.org/packages/autogen/obspy.core.stream.Stream.plot.html)
 
 
+4. Save the plot file
 
+Click the save icon below the plot
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4. Use Software or Libraries
-You can use various software tools or libraries to retrieve data using the constructed query URL. Commonly used options include: **obspy**
-
-**url**
-
-5. Save and Process the Data
-Once you've downloaded the data, you can save it in your preferred format and process it as needed for your specific analysis or research.
--Plotting
 -Print Information from the metadata (obspy)
 do the same from following the documentation

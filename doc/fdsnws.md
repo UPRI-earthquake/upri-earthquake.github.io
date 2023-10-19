@@ -1,4 +1,4 @@
-How to Use FDSNWS to Download Ground Motion Data and Metadata
+How to Use FDSNWS to Download Ground Motion Data and Station Metadata
 ===============================================
 
 ### Introduction
@@ -12,7 +12,7 @@ How to Use FDSNWS to Download Ground Motion Data and Metadata
 
 FDSNWS provides various services for accessing different types of data.
 The most commonly used service for ground motion data is the ```dataselect```
-service. While the ```event``` service is used to obtain the metadata
+service. While the ```station``` service is used to obtain the metadata
 
 #### DataSelect
 This service  allows you to retrieve time series data from seismological instruments. In the context of seismology, time series data refers to recordings of ground motion or seismic activity ***over time.***
@@ -28,17 +28,23 @@ Here are the following data you can gather from ```dataselect``` service
 
     More information about DataSelect service [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf)
 
-#### Event
-This service is designed to provide access to information about seismic events.
+#### Station
+This service provides a way to access and retrieve metadata about seismic monitoring stations.
 
-Here are the following data you can gather from the ```event``` service
-1. ***Earthquake Information:*** The event service gives you details about specific seismic events, particularly earthquakes. This includes where they happened, how strong they were, and when they occurred.
+Here are the following information you can gather from ```station``` service
 
-2. ***Event Background:*** You can access additional information about the event's source, which helps in understanding what caused the event, whether it was a natural earthquake or something else.
+1. ***Station Locations:*** You can find out where seismographic stations are located on the Earth's surface. This data is crucial for understanding which regions are being monitored for seismic activity.
 
-3. ***Station Details:*** This service also offers information about the stations that recorded data for a specific event. This helps in verifying the data's reliability and its sources.
+2. ***Instrument Details:*** The service offers information about the instruments used at each station, including their specifications and capabilities. This helps you know how data is collected and recorded.
 
-    More information about Event service [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf)
+3. ***Operational Status:*** You can learn whether a station is currently operational or if it's undergoing maintenance or repairs. This is essential for assessing the reliability of data from that station.
+
+4. ***Data Availability:*** The service can inform you about the availability of data from specific stations. It lets you know if historical data is accessible or if data is currently being recorded.
+
+5. ***Network Information:*** You can also obtain data about the seismographic networks to which these stations belong. This includes details about the organizations running the networks and their objectives.
+
+
+
 
 ### Obtaining the Data
 #### Steps to Download Ground Motion Data
@@ -108,12 +114,12 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 ![url](_build/html/assets/fdsnws/4.5.jpg "url")
 
 
-#### Steps to Download Metadata
+#### Steps to Download Station Metadata
 
-To obtain the Metadata, we will be using the ```event``` service.
+To obtain the Metadata, we will be using the ```station``` service.
 
 1. Access the [UPRI Earthquake Hub SeisComP FDSNWS Web Service](https://earthquake.science.upd.edu.ph/fdsnws/)
-2. Choose the ```event/``` web service
+2. Choose the ```station/``` web service
 3. Proceed by choosing ```1/```
 ![/1](_build/html/assets/fdsnws/4.6.jpg "/1")
 

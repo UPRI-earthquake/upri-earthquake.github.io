@@ -30,7 +30,6 @@ Here are the following data you can gather from ```dataselect``` service
 
 #### Station
 This service provides a way to access and retrieve metadata about seismic monitoring stations.
-
 Here are the following information you can gather from ```station``` service
 
 1. ***Station Locations:*** You can find out where seismographic stations are located on the Earth's surface. This data is crucial for understanding which regions are being monitored for seismic activity.
@@ -50,8 +49,6 @@ Here are the following information you can gather from ```station``` service
 #### Steps to Download Ground Motion Data
 
 To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
-
-
 1. Access the [UPRI Earthquake Hub SeisComP FDSNWS Web Service](https://earthquake.science.upd.edu.ph/fdsnws/)
 
 2. Choose the ```dataselect/``` web service
@@ -99,7 +96,7 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
     Refer [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf) for the query guide.
 
-    > Example: The following parameters of our test network are the following:
+    > **Example:** The following parameters of our test network are the following:
 
         - Network: AM
         - Station: R3B2D
@@ -125,7 +122,6 @@ To obtain the Metadata, we will be using the ```station``` service.
 
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 ![build](_build/html/assets/fdsnws/4.7.jpg "build")
-
 ![build](_build/html/assets/fdsnws/4.8.jpg "build query")
 
 
@@ -228,21 +224,17 @@ plt.show()
 ```
 
 The type="dayplot" argument specifies the type of plot you want to create. You can adjust the other parameters as needed, such as title, scaling range, color, and figure size.
-
 More plot features accessible [here](https://docs.obspy.org/packages/autogen/obspy.core.stream.Stream.plot.html)
 
-For windows, press CTRL + B to run your python code
 
+For windows, press CTRL + B to run your python code
 If your code ran successfully, a MatLab window containing your visualized miniSEED data will appear.
 
 ![plot](_build/html/assets/fdsnws/4.11.jpg "plot")
 
 
 5. **Save the plot file**
-
-Click the save icon below the plot
-
-
+- Click the save icon below the plot
 Congratulations! You now have a plot of the Seismic Data you just downloaded from FDSNWS!
 
 #### From Event Service

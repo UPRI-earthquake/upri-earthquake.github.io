@@ -15,10 +15,12 @@ SeisComP encompasses a suite of modular components, each dedicated to specific t
 
 
 ## Installation from Pre-Compiled Release Package
-This guide provides instructions for installing SeisComP packages on machines running Ubuntu. These guide works for Ubuntu 20.04 and 22.04, as of this writing. For more comprehensive installation details, please consult the [official documentation](https://www.seiscomp.de/doc/base/installation.html).
+This guide provides instructions for installing SeisComP packages on machines running Ubuntu. These guide works for Ubuntu 20.04 and 22.04, as of this writing. For more comprehensive installation details, please consult the <a href="https://www.seiscomp.de/doc/base/installation.html" target="_blank">official documentation.</a>
+
 
 1. Begin by creating a directory where you intend to download and install SeisComP packages.
-2. Navigate to the directory you've just created and download the appropriate SeisComP binary package compatible with your Linux distribution and architecture. You can obtain this package from the [SeisComP download site](https://www.seiscomp.de/downloader/).
+2. Navigate to the directory you've just created and download the appropriate SeisComP binary package compatible with your Linux distribution and architecture. You can obtain this package from the <a href="https://www.seiscomp.de/downloader/" target="_blank">SeisComP download site</a>.
+
 3. Within the same directory, retrieve the SeisComP maps using the following command:
     ```bash
     wget "https://www.seiscomp.de/downloader/seiscomp-maps.tar.gz"
@@ -164,10 +166,13 @@ In order to process seismic data within SeisComP, it's essential to define a dat
     ```
 
 ## Getting Real-time Data from a Remote Seedlink Server
-[This is the link to Get Real-time Data from a Remote Seedlink Server](https://www.seiscomp.de/doc/base/tutorials/waveforms.html)
+<a href="https://www.seiscomp.de/doc/base/tutorials/waveforms.html" target="_blank">This is the link to Get Real-time Data from a Remote Seedlink Server</a>
+
+
+
 
 ## Important concepts to know about seiscomp
-- [Reference to SeisComp](https://www.seiscomp.de/doc/base/concepts.html#concepts)
+- <a href="https://www.seiscomp.de/doc/base/concepts.html#concepts" target="_blank">Reference to SeisComp</a>
 - Messaging: Exchanging information in real-time processing
 - Database: Storing meta data, configurations and data products
 - Modules: Daemon programs and command-line tools

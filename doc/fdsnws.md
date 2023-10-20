@@ -26,7 +26,7 @@ Here are the following data you can gather from ```dataselect``` service
 3. ***Instrument Info:*** This service can also provide information about the tools (instruments) used to capture this seismic data. Understanding these instruments is crucial for correctly interpreting and using the data.
 
 
-    More information about DataSelect service [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf)
+    More information about DataSelect service <a href="https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf" target="_blank">here</a>
 
 #### Station
 This service provides a way to access and retrieve metadata about seismic monitoring stations.
@@ -49,7 +49,8 @@ Here are the following information you can gather from ```station``` service
 #### Steps to Download Ground Motion Data
 
 To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
-1. Access the [UPRI Earthquake Hub SeisComP FDSNWS Web Service](https://earthquake.science.upd.edu.ph/fdsnws/)
+1. Access the <a href="https://earthquake.science.upd.edu.ph/fdsnws/" target="_blank">UPRI Earthquake Hub SeisComP FDSNWS Web Service</a>
+
 2. Choose the ```dataselect/``` web service
 ![access](_build/html/assets/fdsnws/4.1.jpg "access photo")
 
@@ -97,7 +98,7 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
     - Time Correction:
         - ```updatedAfter```: Specifies the last time the data was updated. It allows you to request data that has been updated or added after a certain timestamp.
 
-    Refer [here](https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf) for the query guide.
+    Refer <a href="https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf" target="_blank">here</a> for the query guide.
 
     > **Example:** The following parameters of our test network are the following:
 
@@ -118,7 +119,7 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
 To obtain the Metadata, we will be using the ```station``` service.
 
-1. Access the [UPRI Earthquake Hub SeisComP FDSNWS Web Service](https://earthquake.science.upd.edu.ph/fdsnws/)
+1. Access the <a href="https://earthquake.science.upd.edu.ph/fdsnws/" target="_blank">UPRI Earthquake Hub SeisComP FDSNWS Web Service</a>
 2. Choose the ```station/``` web service
 3. Proceed by choosing ```1/```
 ![/1](_build/html/assets/fdsnws/4.6.jpg "/1")
@@ -172,7 +173,7 @@ This includes:
         - ```Formatted```: Decide whether the output should be formatted or not for easier readability.
         - ```No Data 404```: Control the response behavior for missing data, allowing you to receive a 404 response for "no data."
 
-    Refer [here](https://www.fdsn.org/webservices/fdsnws-station-1.1.pdf) for the query guide
+    Refer <a href="https://www.fdsn.org/webservices/fdsnws-station-1.1.pdf" target="_blank">here</a> for the query guide.
 
 >
 
@@ -238,7 +239,7 @@ plt.show()
 ```
 
 The type="dayplot" argument specifies the type of plot you want to create. You can adjust the other parameters as needed, such as title, scaling range, color, and figure size.
-More plot features accessible [here](https://docs.obspy.org/packages/autogen/obspy.core.stream.Stream.plot.html)
+More plot features accessible <a href="https://docs.obspy.org/packages/autogen/obspy.core.stream.Stream.plot.html" target="_blank">here</a> for the query guide.
 
 
 For windows, press CTRL + B to run your python code
@@ -307,4 +308,4 @@ print(inv)
 A printed Station Metadata should look like this.
 ![print](_build/html/assets/fdsnws/4.13.jpg "plot")
 
-Reference for processing Station Metadata through ObsPy [here](https://docs.obspy.org/packages/autogen/obspy.core.inventory.html)
+Reference for processing Station Metadata through ObsPy <a href="https://docs.obspy.org/packages/autogen/obspy.core.inventory.html" target="_blank">here</a>

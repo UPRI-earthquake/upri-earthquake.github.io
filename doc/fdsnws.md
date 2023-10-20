@@ -306,6 +306,6 @@ print(inv)
 ```
 
 A printed Station Metadata should look like this.
-![print](_build/html/assets/fdsnws/4.12.jpg "plot")
+![print](_build/html/assets/fdsnws/4.13.jpg "plot")
 
-
+Reference for processing Station Metadata through ObsPy [here](https://docs.obspy.org/packages/autogen/obspy.core.inventory.html)

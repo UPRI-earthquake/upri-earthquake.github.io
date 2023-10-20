@@ -49,10 +49,7 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
   1. To open the PuTTY application, press the Windows key and search for "putty".
       ![image](_build/html/assets/connecting-rshake/1.6.png)
 
-> If PuTTY is not yet installed, you may follow <a href="https://apps.microsoft.com/store/detail/putty/XPFNZKSKLBP7RJ/" target="_blank">this link to get the application via Microsoft Store.</a>
-
-
-[this link to get the application via Microsoft Store.](https://apps.microsoft.com/store/detail/putty/XPFNZKSKLBP7RJ) Or if you prefer not to download anything, you may try connecting via Powershell instead which comes pre-installed in most Windows operating systems.
+> If PuTTY is not yet installed, you may follow <a href="https://apps.microsoft.com/detail/putty/XPFNZKSKLBP7RJ?hl=en-us&gl=PH" target="_blank">this link to get the application via Microsoft Store.</a> Or if you prefer not to download anything, you may try connecting via Powershell instead which comes pre-installed in most Windows operating systems.
 
 
 
@@ -112,5 +109,4 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
 
 
 
-> **_NOTE:_**  For improved security, it's highly recommended to change the default password of your Raspberry Shake. To learn how to update your password and access essential guidelines for securing your device effectively, refer to this [guide](https://manual.raspberryshake.org/hacked.html#hacked).
-
+> **_NOTE:_**  For improved security, it's highly recommended to change the default password of your Raspberry Shake. To learn how to update your password and access essential guidelines for securing your device effectively, refer to this <a href="https://manual.raspberryshake.org/hacked.html#hacked" target="_blank">guide.</a>

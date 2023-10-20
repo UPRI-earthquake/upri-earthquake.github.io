@@ -21,8 +21,8 @@ The script will perform the installation. As it progresses, check that each stat
 
 ## 3. Access the EarthquakeHub Client
 
-After about 5 minutes, your device will finish initialization. Open a web browser and enter the address [rs.local:3000](rs.local:3000). You should see the EarthquakeHub client interface. Congratulations, you've successfully installed the client software!
+After about 5 minutes, your device will finish initialization. Open a web browser and enter the address [rs.local:3000](https://rs.local:3000). You should see the EarthquakeHub client interface. Congratulations, you've successfully installed the client software!
 ![image](_build/html/assets/installing-earthquakehub/2.2.png)
 
 
-Next, proceed to the [next tutorial](https://upri-earthquake.github.io/sending-data-to-ehub-network) to learn how to send data to the EarthquakeHub network.
+Next, proceed to the [next tutorial](https://alyssapatricia.github.io/ui/sending-data-to-ehub-network.html) to learn how to send data to the EarthquakeHub network.

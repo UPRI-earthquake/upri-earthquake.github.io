@@ -14,35 +14,34 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
      **This means that the ethernet port is working as it should.**
 
 ## How to SSH via Windows Powershell
-   - To open PowerShell, either press Ctrl + Shift + P, or hit the Windows key and manually search for PowerShell.
+   1. To open PowerShell, either press Ctrl + Shift + P, or hit the Windows key and manually search for PowerShell.
      ![image](_build/html/assets/connecting-rshake/1.1.png)
 
 
-   - Enter this SSH command: `ssh myshake@rs.local` which means to connect the user `myshake` to the device accessible via the address `rs.local` (which is your Raspberry Shake device in your local network). If it asks to validate the authenticity of the host, simply type "yes"
+   2. Enter this SSH command: `ssh myshake@rs.local` which means to connect the user `myshake` to the device accessible via the address `rs.local` (which is your Raspberry Shake device in your local network). If it asks to validate the authenticity of the host, simply type "yes"
      ![image](_build/html/assets/connecting-rshake/1.2.png)
 
-   - You will be prompted to enter a password. The default password is `shakeme`. Usually, it wouldn't show any characters as you type, but simply type your password and press ENTER afterwards.
+   3. You will be prompted to enter a password. The default password is `shakeme`. Usually, it wouldn't show any characters as you type, but simply type your password and press ENTER afterwards.
      ![image](_build/html/assets/connecting-rshake/1.3.png)
 
 
 
-   - Once successfully connected, the terminal you are in is now controlling the system of your Raspberry Shake device. You may try the `myshake` command to get a status log of your device. In this case, my test device has a network-station code of `AM_RE722`, this should be different from the code of your device.
+   4. Once successfully connected, the terminal you are in is now controlling the system of your Raspberry Shake device. You may try the `myshake` command to get a status log of your device. In this case, my test device has a network-station code of `AM_RE722`, this should be different from the code of your device.
      ![image](_build/html/assets/connecting-rshake/1.4.png)
 
------
 
-   - After you have completed your purpose for connecting to the device, you may close the SSH connection by simply typing `exit` to the prompt. This would return you to the normal terminal prompt for your PC.
+
+   5. After you have completed your purpose for connecting to the device, you may close the SSH connection by simply typing `exit` to the prompt. This would return you to the normal terminal prompt for your PC.
      ![image](_build/html/assets/connecting-rshake/1.5.png)
 
 
 ## How to SSH via Windows PuTTY
-   - To open the PuTTY application, press the Windows key and search for "putty".
+   1. To open the PuTTY application, press the Windows key and search for "putty".
      ![image](_build/html/assets/connecting-rshake/1.6.png)
 
      > If PuTTY is not yet installed, you may follow [this link to get the application via Microsoft Store.](https://apps.microsoft.com/store/detail/putty/XPFNZKSKLBP7RJ) Or if you prefer not to download anything, you may try connecting via Powershell instead which comes pre-installed in most Windows operating systems.
 
-------
-   - Input the following:
+   2. Input the following:
 
      ![image](_build/html/assets/connecting-rshake/1.7.png)
 
@@ -50,52 +49,46 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
        - Make sure that Port is set to 22.
        - Under Connection type, select SSH.
 
------
 
-   - Click Open, and enter Raspberry Shake username and password. By default, these are `myshake` and `shakeme`, respectively. If it asks about trusting the host, simply click Accept.
+   3. Click Open, and enter Raspberry Shake username and password. By default, these are `myshake` and `shakeme`, respectively. If it asks about trusting the host, simply click Accept.
 
      ![image](_build/html/assets/connecting-rshake/1.8.png)
 
------
 
-   -  Once successfully connected, the terminal you are in is now controlling the system of your Raspberry Shake device. You may try the `myshake` command to get a status log of your device. In this case, my test device has a network-station code of `AM_RE722`, this should be different from the code of your device.
+   4.  Once successfully connected, the terminal you are in is now controlling the system of your Raspberry Shake device. You may try the `myshake` command to get a status log of your device. In this case, my test device has a network-station code of `AM_RE722`, this should be different from the code of your device.
      ![image](_build/html/assets/connecting-rshake/1.9.png)
 
------
 
-   - After you have completed your purpose for connecting to the device, you may close the SSH connection by simply typing `exit` to the prompt. This should exit the terminal window and you are effectively disconnected from the device.
+   5. After you have completed your purpose for connecting to the device, you may close the SSH connection by simply typing `exit` to the prompt. This should exit the terminal window and you are effectively disconnected from the device.
 
 ## How to SSH via Mac
-   - Navigate to Applications > Utilities (or Other), and open the Terminal application. You may also pres Cmd+Space and type "Terminal"
+   1. Navigate to Applications > Utilities (or Other), and open the Terminal application. You may also pres Cmd+Space and type "Terminal"
    ![image](_build/html/assets/connecting-rshake/1.10.png)
 
------
 
-   - Enter this SSH command: `ssh myshake@rs.local`
+
+   2. Enter this SSH command: `ssh myshake@rs.local`
      ![image](_build/html/assets/connecting-rshake/1.11.png)
 
------
 
-   - You will be prompted to enter a password. The default password is `shakeme`. Usually, it wouldn't show any characters as you type, but simply type your password and press <ENTER> afterwards.
+   3. You will be prompted to enter a password. The default password is `shakeme`. Usually, it wouldn't show any characters as you type, but simply type your password and press <ENTER> afterwards.
      ![image](_build/html/assets/connecting-rshake/1.12.png)
 
------
 
-   - Once successfully connected, the terminal you are in is now controlling the system of your Raspberry Shake device. You may try the `myshake` command to get a status log of your device. In this case, my test device has a network-station code of `AM_RE722`, this should be different from the code of your device.
+   4. Once successfully connected, the terminal you are in is now controlling the system of your Raspberry Shake device. You may try the `myshake` command to get a status log of your device. In this case, my test device has a network-station code of `AM_RE722`, this should be different from the code of your device.
      ![image](_build/html/assets/connecting-rshake/1.13.png)
 
------
 
-   - After you have completed your purpose for connecting to the device, you may close the SSH connection by simply typing `exit` to the prompt. This would return you to the normal terminal prompt for your macOS.
+   5. After you have completed your purpose for connecting to the device, you may close the SSH connection by simply typing `exit` to the prompt. This would return you to the normal terminal prompt for your macOS.
      ![image](_build/html/assets/connecting-rshake/1.14.png)
 
 
 
 
 ## How to SSH via Ubuntu
-   - Press Ctrl + Alt + T to open a terminal.
-   - Enter this SSH command: `ssh myshake@rs.local`
-   - You will be prompted to enter a password. Type the default password `shakeme` and press <ENTER>.
+   1. Press Ctrl + Alt + T to open a terminal.
+   2. Enter this SSH command: `ssh myshake@rs.local`
+   3. You will be prompted to enter a password. Type the default password `shakeme` and press <ENTER>.
 
 ___
 

@@ -16,7 +16,9 @@ There are two main tasks performed by the earthquake-hub-backend:
 
 ## API
 
-This is the link for the [API Docs](https://alyssapatricia.github.io/ui/ehub-backend/api-docs/)
+This is the link for the <a href="https://upri-earthquake.github.io/ehub-backend/api-docs/" target="_blank">API Docs</a>
+
 
 ## CONTRIBUTING.md
-This is the link for [CONTRIBUTING.md](https://github.com/UPRI-earthquake/earthquake-hub-backend/blob/main/CONTRIBUTING.md)
+This is the link for <a href="https://github.com/UPRI-earthquake/earthquake-hub-backend/blob/main/CONTRIBUTING.md" target="_blank">CONTRIBUTING.md</a>
+

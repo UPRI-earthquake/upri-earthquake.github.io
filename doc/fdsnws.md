@@ -62,6 +62,9 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 ![builder](_build/html/assets/fdsnws/4.3.jpg "builder")
+
+>
+
 ![builder query](_build/html/assets/fdsnws/4.4.jpg "builder query")
 
 >
@@ -129,7 +132,6 @@ To obtain the Metadata, we will be using the ```station``` service.
 ![build](_build/html/assets/fdsnws/4.7.jpg "build")
 
 >
-
 ![build](_build/html/assets/fdsnws/4.8.jpg "build query")
 
 >

@@ -25,7 +25,7 @@ In particular, the ring buffer is chosen as the data structure in which incoming
 
 We can see how this results to a desirable property as a temporary receptacle (buffer) for non-stop data streams: the ring structure can be given a size that wouldn’t grow over time as we write more data due to the built-in feature of overwriting old data.
 
-![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/8100756f-3713-4c3c-a6e6-c9fca4ee453f)
+![image](_build/html/assets/ringserver/6.1.jpg)
 
 
 Lastly, this ring is treated as a shared memory between threads who write into and read from it. A connection from a client corresponds to a single thread, and a single thread can write multiple packets into the ring buffer. In particular, the data in the ring buffer is organized into streams, identified by a unique `streamid` with the format NET_STAT_LOC_CHANNEL. Each stream represents a time-series data recording of a single axis of motion from a station belonging to a network. To represent a stream of data within the ring buffer, a linked-list data structure is used. Each value in the linked-list points to the location in the ring buffer where the next data point of that specific stream is stored.

@@ -173,7 +173,7 @@ This includes:
 
         - ```limit```: Sets the maximum number of events to return in the search results.
 
-    Refer [here](https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf) for the query guide
+    Refer [here](https://www.fdsn.org/webservices/fdsnws-station-1.1.pdf) for the query guide
 
 
 6. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.

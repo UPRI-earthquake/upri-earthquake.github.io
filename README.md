@@ -82,7 +82,7 @@ Detailed instructions written [here](https://alyssapatricia.github.io/ui/dev-gui
 ### 4. Deploying on GitHub Pages
 To deploy your documentation on GitHub Pages, follow these steps:
 
-1. Configure GitHub Pages: In your Forked GitHub repository, go to the "Settings" tab and scroll down to the "GitHub Pages" section. Set the source branch to "gh-pages" and the "docs" folder. Save the changes.
+1. Configure GitHub Pages: In your Forked GitHub repository, go to the "Settings" tab and scroll down to the "GitHub Pages" section. Set the source branch to "gh-pages" and the "root" folder. Save the changes.
 2. Access the Published Documentation: After a few moments, your documentation will be available at the URL mentioned in the GitHub Pages settings, typically in the format: https://```<username>```.github.io/```<repository>```/.
 
 

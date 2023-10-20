@@ -15,7 +15,7 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
 
 ## How to SSH via Windows Powershell
    - To open PowerShell, either press Ctrl + Shift + P, or hit the Windows key and manually search for PowerShell.
-     ![image](_build/html/assets/connecting-rshake/1.1.jpg)
+     ![image](_build/html/assets/connecting-rshake/1.1.jpg "powershell")
 
 
    - Enter this SSH command: `ssh myshake@rs.local` which means to connect the user `myshake` to the device accessible via the address `rs.local` (which is your Raspberry Shake device in your local network). If it asks to validate the authenticity of the host, simply type "yes"

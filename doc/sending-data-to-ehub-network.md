@@ -5,7 +5,7 @@ For a citizen scientist to contribute their real-time Raspberry Shake data to th
 
 > **_NOTE:_**  Make sure that you have already [installed the EarthquakeHub client on your Raspberry Shake device](https://alyssapatricia.github.io/ui/installing-rshake-client.html) before following this tutorial.
 
-## 1. Register a `citizen` Account
+### 1. Register a `citizen` Account
    ![image](_build/html/assets/sending-data/3.1.png)
 
 
@@ -16,7 +16,7 @@ For a citizen scientist to contribute their real-time Raspberry Shake data to th
 
 
 
-## 2. Device to Account Linking
+### 2. Device to Account Linking
    ![image](_build/html/assets/sending-data/3.2.png)
 
 
@@ -31,7 +31,7 @@ For a citizen scientist to contribute their real-time Raspberry Shake data to th
      ![image](_build/html/assets/sending-data/3.3.png)
 
 
-## 3. Adding a Host
+### 3. Adding a Host
   ![image](_build/html/assets/sending-data/3.4.png)
 
    After having linked your device, you are now ready to send data to any available server on the network. This step will also be done via the [EarthquakeHub rShake client](http://rs.local:3000). To do this, click `Add Server` and choose your target ringserver  input the following details of the host you want to send your Raspberry Shake data to:

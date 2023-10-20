@@ -51,17 +51,23 @@ Here are the following information you can gather from ```station``` service
 To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 1. Access the [UPRI Earthquake Hub SeisComP FDSNWS Web Service](https://earthquake.science.upd.edu.ph/fdsnws/)
 
+>
+
 2. Choose the ```dataselect/``` web service
 ![access](_build/html/assets/fdsnws/4.1.jpg "access photo")
 
-
+>
 
 3. Proceed by choosing ```1/```
 ![dataselect](_build/html/assets/fdsnws/4.2.jpg "dataselect")
 
+>
+
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 ![builder](_build/html/assets/fdsnws/4.3.jpg "builder")
 ![builder query](_build/html/assets/fdsnws/4.4.jpg "builder query")
+
+>
 
 5. Specify the parameters of the data you want to download.
   This includes:
@@ -122,52 +128,53 @@ To obtain the Metadata, we will be using the ```station``` service.
 
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 ![build](_build/html/assets/fdsnws/4.7.jpg "build")
+
+>
+
 ![build](_build/html/assets/fdsnws/4.8.jpg "build query")
 
+>
 
 5. Specify the parameters of the data you want to download.
 This includes:
 
-    - **Start Time and End Time**:
+    - **Time Constraints**:
 
-        - ```starttime```:Specifies the beginning time for the search
-        - ```endtime```: Specifies the end time for the search
+        - ```starttime```: Specify the earliest time from which you want to retrieve station data.
+        - ```endtime```: Specify the latest time up to which you want to retrieve station data.
+        - ```startbefore```: Find stations that were operational before the provided start time.
+        - ```startafter```: Find stations that became operational after the provided start time.
+        - ```endbefore```: Find stations that were operational before the specified end time.
+        - ```endafter```: Find stations that became operational after the specified end time.
+
 
         > **_NOTE:_** Refer to the instructions above regarding time formatting.
 
-    - Geographical Region:
+    - **Channel Constraints**:
 
-        - ```minlatitude```: Defines the minimum latitude (southern boundary) for the search area.
-        - ```maxlatitude```: Defines the maximum latitude (northern boundary) for the search area.
-        - ```minlongitude```: Specifies the minimum longitude (western boundary) for the search area.
-        - ```maxlongitude```: Specifies the maximum longitude (eastern boundary) for the search area.
+        - ```Network```: Filter stations by specifying their network code(s).
+        - ```Station```: Narrow your search by station code(s) to retrieve specific stations.
+        - ```Location```: Filter stations by location code(s), which can distinguish instruments at the same station.
+        - ```Channel```:  Specify channel code(s) to retrieve specific seismographic channels.
 
-    - Magnitude Range:
+    - **Geographic Constraints**:
 
-        - ```minmagnitude```: Sets the minimum magnitude of the seismic events you want to retrieve.
-        - ```maxmagnitude```: Sets the maximum magnitude of the seismic events you want to retrieve.
+        - ```None```: Retrieve stations without any specific geographic constraints.
+        - ```Bounding Box```: Filter stations within a specified geographic rectangular area.
+         - ```Circle```: Focus on stations located within a circular geographic region.
 
-    - Event Depth Range:
+    - **Service Specific Constraints**:
 
-        - ```mindepth```: Specifies the minimum depth of the seismic events you want to retrieve.
-        - ```maxdepth```: Specifies the maximum depth of the seismic events you want to retrieve.
+       - ```Level```: Choose the level of detail for station information, with the default being "Station."
+       - ```Exclude Restricted Channels```: Exclude stations with channels marked as restricted.
+       -```Include Data Availability```: Include information about data availability at these stations.
+       - ```Update After```: Filter stations updated after a specified time.
 
-    - Event Type:
+   - **Match Time Series Output Control**:
 
-        - ```type```: Specifies the type of seismic events you're interested in, e.g., "earthquake," "explosion," "nuclear explosion," etc.
-
-    - Event ID:
-
-        - ```eventid```: Allows you to specify the unique identifier for a particular event.
-
-    - Catalog and Contributor:
-
-        - ```catalog```: Filters events based on the catalog they are part of.
-        - ```contributor```: Filters events based on the organization or entity that contributed the data.
-
-    - Event Limit:
-
-        - ```limit```: Sets the maximum number of events to return in the search results.
+        - ```Format```: Specify the output format for station data, with the default being "FDSN Station XML."
+        - ```Formatted```: Decide whether the output should be formatted or not for easier readability.
+        - ```No Data 404```: Control the response behavior for missing data, allowing you to receive a 404 response for "no data."
 
     Refer [here](https://www.fdsn.org/webservices/fdsnws-station-1.1.pdf) for the query guide
 
@@ -189,6 +196,9 @@ To use fetched seismic data for plotting or analysis, you can use ObsPy.
 ```
 pip install obspy
 ```
+
+>
+
 2. **Import the necessary modules:**
 
 Create a Python file. You need to write a script that imports ObsPy modules for data processing and plotting:
@@ -197,6 +207,8 @@ Create a Python file. You need to write a script that imports ObsPy modules for 
 from obspy import read
 import matplotlib.pyplot as plt
 ```
+
+>
 
 3. **Load your seismic data**
 
@@ -213,6 +225,8 @@ Replace 'your_seismic_data.mseed' with your actual file name.
 ```
 st = read('fdsnws.mseed')
 ```
+
+>
 
 4. **Plot the time series:**
 
@@ -232,6 +246,7 @@ If your code ran successfully, a MatLab window containing your visualized miniSE
 
 ![plot](_build/html/assets/fdsnws/4.11.jpg "plot")
 
+>
 
 5. **Save the plot file**
 - Click the save icon below the plot

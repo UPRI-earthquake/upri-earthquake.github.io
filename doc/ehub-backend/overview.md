@@ -9,6 +9,7 @@ There are two main tasks performed by the earthquake-hub-backend:
 
 1. **Authentication**
   By allowing only registered and authorized citizen scientists to contribute data to the network, we are ensuring the authenticity and integrity of the data within the EarthquakeHub network. This is done by integrating an authentication mechanism, as API, to the system; using JSON web tokens. These tokens will be used to determine the authenticity of clients who are requesting certain information to the server. Another use of these tokens is to identify whether a requesting client is permitted to write to the ringserver or not.
+>
 
 2. **Storage of Account Details, Device Information and Seismic Data**
   As a central server, earthquake-hub-backend houses the shared data of the whole network. Information regarding the account of those who registered in the network, device information such as location and name, and seismic-event information are all saved in the database.

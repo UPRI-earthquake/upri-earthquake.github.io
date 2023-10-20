@@ -37,7 +37,7 @@ Lastly, this ring is treated as a shared memory between threads who write into a
 
     To solve this problem we used JSON web tokens (JWT) and an [external Authentication API](link to earthquake-hub-backend), to identify whether a client requesting to write data into the RingServer has permission or not. The way this works is:
 
-    1. We added the AUTHORIZATION command in the DataLink protocol, with the following format:
+    a. We added the AUTHORIZATION command in the DataLink protocol, with the following format:
 
         ```bash
         AUTHORIZATION size\r\n [token]
@@ -45,8 +45,8 @@ Lastly, this ring is treated as a shared memory between threads who write into a
 
        where token is a JWT of the client requesting WRITE permission, and size is the size of that token in bytes.
 
-    2. This provided token is forwarded by the RingServer to the `AuthServer`. The value of this config variable should be set in `ring.conf` and should be given the HTTPS address of the Authentication API from which the client and the RingServer are registered in.
-    3. In response, the AuthServer will handle the decoding and verification of the token, providing essential streamIDs and other relevant information associated with the token. Subsequently, the RingServer will designate the client connection as a write-authorized connection, specifically granting write permissions on the mentioned streamIDs.
+    b. This provided token is forwarded by the RingServer to the `AuthServer`. The value of this config variable should be set in `ring.conf` and should be given the HTTPS address of the Authentication API from which the client and the RingServer are registered in.
+    c. In response, the AuthServer will handle the decoding and verification of the token, providing essential streamIDs and other relevant information associated with the token. Subsequently, the RingServer will designate the client connection as a write-authorized connection, specifically granting write permissions on the mentioned streamIDs.
 
         ```bash
         /* Response schema of AuthServer, received by RingServer */
@@ -62,7 +62,7 @@ Lastly, this ring is treated as a shared memory between threads who write into a
         }
         ```
 
-    4. Once authorized, the client gains the ability to successfully execute WRITE commands on the RingServer, specifically limited to the assigned streamIDs. In the event that the client lacks authorization, the connection will be closed. Additionally, if an authorized client attempts to write on streamIDs other than those with granted permissions, the RingServer will drop the packets.
+    d. Once authorized, the client gains the ability to successfully execute WRITE commands on the RingServer, specifically limited to the assigned streamIDs. In the event that the client lacks authorization, the connection will be closed. Additionally, if an authorized client attempts to write on streamIDs other than those with granted permissions, the RingServer will drop the packets.
 
         SHOW FLOW DIAGRAM containing sensor, ringserver, authserver, and their messages.
 

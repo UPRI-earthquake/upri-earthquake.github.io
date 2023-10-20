@@ -1,7 +1,9 @@
 Introduction To SeisComp
 ========================
 
-**SeisComp** is a seismological software that has been developed collaboratively by the GEOFON Program at Helmholtz Centre Potsdam GFZ German Research Centre for Geosciences and gempa GmbH. It plays a vital role in various aspects of seismological operations, encompassing data acquisition, processing, distribution, and interactive analysis. While SeisComP is employed by the EarthquakeHub Network for processing seismic data sourced through citizen science efforts, it's important to note that its use is not an absolute requirement within the EarthquakeHub Network. Alternative data processing software capable of handling miniseed data can also be employed for processing network data.
+**SeisComp** is a seismological software that has been developed collaboratively by the GEOFON Program at Helmholtz Centre Potsdam GFZ German Research Centre for Geosciences and gempa GmbH. It plays a vital role in various aspects of seismological operations, encompassing data acquisition, processing, distribution, and interactive analysis.
+
+While SeisComP is employed by the EarthquakeHub Network for processing seismic data sourced through citizen science efforts, it's important to note that its use is not an absolute requirement within the EarthquakeHub Network. Alternative data processing software capable of handling miniseed data can also be employed for processing network data.
 
 SeisComP encompasses a suite of modular components, each dedicated to specific tasks, including:
 1. Global Parameters: Unified schema for configuring each modules.
@@ -61,7 +63,7 @@ This guide provides instructions for installing SeisComP packages on machines ru
       ```bash
       ./seiscomp/bin/seiscomp install-deps mariadb-server
       ```
-      ![Database Installation - MariaDB](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/80037186/31606c11-126e-427e-b33a-21453f0f785b)
+      ![image](_build/html/assets/intro-to-seiscomp/5.1.png)
     - For a MySQL installation:
       ```bash
       ./seiscomp/bin/seiscomp install-deps mysql-server
@@ -165,7 +167,7 @@ In order to process seismic data within SeisComP, it's essential to define a dat
 [This is the link to Get Real-time Data from a Remote Seedlink Server](https://www.seiscomp.de/doc/base/tutorials/waveforms.html)
 
 ## Important concepts to know about seiscomp
-- [SeisComP Reference](https://www.seiscomp.de/doc/base/concepts.html#concepts)
+- [Reference to SeisComp](https://www.seiscomp.de/doc/base/concepts.html#concepts)
 - Messaging: Exchanging information in real-time processing
 - Database: Storing meta data, configurations and data products
 - Modules: Daemon programs and command-line tools

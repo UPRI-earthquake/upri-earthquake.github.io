@@ -177,10 +177,12 @@ This includes:
 
     Refer [here](https://www.fdsn.org/webservices/fdsnws-station-1.1.pdf) for the query guide
 
+>
 
-6. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
+6. After filling out the form, click the link below and you will be redirected to the raw Metadata.
+![station](_build/html/assets/fdsnws/4.12.jpg "station")
 
-    ![url](_build/html/assets/fdsnws/4.9.jpg "url")
+7. To save this, press `CTRL + s`. Save with your desired file name.
 
 
 ### Processing the Data
@@ -251,8 +253,59 @@ If your code ran successfully, a MatLab window containing your visualized miniSE
 - Click the save icon below the plot
 Congratulations! You now have a plot of the Seismic Data you just downloaded from FDSNWS!
 
-#### From Event Service
+#### From Station Service
 
-1. :
--Print Information from the metadata (obspy)
-do the same from following the documentation
+1. **Install ObsPy:** if you haven't, install ObsPy:
+
+```
+pip install obspy
+```
+
+>
+
+2. **Import the necessary modules:**
+
+Create a Python file. You need to write a script that imports ObsPy modules for data processing and plotting:
+
+```
+from obspy import read_inventory
+```
+
+>
+
+3. **Load your Station Metadata**
+
+You can use the obspy.read() function to load your existing seismic data file. ObsPy can read various formats, such as MiniSEED, SAC, and more. Here's an example of how to load a MiniSEED file:
+
+```
+inv = read_inventory("your_station_metadata.xml")
+```
+
+Replace 'your_seismic_data.mseed' with your actual file name.
+
+> Example: From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-15T11:30:00```, I've downloaded the Station Metadata with the file name ```query.xml```
+
+```
+inv = read_inventory("query.xml")
+inv
+```
+
+4. **Print your Station Metadata**
+
+```
+print(inv)
+```
+
+Your source code should look like this:
+
+```
+from obspy import read_inventory
+inv = read_inventory("your_station_metadata.xml")
+inv
+print(inv)
+```
+
+A printed Station Metadata should look like this.
+![print](_build/html/assets/fdsnws/4.12.jpg "plot")
+
+

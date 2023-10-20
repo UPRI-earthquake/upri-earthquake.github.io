@@ -43,7 +43,7 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
 
   2. Input the following:
 
-    ![image](_build/html/assets/connecting-rshake/1.7.png)
+  ![image](_build/html/assets/connecting-rshake/1.7.png)
    -  Under Host Name (or IP address), enter your Raspberry Shake’s address, by default this is `rs.local`.
    - Make sure that Port is set to 22.
    - Under Connection type, select SSH.

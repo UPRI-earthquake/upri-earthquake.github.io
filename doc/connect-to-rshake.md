@@ -7,10 +7,13 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
 ## Hardware Setup
    - Connect the power brick to your Raspberry Shake to power it on.
    - Connect one end of an ethernet cable to your Raspberry Shake and plug the other end into an ethernet port on the back of your router.
-   - Wait for the [Raspberry Shake's ethernet LED indicators](https://manual.raspberryshake.org/specifications.html#led-behavior)
+   - Wait for the  <a href="https://manual.raspberryshake.org/specifications.html#led-behavior/" target="_blank">Raspberry Shake's ethernet LED indicators</a>
+
+
+
    to behave as follows:
 
-  <a href="https://manual.raspberryshake.org/specifications.html#led-behavior/" target="_blank">Raspberry Shake's ethernet LED indicators</a>
+
 
        - Green light (flashing repeatedly)
        - Orange light (solid)
@@ -46,7 +49,10 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
   1. To open the PuTTY application, press the Windows key and search for "putty".
       ![image](_build/html/assets/connecting-rshake/1.6.png)
 
-> If PuTTY is not yet installed, you may follow [this link to get the application via Microsoft Store.](https://apps.microsoft.com/store/detail/putty/XPFNZKSKLBP7RJ) Or if you prefer not to download anything, you may try connecting via Powershell instead which comes pre-installed in most Windows operating systems.
+> If PuTTY is not yet installed, you may follow <a href="https://apps.microsoft.com/store/detail/putty/XPFNZKSKLBP7RJ/" target="_blank">this link to get the application via Microsoft Store.</a>
+
+
+[this link to get the application via Microsoft Store.](https://apps.microsoft.com/store/detail/putty/XPFNZKSKLBP7RJ) Or if you prefer not to download anything, you may try connecting via Powershell instead which comes pre-installed in most Windows operating systems.
 
 
 

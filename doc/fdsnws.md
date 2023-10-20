@@ -50,9 +50,6 @@ Here are the following information you can gather from ```station``` service
 
 To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 1. Access the [UPRI Earthquake Hub SeisComP FDSNWS Web Service](https://earthquake.science.upd.edu.ph/fdsnws/)
-
->
-
 2. Choose the ```dataselect/``` web service
 ![access](_build/html/assets/fdsnws/4.1.jpg "access photo")
 
@@ -74,7 +71,7 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
     - **Network and Station Information:**
 
-        - ```network```: Specifies the network code, which represents the seismological network you want data from.
+        - ```network```:  Use this parameter to specify the network code, representing the seismological network you are interested in.
         - ```station```: Defines the station code, which identifies a specific seismic station.
         - ```location```: Specifies the location code, typically a two-character code representing the location of the instrument at the station.
       - ```channel```: Specifies the channel code, which identifies a specific data channel (e.g., "BHZ" for a broadband horizontal component).
@@ -89,7 +86,7 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
         > For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30``` pm till ```October 12, 2023 11:30 am``` start time should be ```2023-10-11T23:30:00``` and end time should be ```2023-10-12T11:30:00```
 
     - **Data Format:**
-        - ```format```: Specifies the format in which you want to receive the data. The ground data is in **miniseed** format
+        - ```format```: Specifies the format in which you want to receive the data. The ground data is in **miniSEED** format
 
     - **Data Availability and Quality**:
         - ```availability```: Allows you to filter data based on its availability (e.g., "available," "not available," "all").
@@ -125,6 +122,8 @@ To obtain the Metadata, we will be using the ```station``` service.
 2. Choose the ```station/``` web service
 3. Proceed by choosing ```1/```
 ![/1](_build/html/assets/fdsnws/4.6.jpg "/1")
+
+>
 
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 ![build](_build/html/assets/fdsnws/4.7.jpg "build")

@@ -64,7 +64,7 @@ Lastly, this ring is treated as a shared memory between threads who write into a
 
       d. Once authorized, the client gains the ability to successfully execute WRITE commands on the RingServer, specifically limited to the assigned streamIDs. In the event that the client lacks authorization, the connection will be closed. Additionally, if an authorized client attempts to write on streamIDs other than those with granted permissions, the RingServer will drop the packets.
 
-        ![image](_build/html/assets/ringserver/6.2.jpg).
+      ![image](_build/html/assets/ringserver/6.2.jpg).
 
    This approach requires clients to register beforehand if they want to be allowed write access into the RingServer. Such is a service provided by the Authentication API (AuthServer) which can be run as an external HTTPS server that can provide tokens for any registered client and can verify tokens for any *registered* RingServer. In the context of the earthquake-hub citizen science network, UPRI is hosting this Authentication API.
 

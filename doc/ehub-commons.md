@@ -40,7 +40,7 @@ There are two different docker-compose files written for two scenarios, *(1)* fo
     - **MongoDB:** This is a NoSQL database used to store and manage data, such as account information, device information, and recorded seismic events, within the earthquake-hub network.
     - **Ringserver:** This is a TCP-based ring buffer designed for packetized streaming data which utilizes time-series data from various station, archive seismic data, and serve those data (or diagnostics of such data) towards the clients.
     - ***Certbot:** This is a tool used to automatically obtain and manage SSL/TLS certificates from the Let's Encrypt Certificate Authority that provides valid SSL certificate for the server’s domain which ensures secure communication between the server and its clients. You may refer to this [post](https://mindsers.blog/post/https-using-nginx-certbot-docker/) on how to request SSL certificate using docker compose.
-      - **_NOTE:_** that Certbot needs to be renewed `every three (3) months` to keep the certificates valid and up-to-date. Certificate renewal process can easily be done using the following command:*
+      **_NOTE:_** that Certbot needs to be renewed `every three (3) months` to keep the certificates valid and up-to-date. Certificate renewal process can easily be done using the following command:*
         ```bash
         docker compose run --rm certbot renew
         ```

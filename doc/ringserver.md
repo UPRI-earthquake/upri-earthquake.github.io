@@ -35,20 +35,20 @@ Lastly, this ring is treated as a shared memory between threads who write into a
 
     Being able to control which clients can connect to a server is a useful feature in server management. More so when you allow clients to write data into your server, it is necessary to discriminate among clients based on whether they have write permissions or not. Originally, RingServer can discriminate client connections via manually written IP addresses in the server configuration file (see original `TrustedIP` configuration on original documentation). However, in citizen science application, there is no way to identify user IP address pre-connection since IP addresses are often dynamic and hidden behind Network Address Translation (NAT).
 
-    To solve this problem we used JSON web tokens (JWT) and an [external Authentication API](link to earthquake-hub-backend), to identify whether a client requesting to write data into the RingServer has permission or not. The way this works is:
+    To solve this problem we used JSON web tokens (JWT) and an [external Authentication API](https://alyssapatricia.github.io/ui/ehub-backend/api-docs/), to identify whether a client requesting to write data into the RingServer has permission or not. The way this works is:
 
-    a. We added the AUTHORIZATION command in the DataLink protocol, with the following format:
+      a. We added the AUTHORIZATION command in the DataLink protocol, with the following format:
 
-        ```bash
+      ```bash
         AUTHORIZATION size\r\n [token]
-        ```
+      ```
 
        where token is a JWT of the client requesting WRITE permission, and size is the size of that token in bytes.
 
-    b. This provided token is forwarded by the RingServer to the `AuthServer`. The value of this config variable should be set in `ring.conf` and should be given the HTTPS address of the Authentication API from which the client and the RingServer are registered in.
-    c. In response, the AuthServer will handle the decoding and verification of the token, providing essential streamIDs and other relevant information associated with the token. Subsequently, the RingServer will designate the client connection as a write-authorized connection, specifically granting write permissions on the mentioned streamIDs.
+      b. This provided token is forwarded by the RingServer to the `AuthServer`. The value of this config variable should be set in `ring.conf` and should be given the HTTPS address of the Authentication API from which the client and the RingServer are registered in.
+      c. In response, the AuthServer will handle the decoding and verification of the token, providing essential streamIDs and other relevant information associated with the token. Subsequently, the RingServer will designate the client connection as a write-authorized connection, specifically granting write permissions on the mentioned streamIDs.
 
-        ```bash
+      ```bash
         /* Response schema of AuthServer, received by RingServer */
         {
           status: responseCodes.INBEHALF_VERIFICATION_SUCCESS,
@@ -60,9 +60,9 @@ Lastly, this ring is treated as a shared memory between threads who write into a
             tokenExp: decodedToken.exp,
           }
         }
-        ```
+      ```
 
-    d. Once authorized, the client gains the ability to successfully execute WRITE commands on the RingServer, specifically limited to the assigned streamIDs. In the event that the client lacks authorization, the connection will be closed. Additionally, if an authorized client attempts to write on streamIDs other than those with granted permissions, the RingServer will drop the packets.
+      d. Once authorized, the client gains the ability to successfully execute WRITE commands on the RingServer, specifically limited to the assigned streamIDs. In the event that the client lacks authorization, the connection will be closed. Additionally, if an authorized client attempts to write on streamIDs other than those with granted permissions, the RingServer will drop the packets.
 
         SHOW FLOW DIAGRAM containing sensor, ringserver, authserver, and their messages.
 

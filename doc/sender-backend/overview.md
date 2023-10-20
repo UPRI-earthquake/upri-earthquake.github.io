@@ -11,7 +11,7 @@ There are two main tasks performed by the sender-backend:
   Before an rshake can send data to a ringserver it is necessary to (1) link the physical device to a registered account for the citizen science network, and (2) to input the address of the destination ringserver.
   Given a connection you want to monitor, the program provides information regarding the streaming status to the ringserver hosts specified.
   These tasks are done via the webapp (frontend) that is served through the sender-backend.
-
+>
 2. **Spawning Slink2dali**
   `Slink2dali` is integrated to the sender-backend container, which is responsible for forwarding data from the rShake's seedlink server to remote ringservers. The backend application spawns the Slink2dali process, allowing it to retrieve locally available data from the rShake device and forward it to configured remote servers, like the UP Ringserver.
 

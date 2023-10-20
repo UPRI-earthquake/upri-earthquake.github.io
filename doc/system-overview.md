@@ -4,11 +4,12 @@ System Overview
 
 ### Real-Time Sensor Data Collection and Processing
 
-![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/79ff3d2c-b613-441b-8951-55d87b603bf1)
+![image](_build/html/assets/system-ov/7.1.png)
 
 The EarthquakeHub software suite enables a network of Raspberry Pi devices deployed across the entire country to transmit real-time sensor data to a central server. The central server processes and serves the received data for various purposes, including data archiving, earthquake detection, and public showcasing through the web application, [earthquake.science.upd.edu.ph](http://earthquake.science.upd.edu.ph)
 
-![image](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/47804913/bac3f29e-f973-46e1-abf2-cb197d33dfde)
+![image](_build/html/assets/system-ov/7.2.png)
+
 
 The foundation of the system is built on a server-client model, where the client initiates a TCP connection to the central server and sends real-time sensor data over this connection.
 

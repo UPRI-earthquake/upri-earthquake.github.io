@@ -130,9 +130,6 @@ To obtain the Metadata, we will be using the ```station``` service.
 
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 ![builder](_build/html/assets/fdsnws/4.7.jpg "builder")
-
->
-
 ![builder query](_build/html/assets/fdsnws/4.8.jpg "builder query")
 
 >

@@ -17,12 +17,12 @@ bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/mai
 > **_NOTE:_** To uninstall, simply change the link above from ".../install.sh" to ".../uninstall.sh"
 
 The script will perform the installation. As it progresses, check that each status message displays **"OK"** instead of **"ERROR."** Once the installation is complete, you'll receive a prompt. Respond with "y" to initiate a restart of your Raspberry Shake device.
-![image](_build/html/assets/installing-earthquakehub/2.1.jpg)
+![image](_build/html/assets/installing-earthquakehub/2.1.png)
 
 ## 3. Access the EarthquakeHub Client
 
 After about 5 minutes, your device will finish initialization. Open a web browser and enter the address [rs.local:3000](rs.local:3000). You should see the EarthquakeHub client interface. Congratulations, you've successfully installed the client software!
-![image](_build/html/assets/installing-earthquakehub/2.2.jpg)
+![image](_build/html/assets/installing-earthquakehub/2.2.png)
 
 
 Next, proceed to the [next tutorial](https://upri-earthquake.github.io/sending-data-to-ehub-network) to learn how to send data to the EarthquakeHub network.

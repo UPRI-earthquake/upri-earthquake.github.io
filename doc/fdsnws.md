@@ -62,9 +62,6 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 ![builder](_build/html/assets/fdsnws/4.3.jpg "builder")
-
->
-
 ![builder query](_build/html/assets/fdsnws/4.4.jpg "builder query")
 
 >
@@ -130,7 +127,6 @@ To obtain the Metadata, we will be using the ```station``` service.
 
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 ![builder](_build/html/assets/fdsnws/4.7.jpg "builder")
->
 ![builder query](_build/html/assets/fdsnws/4.8.jpg "builder query")
 
 >
@@ -224,7 +220,7 @@ st = read('your_seismic_data.mseed')
 
 Replace 'your_seismic_data.mseed' with your actual file name.
 
-> Example: From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-15T11:30:00```, I've downloaded the MiniSeed data with the file name ```fdsnws.md```
+> Example: From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-12T11:30:00```, I've downloaded the MiniSeed data with the file name ```fdsnws.md```
 
 ```
 st = read('fdsnws.mseed')
@@ -286,7 +282,7 @@ inv = read_inventory("your_station_metadata.xml")
 
 Replace 'your_seismic_data.mseed' with your actual file name.
 
-> Example: From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-15T11:30:00```, I've downloaded the Station Metadata with the file name ```query.xml```
+> Example: From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-12T11:30:00```, I've downloaded the Station Metadata with the file name ```query.xml```
 
 ```
 inv = read_inventory("query.xml")

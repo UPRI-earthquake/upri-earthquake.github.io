@@ -129,10 +129,11 @@ To obtain the Metadata, we will be using the ```station``` service.
 >
 
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
-![build](_build/html/assets/fdsnws/4.7.jpg "build")
+![builder](_build/html/assets/fdsnws/4.7.jpg "builder")
 
 >
-![build](_build/html/assets/fdsnws/4.8.jpg "build query")
+
+![builder query](_build/html/assets/fdsnws/4.8.jpg "builder query")
 
 >
 
@@ -182,7 +183,7 @@ This includes:
 >
 
 6. After filling out the form, click the link below and you will be redirected to the raw Metadata.
-![station](_build/html/assets/fdsnws/4.12.jpg "station")
+![station](_build/html/assets/fdsnws/4.14.jpg "station")
 
 7. To save this, press `CTRL + s`. Save with your desired file name.
 

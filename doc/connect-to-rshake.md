@@ -7,7 +7,7 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
 ## Hardware Setup
    - Connect the power brick to your Raspberry Shake to power it on.
    - Connect one end of an ethernet cable to your Raspberry Shake and plug the other end into an ethernet port on the back of your router.
-   - Wait for the [Raspberry Shake's ethernet LED indicators](https://manual.raspberryshake.org/specifications.html#led-behavior) to behave as follows:
+   - Wait for the [Raspberry Shake's ethernet LED indicators](https://manual.raspberryshake.org/specifications.html#led-behavior){:target="_blank"} to behave as follows:
        - Green light (flashing repeatedly)
        - Orange light (solid)
 

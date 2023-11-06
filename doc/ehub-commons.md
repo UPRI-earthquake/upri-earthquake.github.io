@@ -3,7 +3,7 @@ earthquake-hub-commons
 
 ### What is the earthquake-hub-commons intended for
 This repository integrates all the essential programs necessary for hosting a citizen science network of ground motion sensors[^1]  It enables data transmission, archiving, and allows feeding the network data to earthquake detection softwareo[^2].
-A version of this repository is deployed live on [earthquake.science.upd.edu.ph](https://earthquake.science.upd.edu.ph)
+A version of this repository is deployed live on <a href="https://earthquake.science.upd.edu.ph" target="_blank">earthquake.science.upd.edu.ph.</a>
 
 
 [^1]: such as but not limited to raspberryshakes
@@ -11,13 +11,15 @@ A version of this repository is deployed live on [earthquake.science.upd.edu.ph]
 
 ### Server Deployment via Docker Compose
 There are two different docker-compose files written for two scenarios, *(1)* for *deploying in a server* and *(2)* for *development/testing* in your local machine.
-1. **Clone the repository:** Begin by cloning [this repository](https://github.com/UPRI-earthquake/earthquake-hub-commons.git) to your local machine using the git clone command.
-2. **Install Docker:** Make sure you have [Docker](https://docs.docker.com/get-docker/) installed on your system. Docker Compose is essential for managing multi-container Docker applications.
+1. **Clone the repository:** Begin by cloning <a href="https://github.com/UPRI-earthquake/earthquake-hub-commons.git" target="_blank">this repository</a> to your local machine using the git clone command.
+
+2. **Install Docker:** Make sure you have <a href="https://docs.docker.com/get-docker/" target="_blank">Docker</a> installed on your system. Docker Compose is essential for managing multi-container Docker applications.
 3. **Configure env variables:** Create a file named .env in the root of the repository, and add the necessary configuration variables. You can find an example of these variables in the .env.example file.
 4. **Set up nginx certificates:** For this, there will be another series of steps to be done. These steps will only be done during development/testing to replicate the deployment server enviroment into your local machine; to ensure that you have valid SSL certificates for Nginx.
-    - Create a locally trusted self-signed SSL certificate (you may use [mkcert](https://www.howtoforge.com/how-to-create-locally-trusted-ssl-certificates-with-mkcert-on-ubuntu/) to do this). And store the `pem` files in `https_data/certbot/conf/live/<server-name>/`
-    - Configure the [nginx configuration file](https_data/nginx.dep-test.d/nginx.dep-test.conf):
-        > ℹ️ If you name your `pem` files as `localhost.pem` and `localhost-key.pem`, and then store them in the folder `https_data/certbot/conf/live/localhost/`, then you shouldn't have to alter the nginx configuration file.
+    - Create a locally trusted self-signed SSL certificate (you may use <a href="https://www.howtoforge.com/how-to-create-locally-trusted-ssl-certificates-with-mkcert-on-ubuntu/" target="_blank">mkcert</a> to do this). And store the `pem` files in `https_data/certbot/conf/live/<server-name>/`
+    - Configure the <a href="https_data/nginx.dep-test.d/nginx.dep-test.conf" target="_blank">nginx configuration file</a>
+
+        > If you name your `pem` files as `localhost.pem` and `localhost-key.pem`, and then store them in the folder `https_data/certbot/conf/live/localhost/`, then you shouldn't have to alter the nginx configuration file.
         * `server_name` must match the one set for the certificates
         * `ssl_certificate` and `ssl_certificate_key` should both correspond to the location and filenames of the previously generated `pem` files.
 5. **Create MongoDB volume:** Run the following command to create a docker volume for mongodb data:
@@ -28,7 +30,9 @@ There are two different docker-compose files written for two scenarios, *(1)* fo
     ```bash
     docker compose --env-file .dep-test.env up --build
     ```
-    > **_NOTE:_** If ever you encounter an error saying you are unauthorized to pull image, follow this guide on how to [authenticate with personal access token from `ghcr.io`](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic).
+    > **_NOTE:_** If ever you encounter an error saying you are unauthorized to pull image, follow this guide on how to
+    <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic" target="_blank">authenticate with personal access token from `ghcr.io`</a>
+
     >
     > **_NOTE:_** To get the certificates using `certbot`, First up the nginx-proxy container but with the https server in the nginx.conf file commented out. Second, fill this in via certbot: `docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d <your-webapp-url>.org .`. Lastly, add the 443 (or https) config for the nginx and restart that container.
     Within a few months, the certificate will expire. To renew using certbot, use docker compose run --rm certbot renew
@@ -67,7 +71,10 @@ There are two different docker-compose files written for two scenarios, *(1)* fo
 #### SeisComP
 The earthquake-hub-commons repository allows easy interfacing with earthquake processing softwares such as SeisComP (Seismic Communication Processor) which is a widely used earthquake detection  and seismic data processing software.
 SeisComP is a collection of *software modules* used to for seismic data transmission, processing, analysis, monitoring, and archiving. These functions can be done in both real-time and offline.
-For further information about SeisComP check this [overview](https://www.seiscomp.de/doc/index.html) on how to get started with SeisComP.
+For further information about SeisComP check this <a href="https://www.seiscomp.de/doc/index.html" target="_blank">overview</a>
+
+
+[]() on how to get started with SeisComP.
 
 #### Backend Endpoints and Python Scripts
 This repository exposes two Server-Sent-Event endpoints (`/messaging/restricted/new-pick` and `/messaging/restricted/new-event`) and run two Python scripts to interact with the processor. The two python scripts are run as systemd services which publish `pick events` and `recorded seismic events` from SeisComP to the aforementioned endpoints.

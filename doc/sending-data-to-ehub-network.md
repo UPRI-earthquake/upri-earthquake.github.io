@@ -3,13 +3,16 @@ Sending Data to EarthquakeHub Network
 
 For a citizen scientist to contribute their real-time Raspberry Shake data to the EarthquakeHub network, here are the steps to follow:
 
-> **_NOTE:_**  Make sure that you have already [installed the EarthquakeHub client on your Raspberry Shake device](https://alyssapatricia.github.io/ui/installing-rshake-client.html) before following this tutorial.
+> **_NOTE:_**  Make sure that you have already
+<a href="https://upri-earthquake.github.io/installing-rshake-client.html" target="_blank">installed the EarthquakeHub client on your Raspberry Shake device.</a>
+before following this tutorial.
 
 ### 1. Register a `citizen` Account
    ![image](_build/html/assets/sending-data/3.1.png)
 
 
- To register an account go to [earthquake-hub web app](https://earthquake.science.upd.edu.ph) and click the `Sign Up` button. Choose `citizen` as your Role, and provide the following required details:
+ To register an account go to
+<a href="https://earthquake.science.upd.edu.ph" target="_blank">earthquake-hub web app</a> and click the `Sign Up` button. Choose `citizen` as your Role, and provide the following required details:
 
 - A valid email address
 - Account password
@@ -27,7 +30,7 @@ For a citizen scientist to contribute their real-time Raspberry Shake data to th
   - Latitude (in degree coordinate)
 
 
-    > You may use [Google Maps](https://google.com/maps) to search your location on the map. Get the latitude and longitude coordinates by right clicking your pinned location on the map.
+    > You may use <a href="https://google.com/maps" target="_blank">Google Maps</a> to search your location on the map. Get the latitude and longitude coordinates by right clicking your pinned location on the map.
      ![image](_build/html/assets/sending-data/3.3.png)
 
 

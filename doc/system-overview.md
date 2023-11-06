@@ -6,7 +6,7 @@ System Overview
 
 ![image](_build/html/assets/system-ov/7.1.png)
 
-The EarthquakeHub software suite enables a network of Raspberry Pi devices deployed across the entire country to transmit real-time sensor data to a central server. The central server processes and serves the received data for various purposes, including data archiving, earthquake detection, and public showcasing through the web application, <a href="http://earthquake.science.upd.edu.ph" target="_blank">earthquake.science.upd.edu.ph</a>,
+The EarthquakeHub software suite enables a network of Raspberry Pi devices deployed across the entire country to transmit real-time sensor data to a central server. The central server processes and serves the received data for various purposes, including data archiving, earthquake detection, and public showcasing through the web application, <a href="http://earthquake.science.upd.edu.ph" target="_blank">earthquake.science.upd.edu.ph</a>.
 
 ![image](_build/html/assets/system-ov/7.2.png)
 

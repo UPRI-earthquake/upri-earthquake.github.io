@@ -13,12 +13,10 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
 
    to behave as follows:
 
+- Green light (flashing repeatedly)
+- Orange light (solid)
 
-
-    - Green light (flashing repeatedly)
-    - Orange light (solid)
-
-    **This means that the ethernet port is working as it should.**
+**This means that the ethernet port is working as it should.**
 
 ## How to SSH via Windows Powershell
    1. To open PowerShell, either press Ctrl + Shift + P, or hit the Windows key and manually search for PowerShell.

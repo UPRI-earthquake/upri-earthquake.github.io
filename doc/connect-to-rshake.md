@@ -107,9 +107,37 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
 
 > _**NOTE:** For improved security, it's highly recommended to change the default password of your Raspberry Shake. To learn how to update your password and access essential guidelines for securing your device effectively, refer to this <a href="https://manual.raspberryshake.org/hacked.html#hacked" target="_blank">guide.</a>_
 
-<div class="rst-content note">
+
+<div class="rst-content admonition">
+  <div class="rst-content note">
 
 This is a note.
 You can add your note's content here.
 
 </div>
+
+**Note**
+{: .panel-heading}
+<div class="panel-body">
+
+NOTE DESCRIPTION
+
+</div>
+</div>
+
+<div class="rst-content admonition">
+  **Note**
+  </div>
+  <div class="rst-content note">
+    NOTE DESCRIPTION
+  </div>
+  This is a note.
+  You can add your note's content here.
+</div>
+In this structure:
+
+
+
+
+
+

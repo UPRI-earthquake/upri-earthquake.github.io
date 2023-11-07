@@ -38,14 +38,16 @@ There are two different docker-compose files written for two scenarios, *(1)* fo
     <body class="rst-content admonition">
         <ul>
             <li> If ever you encounter an error saying you are unauthorized to pull image, follow this guide on how to <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic" target="_blank">authenticate with personal access token from <code> ghcr.io </code> </a> </li>
-            <li> To get the certificates using <code> certbot </code>, First up the nginx-proxy container but with the https server in the nginx.conf file commented out. Second, fill this in via certbot: <code> docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d <your-webapp-url>.org </code> . Lastly, add the 443 (or https) config for the nginx and restart that container.</li>
-            <li>  Within a few months, the certificate will expire. To renew using certbot, use docker compose run --rm certbot renew </li>
+            <li> To get the certificates using <code> certbot </code>, First up the nginx-proxy container but with the https server in the nginx.conf file commented out. Second, fill this in via certbot: <code> docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d <your-webapp-url>.org </code> Lastly, add the 443 (or https) config for the nginx and restart that container.</li>
+            <li>  Within a few months, the certificate will expire. To renew using certbot, use <code> docker compose run --rm certbot renew </code>
+            </li>
         </ul>
     </body>
 </div>
 
 
-The docker compose command will start the following containers:
+**The docker compose command will start the following containers:**
+
 - **Nginx Proxy:** This acts as a reverse proxy server which handles incoming HTTP/HTTPS traffic and distributes it to the corresponding services within the Docker network.
 - **Earthquake-hub-frontend:** This hosts the front-end application for the earthquake-hub network which serves the user interface and interacts with the backend services to display data and handle user requests.
 - **Earthquake-hub-backend:** This hosts the back-end application for the earthquake-hub network. It handles various functionalities, such as user authentication, data processing, and database interactions, to support the front-end application and process incoming data from the sensors.
@@ -58,27 +60,23 @@ The docker compose command will start the following containers:
     </p>
     <p>
     <body class="rst-content admonition">
-        Certbot needs to be renewed `every three (3) months` to keep the certificates valid and up-to-date. Certificate renewal process can easily be done using the following command:*
-        ```bash
-        docker compose run --rm certbot renew
-        ```
+        Certbot needs to be renewed `every three (3) months` to keep the certificates valid and up-to-date. Certificate renewal process can easily be done using the following command:
+        <code>docker compose run --rm certbot renew</code>
     </body>
     </p>
 </div>
 
-- ***Geoserve:** This is a service that provides geographic information for the earthquake-hub network. It is used to convert latitude and longitude values into names of places, such as their city name, region, and country name.
+- **Geoserve:** This is a service that provides geographic information for the earthquake-hub network. It is used to convert latitude and longitude values into names of places, such as their city name, region, and country name.
 <div class="rst-content note">
   <p class="rst-content admonition-title">
     <b> NOTE </b>
     </p>
-    <p>
     <body class="rst-content admonition">
         <ul>
         <li> Certbot and Geoserve are not used in local development/testing. The two will only be run using the docker compose which is intended for deploying in a server. </li>
         <li> Certbot needs to renew the SSL certificates every three (3) months. </li>
         </ul>
     </body>
-</p>
 </div>
 
 
@@ -102,10 +100,7 @@ The docker compose command will start the following containers:
 #### SeisComP
 The earthquake-hub-commons repository allows easy interfacing with earthquake processing softwares such as SeisComP (Seismic Communication Processor) which is a widely used earthquake detection  and seismic data processing software.
 SeisComP is a collection of *software modules* used to for seismic data transmission, processing, analysis, monitoring, and archiving. These functions can be done in both real-time and offline.
-For further information about SeisComP check this <a href="https://www.seiscomp.de/doc/index.html" target="_blank">overview</a>
-
-
-[]() on how to get started with SeisComP.
+For further information about SeisComP check this <a href="https://www.seiscomp.de/doc/index.html" target="_blank">overview</a> on how to get started with SeisComP.
 
 #### Backend Endpoints and Python Scripts
 This repository exposes two Server-Sent-Event endpoints (`/messaging/restricted/new-pick` and `/messaging/restricted/new-event`) and run two Python scripts to interact with the processor. The two python scripts are run as systemd services which publish `pick events` and `recorded seismic events` from SeisComP to the aforementioned endpoints.

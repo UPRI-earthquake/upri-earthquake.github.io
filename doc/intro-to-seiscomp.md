@@ -94,17 +94,17 @@ This guide provides instructions for installing SeisComP packages on machines ru
 
 ## Getting Started
 After installing seiscomp packages and configuring database, the next step is to setup seiscomp using `seiscomp setup` or the wizard from within scconfig.
-1. Execute setup via:
 
+1. Execute setup via:
 
     <div class="rst-content note">
       <p class="rst-content admonition-title">
         <b> NOTE </b>
       </p>
       <p>
-      <body class="rst-content admonition">
-   In seiscomp setup default values are given in brackets []:
-    </body>
+          <body class="rst-content admonition">
+          In seiscomp setup default values are given in brackets []:
+          </body>
       </p>
     </div>
 
@@ -115,10 +115,9 @@ After installing seiscomp packages and configuring database, the next step is to
     ====================================================================
     seiscomp setup
     ====================================================================
-
-This initializes the configuration of your installation. If you already made adjustments to the configuration files be warned that this setup will overwrite existing parameters with default values. This is not a configurator for all options of your setup but helps to setup initial standard values.
-
-    <div class="rst-content hint">
+    ```
+    This initializes the configuration of your installation. If you already made adjustments to the configuration files be warned that this setup will overwrite existing parameters with default values. This is not a configurator for all options of your setup but helps to setup initial standard values.
+        <div class="rst-content hint">
       <p class="rst-content admonition-title">
         <b> HINT </b>
       </p>
@@ -137,6 +136,7 @@ This initializes the configuration of your installation. If you already made adj
 
     ```
     This will ask for initial settings. You may just leave the default values for the following details:
+
     ```bash
     Organization name []:
     Enable database storage [yes]:

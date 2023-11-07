@@ -4,9 +4,9 @@ How to Use FDSNWS to Download Ground Motion Data and Station Metadata
 ### Introduction
 **FDSNWS** (Federation of Digital Seismograph Networks Web Services) is a set of web services that allow users to access and retrieve seismic data from various seismological networks and data centers. This documentation will guide you through the process of using FDSNWS to download ground motion data and its metadeta from the UPRI EarthquakeHub Network. Understanding the distinction among these two is essential to make interpretations more significant. In the context of FDSNWS,
 
-**Data:** This is the actual seismic information you're interested in, like the earthquake measurements, shaking patterns, and seismograph readings.
+- **Data:** This is the actual seismic information you're interested in, like the earthquake measurements, shaking patterns, and seismograph readings.
 
-**Metadata:** This provides important details *about* the data. It includes information such as when and where the seismic event occurred, how strong it was, and the equipment used to record the data. Think of metadata as helpful labels that give you context and understanding about the seismic data you're looking at.
+- **Metadata:** This provides important details *about* the data. It includes information such as when and where the seismic event occurred, how strong it was, and the equipment used to record the data. Think of metadata as helpful labels that give you context and understanding about the seismic data you're looking at.
 
 ### Service Overview
 
@@ -102,10 +102,10 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
     > **Example:** The following parameters of our test network are the following:
 
-        - Network: AM
-        - Station: R3B2D
-        - Location: 00
-        - Channel: EHZ
+    - Network: AM
+    - Station: R3B2D
+    - Location: 00
+    - Channel: EHZ
 
     The values vary according the the network you want to extract data from.
 
@@ -192,7 +192,8 @@ This includes:
 To use fetched seismic data for plotting or analysis, you can use ObsPy.
  Follow these steps:
 
-1. **Install ObsPy:** Make sure ObsPy is installed:
+1. **Install ObsPy**
+Make sure ObsPy is installed:
 
 ```
 pip install obspy
@@ -200,8 +201,7 @@ pip install obspy
 
 >
 
-2. **Import the necessary modules:**
-
+2. **Import the necessary modules**
 Create a Python file. You need to write a script that imports ObsPy modules for data processing and plotting:
 
 ```
@@ -212,7 +212,6 @@ import matplotlib.pyplot as plt
 >
 
 3. **Load your seismic data**
-
 You can use the obspy.read() function to load your existing seismic data file. ObsPy can read various formats, such as MiniSEED, SAC, and more. Here's an example of how to load a MiniSEED file:
 
 ```
@@ -229,8 +228,7 @@ st = read('fdsnws.mseed')
 
 >
 
-4. **Plot the time series:**
-
+4. **Plot the time series**
 You can use ObsPy to plot the loaded time series data using Matplotlib. Here's an example:
 
 ```
@@ -242,7 +240,7 @@ The type="dayplot" argument specifies the type of plot you want to create. You c
 More plot features accessible <a href="https://docs.obspy.org/packages/autogen/obspy.core.stream.Stream.plot.html" target="_blank">here</a> for the query guide.
 
 
-For windows, press CTRL + B to run your python code
+For windows, press ```CTRL + B``` to run your python code
 If your code ran successfully, a MatLab window containing your visualized miniSEED data will appear.
 
 ![plot](_build/html/assets/fdsnws/4.11.jpg "plot")
@@ -255,7 +253,8 @@ Congratulations! You now have a plot of the Seismic Data you just downloaded fro
 
 #### From Station Service
 
-1. **Install ObsPy:** if you haven't, install ObsPy:
+1. **Install ObsPy**
+if you haven't, install ObsPy:
 
 ```
 pip install obspy
@@ -263,8 +262,7 @@ pip install obspy
 
 >
 
-2. **Import the necessary modules:**
-
+2. **Import the necessary modules**
 Create a Python file. You need to write a script that imports ObsPy modules for data processing and plotting:
 
 ```
@@ -274,7 +272,6 @@ from obspy import read_inventory
 >
 
 3. **Load your Station Metadata**
-
 You can use the obspy.read() function to load your existing seismic data file. ObsPy can read various formats, such as MiniSEED, SAC, and more. Here's an example of how to load a MiniSEED file:
 
 ```

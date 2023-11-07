@@ -31,4 +31,4 @@ You should see the EarthquakeHub client interface. Congratulations, you've succe
 ![image](_build/html/assets/installing-earthquakehub/2.2.png)
 
 
-Next, proceed to the [next tutorial](upri-earthquake.github.io/sending-data-to-ehub-network.html) to learn how to send data to the EarthquakeHub network.
+Next, proceed to the <a href="https://upri-earthquake.github.io/sending-data-to-ehub-network.html" target="_blank">next tutorial</a> to learn how to send data to the EarthquakeHub network.

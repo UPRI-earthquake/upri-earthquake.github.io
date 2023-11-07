@@ -23,7 +23,7 @@ before following this tutorial.
    ![image](_build/html/assets/sending-data/3.2.png)
 
 
-   In order for your device to stream data to the network, you should first link your device into your account.  This step will be done via the EarthquakeHub rShake client accessible via [rs.local:3000](http://rs.local:3000). To link your device, just click the `Link` button and input the account credentials you registered in Step 1, and the location information of your device:
+   In order for your device to stream data to the network, you should first link your device into your account.  This step will be done via the EarthquakeHub rShake client accessible via <a href="https://rs.local:3000" target="_blank">rs.local:3000.</a> To link your device, just click the `Link` button and input the account credentials you registered in Step 1, and the location information of your device:
 
   - Elevation (in meters)
   - Longitute (in degree coordinates)
@@ -37,7 +37,7 @@ before following this tutorial.
 ### 3. Adding a Host
   ![image](_build/html/assets/sending-data/3.4.png)
 
-   After having linked your device, you are now ready to send data to any available server on the network. This step will also be done via the [EarthquakeHub rShake client](http://rs.local:3000). To do this, click `Add Server` and choose your target ringserver  input the following details of the host you want to send your Raspberry Shake data to:
+   After having linked your device, you are now ready to send data to any available server on the network. This step will also be done via the <a href="https://rs.local:3000" target="_blank">EarthquakeHub rShake client.</a> To do this, click `Add Server` and choose your target ringserver  input the following details of the host you want to send your Raspberry Shake data to:
 
 - Target ringserver's url
 - Hostname of the ringserver

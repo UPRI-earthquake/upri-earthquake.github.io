@@ -42,9 +42,8 @@ There are two different docker-compose files written for two scenarios, *(1)* fo
                 <dd> - First up the nginx-proxy container but with the https server in the nginx.conf file commented out. </dd>
                 <dd> - Second, fill this in via certbot: `docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d <your-webapp-url>.org .`</dd>
                 <dd> - Lastly, add the 443 (or https) config for the nginx and restart that container. </dd>
-
-            Within a few months, the certificate will expire. To renew using certbot, use docker compose run --rm certbot renew
         </ul>
+            Within a few months, the certificate will expire. To renew using certbot, use docker compose run --rm certbot renew
     </body>
 </div>
 

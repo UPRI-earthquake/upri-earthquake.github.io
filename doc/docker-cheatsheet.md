@@ -62,7 +62,7 @@ Finally, when you are running microservices (ie. a set of containers that each r
     -  Download an image from a remote repository (ie. ghcr.io) defined in the image name. This is in contrast to building it from source, ie a local Dockerfile.
 
 13. `docker push <image-name>`
-    - Upload a locally built image to a remote repository. You may need to <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry" target="_blank">authenticate to the remote repository, such as in ghcr.io</a>,
+    - Upload a locally built image to a remote repository. You may need to <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry" target="_blank">authenticate to the remote repository, such as in ghcr.io</a>.
 
 
 ## Docker Compose commands

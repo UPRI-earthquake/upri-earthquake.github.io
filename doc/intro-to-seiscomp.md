@@ -91,18 +91,14 @@ This guide provides instructions for installing SeisComP packages on machines ru
 ## Getting Started
 After installing seiscomp packages and configuring database, the next step is to setup seiscomp using `seiscomp setup` or the wizard from within scconfig.
 1. Execute setup via:
-
-
     <div class="rst-content note">
       <p class="rst-content admonition-title">
         <b> NOTE </b>
       </p>
       <p>
-      <body class="rst-content admonition">
-   In seiscomp setup default values are given in brackets []:
-    </body>
-  </p>
-  </div>
+          <body class="rst-content admonition"> In seiscomp setup default values are given in brackets []: </body>
+      </p>
+    </div>
 
     ```bash
     seiscomp/bin/seiscomp setup
@@ -170,6 +166,7 @@ After installing seiscomp packages and configuring database, the next step is to
     Q) Quit without changes
     Command? [P]:
     ```
+
 
 ## Adding New Station
 In order to process seismic data within SeisComP, it's essential to define a data source, which is typically represented by a station. Follow these steps to add a new station to your SeisComP setup:

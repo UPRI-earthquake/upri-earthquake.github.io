@@ -35,10 +35,3 @@ Welcome to UPRI EarthquakeHub's documentation!
    ringserver.md
    slink2dali.md
 
-.. note::
-
-   **Note**
-   :class: panel-heading
-
-   Note description
-

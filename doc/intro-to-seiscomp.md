@@ -97,10 +97,12 @@ After installing seiscomp packages and configuring database, the next step is to
       <p class="rst-content admonition-title">
         <b> NOTE </b>
       </p>
+      <p>
       <body class="rst-content admonition">
    In seiscomp setup default values are given in brackets []:
     </body>
-    </div>
+  </p>
+  </div>
 
     ```bash
     seiscomp/bin/seiscomp setup

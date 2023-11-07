@@ -21,17 +21,17 @@ This is important since most ground motion micro-computers (such as raspberrysha
 
 ### Changes
 
-1. Authorization
+#### 1. Authorization
 
    A major addition we added is the ability to authorize a connection to the DataLink server. Strictly speaking this is a change in the DataLink protocol, and hence in the `libdali` dependency of slink2dali. This is done by adding `dl_authorize()` routine in `libdali/connection.c` which sends a command to the datalink server with the format: `AUTHORIZATION size token`, where token is a JSON web token provided via the `-a <token>` option when executing slink2dali. In this authorization, it is assumed that a valid token is available which can write on the `streamID` that the slink2dali wants to forward. Currently, this is a required argument as running this version without that option hasn’t yet been implemented/fixed.
 
-2. Response Codes
+#### 2. Response Codes
 
    Another addition is the use of response codes in dl_authorize() and dl_write(). This is done so as to allow additional actions based on what the datalink server has responded. Whereas before, a datalink server immediately disconnects a client whenever an error has been encountered, and slink2dali in that case will infinitely retry to reconnect, the addition of response codes allows other actions to be taken. In this case, we added the dropping of packets without disconnecting the client. This feature is useful in our application, specifically:
     1. Intentional dropping of packets by the server without disconnecting a client is a desirable feature when we allow multiple redundant connections from the same source.
     2. When a client connection is authorized, but is forwarding different packets with different streamIDs, then the packets whose streamIDs aren’t included in the authorization of token should be dropped.
 
-3. Code execution
+#### 3. Code execution
 
    Lastly, the main loop that forwards each packet has been refactored to accommodate the changes stated above. Specifically, `createDLconnection()` was created and `sendrecord()` was edited in order to expose the response code as return status of `dl_authorize()` and `dl_write()`, and make the code execution flow depend on these return status codes.
 

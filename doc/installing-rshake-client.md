@@ -17,17 +17,14 @@ In your SSH terminal, execute the following command:
 bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/main/install.sh)
 ```
 
-
-
 <div class="rst-content note">
   <p class="rst-content admonition-title">
     <b> NOTE </b>
-  </p>
-    <p class="rst-content admonition">
-    To uninstall, simply change the link above from ".../install.sh" to ".../uninstall.sh"
     </p>
+    <body class="rst-content admonition">
+     To uninstall, simply change the link above from ".../install.sh" to ".../uninstall.sh"
+    </body>
 </div>
-
 
 The script will perform the installation. As it progresses, check that each status message displays **"OK"** instead of **"ERROR."** Once the installation is complete, you'll receive a prompt. Respond with "y" to initiate a restart of your Raspberry Shake device.
 ![image](_build/html/assets/installing-earthquakehub/2.1.png)

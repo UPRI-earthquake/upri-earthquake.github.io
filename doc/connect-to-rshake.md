@@ -102,8 +102,6 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
    2. Enter this SSH command: `ssh myshake@rs.local`
    3. You will be prompted to enter a password. Type the default password `shakeme` and press <ENTER>.
 
-
-1
 <div class="rst-content note">
   <p class="rst-content admonition-title">
     <b> NOTE </b>
@@ -113,12 +111,4 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
     </body>
 </div>
 
-2
-<div class="rst-content note">
-  <p class="rst-content admonition-title">
-    <b> NOTE </b>
-  </p>
-    <span class="rst-content admonition">
-    For improved security, it's highly recommended to change the default password of your Raspberry Shake. To learn how to update your password and access essential guidelines for securing your device effectively, refer to this <a href="https://manual.raspberryshake.org/hacked.html#hacked" target="_blank">guide.</a>
-  </span>
-</div>
+

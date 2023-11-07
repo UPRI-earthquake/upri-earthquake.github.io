@@ -39,9 +39,9 @@ This guide provides instructions for installing SeisComP packages on machines ru
       <p class="rst-content admonition-title">
         <b> NOTE </b>
       </p>
-    <p class="rst-content admonition">
+    <body class="rst-content admonition">
     For some packages, documentations are already included in the downloaded seiscomp package so there is no need to download and unpack the documentation.
-    </p>
+    </body>
     </div>
 
     >
@@ -59,9 +59,9 @@ This guide provides instructions for installing SeisComP packages on machines ru
       <p class="rst-content admonition-title">
         <b> NOTE </b>
       </p>
-    <p class="rst-content admonition">
+    <body class="rst-content admonition">
    Depending on your Ubuntu version, additional steps may be required to address specific dependencies:
-    </p>
+    </body>
     </div>
 
     - On Ubuntu 18: Install Python and related libraries:
@@ -97,9 +97,9 @@ After installing seiscomp packages and configuring database, the next step is to
       <p class="rst-content admonition-title">
         <b> NOTE </b>
       </p>
-    <p class="rst-content admonition">
+    <body class="rst-content admonition">
    In seiscomp setup default values are given in brackets []:
-    </p>
+    </body>
     </div>
 
     ```bash

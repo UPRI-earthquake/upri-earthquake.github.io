@@ -2,7 +2,7 @@ earthquake-hub-commons
 =======================
 
 ### What is the earthquake-hub-commons intended for
-This repository integrates all the essential programs necessary for hosting a citizen science network of ground motion sensors[^1]  It enables data transmission, archiving, and allows feeding the network data to earthquake detection softwareo[^2].
+This repository integrates all the essential programs necessary for hosting a citizen science network of ground motion sensors[^1]  It enables data transmission, archiving, and allows feeding the network data to earthquake detection software[^2].
 A version of this repository is deployed live on <a href="https://earthquake.science.upd.edu.ph" target="_blank">earthquake.science.upd.edu.ph.</a>
 
 
@@ -26,10 +26,39 @@ There are two different docker-compose files written for two scenarios, *(1)* fo
     ```bash
     docker volume create earthquake-hub-mongodb-data
     ```
-5. **Run the containers:** Once the setup is configured, run the following Docker Compose command to start all the necessary containers:
+6. **Run the containers:** Once the setup is configured, run the following Docker Compose command to start all the necessary containers:
     ```bash
     docker compose --env-file .dep-test.env up --build
     ```
+
+<div class="rst-content note">
+  <p class="rst-content admonition-title">
+    <b> NOTE </b>
+    </p>
+    <body class="rst-content admonition">
+        <ul>
+            <li> If ever you encounter an error saying you are unauthorized to pull image, follow this guide on how to <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic" target="_blank">authenticate with personal access token from `ghcr.io`</a> </li>
+            <li> To get the certificates using `certbot`, </li>
+                <dd> - First up the nginx-proxy container but with the https server in the nginx.conf file commented out. </dd>
+                <dd> - Second, fill this in via certbot: `docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d <your-webapp-url>.org .`</dd>
+                <dd> - Lastly, add the 443 (or https) config for the nginx and restart that container. </dd>
+
+            Within a few months, the certificate will expire. To renew using certbot, use docker compose run --rm certbot renew
+        </ul>
+    </body>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
     > **_NOTE:_** If ever you encounter an error saying you are unauthorized to pull image, follow this guide on how to
     <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic" target="_blank">authenticate with personal access token from `ghcr.io`</a>
 

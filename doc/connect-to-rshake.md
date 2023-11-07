@@ -10,7 +10,6 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
    - Wait for the <a href="https://manual.raspberryshake.org/specifications.html#led-behavior/" target="_blank">Raspberry Shake's ethernet LED indicators</a>to behave as follows:
       - Green light (flashing repeatedly)
       - Orange light (solid)
-
 >> *This means that the ethernet port is working as it should.*
 
 
@@ -100,9 +99,9 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
    2. Enter this SSH command: `ssh myshake@rs.local`
    3. You will be prompted to enter a password. Type the default password `shakeme` and press <ENTER>.
 
-<div class="rst-content warning">
+<div class="rst-content note">
   <p class="rst-content admonition-title">
-    <b> WARNING </b>
+    <b> NOTE </b>
     </p>
     <body class="rst-content admonition">
     For improved security, it's highly recommended to change the default password of your Raspberry Shake. To learn how to update your password and access essential guidelines for securing your device effectively, refer to this <a href="https://manual.raspberryshake.org/hacked.html#hacked" target="_blank">guide.</a>

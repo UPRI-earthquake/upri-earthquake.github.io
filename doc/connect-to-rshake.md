@@ -114,11 +114,10 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
 
 
 
-rst-content .admonition,.rst-content .admonition-title:before
-
 <div class="rst-content admonition-title">
-    <em> <b> NOTE: </b> </em>
-        <div class="rst-content admonition">
-            <em> <b> NOTE: </b> </em> For improved security, it's highly recommended to change the default password of your Raspberry Shake. To learn how to update your password and access essential guidelines for securing your device effectively, refer to this <a href="https://manual.raspberryshake.org/hacked.html#hacked" target="_blank">guide.</a>
-       </div>
-</div>
+    <b> NOTE: </b>
+  </div>
+    <div class="rst-content admonition">
+      <em> <b> NOTE: </b> </em> For improved security, it's highly recommended to change the default password of your Raspberry Shake. To learn how to update your password and access essential guidelines for securing your device effectively, refer to this <a href="https://manual.raspberryshake.org/hacked.html#hacked" target="_blank">guide.</a>
+      </div>
+

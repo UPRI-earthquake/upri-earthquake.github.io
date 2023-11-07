@@ -108,33 +108,32 @@ After installing seiscomp packages and configuring database, the next step is to
       </p>
     </div>
 
-    ```bash
+    ```
     seiscomp/bin/seiscomp setup
     ```
-    ```bash
+    ```
     ====================================================================
     seiscomp setup
     ====================================================================
     ```
     This initializes the configuration of your installation. If you already made adjustments to the configuration files be warned that this setup will overwrite existing parameters with default values. This is not a configurator for all options of your setup but helps to setup initial standard values.
-        <div class="rst-content hint">
+      <div class="rst-content hint">
       <p class="rst-content admonition-title">
         <b> HINT </b>
       </p>
       <p>
       <body class="rst-content admonition">
       Entered values starting with a dot (.) are handled as commands. Available commands are:
-      <ul>
-          <li>  quit: Quit setup without modification to your configuration. </li>
-          <li> back: Go back to the previous parameter. </li>
-          <li> help: Show help about the current parameter (if available). </li>
-      </ul>
-      If you need to enter a value with a leading dot, escape it with backslash, e.g. "\.value".
+         <ul>
+              <li>  quit: Quit setup without modification to your configuration. </li>
+             <li> back: Go back to the previous parameter. </li>
+              <li> help: Show help about the current parameter (if available). </li>
+          </ul>
+      If you need to enter a value with a leading dot, escape it with backslash, e.g. "value".
     </body>
       </p>
     </div>
 
-    ```
     This will ask for initial settings. You may just leave the default values for the following details:
 
     ```bash

@@ -105,12 +105,12 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
 
 1
 <div class="rst-content note">
-  <span class="rst-content admonition-title">
+  <p class="rst-content admonition-title">
     <b> NOTE </b>
-    </span>
-    <span class="rst-content admonition">
+    </p>
+    <body class="rst-content admonition">
     For improved security, it's highly recommended to change the default password of your Raspberry Shake. To learn how to update your password and access essential guidelines for securing your device effectively, refer to this <a href="https://manual.raspberryshake.org/hacked.html#hacked" target="_blank">guide.</a>
-    </span>
+    </body>
 </div>
 
 2
@@ -122,5 +122,3 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
     For improved security, it's highly recommended to change the default password of your Raspberry Shake. To learn how to update your password and access essential guidelines for securing your device effectively, refer to this <a href="https://manual.raspberryshake.org/hacked.html#hacked" target="_blank">guide.</a>
   </span>
 </div>
-
-=

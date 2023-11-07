@@ -15,10 +15,10 @@ There are two main tasks performed by the sender-backend:
 2. **Spawning Slink2dali**
   `Slink2dali` is integrated to the sender-backend container, which is responsible for forwarding data from the rShake's seedlink server to remote ringservers. The backend application spawns the Slink2dali process, allowing it to retrieve locally available data from the rShake device and forward it to configured remote servers, like the UP Ringserver.
 
+
+
 ## API
-
-This is the link for the [API Docs](https://alyssapatricia.github.io/ui/sender-backend/api-docs/)
-
+This is the link for the <a href="https://upri-earthquake.github.io/sender-backend/api-docs/" target="_blank">API Docs</a>
 
 ## CONTRIBUTING.md
-This is the link for [CONTRIBUTING.md](https://github.com/UPRI-earthquake/sender-backend/blob/main/CONTRIBUTING.md)
+This is the link for <a href="https://github.com/UPRI-earthquake/sender-backend/blob/main/CONTRIBUTING.md" target="_blank">CONTRIBUTING.md</a>

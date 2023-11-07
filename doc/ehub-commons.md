@@ -60,7 +60,7 @@ There are two different docker-compose files written for two scenarios, *(1)* fo
     </p>
     <p>
     <body class="rst-content admonition">
-        Certbot needs to be renewed `every three (3) months` to keep the certificates valid and up-to-date. Certificate renewal process can easily be done using the following command:
+        Certbot needs to be renewed <b> every three (3) months </b> to keep the certificates valid and up-to-date. Certificate renewal process can easily be done using the following command:
         <code>docker compose run --rm certbot renew</code>
     </body>
     </p>

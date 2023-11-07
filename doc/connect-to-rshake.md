@@ -7,14 +7,12 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
 ## Hardware Setup
    - Connect the power brick to your Raspberry Shake to power it on.
    - Connect one end of an ethernet cable to your Raspberry Shake and plug the other end into an ethernet port on the back of your router.
-   - Wait for the <a href="https://manual.raspberryshake.org/specifications.html#led-behavior/" target="_blank">Raspberry Shake's ethernet LED indicators</a>
+   - Wait for the <a href="https://manual.raspberryshake.org/specifications.html#led-behavior/" target="_blank">Raspberry Shake's ethernet LED indicators</a>to behave as follows:
+      - Green light (flashing repeatedly)
+      - Orange light (solid)
 
+>> *This means that the ethernet port is working as it should.*
 
-
-   to behave as follows:
-- Green light (flashing repeatedly)
-- Orange light (solid)
-> *This means that the ethernet port is working as it should.*
 
 ## How to SSH via Windows Powershell
    1. To open PowerShell, either press Ctrl + Shift + P, or hit the Windows key and manually search for PowerShell.
@@ -71,7 +69,7 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
   5. After you have completed your purpose for connecting to the device, you may close the SSH connection by simply typing `exit` to the prompt. This should exit the terminal window and you are effectively disconnected from the device.
 
 ## How to SSH via Mac
-   1. Navigate to Applications > Utilities (or Other), and open the Terminal application. You may also pres Cmd+Space and type "Terminal"
+   1. Navigate to Applications > Utilities (or Other), and open the Terminal application. You may also pres `cmd+Space` and type "Terminal"
    ![image](_build/html/assets/connecting-rshake/1.10.png)
 
 >
@@ -102,9 +100,9 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
    2. Enter this SSH command: `ssh myshake@rs.local`
    3. You will be prompted to enter a password. Type the default password `shakeme` and press <ENTER>.
 
-<div class="rst-content note">
+<div class="rst-content warning">
   <p class="rst-content admonition-title">
-    <b> NOTE </b>
+    <b> WARNING </b>
     </p>
     <body class="rst-content admonition">
     For improved security, it's highly recommended to change the default password of your Raspberry Shake. To learn how to update your password and access essential guidelines for securing your device effectively, refer to this <a href="https://manual.raspberryshake.org/hacked.html#hacked" target="_blank">guide.</a>

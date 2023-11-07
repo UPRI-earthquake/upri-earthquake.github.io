@@ -117,7 +117,7 @@ After installing seiscomp packages and configuring database, the next step is to
     ====================================================================
     ```
     This initializes the configuration of your installation. If you already made adjustments to the configuration files be warned that this setup will overwrite existing parameters with default values. This is not a configurator for all options of your setup but helps to setup initial standard values.
-      <div class="rst-content hint">
+      <div class="rst-content note">
       <p class="rst-content admonition-title">
         <b> HINT </b>
       </p>

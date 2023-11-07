@@ -6,12 +6,12 @@ Introduction To SeisComp
 While SeisComP is employed by the EarthquakeHub Network for processing seismic data sourced through citizen science efforts, it's important to note that its use is not an absolute requirement within the EarthquakeHub Network. Alternative data processing software capable of handling miniseed data can also be employed for processing network data.
 
 SeisComP encompasses a suite of modular components, each dedicated to specific tasks, including:
-1. Global Parameters: Unified schema for configuring each modules.
-2. Acquisition: Responsible for data collection.
-3. Inventory: Manages network information.
-4. Messaging: Facilitates communication between system elements.
-5. Processing: Executes advanced data analysis and interpretation.
-6. Utilities: Offers various auxiliary tools for enhanced functionality.
+1. **Global Parameters:** Unified schema for configuring each modules.
+2. **Acquisition:** Responsible for data collection.
+3. **Inventory:** Manages network information.
+4. **Messaging:** Facilitates communication between system elements.
+5. **Processing:** Executes advanced data analysis and interpretation.
+6. **Utilities:** Offers various auxiliary tools for enhanced functionality.
 
 
 ## Installation from Pre-Compiled Release Package
@@ -39,9 +39,11 @@ This guide provides instructions for installing SeisComP packages on machines ru
       <p class="rst-content admonition-title">
         <b> NOTE </b>
       </p>
+      <p>
     <body class="rst-content admonition">
     For some packages, documentations are already included in the downloaded seiscomp package so there is no need to download and unpack the documentation.
     </body>
+      </p>
     </div>
 
     >
@@ -59,9 +61,11 @@ This guide provides instructions for installing SeisComP packages on machines ru
       <p class="rst-content admonition-title">
         <b> NOTE </b>
       </p>
+      <p>
     <body class="rst-content admonition">
    Depending on your Ubuntu version, additional steps may be required to address specific dependencies:
     </body>
+  </p>
     </div>
 
     - On Ubuntu 18: Install Python and related libraries:
@@ -97,9 +101,11 @@ After installing seiscomp packages and configuring database, the next step is to
       <p class="rst-content admonition-title">
         <b> NOTE </b>
       </p>
-    <body class="rst-content admonition">
+      <p>
+      <body class="rst-content admonition">
    In seiscomp setup default values are given in brackets []:
     </body>
+      </p>
     </div>
 
     ```bash
@@ -110,23 +116,25 @@ After installing seiscomp packages and configuring database, the next step is to
     seiscomp setup
     ====================================================================
 
-    This initializes the configuration of your installation.
-    If you already made adjustments to the configuration files
-    be warned that this setup will overwrite existing parameters
-    with default values. This is not a configurator for all
-    options of your setup but helps to setup initial standard values.
+This initializes the configuration of your installation. If you already made adjustments to the configuration files be warned that this setup will overwrite existing parameters with default values. This is not a configurator for all options of your setup but helps to setup initial standard values.
 
-    --------------------------------------------------------------------
-    Hint: Entered values starting with a dot (.) are handled
-          as commands. Available commands are:
+    <div class="rst-content hint">
+      <p class="rst-content admonition-title">
+        <b> HINT </b>
+      </p>
+      <p>
+      <body class="rst-content admonition">
+      Entered values starting with a dot (.) are handled as commands. Available commands are:
+      <ul>
+          <li>  quit: Quit setup without modification to your configuration. </li>
+          <li> back: Go back to the previous parameter. </li>
+          <li> help: Show help about the current parameter (if available). </li>
+      </ul>
+      If you need to enter a value with a leading dot, escape it with backslash, e.g. "\.value".
+    </body>
+      </p>
+    </div>
 
-          quit: Quit setup without modification to your configuration.
-          back: Go back to the previous parameter.
-          help: Show help about the current parameter (if available).
-
-          If you need to enter a value with a leading dot, escape it
-          with backslash, e.g. "\.value".
-    --------------------------------------------------------------------
     ```
     This will ask for initial settings. You may just leave the default values for the following details:
     ```bash

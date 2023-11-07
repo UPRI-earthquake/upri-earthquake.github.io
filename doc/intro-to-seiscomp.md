@@ -94,48 +94,43 @@ This guide provides instructions for installing SeisComP packages on machines ru
 
 ## Getting Started
 After installing seiscomp packages and configuring database, the next step is to setup seiscomp using `seiscomp setup` or the wizard from within scconfig.
-
 1. Execute setup via:
+
 
     <div class="rst-content note">
       <p class="rst-content admonition-title">
         <b> NOTE </b>
       </p>
       <p>
-          <body class="rst-content admonition">
-          In seiscomp setup default values are given in brackets []:
-          </body>
-      </p>
-    </div>
-
-    ```
-    seiscomp/bin/seiscomp setup
-    ```
-    ```
-    ====================================================================
-    seiscomp setup
-    ====================================================================
-    ```
-    This initializes the configuration of your installation. If you already made adjustments to the configuration files be warned that this setup will overwrite existing parameters with default values. This is not a configurator for all options of your setup but helps to setup initial standard values.
-      <div class="rst-content note">
-      <p class="rst-content admonition-title">
-        <b> HINT </b>
-      </p>
-      <p>
       <body class="rst-content admonition">
-      Entered values starting with a dot (.) are handled as commands. Available commands are:
-         <ul>
-              <li>  quit: Quit setup without modification to your configuration. </li>
-             <li> back: Go back to the previous parameter. </li>
-              <li> help: Show help about the current parameter (if available). </li>
-          </ul>
-      If you need to enter a value with a leading dot, escape it with backslash, e.g. "value".
+   In seiscomp setup default values are given in brackets []:
     </body>
       </p>
     </div>
 
-    This will ask for initial settings. You may just leave the default values for the following details:
+    ```bash
+    seiscomp/bin/seiscomp setup
+    ```
+    ```bash
+    ====================================================================
+    seiscomp setup
+    ====================================================================
 
+This initializes the configuration of your installation. If you already made adjustments to the configuration files be warned that this setup will overwrite existing parameters with default values. This is not a configurator for all options of your setup but helps to setup initial standard values.
+
+    --------------------------------------------------------------------
+    Hint: Entered values starting with a dot (.) are handled
+          as commands. Available commands are:
+
+          quit: Quit setup without modification to your configuration.
+          back: Go back to the previous parameter.
+          help: Show help about the current parameter (if available).
+
+          If you need to enter a value with a leading dot, escape it
+          with backslash, e.g. "\.value".
+    --------------------------------------------------------------------
+    ```
+    This will ask for initial settings. You may just leave the default values for the following details:
     ```bash
     Organization name []:
     Enable database storage [yes]:

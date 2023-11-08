@@ -197,7 +197,7 @@ In order to process seismic data within SeisComP, it's essential to define a dat
     ```
 
 ## Getting Real-time Data from a Remote Seedlink Server
-<a href="https://www.seiscomp.de/doc/base/tutorials/waveforms.html" target="_blank">This is the link to Get Real-time Data from a Remote Seedlink Server</a>
+<a href="https://www.seiscomp.de/doc/base/tutorials/waveforms.html" target="_blank"> Refer to this link </a>
 
 
 

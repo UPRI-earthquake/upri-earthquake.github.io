@@ -108,31 +108,25 @@ Clicking ```builder``` redirects you to this page:
 
     Refer <a href="https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf" target="_blank">here</a> for the query guide.
 
-    > **Example:** The following parameters of our test network are the following:
+    <div class="rst-content tip">
+            <p class="rst-content admonition-title">
+                <b> EXAMPLE </b>
+            </p>
+                <body class="rst-content admonition">
+                    The following parameters of our test network are the following:
+                    <ul>
+                        <li> Network: AM </li>
+                        <li> Station: R3B2D </li>
+                        <li> Location: 00 </li>
+                        <li> Channel: EHZ </li>
+                    </ul>
+                </body>
+        </div>
 
-    - Network: AM
-    - Station: R3B2D
-    - Location: 00
-    - Channel: EHZ
-
-    The values vary according the the network you want to extract data from.
-
-    ![10](_build/html/assets/fdsnws/4.10.jpg "10")
-
-
-    Refer <a href="https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf" target="_blank">here</a> for the query guide.
-
-    > **Example:** The following parameters of our test network are the following:
-
-    - Network: AM
-    - Station: R3B2D
-    - Location: 00
-    - Channel: EHZ
 
     The values vary according the the network you want to extract data from.
 
     ![10](_build/html/assets/fdsnws/4.10.jpg "10")
-
 
 
 6. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page. Refer to the previous screenshot in Step 5.
@@ -249,7 +243,15 @@ st = read('your_seismic_data.mseed')
 
 Replace 'your_seismic_data.mseed' with your actual file name.
 
-> Example: From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-12T11:30:00```, I've downloaded the MiniSeed data with the file name ```fdsnws.md```
+<div class="rst-content tip">
+            <p class="rst-content admonition-title">
+                <b> EXAMPLE </b>
+            </p>
+                <body class="rst-content admonition">
+                    From the retrieved data from date range <code> 2023-10-11T23:30:00 </code> and <code> 2023-10-12T11:30:00</code>, I've downloaded the MiniSeed data with the file name <code> fdsnws.md </code>
+                </body>
+</div>
+
 
 ```
 st = read('fdsnws.mseed')
@@ -309,7 +311,17 @@ inv = read_inventory("your_station_metadata.xml")
 
 Replace 'your_seismic_data.mseed' with your actual file name.
 
-> Example: From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-12T11:30:00```, I've downloaded the Station Metadata with the file name ```query.xml```
+<div class="rst-content tip">
+            <p class="rst-content admonition-title">
+                <b> EXAMPLE </b>
+            </p>
+                <body class="rst-content admonition">
+                    From the retrieved data from date range <code> 2023-10-11T23:30:00 </code> and <code> 2023-10-12T11:30:00</code>, I've downloaded the Station Metadata with the file name <code> query.xml </code>
+
+                </body>
+</div>
+
+
 
 ```
 inv = read_inventory("query.xml")

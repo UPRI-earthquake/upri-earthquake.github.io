@@ -99,14 +99,13 @@ After installing seiscomp packages and configuring database, the next step is to
         <b> NOTE </b>
       </p>
       <p>
-          <body class="rst-content admonition"> In seiscomp setup default values are given in brackets []: </body>
+          <body class="rst-content admonition"> In seiscomp setup default values are given in brackets [ ]: </body>
       </p>
     </div>
 
     ```bash
     seiscomp/bin/seiscomp setup
-    ```
-    ```bash
+
     ====================================================================
     seiscomp setup
     ====================================================================
@@ -130,8 +129,11 @@ After installing seiscomp packages and configuring database, the next step is to
     --------------------------------------------------------------------
     ```
     This will ask for initial settings. You may just leave the default values for the following details:
+
     ```bash
     Organization name []:
+    ```
+    ```
     Enable database storage [yes]:
     0) mysql
       MySQL server.
@@ -142,7 +144,7 @@ After installing seiscomp packages and configuring database, the next step is to
     Database backend [0]:
     Create database [yes]:
     ```
-    > For database root password, you may enter your desired password
+    For database root password, you may enter your desired password
     ```bash
     MYSQL root password (input not echoed) []:
     ```
@@ -151,7 +153,7 @@ After installing seiscomp packages and configuring database, the next step is to
     Database name [seiscomp]:
     Database hostname [localhost]:
     ```
-    > Specify the desired user and password for both read-write and read-only access parameters.
+    Specify the desired user and password for both read-write and read-only access parameters.
     ```bash
     Database read-write user [sysop]:
     Database read-write password [sysop]:

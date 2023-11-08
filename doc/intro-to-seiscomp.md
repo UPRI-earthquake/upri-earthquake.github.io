@@ -39,9 +39,11 @@ This guide provides instructions for installing SeisComP packages on machines ru
       <p class="rst-content admonition-title">
         <b> NOTE </b>
       </p>
-    <body class="rst-content admonition">
-    For some packages, documentations are already included in the downloaded seiscomp package so there is no need to download and unpack the documentation.
-    </body>
+        <p>
+          <body class="rst-content admonition">
+            For some packages, documentations are already included in the downloaded seiscomp package so there is no need to download and unpack the documentation.
+          </body>
+        </p>
     </div>
 
     >
@@ -59,9 +61,10 @@ This guide provides instructions for installing SeisComP packages on machines ru
       <p class="rst-content admonition-title">
         <b> NOTE </b>
       </p>
-    <body class="rst-content admonition">
-   Depending on your Ubuntu version, additional steps may be required to address specific dependencies:
-    </body>
+        <p>
+          <body class="rst-content admonition">Depending on your Ubuntu version, additional steps may be required to address specific dependencies:
+          </body>
+        </p>
     </div>
 
     - On Ubuntu 18: Install Python and related libraries:

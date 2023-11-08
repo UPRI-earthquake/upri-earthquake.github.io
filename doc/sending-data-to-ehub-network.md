@@ -8,7 +8,7 @@ For a citizen scientist to contribute their real-time Raspberry Shake data to th
     <b> NOTE </b>
     </p>
     <body class="rst-content admonition">
-     Make sure that you have already <a href="https://upri-earthquake.github.io/installing-rshake-client.html" target="_blank"> installed the EarthquakeHub client on your Raspberry Shake device.</a> before following this tutorial.
+     Make sure that you have already <a href="https://upri-earthquake.github.io/installing-rshake-client.html" target="_blank"> installed the EarthquakeHub client on your Raspberry Shake device </a> before following this tutorial.
     </body>
 </div>
 

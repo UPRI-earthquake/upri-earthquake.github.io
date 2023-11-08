@@ -58,7 +58,6 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 ![builder](_build/html/assets/fdsnws/4.3.jpg "builder")
-
 Clicking ```builder``` redirects you to this page:
 ![builder query](_build/html/assets/fdsnws/4.4.jpg "builder query")
 

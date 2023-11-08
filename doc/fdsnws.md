@@ -4,15 +4,13 @@ How to Use FDSNWS to Download Ground Motion Data and Station Metadata
 ### Introduction
 **FDSNWS** (Federation of Digital Seismograph Networks Web Services) is a set of web services that allow users to access and retrieve seismic data from various seismological networks and data centers. This documentation will guide you through the process of using FDSNWS to download ground motion data and its metadeta from the UPRI EarthquakeHub Network. Understanding the distinction among these two is essential to make interpretations more significant. In the context of FDSNWS,
 
-- **Data:** This is the actual seismic information you're interested in, like the earthquake measurements, shaking patterns, and seismograph readings.
+- **Data:** This is the actual seismic information you’re interested in: the measurement of the ground motion either in displacement, velocity, or acceleration
 
-- **Metadata:** This provides important details *about* the data. It includes information such as when and where the seismic event occurred, how strong it was, and the equipment used to record the data. Think of metadata as helpful labels that give you context and understanding about the seismic data you're looking at.
+- **Metadata:** This provides important details *about the station/s (seismic sensor) that records the data.* It includes information such as where the station is located, its frequency response, and other organizational information. Think of metadata as the digital *manual* of the seismic instrument.
 
 ### Service Overview
 
-FDSNWS provides various services for accessing different types of data.
-The most commonly used service for ground motion data is the ```dataselect```
-service. While the ```station``` service is used to obtain the metadata
+FDSNWS provides various services for accessing different products of a seismic network.The service used for ground motion data is the ```dataselect``` service. While the ```station``` service is used to obtain the metadata.
 
 #### DataSelect
 This service  allows you to retrieve time series data from seismological instruments. In the context of seismology, time series data refers to recordings of ground motion or seismic activity ***over time.***
@@ -23,9 +21,6 @@ Here are the following data you can gather from ```dataselect``` service
 
 2. ***Time Charts:*** You can request time charts that show you how this shaking changes over time. These charts help scientists and researchers analyze and study the seismic activity.
 
-3. ***Instrument Info:*** This service can also provide information about the tools (instruments) used to capture this seismic data. Understanding these instruments is crucial for correctly interpreting and using the data.
-
-
     More information about DataSelect service <a href="https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf" target="_blank">here</a>
 
 #### Station
@@ -34,7 +29,7 @@ Here are the following information you can gather from ```station``` service
 
 1. ***Station Locations:*** You can find out where seismographic stations are located on the Earth's surface. This data is crucial for understanding which regions are being monitored for seismic activity.
 
-2. ***Instrument Details:*** The service offers information about the instruments used at each station, including their specifications and capabilities. This helps you know how data is collected and recorded.
+2. ***Instrument Details:*** The service offers information about the instruments used at each station, most importantly, their frequency response. The frequency response is necessary for the digital processing of the instrument data.
 
 3. ***Operational Status:*** You can learn whether a station is currently operational or if it's undergoing maintenance or repairs. This is essential for assessing the reliability of data from that station.
 
@@ -77,6 +72,11 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
         - ```location```: Specifies the location code, typically a two-character code representing the location of the instrument at the station.
       - ```channel```: Specifies the channel code, which identifies a specific data channel (e.g., "BHZ" for a broadband horizontal component).
 
+Here are some references for the Station Naming Convention:
+
+> - <a href="https://manual.raspberryshake.org/stationNamingConvention.html"> Raspberry Shake Station Naming Convention </a>
+> - <a href="http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf" target="_blank"> SEEDManual: Channel Naming </a>
+
     - **Time Window:**
 
         - ```starttime```: Specifies the beginning time of the data you want to retrieve
@@ -111,8 +111,9 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
     ![10](_build/html/assets/fdsnws/4.10.jpg "10")
 
-6. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page.
-![url](_build/html/assets/fdsnws/4.5.jpg "url")
+
+
+6. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page. Refer to the previous screenshot in Step 5.
 
 
 #### Steps to Download Station Metadata
@@ -128,6 +129,9 @@ To obtain the Metadata, we will be using the ```station``` service.
 
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 ![builder](_build/html/assets/fdsnws/4.7.jpg "builder")
+
+>
+
 ![builder query](_build/html/assets/fdsnws/4.8.jpg "builder query")
 
 >
@@ -162,7 +166,7 @@ This includes:
 
     - **Service Specific Constraints**:
 
-       - ```Level```: Choose the level of detail for station information, with the default being "Station."
+       - ```Level```: Choose the level of detail for station information, with the default being “Station.” Various levels determines the amount of information included in the metadata, i.e. a level of *Response* would include the station frequency response, whereas a level of *Station* only includes organizational information about the station.
        - ```Exclude Restricted Channels```: Exclude stations with channels marked as restricted.
        -```Include Data Availability```: Include information about data availability at these stations.
        - ```Update After```: Filter stations updated after a specified time.
@@ -177,7 +181,7 @@ This includes:
 
 >
 
-6. After filling out the form, click the link below and you will be redirected to the raw Metadata.
+6. After filling out the form, click the link in the URL textbox you will be redirected to the raw Metadata.
 ![station](_build/html/assets/fdsnws/4.14.jpg "station")
 
 >
@@ -240,15 +244,16 @@ The type="dayplot" argument specifies the type of plot you want to create. You c
 More plot features accessible <a href="https://docs.obspy.org/packages/autogen/obspy.core.stream.Stream.plot.html" target="_blank">here</a> for the query guide.
 
 
-For windows, press ```CTRL + B``` to run your python code
-If your code ran successfully, a MatLab window containing your visualized miniSEED data will appear.
+Run your python code. If your code ran successfully, a pyplot window containing your visualized miniSEED data will appear.
 
 ![plot](_build/html/assets/fdsnws/4.11.jpg "plot")
 
 >
 
 5. **Save the plot file**
-- Click the save icon below the plot
+- Click the save icon below the plot.
+
+
 Congratulations! You now have a plot of the Seismic Data you just downloaded from FDSNWS!
 
 #### From Station Service
@@ -284,7 +289,6 @@ Replace 'your_seismic_data.mseed' with your actual file name.
 
 ```
 inv = read_inventory("query.xml")
-inv
 ```
 
 4. **Print your Station Metadata**
@@ -298,7 +302,6 @@ Your source code should look like this:
 ```
 from obspy import read_inventory
 inv = read_inventory("your_station_metadata.xml")
-inv
 print(inv)
 ```
 

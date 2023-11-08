@@ -150,7 +150,7 @@ To obtain the Metadata, we will be using the ```station``` service.
 
 Clicking ```builder``` redirects you to this page:
 
-![builder query](_build/html/assets/fdsnws/4.8.jpg "builder query")
+    ![builder query](_build/html/assets/fdsnws/4.8.jpg "builder query")
 
 >
 

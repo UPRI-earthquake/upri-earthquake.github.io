@@ -164,9 +164,11 @@ This includes:
             <p class="rst-content admonition-title">
                 <b> NOTE </b>
             </p>
+            <p>
                 <body class="rst-content admonition">
                 Refer to the instructions above regarding time formatting.
                 </body>
+            </p>
         </div>
 
     - **Channel Constraints**:

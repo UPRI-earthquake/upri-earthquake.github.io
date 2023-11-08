@@ -10,7 +10,7 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
    - Wait for the <a href="https://manual.raspberryshake.org/specifications.html#led-behavior/" target="_blank">Raspberry Shake's ethernet LED indicators</a>to behave as follows:
       - Green light (flashing repeatedly)
       - Orange light (solid)
->> *This means that the ethernet port is working as it should.*
+> *This means that the ethernet port is working as it should.*
 
 
 ## How to SSH via Windows Powershell
@@ -51,9 +51,10 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
   2. Input the following:
 
       ![image](_build/html/assets/connecting-rshake/1.7.png)
-   -  Under Host Name (or IP address), enter your Raspberry Shake’s address, by default this is `rs.local`.
-   - Make sure that Port is set to 22.
-   - Under Connection type, select SSH.
+
+      -  Under Host Name (or IP address), enter your Raspberry Shake’s address, by default this is `rs.local`.
+      - Make sure that Port is set to 22.
+      - Under Connection type, select SSH.
 
   3.  Click Open, and enter Raspberry Shake username and password. By default, these are `myshake` and `shakeme`, respectively. If it asks about trusting the host, simply click Accept.
       ![image](_build/html/assets/connecting-rshake/1.8.png)
@@ -99,7 +100,7 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
    2. Enter this SSH command: `ssh myshake@rs.local`
    3. You will be prompted to enter a password. Type the default password `shakeme` and press <ENTER>.
 
-<div class="rst-content note">
+<div class="rst-content todo">
   <p class="rst-content admonition-title">
     <b> NOTE </b>
     </p>

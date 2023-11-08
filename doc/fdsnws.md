@@ -72,10 +72,9 @@ Clicking ```builder``` redirects you to this page:
         - ```location```: Specifies the location code, typically a two-character code representing the location of the instrument at the station.
       - ```channel```: Specifies the channel code, which identifies a specific data channel (e.g., "BHZ" for a broadband horizontal component).
 
-Here are some references for the Station Naming Convention:
-
-> - <p><a href="https://manual.raspberryshake.org/stationNamingConvention.html"> Raspberry Shake Station Naming Convention </a></p>
-> - <p><a href="http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf" target="_blank"> SEEDManual: Channel Naming </a></p>
+      Here are some references for the Station Naming Convention:
+      > - <p><a href="https://manual.raspberryshake.org/stationNamingConvention.html"> Raspberry Shake Station Naming Convention </a></p>
+      > - <p><a href="http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf" target="_blank"> SEEDManual: Channel Naming </a></p>
 
 
     - **Time Window:**

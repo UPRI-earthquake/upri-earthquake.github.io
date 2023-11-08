@@ -58,6 +58,9 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 ![builder](_build/html/assets/fdsnws/4.3.jpg "builder")
+
+Clicking ```builder``` redirects you to this page:
+
 ![builder query](_build/html/assets/fdsnws/4.4.jpg "builder query")
 
 >
@@ -77,26 +80,40 @@ Here are some references for the Station Naming Convention:
 > - <a href="https://manual.raspberryshake.org/stationNamingConvention.html"> Raspberry Shake Station Naming Convention </a>
 > - <a href="http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf" target="_blank"> SEEDManual: Channel Naming </a>
 
-    - **Time Window:**
+- **Time Window:**
 
-        - ```starttime```: Specifies the beginning time of the data you want to retrieve
-        - ```endtime```: Specifies the end time of the data you want to retrieve
+    - ```starttime```: Specifies the beginning time of the data you want to retrieve
+    - ```endtime```: Specifies the end time of the data you want to retrieve
 
-        > **_NOTE:_** The time is formatted **YYYY-MM-DDTHH-MM-SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
+> **_NOTE:_** The time is formatted **YYYY-MM-DDTHH-MM-SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
 
-        > For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30``` pm till ```October 12, 2023 11:30 am``` start time should be ```2023-10-11T23:30:00``` and end time should be ```2023-10-12T11:30:00```
+> For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30``` pm till ```October 12, 2023 11:30 am``` start time should be ```2023-10-11T23:30:00``` and end time should be ```2023-10-12T11:30:00```
 
-    - **Data Format:**
-        - ```format```: Specifies the format in which you want to receive the data. The ground data is in **miniSEED** format
+- **Data Format:**
+    - ```format```: Specifies the format in which you want to receive the data. The ground data is in **miniSEED** format
 
-    - **Data Availability and Quality**:
-        - ```availability```: Allows you to filter data based on its availability (e.g., "available," "not available," "all").
-        - ```quality```: Filters data based on its quality (e.g., "D," "M," "Q," "R").
+- **Data Availability and Quality**:
+    - ```availability```: Allows you to filter data based on its availability (e.g., "available," "not available," "all").
+    - ```quality```: Filters data based on its quality (e.g., "D," "M," "Q," "R").
 
-    - **Data Limit:**
-        -  ```limit```: Sets the maximum number of data segments to return in the search results. This parameter is useful for limiting the amount of data you receive in a single request.
-    - Time Correction:
-        - ```updatedAfter```: Specifies the last time the data was updated. It allows you to request data that has been updated or added after a certain timestamp.
+- **Data Limit:**
+    -  ```limit```: Sets the maximum number of data segments to return in the search results. This parameter is useful for limiting the amount of data you receive in a single request.
+- Time Correction:
+    - ```updatedAfter```: Specifies the last time the data was updated. It allows you to request data that has been updated or added after a certain timestamp.
+
+    Refer <a href="https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf" target="_blank">here</a> for the query guide.
+
+    > **Example:** The following parameters of our test network are the following:
+
+    - Network: AM
+    - Station: R3B2D
+    - Location: 00
+    - Channel: EHZ
+
+    The values vary according the the network you want to extract data from.
+
+    ![10](_build/html/assets/fdsnws/4.10.jpg "10")
+
 
     Refer <a href="https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf" target="_blank">here</a> for the query guide.
 
@@ -130,7 +147,8 @@ To obtain the Metadata, we will be using the ```station``` service.
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 ![builder](_build/html/assets/fdsnws/4.7.jpg "builder")
 
->
+
+Clicking ```builder``` redirects you to this page:
 
 ![builder query](_build/html/assets/fdsnws/4.8.jpg "builder query")
 
@@ -251,8 +269,7 @@ Run your python code. If your code ran successfully, a pyplot window containing 
 >
 
 5. **Save the plot file**
-- Click the save icon below the plot.
-
+- Click the save icon in the lower part of the window to save the plot image.
 
 Congratulations! You now have a plot of the Seismic Data you just downloaded from FDSNWS!
 

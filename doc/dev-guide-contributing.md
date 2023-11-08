@@ -15,12 +15,12 @@ git checkout -b feature/new-feature
 ## 2. Commit & Push
 
 Commit your changes with a descriptive commit message then push to upstream. Please refer to the following tags as guide in naming your commit messages and pull request titles:
-1. draft - to be completed PR/commit
-2. feat - new feature
-3. fix - bug fixes
-4. test - anything related to testing
-5. chore - (aka housekeeping) cleaning/styling/refactor code, adding comments
-6. docs - anything related to documentation / comments
+1. **draft** - to be completed PR/commit
+2. **feat** - new feature
+3. **fix** - bug fixes
+4. **test** - anything related to testing
+5. **chore** - (aka housekeeping) cleaning/styling/refactor code, adding comments
+6. **docs** - anything related to documentation / comments
 
 ## 3. Create a Pull Request
 

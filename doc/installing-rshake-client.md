@@ -22,7 +22,7 @@ bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/mai
     </p>
     <p>
      <body class="rst-content admonition">
-     To uninstall, simply change the link above from ```".../install.sh"``` to ```".../uninstall.sh"```
+     To uninstall, simply change the link above from<code>".../install.sh" </code> to <code>".../uninstall.sh"</code>
      </body>
     </p>
 </div>

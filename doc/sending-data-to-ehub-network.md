@@ -35,8 +35,7 @@ For a citizen scientist to contribute their real-time Raspberry Shake data to th
    > - Longitute (in degree coordinates)
    > - Latitude (in degree coordinate)
 
-
-    > You may use <a href="https://google.com/maps" target="_blank">Google Maps</a> to search your location on the map. Get the latitude and longitude coordinates by right clicking your pinned location on the map.
+   You may use <a href="https://google.com/maps" target="_blank">Google Maps</a> to search your location on the map. Get the latitude and longitude coordinates by right clicking your pinned location on the map.
      ![image](_build/html/assets/sending-data/3.3.png)
 
 

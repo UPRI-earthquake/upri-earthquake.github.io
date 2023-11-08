@@ -38,7 +38,7 @@ There are two different docker-compose files written for two scenarios, *(1)* fo
     <body class="rst-content admonition">
         <ul>
             <li> If ever you encounter an error saying you are unauthorized to pull image, follow this guide on how to <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic" target="_blank">authenticate with personal access token from <code> ghcr.io </code> </a> </li>
-            <li> To get the certificates using <code> certbot </code>, First up the nginx-proxy container but with the https server in the nginx.conf file commented out. Second, fill this in via certbot: <code> docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d <your-webapp-url>.org </code> Lastly, add the 443 (or https) config for the nginx and restart that container.</li>
+            <li> To get the certificates using <code>certbot</code>, First up the nginx-proxy container but with the https server in the nginx.conf file commented out. Second, fill this in via certbot: <code> docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d <your-webapp-url>.org </code> Lastly, add the 443 (or https) config for the nginx and restart that container.</li>
             <li>  Within a few months, the certificate will expire. To renew using certbot, use <code> docker compose run --rm certbot renew </code>
             </li>
         </ul>

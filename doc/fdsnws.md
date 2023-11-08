@@ -80,10 +80,18 @@ Clicking ```builder``` redirects you to this page:
 
         - ```starttime```: Specifies the beginning time of the data you want to retrieve
         - ```endtime```: Specifies the end time of the data you want to retrieve
+        <div class="rst-content note">
+            <p class="rst-content admonition-title">
+                <b> NOTE </b>
+            </p>
+                <body class="rst-content admonition">
+                    <ul>
+                        <li> The time is formatted <b>YYYY-MM-DDTHH-MM-SS</b>. The date and time are separated by the "T". The time is in 24-Hour (military time format). </li>
+                        <li> For example, we want to obtain the data starting from  <code> October 11, 2023 at 11:30 </code> pm till <code> October 12, 2023 11:30 am </code> start time should be  <code> 2023-10-11T23:30:00 </code> and end time should be <code> 2023-10-12T11:30:00 </code> </li>
+                    </ul>
+                </body>
+        </div>
 
-        > **_NOTE:_** The time is formatted **YYYY-MM-DDTHH-MM-SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
-
-        > For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30``` pm till ```October 12, 2023 11:30 am``` start time should be ```2023-10-11T23:30:00``` and end time should be ```2023-10-12T11:30:00```
 
     - **Data Format:**
         - ```format```: Specifies the format in which you want to receive the data. The ground data is in **miniSEED** format
@@ -159,9 +167,14 @@ This includes:
         - ```startafter```: Find stations that became operational after the provided start time.
         - ```endbefore```: Find stations that were operational before the specified end time.
         - ```endafter```: Find stations that became operational after the specified end time.
-
-
-        > **_NOTE:_** Refer to the instructions above regarding time formatting.
+        <div class="rst-content note">
+            <p class="rst-content admonition-title">
+                <b> NOTE </b>
+            </p>
+                <body class="rst-content admonition">
+                Refer to the instructions above regarding time formatting.
+                </body>
+        </div>
 
     - **Channel Constraints**:
 

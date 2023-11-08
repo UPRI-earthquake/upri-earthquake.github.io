@@ -107,7 +107,6 @@ Clicking ```builder``` redirects you to this page:
         - ```updatedAfter```: Specifies the last time the data was updated. It allows you to request data that has been updated or added after a certain timestamp.
 
     Refer <a href="https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf" target="_blank">here</a> for the query guide.
-
     <div class="rst-content tip">
             <p class="rst-content admonition-title">
                 <b> EXAMPLE </b>
@@ -243,15 +242,13 @@ st = read('your_seismic_data.mseed')
 
 Replace 'your_seismic_data.mseed' with your actual file name.
 
-<div class="rst-content tip">
-            <p class="rst-content admonition-title">
-                <b> EXAMPLE </b>
-            </p>
-                <body class="rst-content admonition">
-                    From the retrieved data from date range <code> 2023-10-11T23:30:00 </code> and <code> 2023-10-12T11:30:00</code>, I've downloaded the MiniSeed data with the file name <code> fdsnws.md </code>
-                </body>
-</div>
 
+
+
+
+
+
+> Example: From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-12T11:30:00```, I've downloaded the MiniSeed data with the file name ```fdsnws.md```
 
 ```
 st = read('fdsnws.mseed')
@@ -311,17 +308,7 @@ inv = read_inventory("your_station_metadata.xml")
 
 Replace 'your_seismic_data.mseed' with your actual file name.
 
-<div class="rst-content tip">
-            <p class="rst-content admonition-title">
-                <b> EXAMPLE </b>
-            </p>
-                <body class="rst-content admonition">
-                    From the retrieved data from date range <code> 2023-10-11T23:30:00 </code> and <code> 2023-10-12T11:30:00</code>, I've downloaded the Station Metadata with the file name <code> query.xml </code>
-
-                </body>
-</div>
-
-
+> Example: From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-12T11:30:00```, I've downloaded the Station Metadata with the file name ```query.xml```
 
 ```
 inv = read_inventory("query.xml")

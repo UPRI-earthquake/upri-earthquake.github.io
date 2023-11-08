@@ -60,10 +60,7 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 ![builder](_build/html/assets/fdsnws/4.3.jpg "builder")
 
 Clicking ```builder``` redirects you to this page:
-
 ![builder query](_build/html/assets/fdsnws/4.4.jpg "builder query")
-
->
 
 5. Specify the parameters of the data you want to download.
   This includes:
@@ -77,13 +74,14 @@ Clicking ```builder``` redirects you to this page:
 
 Here are some references for the Station Naming Convention:
 
-> - <a href="https://manual.raspberryshake.org/stationNamingConvention.html"> Raspberry Shake Station Naming Convention </a>
-> - <a href="http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf" target="_blank"> SEEDManual: Channel Naming </a>
+> - <p><a href="https://manual.raspberryshake.org/stationNamingConvention.html"> Raspberry Shake Station Naming Convention </a></p>
+> - <p><a href="http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf" target="_blank"> SEEDManual: Channel Naming </a></p>
 
-- **Time Window:**
 
-    - ```starttime```: Specifies the beginning time of the data you want to retrieve
-    - ```endtime```: Specifies the end time of the data you want to retrieve
+    - **Time Window:**
+
+        - ```starttime```: Specifies the beginning time of the data you want to retrieve
+        - ```endtime```: Specifies the end time of the data you want to retrieve
 
 > **_NOTE:_** The time is formatted **YYYY-MM-DDTHH-MM-SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
 

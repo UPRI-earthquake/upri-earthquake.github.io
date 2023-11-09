@@ -15,23 +15,6 @@ release = '0.1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = ['myst_parser','sphinxcontrib.redoc']
-redoc = [
-    {
-        'name': 'UPRI EarthquakeHub APIs',
-        'page': 'api',
-        'spec': 'ehub-backend-api-docs.json',  # Specify the path to your OpenAPI JSON file
-        'embed': True,
-        'opts': {
-            'hide-loading': True,
-            'theme': 'dark',
-            # Add other ReDoc options as needed
-        },
-    },
-]
-
-
-
-
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']

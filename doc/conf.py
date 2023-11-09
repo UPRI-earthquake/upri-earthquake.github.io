@@ -15,6 +15,7 @@ release = '0.1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = ['myst_parser','sphinxcontrib.redoc']
+redoc_spec_path = ['doc/ehub-backend/api-docs/ehub-backend-api-docs.json']
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']

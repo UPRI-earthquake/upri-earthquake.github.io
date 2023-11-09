@@ -19,7 +19,7 @@ redoc = [
     {
         'name': 'UPRI EarthquakeHub APIs',
         'page': 'api',
-        'spec': 'ehub-backend/api-docs/ehub-backend-api-docs.json',  # Specify the path to your OpenAPI JSON file
+        'spec': 'ehub-backend-api-docs.json',  # Specify the path to your OpenAPI JSON file
         'embed': True,
         'opts': {
             'hide-loading': True,
@@ -28,9 +28,6 @@ redoc = [
         },
     },
 ]
-
-
-
 
 
 

@@ -35,7 +35,6 @@ Welcome to UPRI EarthquakeHub's documentation!
    ringserver.md
    slink2dali.md
 
-.. redoc::
-   :name: UPRI EarthquakeHub APIs
-   :page: api
-   :spec: ehub-backend/api-docs/ehub-backend-api-docs.json
+==========================
+
+.. redoc:: api

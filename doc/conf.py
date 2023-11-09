@@ -21,7 +21,7 @@ redoc = [
     {
         'name': '"UPRI EarthquakeHub APIs',
         'page': 'api',
-        'spec': 'doc/ehub-backend/api-docs/ehub-backend-api-docs.json',
+        'spec': 'ehub-backend/api-docs/ehub-backend-api-docs.json',
         'embed': True,
     }
 ]

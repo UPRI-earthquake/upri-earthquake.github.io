@@ -96,7 +96,7 @@ There are two different docker-compose files written for two scenarios, *(1)* fo
         "role": "brgy"
        }
        ```
-       > Please change the `<USERNAME>` and `<PASSWORD>` parameters with your credentials.
+       Please change the `<USERNAME>` and `<PASSWORD>` parameters with your credentials.
 
 ### Interfacing with a processor
 #### SeisComP

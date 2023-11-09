@@ -14,18 +14,8 @@ release = '0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['myst_parser','sphinxcontrib.redoc']
+extensions = ['myst_parser','sphinxcontrib.openapi']
 openapi_spec_path = ['doc/ehub-backend/api-docs/ehub-backend-api-docs.json']
-
-redoc = [
-    {
-        'name': 'Your API Name',
-        'page': 'api',
-        'spec': 'ehub-backend/api-docs/ehub-backend-api-docs.json',  # Specify the path to your OpenAPI JSON file
-        'embed': True,
-
-    },
-]
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -37,4 +27,3 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
-

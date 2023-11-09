@@ -10,5 +10,5 @@ EarthquakeHub Backend API
 
 =====================
 ======================
+.. redoc:: ehub-backend-api-docs.json
 
-.. http:include::ehub-backend-api-docs.json

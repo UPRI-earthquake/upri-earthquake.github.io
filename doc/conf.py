@@ -20,14 +20,10 @@ openapi_spec_path = ['doc/ehub-backend/api-docs/ehub-backend-api-docs.json']
 redoc = [
     {
         'name': 'Your API Name',
-        'page': 'index',
+        'page': 'api',
         'spec': 'ehub-backend/api-docs/ehub-backend-api-docs.json',  # Specify the path to your OpenAPI JSON file
         'embed': True,
-        'opts': {
-            'hide-loading': True,
-            'theme': 'dark',
-            # Add other ReDoc options as needed
-        },
+
     },
 ]
 

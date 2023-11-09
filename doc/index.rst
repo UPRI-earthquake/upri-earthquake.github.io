@@ -35,3 +35,4 @@ Welcome to UPRI EarthquakeHub's documentation!
    ringserver.md
    slink2dali.md
 
+.. redoc:: api

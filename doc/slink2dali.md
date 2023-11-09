@@ -1,7 +1,8 @@
 Slink2Dali
 ================
 
-This documentation aims to introduce the application of slink2dali in the earthquake-hub citizen science network. See the [system overview here](add link here). This is a fork of [iris-edu/slink2dali](https://github.com/iris-edu/slink2dali). See their [original documentation here](https://github.com/iris-edu/slink2dali/blob/main/doc/slink2dali.md).
+This documentation aims to introduce the application of slink2dali in the earthquake-hub citizen science network. See the
+ <a href="https://upri-earthquake.github.io/system-overview" target="_blank">system overview here</a>. This is a fork of <a href="https://github.com/iris-edu/slink2dali" target="_blank">iris-edu/slink2dali</a> See their <a href="https://github.com/iris-edu/slink2dali/blob/main/doc/slink2dali.md" target="_blank">original documentation here</a>.
 
 ### Background
 

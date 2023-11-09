@@ -18,7 +18,7 @@ extensions = ['myst_parser','sphinxcontrib.redoc']
 redoc = [
     {
         'name': 'UPRI API',
-        'page': 'api',
+        'page': 'yml',
         'spec': 'ehub-backend/api-docs/ehub-backend-api-docs.json',
         'embed': True,
     }

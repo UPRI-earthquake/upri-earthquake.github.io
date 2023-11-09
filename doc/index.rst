@@ -37,4 +37,7 @@ Welcome to UPRI EarthquakeHub's documentation!
 
 ==========================
 
-.. redoc:: api
+.. redoc::
+   :name: Your API Name
+   :page: api
+   :spec: ehub-backend/api-docs/ehub-backend-api-docs.json

@@ -14,8 +14,16 @@ release = '0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['myst_parser','sphinxcontrib.openapi']
-openapi_spec_path = ['doc/ehub-backend/api-docs/ehub-backend-api-docs.json']
+extensions = ['myst_parser','sphinxcontrib.redoc']
+redoc = [
+    {
+        'name': 'UPRI API',
+        'page': 'api',
+        'spec': 'ehub-backend/api-docs/ehub-backend-api-docs.json',
+        'embed': True,
+    }
+]
+
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']

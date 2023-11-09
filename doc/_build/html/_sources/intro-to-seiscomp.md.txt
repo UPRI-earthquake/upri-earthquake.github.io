@@ -1,22 +1,26 @@
 Introduction To SeisComp
 ========================
 
-**SeisComp** is a seismological software that has been developed collaboratively by the GEOFON Program at Helmholtz Centre Potsdam GFZ German Research Centre for Geosciences and gempa GmbH. It plays a vital role in various aspects of seismological operations, encompassing data acquisition, processing, distribution, and interactive analysis. While SeisComP is employed by the EarthquakeHub Network for processing seismic data sourced through citizen science efforts, it's important to note that its use is not an absolute requirement within the EarthquakeHub Network. Alternative data processing software capable of handling miniseed data can also be employed for processing network data.
+**SeisComp** is a seismological software that has been developed collaboratively by the GEOFON Program at Helmholtz Centre Potsdam GFZ German Research Centre for Geosciences and gempa GmbH. It plays a vital role in various aspects of seismological operations, encompassing data acquisition, processing, distribution, and interactive analysis.
+
+While SeisComP is employed by the EarthquakeHub Network for processing seismic data sourced through citizen science efforts, it's important to note that its use is not an absolute requirement within the EarthquakeHub Network. Alternative data processing software capable of handling miniseed data can also be employed for processing network data.
 
 SeisComP encompasses a suite of modular components, each dedicated to specific tasks, including:
-1. Global Parameters: Unified schema for configuring each modules.
-2. Acquisition: Responsible for data collection.
-3. Inventory: Manages network information.
-4. Messaging: Facilitates communication between system elements.
-5. Processing: Executes advanced data analysis and interpretation.
-6. Utilities: Offers various auxiliary tools for enhanced functionality.
+1. **Global Parameters:** Unified schema for configuring each modules.
+2. **Acquisition:** Responsible for data collection.
+3. **Inventory:** Manages network information.
+4. **Messaging:** Facilitates communication between system elements.
+5. **Processing:** Executes advanced data analysis and interpretation.
+6. **Utilities:** Offers various auxiliary tools for enhanced functionality.
 
 
 ## Installation from Pre-Compiled Release Package
-This guide provides instructions for installing SeisComP packages on machines running Ubuntu. These guide works for Ubuntu 20.04 and 22.04, as of this writing. For more comprehensive installation details, please consult the [official documentation](https://www.seiscomp.de/doc/base/installation.html).
+This guide provides instructions for installing SeisComP packages on machines running Ubuntu. These guide works for Ubuntu 20.04 and 22.04, as of this writing. For more comprehensive installation details, please consult the <a href="https://www.seiscomp.de/doc/base/installation.html" target="_blank">official documentation.</a>
+
 
 1. Begin by creating a directory where you intend to download and install SeisComP packages.
-2. Navigate to the directory you've just created and download the appropriate SeisComP binary package compatible with your Linux distribution and architecture. You can obtain this package from the [SeisComP download site](https://www.seiscomp.de/downloader/).
+2. Navigate to the directory you've just created and download the appropriate SeisComP binary package compatible with your Linux distribution and architecture. You can obtain this package from the <a href="https://www.seiscomp.de/downloader/" target="_blank">SeisComP download site</a>.
+
 3. Within the same directory, retrieve the SeisComP maps using the following command:
     ```bash
     wget "https://www.seiscomp.de/downloader/seiscomp-maps.tar.gz"
@@ -31,7 +35,17 @@ This guide provides instructions for installing SeisComP packages on machines ru
     ```bash
     tar xzf seiscomp-4.0.0-doc.tar.gz
     ```
-    > **_NOTE:_** For some packages, documentations are already included in the downloaded seiscomp package so there is no need to download and unpack the documentation.
+    <div class="rst-content note">
+      <p class="rst-content admonition-title">
+        <b> NOTE </b>
+      </p>
+        <p>
+          <body class="rst-content admonition">
+            For some packages, documentations are already included in the downloaded seiscomp package so there is no need to download and unpack the documentation.
+          </body>
+        </p>
+    </div>
+
     >
     You may check that all files are properly unpacked by running the `ls` command:
     ```bash
@@ -39,10 +53,20 @@ This guide provides instructions for installing SeisComP packages on machines ru
     bin  etc  include  lib  man  sbin  share
     ```
 5. Execute the following commands to install dependencies and set up the environment:
+
     ```bash
     ./seiscomp/bin/seiscomp install-deps base
     ```
-    > **_NOTE:_** Depending on your Ubuntu version, additional steps may be required to address specific dependencies:
+    <div class="rst-content note">
+      <p class="rst-content admonition-title">
+        <b> NOTE </b>
+      </p>
+        <p>
+          <body class="rst-content admonition">Depending on your Ubuntu version, additional steps may be required to address specific dependencies:
+          </body>
+        </p>
+    </div>
+
     - On Ubuntu 18: Install Python and related libraries:
       ```bash
       sudo apt-get install python libqtgui4
@@ -61,7 +85,7 @@ This guide provides instructions for installing SeisComP packages on machines ru
       ```bash
       ./seiscomp/bin/seiscomp install-deps mariadb-server
       ```
-      ![Database Installation - MariaDB](https://github.com/UPRI-earthquake/upri-earthquake.github.io/assets/80037186/31606c11-126e-427e-b33a-21453f0f785b)
+      ![image](_build/html/assets/intro-to-seiscomp/5.1.png)
     - For a MySQL installation:
       ```bash
       ./seiscomp/bin/seiscomp install-deps mysql-server
@@ -70,11 +94,18 @@ This guide provides instructions for installing SeisComP packages on machines ru
 ## Getting Started
 After installing seiscomp packages and configuring database, the next step is to setup seiscomp using `seiscomp setup` or the wizard from within scconfig.
 1. Execute setup via:
-    > **_NOTE:_** In seiscomp setup default values are given in brackets []:
+    <div class="rst-content note">
+      <p class="rst-content admonition-title">
+        <b> NOTE </b>
+      </p>
+      <p>
+          <body class="rst-content admonition"> In seiscomp setup default values are given in brackets [ ]: </body>
+      </p>
+    </div>
+
     ```bash
     seiscomp/bin/seiscomp setup
-    ```
-    ```bash
+
     ====================================================================
     seiscomp setup
     ====================================================================
@@ -98,8 +129,11 @@ After installing seiscomp packages and configuring database, the next step is to
     --------------------------------------------------------------------
     ```
     This will ask for initial settings. You may just leave the default values for the following details:
+
     ```bash
     Organization name []:
+    ```
+    ```
     Enable database storage [yes]:
     0) mysql
       MySQL server.
@@ -110,7 +144,7 @@ After installing seiscomp packages and configuring database, the next step is to
     Database backend [0]:
     Create database [yes]:
     ```
-    > For database root password, you may enter your desired password
+    For database root password, you may enter your desired password
     ```bash
     MYSQL root password (input not echoed) []:
     ```
@@ -119,7 +153,7 @@ After installing seiscomp packages and configuring database, the next step is to
     Database name [seiscomp]:
     Database hostname [localhost]:
     ```
-    > Specify the desired user and password for both read-write and read-only access parameters.
+    Specify the desired user and password for both read-write and read-only access parameters.
     ```bash
     Database read-write user [sysop]:
     Database read-write password [sysop]:
@@ -137,6 +171,7 @@ After installing seiscomp packages and configuring database, the next step is to
     Q) Quit without changes
     Command? [P]:
     ```
+
 
 ## Adding New Station
 In order to process seismic data within SeisComP, it's essential to define a data source, which is typically represented by a station. Follow these steps to add a new station to your SeisComP setup:
@@ -162,10 +197,13 @@ In order to process seismic data within SeisComP, it's essential to define a dat
     ```
 
 ## Getting Real-time Data from a Remote Seedlink Server
-[This is the link to Get Real-time Data from a Remote Seedlink Server](https://www.seiscomp.de/doc/base/tutorials/waveforms.html)
+<a href="https://www.seiscomp.de/doc/base/tutorials/waveforms.html" target="_blank"> Refer to this link </a>
+
+
+
 
 ## Important concepts to know about seiscomp
-- [SeisComP Reference](https://www.seiscomp.de/doc/base/concepts.html#concepts)
+- <a href="https://www.seiscomp.de/doc/base/concepts.html#concepts" target="_blank">Reference to SeisComp</a>
 - Messaging: Exchanging information in real-time processing
 - Database: Storing meta data, configurations and data products
 - Modules: Daemon programs and command-line tools

@@ -10,5 +10,4 @@ EarthquakeHub Backend API
 
 =====================
 ======================
-
 .. openapi:: ehub-backend-api-docs.json

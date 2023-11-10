@@ -14,15 +14,7 @@ release = '0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['myst_parser','sphinxcontrib.openapi','sphinxcontrib.redoc']
-redoc = [
-    {
-        'name': 'UPRI API',
-        'page': 'yml',
-        'spec': 'ehub-backend/api-docs/ehub-backend-api-docs.json',
-        'embed': True,
-    }
-]
+extensions = ['myst_parser','sphinxcontrib.openapi']
 openapi_spec_path = ['doc/ehub-backend/api-docs/ehub-backend-api-docs.json']
 
 

@@ -23,10 +23,14 @@ redoc = [
         'embed': True,
     }
 ]
+openapi_spec_path = ['doc/ehub-backend/api-docs/ehub-backend-api-docs.json']
+
+
 
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+
 
 
 

@@ -73,11 +73,16 @@ Lastly, this ring is treated as a shared memory between threads who write into a
 
 2. **Redundant Connections**
 
-   The dual nature of a DataLink connection allows for more complex network structures. Specifically in the citizen science network, a client can choose to send data to multiple publicly available RingServers which themselves can also forward their data to other RingServers. In such a scenario, a redundant connection is possible if a source of data establishes a direct and an indirect connection such as shown in [the diagram]**(link to diagram)**. Such a redundant connection is actually tolerated so as to improve network data resiliency and to allow more localized event detection [^1]
+   The dual nature of a DataLink connection allows for more complex network structures. Specifically in the citizen science network, a client can choose to send data to multiple publicly available RingServers which themselves can also forward their data to other RingServers. In such a scenario, a redundant connection is possible if a source of data establishes a direct and an indirect connection such as shown in the diagram:
+   ![image](_build/html/assets/ringserver/redundant.jpg)
+
+
+
+   Such a redundant connection is actually tolerated so as to improve network data resiliency and to allow more localized event detection [^1]
 
    A problem that will arise from allowing redundant connections is that the RingServer at the last receiving end will receive packets from the same source once for every connection. Hence, it should be able to identify duplicate packets for a given stream and perform necessary action. In this case, we decided that it is simplest to just drop the packets (or not proceed on writing them into the ring and just move to the next available packet) so as to avoid having duplicate packets written on the ring.
 
-   To do this, a function `CheckIfDuplicate()` was created to act as a filter on new packets, checking whether the packet is duplicate or not. This function is called before `RingWrite()`. The only basis used on deciding whether to write the new packet or not is by checking whether data *start-time of the packe*t  is later or equal to the ******end-time of the latest written packet****** in the stream that the packet belongs to.
+   To do this, a function `CheckIfDuplicate()` was created to act as a filter on new packets, checking whether the packet is duplicate or not. This function is called before `RingWrite()`. The only basis used on deciding whether to write the new packet or not is by checking whether data *start-time of the packe*t  is later or equal to the *end-time of the latest written packet* in the stream that the packet belongs to.
 
    *(This is a very simplistic approach and might require further improvements if need be; however, this solution can be used in this application since a packet’s start-time and end-time both depends on the source data packet, i.e. a miniseed packet. That means that all packets coming from a single source and received on each different connection will have start and end times that are based on the same time source, meaning it is plausible to perform comparison between them and use this to decide time-ordering of the packets(footnote: one special case is that identical packets shall also have identical start and end times and hence can be concluded on the receiving end to be duplicates)*
 

@@ -78,7 +78,7 @@ Lastly, this ring is treated as a shared memory between threads who write into a
 
 
 
-   Such a redundant connection is actually tolerated so as to improve network data resiliency and to allow more localized event detection [^1]
+   Such a redundant connection is actually tolerated so as to improve network data resiliency and to allow more localized event detection[^1]
 
    A problem that will arise from allowing redundant connections is that the RingServer at the last receiving end will receive packets from the same source once for every connection. Hence, it should be able to identify duplicate packets for a given stream and perform necessary action. In this case, we decided that it is simplest to just drop the packets (or not proceed on writing them into the ring and just move to the next available packet) so as to avoid having duplicate packets written on the ring.
 
@@ -89,7 +89,7 @@ Lastly, this ring is treated as a shared memory between threads who write into a
    It should be mentioned that similar to the original RingServer, no packet re-ordering is performed in this fork. The packets that are coming are all received and written in the order they are received, with the difference that now we're dropping the packet if it fails the duplicate checking.
 
 
-   [^1] In the context of data processing softwares, a RingServer receiving data from a client geographically closer to it than another RingServer should be able to more quickly provide this data to a processor as compared to the other RingServer).
+   [^1]: In the context of data processing softwares, a RingServer receiving data from a client geographically closer to it than another RingServer should be able to more quickly provide this data to a processor as compared to the other RingServer).
 
 3. **Server-Sent-Events (SSE) Endpoints**
 

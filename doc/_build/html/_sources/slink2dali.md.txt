@@ -16,7 +16,7 @@ In citizen science application, this means that the DataLink protocol allows for
 
 What slink2dali does is serve as the middleman between a seedlink and a datalink server. Specifically, it will receive a packet from a seedlink server, package that miniseed as a payload within a datalink packet, and finally send it over to a datalink server. It will do this packaging and forwarding for every packet sent by the seedlink server.
 
-__ show diagram here (seedlink, s2d, datalink)__
+![image](_build/html/assets/ringserver/seedlink.jpg).
 
 This is important since most ground motion micro-computers (such as raspberryshake devices), come with an internal SeedLink server. Meaning instead of only being able to read data from this device’s SeedLink server, we can use slink2dali to extend the functionality of such a device by also making it able to send its real-time data to some remote DataLink server.
 

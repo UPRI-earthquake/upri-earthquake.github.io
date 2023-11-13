@@ -72,8 +72,10 @@ Clicking ```builder``` redirects you to this page:
         - ```channel```: Specifies the channel code, which identifies a specific data channel (e.g., "BHZ" for a broadband horizontal component).
 
       Here are some references for the Station Naming Convention:
+      ```{seealso}
       > - <p><a href="https://manual.raspberryshake.org/stationNamingConvention.html"> Raspberry Shake Station Naming Convention </a></p>
       > - <p><a href="http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf" target="_blank"> SEEDManual: Channel Naming </a></p>
+      ```
 
 
     - **Time Window:**
@@ -88,7 +90,7 @@ Clicking ```builder``` redirects you to this page:
         ```
 
     - **Data Format:**
-        - ```format```: Specifies the format in which you want to receive the data. The ground data is in **miniSEED** format
+        - ```format```: Specifies the format in which you want to receive the data. The ground data is in **miniSEED** format.
 
     - **Data Availability and Quality**:
         - ```availability```: Allows you to filter data based on its availability (e.g., "available," "not available," "all").
@@ -100,17 +102,18 @@ Clicking ```builder``` redirects you to this page:
     - Time Correction:
         - ```updatedAfter```: Specifies the last time the data was updated. It allows you to request data that has been updated or added after a certain timestamp.
 
+    ```{seealso}
     Refer <a href="https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf" target="_blank">here</a> for the query guide.
+    ```
 
-
-    ```{note}
-         The following parameters of our test network are the following:
+    ```{admonition} Example
+    The following parameters of our test network are the following:
          - Network: AM
          - Station: R3B2D
          - Location: 00
          - Channel: EHZ
 
-        ```
+    ```
 
 
     The values vary according the the network you want to extract data from.
@@ -121,7 +124,7 @@ Clicking ```builder``` redirects you to this page:
 6. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page. Refer to the previous screenshot in Step 5.
 
 
-#### Steps to Download Station Metadata
+### Steps to Download Station Metadata
 
 To obtain the Metadata, we will be using the ```station``` service.
 
@@ -182,7 +185,9 @@ This includes:
         - ```Formatted```: Decide whether the output should be formatted or not for easier readability.
         - ```No Data 404```: Control the response behavior for missing data, allowing you to receive a 404 response for "no data."
 
+    ```{seealso}
     Refer <a href="https://www.fdsn.org/webservices/fdsnws-station-1.1.pdf" target="_blank">here</a> for the query guide.
+    ```
 
 
 
@@ -194,9 +199,9 @@ This includes:
 7. To save the raw metadata, press `CTRL + s`. Save with your desired file name.
 
 
-### Processing the Data
+## Processing the Data
 
-#### From DataSelect Service:
+### From DataSelect Service:
 
 To use fetched seismic data for plotting or analysis, you can use ObsPy.
  Follow these steps:
@@ -266,7 +271,7 @@ Run your python code. If your code ran successfully, a pyplot window containing 
 
 Congratulations! You now have a plot of the Seismic Data you just downloaded from FDSNWS!
 
-#### From Station Service
+### From Station Service
 
 1. **Install ObsPy**
 if you haven't, install ObsPy:

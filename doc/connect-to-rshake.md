@@ -108,3 +108,8 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
     </body>
 </div>
 
+```{note}
+It is *possible* to have multiple paragraphs in the same admonition.
+
+If you really want, you can even have lists, or code, or tables.
+```

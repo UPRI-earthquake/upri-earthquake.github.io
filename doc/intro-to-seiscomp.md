@@ -35,18 +35,13 @@ This guide provides instructions for installing SeisComP packages on machines ru
     ```bash
     tar xzf seiscomp-4.0.0-doc.tar.gz
     ```
-    <div class="rst-content note">
-      <p class="rst-content admonition-title">
-        <b> NOTE </b>
-      </p>
-        <p>
-          <body class="rst-content admonition">
-            For some packages, documentations are already included in the downloaded seiscomp package so there is no need to download and unpack the documentation.
-          </body>
-        </p>
-    </div>
 
-    >
+
+```{note}
+For some packages, documentations are already included in the downloaded seiscomp package so there is no need to download and unpack the documentation.
+```
+
+
     You may check that all files are properly unpacked by running the `ls` command:
     ```bash
     ls seiscomp
@@ -57,15 +52,11 @@ This guide provides instructions for installing SeisComP packages on machines ru
     ```bash
     ./seiscomp/bin/seiscomp install-deps base
     ```
-    <div class="rst-content note">
-      <p class="rst-content admonition-title">
-        <b> NOTE </b>
-      </p>
-        <p>
-          <body class="rst-content admonition">Depending on your Ubuntu version, additional steps may be required to address specific dependencies:
-          </body>
-        </p>
-    </div>
+
+    ```{note}
+Depending on your Ubuntu version, additional steps may be required to address specific dependencies:
+```
+
 
     - On Ubuntu 18: Install Python and related libraries:
       ```bash
@@ -94,14 +85,12 @@ This guide provides instructions for installing SeisComP packages on machines ru
 ## Getting Started
 After installing seiscomp packages and configuring database, the next step is to setup seiscomp using `seiscomp setup` or the wizard from within scconfig.
 1. Execute setup via:
-    <div class="rst-content note">
-      <p class="rst-content admonition-title">
-        <b> NOTE </b>
-      </p>
-      <p>
-          <body class="rst-content admonition"> In seiscomp setup default values are given in brackets [ ]: </body>
-      </p>
-    </div>
+
+
+    ```{note}
+In seiscomp setup default values are given in brackets [ ]:
+```
+
 
     ```bash
     seiscomp/bin/seiscomp setup

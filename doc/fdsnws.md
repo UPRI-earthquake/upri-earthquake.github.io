@@ -49,12 +49,12 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 2. Choose the ```dataselect/``` web service
 ![access](_build/html/assets/fdsnws/4.1.jpg "access photo")
 
->
+
 
 3. Proceed by choosing ```1/```
 ![dataselect](_build/html/assets/fdsnws/4.2.jpg "dataselect")
 
->
+
 
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 ![builder](_build/html/assets/fdsnws/4.3.jpg "builder")
@@ -134,14 +134,14 @@ To obtain the Metadata, we will be using the ```station``` service.
 3. Proceed by choosing ```1/```
 ![/1](_build/html/assets/fdsnws/4.6.jpg "/1")
 
->
+
 
 4. Under available URLs, select ```builder``` from the options to proceed to the URL Builder where you will input your information request.
 ![builder](_build/html/assets/fdsnws/4.7.jpg "builder")
 Clicking ```builder``` redirects you to this page:
 ![builder query](_build/html/assets/fdsnws/4.8.jpg "builder query")
 
->
+
 
 5. Specify the parameters of the data you want to download.
 This includes:
@@ -188,12 +188,12 @@ This includes:
 
     Refer <a href="https://www.fdsn.org/webservices/fdsnws-station-1.1.pdf" target="_blank">here</a> for the query guide.
 
->
+
 
 6. After filling out the form, click the link in the URL textbox you will be redirected to the raw Metadata.
 ![station](_build/html/assets/fdsnws/4.14.jpg "station")
 
->
+
 
 7. To save the raw metadata, press `CTRL + s`. Save with your desired file name.
 
@@ -212,7 +212,7 @@ Make sure ObsPy is installed:
 pip install obspy
 ```
 
->
+
 
 2. **Import the necessary modules**
 Create a Python file. You need to write a script that imports ObsPy modules for data processing and plotting:
@@ -222,7 +222,7 @@ from obspy import read
 import matplotlib.pyplot as plt
 ```
 
->
+
 
 3. **Load your seismic data**
 You can use the obspy.read() function to load your existing seismic data file. ObsPy can read various formats, such as MiniSEED, SAC, and more. Here's an example of how to load a MiniSEED file:
@@ -245,7 +245,7 @@ Replace 'your_seismic_data.mseed' with your actual file name.
 st = read('fdsnws.mseed')
 ```
 
->
+
 
 4. **Plot the time series**
 You can use ObsPy to plot the loaded time series data using Matplotlib. Here's an example:
@@ -263,7 +263,7 @@ Run your python code. If your code ran successfully, a pyplot window containing 
 
 ![plot](_build/html/assets/fdsnws/4.11.jpg "plot")
 
->
+
 
 5. **Save the plot file**
 - Click the save icon in the lower part of the window to save the plot image.
@@ -279,7 +279,7 @@ if you haven't, install ObsPy:
 pip install obspy
 ```
 
->
+
 
 2. **Import the necessary modules**
 Create a Python file. You need to write a script that imports ObsPy modules for data processing and plotting:
@@ -288,7 +288,7 @@ Create a Python file. You need to write a script that imports ObsPy modules for 
 from obspy import read_inventory
 ```
 
->
+
 
 3. **Load your Station Metadata**
 You can use the obspy.read() function to load your existing seismic data file. ObsPy can read various formats, such as MiniSEED, SAC, and more. Here's an example of how to load a MiniSEED file:

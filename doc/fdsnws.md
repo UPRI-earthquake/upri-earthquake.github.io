@@ -73,8 +73,8 @@ Clicking ```builder``` redirects you to this page:
 
       Here are some references for the Station Naming Convention:
       ```{seealso}
-      > - <p><a href="https://manual.raspberryshake.org/stationNamingConvention.html"> Raspberry Shake Station Naming Convention </a></p>
-      > - <p><a href="http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf" target="_blank"> SEEDManual: Channel Naming </a></p>
+      - <a href="https://manual.raspberryshake.org/stationNamingConvention.html"> Raspberry Shake Station Naming Convention </a><
+      - <a href="http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf" target="_blank"> SEEDManual: Channel Naming </a>
       ```
 
 
@@ -108,17 +108,15 @@ Clicking ```builder``` redirects you to this page:
 
     ```{admonition} Example
     The following parameters of our test network are the following:
-         - Network: AM
-         - Station: R3B2D
-         - Location: 00
-         - Channel: EHZ
-
-    ```
-
-
+    - Network: AM
+    - Station: R3B2D
+    - Location: 00
+    - Channel: EHZ
     The values vary according the the network you want to extract data from.
 
     ![10](_build/html/assets/fdsnws/4.10.jpg "10")
+
+    ```
 
 
 6. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page. Refer to the previous screenshot in Step 5.
@@ -238,9 +236,10 @@ Replace 'your_seismic_data.mseed' with your actual file name.
 
 
 
+ ```{admonition} Example
+ From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-12T11:30:00```, I've downloaded the MiniSeed data with the file name ```fdsnws.md```
 
-
-> Example: From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-12T11:30:00```, I've downloaded the MiniSeed data with the file name ```fdsnws.md```
+```
 
 ```
 st = read('fdsnws.mseed')
@@ -300,7 +299,11 @@ inv = read_inventory("your_station_metadata.xml")
 
 Replace 'your_seismic_data.mseed' with your actual file name.
 
-> Example: From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-12T11:30:00```, I've downloaded the Station Metadata with the file name ```query.xml```
+
+ ```{admonition} Example
+From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-12T11:30:00```, I've downloaded the Station Metadata with the file name ```query.xml```
+
+```
 
 ```
 inv = read_inventory("query.xml")

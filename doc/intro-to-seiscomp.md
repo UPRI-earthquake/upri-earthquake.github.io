@@ -41,8 +41,8 @@ This guide provides instructions for installing SeisComP packages on machines ru
 For some packages, documentations are already included in the downloaded seiscomp package so there is no need to download and unpack the documentation.
 ```
 
+You may check that all files are properly unpacked by running the `ls` command:
 
-    You may check that all files are properly unpacked by running the `ls` command:
     ```bash
     ls seiscomp
     bin  etc  include  lib  man  sbin  share
@@ -52,47 +52,45 @@ For some packages, documentations are already included in the downloaded seiscom
     ```bash
     ./seiscomp/bin/seiscomp install-deps base
     ```
-
     ```{note}
 Depending on your Ubuntu version, additional steps may be required to address specific dependencies:
 ```
+- On Ubuntu 18: Install Python and related libraries:
 
-
-    - On Ubuntu 18: Install Python and related libraries:
-      ```bash
+```bash
       sudo apt-get install python libqtgui4
       ```
-    - On Ubuntu 20 and newer: Ensure libpython3-dev is installed:
-      ```bash
+- On Ubuntu 20 and newer: Ensure libpython3-dev is installed:
+
+```bash
       sudo apt-get install libpython3-dev
       ```
-    - Alternatively, for Mint 18 (Ubuntu 16.04):
-      ```bash
+- Alternatively, for Mint 18 (Ubuntu 16.04):
+```bash
       sudo apt-get update
       sudo apt-get install libxml2 libboost-filesystem1.58.0 libboost-iostreams1.58.0 libboost-thread1.58.0 libboost-program-options1.58.0 libboost-regex1.58.0 libboost-signals1.58.0 libboost-system1.58.0 libssl1.0.0 libncurses5 libmysqlclient20 libpq5 libpython2.7 python-numpy mysql-server mysql-client libqtgui4 libqt4-xml libqt4-opengl libqt4-sql-sqlite
       ```
+
 6. Configure the database. You may choose to use either MariaDB or a MySQL for the database.
-    - For a MariaDB installation:
-      ```bash
-      ./seiscomp/bin/seiscomp install-deps mariadb-server
-      ```
-      ![image](_build/html/assets/intro-to-seiscomp/5.1.png)
-    - For a MySQL installation:
-      ```bash
-      ./seiscomp/bin/seiscomp install-deps mysql-server
-      ```
+- For a MariaDB installation:
+```bash
+./seiscomp/bin/seiscomp install-deps mariadb-server
+```
+![image](_build/html/assets/intro-to-seiscomp/5.1.png)
+
+- For a MySQL installation:
+```bash
+./seiscomp/bin/seiscomp install-deps mysql-server
+```
 
 ## Getting Started
 After installing seiscomp packages and configuring database, the next step is to setup seiscomp using `seiscomp setup` or the wizard from within scconfig.
 1. Execute setup via:
-
-
-    ```{note}
+```{note}
 In seiscomp setup default values are given in brackets [ ]:
 ```
 
-
-    ```bash
+```bash
     seiscomp/bin/seiscomp setup
 
     ====================================================================
@@ -117,9 +115,9 @@ In seiscomp setup default values are given in brackets [ ]:
           with backslash, e.g. "\.value".
     --------------------------------------------------------------------
     ```
-    This will ask for initial settings. You may just leave the default values for the following details:
+This will ask for initial settings. You may just leave the default values for the following details:
 
-    ```bash
+```bash
     Organization name []:
     ```
     ```
@@ -150,6 +148,7 @@ In seiscomp setup default values are given in brackets [ ]:
     Database read-only user [sysop]:
     Database read-only password [sysop]:
     ```
+
 2. After addressing all questions, you'll need to make a final decision: proceed to create the initial configuration, return to the previous question, or exit without making any changes. Press <ENTER> to save the initial setup.
     ```bash
     Finished setup

@@ -31,5 +31,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'furo'
 html_static_path = ['_static']
 html_theme_options = {
-    "announcement": "<em>Important</em> announcement!",
+    "light_css_variables": {
+        "color-header-background": "#8ec858",
+        "color-brand-content": "#7C4DFF",
+    },
 }

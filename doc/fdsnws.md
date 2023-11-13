@@ -87,21 +87,6 @@ Clicking ```builder``` redirects you to this page:
 
         ```
 
-
-
-        <div class="rst-content note">
-            <p class="rst-content admonition-title">
-                <b> NOTE </b>
-            </p>
-                <body class="rst-content admonition">
-                    <ul>
-                        <li>  </li>
-                        <li> For example, we want to obtain the data starting from  <code> October 11, 2023 at 11:30 </code> pm till <code> October 12, 2023 11:30 am </code> start time should be  <code> 2023-10-11T23:30:00 </code> and end time should be <code> 2023-10-12T11:30:00 </code> </li>
-                    </ul>
-                </body>
-        </div>
-
-
     - **Data Format:**
         - ```format```: Specifies the format in which you want to receive the data. The ground data is in **miniSEED** format
 
@@ -169,16 +154,11 @@ This includes:
         - ```startafter```: Find stations that became operational after the provided start time.
         - ```endbefore```: Find stations that were operational before the specified end time.
         - ```endafter```: Find stations that became operational after the specified end time.
-        <div class="rst-content note">
-            <p class="rst-content admonition-title">
-                <b> NOTE </b>
-            </p>
-            <p>
-                <body class="rst-content admonition">
-                Refer to the instructions above regarding time formatting.
-                </body>
-            </p>
-        </div>
+
+         ```{note}
+        Refer to the instructions above regarding time formatting.
+
+        ```
 
     - **Channel Constraints**:
 

@@ -9,7 +9,8 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
    - Wait for the <a href="https://manual.raspberryshake.org/specifications.html#led-behavior/" target="_blank">Raspberry Shake's ethernet LED indicators</a>to behave as follows:
       - Green light (flashing repeatedly)
       - Orange light (solid)
- *This means that the ethernet port is working as it should.*
+
+ This means that the ethernet port is working as it should.
 
 
 ## How to SSH via Windows Powershell
@@ -100,7 +101,5 @@ Connecting to your Raspberry Shake using SSH allows you to access and manage you
 
 
 ```{note}
-It is *possible* to have multiple paragraphs in the same admonition.
-
-If you really want, you can even have lists, or code, or tables.
+For improved security, it's highly recommended to change the default password of your Raspberry Shake. To learn how to update your password and access essential guidelines for securing your device effectively, refer to this <a href="https://manual.raspberryshake.org/hacked.html#hacked" target="_blank">guide.</a>
 ```

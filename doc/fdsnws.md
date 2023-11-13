@@ -1,18 +1,18 @@
 How to Use FDSNWS to Download Ground Motion Data and Station Metadata
 ===============================================
 
-### Introduction
+## Introduction
 **FDSNWS** (Federation of Digital Seismograph Networks Web Services) is a set of web services that allow users to access and retrieve seismic data from various seismological networks and data centers. This documentation will guide you through the process of using FDSNWS to download ground motion data and its metadeta from the UPRI EarthquakeHub Network. Understanding the distinction among these two is essential to make interpretations more significant. In the context of FDSNWS,
 
 - **Data:** This is the actual seismic information you’re interested in: the measurement of the ground motion either in displacement, velocity, or acceleration
 
 - **Metadata:** This provides important details *about the station/s (seismic sensor) that records the data.* It includes information such as where the station is located, its frequency response, and other organizational information. Think of metadata as the digital *manual* of the seismic instrument.
 
-### Service Overview
+## Service Overview
 
 FDSNWS provides various services for accessing different products of a seismic network.The service used for ground motion data is the ```dataselect``` service. While the ```station``` service is used to obtain the metadata.
 
-#### DataSelect
+### DataSelect
 This service  allows you to retrieve time series data from seismological instruments. In the context of seismology, time series data refers to recordings of ground motion or seismic activity ***over time.***
 
 Here are the following data you can gather from ```dataselect``` service
@@ -23,7 +23,7 @@ Here are the following data you can gather from ```dataselect``` service
 
     More information about DataSelect service <a href="https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf" target="_blank">here</a>
 
-#### Station
+### Station
 This service provides a way to access and retrieve metadata about seismic monitoring stations.
 Here are the following information you can gather from ```station``` service
 
@@ -40,8 +40,8 @@ Here are the following information you can gather from ```station``` service
 
 
 
-### Obtaining the Data
-#### Steps to Download Ground Motion Data
+## Obtaining the Data
+### Steps to Download Ground Motion Data
 
 To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 1. Access the <a href="https://earthquake.science.upd.edu.ph/fdsnws/" target="_blank">UPRI Earthquake Hub SeisComP FDSNWS Web Service</a>
@@ -101,20 +101,16 @@ Clicking ```builder``` redirects you to this page:
         - ```updatedAfter```: Specifies the last time the data was updated. It allows you to request data that has been updated or added after a certain timestamp.
 
     Refer <a href="https://www.fdsn.org/webservices/fdsnws-dataselect-1.1.pdf" target="_blank">here</a> for the query guide.
-    <div class="rst-content tip">
-            <p class="rst-content admonition-title">
-                <b> EXAMPLE </b>
-            </p>
-                <body class="rst-content admonition">
-                    The following parameters of our test network are the following:
-                    <ul>
-                        <li> Network: AM </li>
-                        <li> Station: R3B2D </li>
-                        <li> Location: 00 </li>
-                        <li> Channel: EHZ </li>
-                    </ul>
-                </body>
-        </div>
+
+
+    ```{note}
+         The following parameters of our test network are the following:
+         - Network: AM
+         - Station: R3B2D
+         - Location: 00
+         - Channel: EHZ
+
+        ```
 
 
     The values vary according the the network you want to extract data from.

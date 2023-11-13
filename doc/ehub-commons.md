@@ -32,9 +32,10 @@ There are two different docker-compose files written for two scenarios, *(1)* fo
     ```
 
 ```{note}
-- If ever you encounter an error saying you are unauthorized to pull image, follow this guide on how to <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic" target="_blank">authenticate with personal access token from <code> ghcr.io </code> </a>
-- To get the certificates using <code>certbot</code>, First up the nginx-proxy container but with the https server in the nginx.conf file commented out. Second, fill this in via certbot: <code> docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d <your-webapp-url>.org </code> Lastly, add the 443 (or https) config for the nginx and restart that container.</li>
-- Within a few months, the certificate will expire. To renew using certbot, use <code> docker compose run --rm certbot renew </code>
+- If ever you encounter an error saying you are unauthorized to pull image, follow this guide on how to <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic" target="_blank">authenticate with personal access token from ```ghcr.io``` </a>
+- To get the certificates using ```certbot```, First up the nginx-proxy container but with the https server in the nginx.conf file commented out. Second, fill this in via certbot: ``` docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d <your-webapp-url>.org```.
+- Lastly, add the 443 (or https) config for the nginx and restart that container.
+- Within a few months, the certificate will expire. To renew using certbot, use ``` docker compose run --rm certbot renew ```
 ```
 
 
@@ -48,16 +49,13 @@ There are two different docker-compose files written for two scenarios, *(1)* fo
 - **MongoDB:** This is a NoSQL database used to store and manage data, such as account information, device information, and recorded seismic events, within the earthquake-hub network.
 - **Ringserver:** This is a TCP-based ring buffer designed for packetized streaming data which utilizes time-series data from various station, archive seismic data, and serve those data (or diagnostics of such data) towards the clients.
 - **Certbot:** This is a tool used to automatically obtain and manage SSL/TLS certificates from the Let's Encrypt Certificate Authority that provides valid SSL certificate for the server’s domain which ensures secure communication between the server and its clients. You may refer to this [post](https://mindsers.blog/post/https-using-nginx-certbot-docker/) on how to request SSL certificate using docker compose.
-
 ```{note}
 Certbot needs to be renewed <b> every three (3) months </b> to keep the certificates valid and up-to-date. Certificate renewal process can easily be done using the following command:
-            <code>docker compose run --rm certbot renew</code>
+    ```docker compose run --rm certbot renew```
 ```
 
 
 - **Geoserve:** This is a service that provides geographic information for the earthquake-hub network. It is used to convert latitude and longitude values into names of places, such as their city name, region, and country name.
-
-
 ```{note}
 - Certbot and Geoserve are not used in local development/testing. The two will only be run using the docker compose which is intended for deploying in a server.
 - Certbot needs to renew the SSL certificates every three (3) months.

@@ -1,9 +1,1 @@
-==============================================
-EarthquakeHub Backend API
-==============================================
-
-
-=====================
-======================
-
-.. openapi:: ehub-backend-api-docs.yml
+.. swaggerv2doc:: ehub-backend-api-docs.json

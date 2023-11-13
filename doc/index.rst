@@ -12,7 +12,7 @@ Welcome to UPRI EarthquakeHub's documentation!
 ======================
 .. toctree::
    :maxdepth: 1
-   :caption: **Tutorial**
+   :caption: Tutorial
 
    connect-to-rshake.md
    installing-rshake-client.md
@@ -26,7 +26,7 @@ Welcome to UPRI EarthquakeHub's documentation!
 ======================
 .. toctree::
    :maxdepth: 1
-   :caption: **Documentation**
+   :caption: Documentation
 
    system-overview.md
    ehub-commons.md

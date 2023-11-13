@@ -80,13 +80,22 @@ Clicking ```builder``` redirects you to this page:
 
         - ```starttime```: Specifies the beginning time of the data you want to retrieve
         - ```endtime```: Specifies the end time of the data you want to retrieve
+
+       ```{note}
+        - The time is formatted **YYYY-MM-DDTHH-MM-SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
+        -  For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30pm``` till ```October 12, 2023 11:30 am``` start time should be  ```2023-10-11T23:30:00``` and end time should be ```2023-10-12T11:30:00```
+
+        ```
+
+
+
         <div class="rst-content note">
             <p class="rst-content admonition-title">
                 <b> NOTE </b>
             </p>
                 <body class="rst-content admonition">
                     <ul>
-                        <li> The time is formatted <b>YYYY-MM-DDTHH-MM-SS</b>. The date and time are separated by the "T". The time is in 24-Hour (military time format). </li>
+                        <li>  </li>
                         <li> For example, we want to obtain the data starting from  <code> October 11, 2023 at 11:30 </code> pm till <code> October 12, 2023 11:30 am </code> start time should be  <code> 2023-10-11T23:30:00 </code> and end time should be <code> 2023-10-12T11:30:00 </code> </li>
                     </ul>
                 </body>

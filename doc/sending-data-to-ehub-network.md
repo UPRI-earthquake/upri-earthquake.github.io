@@ -3,15 +3,10 @@ Sending Data to EarthquakeHub Network
 
 For a citizen scientist to contribute their real-time Raspberry Shake data to the EarthquakeHub network, here are the steps to follow:
 
-<div class="rst-content note">
-  <p class="rst-content admonition-title">
-    <b> NOTE </b>
-    </p>
-    <body class="rst-content admonition">
-     Make sure that you have already <a href="https://upri-earthquake.github.io/installing-rshake-client.html" target="_blank"> installed the EarthquakeHub client on your Raspberry Shake device </a> before following this tutorial.
-    </body>
-</div>
 
+```{note}
+Make sure that you have already <a href="https://upri-earthquake.github.io/installing-rshake-client.html" target="_blank"> installed the EarthquakeHub client on your Raspberry Shake device </a> before following this tutorial.
+```
 
 
 

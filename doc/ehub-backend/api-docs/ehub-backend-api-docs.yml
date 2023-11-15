@@ -3,7 +3,6 @@ info:
   title: UPRI EarthquakeHub APIs
   version: "1.0.0"
   description: These are the API endpoints used for UPRI earthquake-hub-backend
-host: api.batcomputer.com
 components:
   securitySchemes:
     bearerAuth:

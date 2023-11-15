@@ -1,6 +1,4 @@
----
 openapi: 3.0.0
-swagger: '2.0'
 info:
   title: UPRI EarthquakeHub APIs
   version: 1.0.0
@@ -31,22 +29,22 @@ components:
           type: string
           description: The status of the account
           enum:
-          - Inactive
-          - Active
+            - Inactive
+            - Active
         roles:
           type: array
           items:
             type: string
           description: The roles associated with the account
           enum:
-          - sensor
-          - citizen
-          - admin
-          - brgy
+            - sensor
+            - citizen
+            - admin
+            - brgy
         devices:
           type: array
           items:
-            type: objectId
+            type: object
           description: The devices associated with the account
       example:
         _id: 6151ec04b417ad001ff7d343
@@ -54,12 +52,12 @@ components:
         username: testuser
         password: testpassword
         roles:
-        - sensor
-        - citizen
+          - sensor
+          - citizen
         accountStatus: inactive
         devices:
-        - 6151ec04b417ad001ff7d345
-        - 6151ec04b417ad001ff7d346
+          - 6151ec04b417ad001ff7d345
+          - 6151ec04b417ad001ff7d346
     Device:
       type: object
       properties:
@@ -72,7 +70,7 @@ components:
         streamId:
           type: string
           description: The stream ID of the device (e.g. AM_RE722\.*\/MSEED)
-          pattern: "^[A-Z]{2}_[A-Z0-9]{5}_\\.\\*\\/MSEED$"
+          pattern: ^[A-Z]{2}_[A-Z0-9]{5}_\.\*\/MSEED$
         network:
           type: string
           description: The network of the device
@@ -91,7 +89,7 @@ components:
         macAddress:
           type: string
           description: The MAC address of the device
-          pattern: "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"
+          pattern: ^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$
         activity:
           type: string
           description: The activity status of the device (active, inactive, INTERNAL_ERROR)
@@ -126,8 +124,8 @@ components:
           description: Magnitude value of the event
         type:
           type: string
-          description: "* `NEW`  - Newly created event object from SeisComP * `UPDATE`
-            - An update of previously created event object\n"
+          description: |
+            * `NEW`  - Newly created event object from SeisComP * `UPDATE` - An update of previously created event object
         text:
           type: string
           description: SeisComP's derived place name for the event
@@ -145,24 +143,10 @@ components:
         type: earthquake
         text: Mindoro, Philippines
 paths:
-  "/example_endpoint":
-    post:
-      summary: Example Endpoint
-      requestBody:
-        description: Request body for the example endpoint
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Account'
-      responses:
-        '200':
-          description: OK
-paths:
-  "/accounts/register":
+  /accounts/register:
     post:
       tags:
-      - Accounts
+        - Accounts
       summary: Create a new account given user information
       requestBody:
         description: Account details for registration
@@ -174,8 +158,7 @@ paths:
               properties:
                 email:
                   type: string
-                  description: Valid email address of the user who wants to register
-                    to the network
+                  description: Valid email address of the user who wants to register to the network
                 username:
                   type: string
                   description: Unique username to be used
@@ -237,11 +220,11 @@ paths:
                   message:
                     type: string
                     example: Server error occured
-  "/accounts/authenticate":
+  /accounts/authenticate:
     post:
       summary: Return a JWT in exchange for username, password, & role
       tags:
-      - Accounts
+        - Accounts
       requestBody:
         description: User credentials for authentication
         required: true
@@ -257,7 +240,7 @@ paths:
                   type: string
                   description: Account's password
                 role:
-                  type: enum[string]
+                  type: string
                   description: |
                     Account role, depends on where to auth from:
                      * `sensor`  - when authenticating from rshake device
@@ -270,8 +253,7 @@ paths:
               role: citizen
       responses:
         '200':
-          description: Authentication successful. ! Varies depending on account role
-            !
+          description: Authentication successful. ! Varies depending on account role !
           content:
             application/json:
               schema:
@@ -348,13 +330,13 @@ paths:
                   message:
                     type: string
                     example: Server error occured
-  "/accounts/signout":
+  /accounts/signout:
     post:
       summary: Clear citizen's accessToken in cookie
       tags:
-      - Accounts
+        - Accounts
       security:
-      - cookieAuth: []
+        - cookieAuth: []
       responses:
         '200':
           description: Sign out successful
@@ -398,13 +380,13 @@ paths:
                   message:
                     type: string
                     example: Server error occured
-  "/accounts/verify-sensor-token":
+  /accounts/verify-sensor-token:
     post:
       summary: Tell a brgy whether a sensor's JWT came from this server
       tags:
-      - Accounts
+        - Accounts
       security:
-      - bearerAuth: []
+        - bearerAuth: []
       requestBody:
         description: Sensor's token that the client (must be a brgy) asks to be verified
         required: true
@@ -444,14 +426,13 @@ paths:
                         type: array
                         items:
                           type: string
-                          pattern: "^[A-Z]{2}_[A-Z0-9]{5}_\\.\\*\\/MSEED$"
+                          pattern: ^[A-Z]{2}_[A-Z0-9]{5}_\.\*\/MSEED$
                           description: Stream ID of the device (format XX_XXXXX_.*&#8205;/MSEED)
                       tokenExp:
                         type: number
                         example: 1678912345
         '400':
-          description: Sensor verification failed due to invalid request or internal
-            error
+          description: Sensor verification failed due to invalid request or internal error
           content:
             application/json:
               schema:
@@ -500,13 +481,13 @@ paths:
                   message:
                     type: string
                     example: Server error occured
-  "/accounts/profile":
+  /accounts/profile:
     get:
       summary: Return user information if accessToken is in cookie
       tags:
-      - Accounts
+        - Accounts
       security:
-      - cookieAuth: []
+        - cookieAuth: []
       responses:
         '200':
           description: Successfully added device to user account
@@ -560,13 +541,13 @@ paths:
                   message:
                     type: string
                     example: Server error occured
-  "/device/add":
+  /device/add:
     post:
       summary: Add a device to the user's account
       tags:
-      - Device
+        - Device
       security:
-      - cookieAuth: []
+        - cookieAuth: []
       requestBody:
         description: Device data to be added
         required: true
@@ -658,13 +639,13 @@ paths:
                   message:
                     type: string
                     example: Server error occured
-  "/device/link":
+  /device/link:
     post:
       summary: Bind sensor's MAC address and streamId to the user's device record
       tags:
-      - Device
+        - Device
       security:
-      - bearerAuth: []
+        - bearerAuth: []
       requestBody:
         required: true
         description: Physical identification of the device/sensor
@@ -675,11 +656,11 @@ paths:
               properties:
                 macAddress:
                   type: string
-                  pattern: "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"
+                  pattern: ^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$
                   description: MAC address of the device (format XX:XX:XX:XX:XX:XX)
                 streamId:
                   type: string
-                  pattern: "^[A-Z]{2}_[A-Z0-9]{5}_\\.\\*\\/MSEED$"
+                  pattern: ^[A-Z]{2}_[A-Z0-9]{5}_\.\*\/MSEED$
                   description: Stream ID of a device (format XX_XXXXX_.*&#8205;/MSEED)
       responses:
         '200':
@@ -730,7 +711,7 @@ paths:
                           streamId:
                             type: string
                             description: The stream ID of the device.
-                            pattern: "^[A-Z]{2}_[A-Z0-9]{5}_\\.\\*\\/MSEED$"
+                            pattern: ^[A-Z]{2}_[A-Z0-9]{5}_\.\*\/MSEED$
         '400':
           description: Bad request
           content:
@@ -774,11 +755,11 @@ paths:
                   message:
                     type: string
                     example: Server error occured
-  "/device/all":
+  /device/all:
     get:
       summary: Return all added (not necessarily linked) devices with their location
       tags:
-      - Device
+        - Device
       responses:
         '200':
           description: Success response with device locations
@@ -789,8 +770,7 @@ paths:
                 properties:
                   status:
                     type: number
-                    description: The custom status code for the response as defined
-                      in responseCodes.js
+                    description: The custom status code for the response as defined in responseCodes.js
                     example: responseCodes.GENERIC_SUCCESS
                   message:
                     type: string
@@ -833,8 +813,7 @@ paths:
                 properties:
                   status:
                     type: number
-                    description: The custome status code for the response as defined
-                      in responseCodes.js
+                    description: The custome status code for the response as defined in responseCodes.js
                     example: responseCodes.GENERIC_ERROR
                   message:
                     type: string
@@ -853,13 +832,13 @@ paths:
                   message:
                     type: string
                     example: Server error occured
-  "/device/my-devices":
+  /device/my-devices:
     get:
       summary: Return list of devices belonging to the authenticated (citizen) user
       tags:
-      - Device
+        - Device
       security:
-      - cookieAuth: []
+        - cookieAuth: []
       responses:
         '200':
           description: Success response with device locations
@@ -870,8 +849,7 @@ paths:
                 properties:
                   status:
                     type: number
-                    description: The custom status code for the response as defined
-                      in responseCodes.js
+                    description: The custom status code for the response as defined in responseCodes.js
                     example: responseCodes.GENERIC_SUCCESS
                   message:
                     type: string
@@ -901,8 +879,7 @@ paths:
                           example: Streaming
                         statusSince:
                           type: string
-                          description: Timestamp indicating when the device status
-                            changed (Not Available if Not Yet Linked)
+                          description: Timestamp indicating when the device status changed (Not Available if Not Yet Linked)
                           example: Fri, 14 Jul 2023 12:40:37 GMT
         '403':
           description: When no token is present in sent cookie
@@ -930,30 +907,29 @@ paths:
                   message:
                     type: string
                     example: Server error occured
-  "/device/status":
+  /device/status:
     get:
       summary: Return the status of a specified device
       tags:
-      - Device
+        - Device
       parameters:
-      - in: query
-        name: network
-        schema:
-          type: string
-        description: The network code of the device
-        required: true
-        example: AM
-      - in: query
-        name: station
-        schema:
-          type: string
-        description: The station code of the device
-        required: true
-        example: RE722
+        - in: query
+          name: network
+          schema:
+            type: string
+          description: The network code of the device
+          required: true
+          example: AM
+        - in: query
+          name: station
+          schema:
+            type: string
+          description: The station code of the device
+          required: true
+          example: RE722
       responses:
         '200':
-          description: Successful response with device network, station, status, and
-            statusSince sent back as payload
+          description: Successful response with device network, station, status, and statusSince sent back as payload
           content:
             application/json:
               schema:
@@ -961,8 +937,7 @@ paths:
                 properties:
                   status:
                     type: number
-                    description: The custom status code for the response as defined
-                      in responseCodes.js
+                    description: The custom status code for the response as defined in responseCodes.js
                     example: responseCodes.GENERIC_SUCCESS
                   message:
                     type: string
@@ -989,8 +964,7 @@ paths:
                         example: Streaming
                       statusSince:
                         type: string
-                        description: Timestamp indicating when the device status changed
-                          (Not Available if Not Yet Linked)
+                        description: Timestamp indicating when the device status changed (Not Available if Not Yet Linked)
                         example: Fri, 14 Jul 2023 12:40:37 GMT
         '500':
           description: Internal server error
@@ -1005,28 +979,28 @@ paths:
                   message:
                     type: string
                     example: Server error occured
-  "/eq-events":
+  /eq-events:
     get:
       summary: Get recorded seismic events in the network within a specific time range
       tags:
-      - EQ Events
+        - EQ Events
       parameters:
-      - in: query
-        name: startTime
-        schema:
-          type: string
-          format: date-time
-        description: The start time of the events (yyyy-MM-dd HH:mm:ss.S)
-        required: true
-        example: '2022-09-09 14:30:00.0'
-      - in: query
-        name: endTime
-        schema:
-          type: string
-          format: date-time
-        description: The start time of the events (yyyy-MM-dd HH:mm:ss.S)
-        required: true
-        example: '2023-09-09 14:30:00.0'
+        - in: query
+          name: startTime
+          schema:
+            type: string
+            format: date-time
+          description: The start time of the events (yyyy-MM-dd HH:mm:ss.S)
+          required: true
+          example: '2022-09-09 14:30:00.0'
+        - in: query
+          name: endTime
+          schema:
+            type: string
+            format: date-time
+          description: The start time of the events (yyyy-MM-dd HH:mm:ss.S)
+          required: true
+          example: '2023-09-09 14:30:00.0'
       responses:
         '200':
           description: EQ events acquired successfully.
@@ -1045,8 +1019,7 @@ paths:
                     example: EQ events acquired successfully
                   payload:
                     type: array
-                    description: The array containing earthquake event data as detected
-                      by SeisComP.
+                    description: The array containing earthquake event data as detected by SeisComP.
                     items:
                       type: object
                       properties:
@@ -1084,34 +1057,33 @@ paths:
                           description: Default location text as generated from SeisComP
                         place:
                           type: string
-                          description: More specific location acquired via Geoserve
-                            API
+                          description: More specific location acquired via Geoserve API
               examples:
                 example1:
                   value:
                     status: responseCodes.GENERIC_SUCCESS
                     message: EQ events acquired successfully
                     payload:
-                    - _id: 649ad196820cffdfa3fa48cb
-                      publicID: result.value.publicID
-                      OT: '2022-09-09T14:39:21.000Z'
-                      latitude_value: 14.123
-                      longitude_value: 123.123
-                      depth_value: 1.1
-                      magnitude_value: 2.1
-                      type: M
-                      text: Quezon City, Philippines
-                      place: 40km North of Manila
-                    - _id: 649ad1b2820cffdfa3fa48d0
-                      publicID: result.value.publicID
-                      OT: '2023-06-09T14:39:21.000Z'
-                      latitude_value: 14.123
-                      longitude_value: 123.123
-                      depth_value: 1.1
-                      magnitude_value: 2.1
-                      type: M
-                      text: Quezon City, Philippines
-                      place: Unavailable
+                      - _id: 649ad196820cffdfa3fa48cb
+                        publicID: result.value.publicID
+                        OT: '2022-09-09T14:39:21.000Z'
+                        latitude_value: 14.123
+                        longitude_value: 123.123
+                        depth_value: 1.1
+                        magnitude_value: 2.1
+                        type: M
+                        text: Quezon City, Philippines
+                        place: 40km North of Manila
+                      - _id: 649ad1b2820cffdfa3fa48d0
+                        publicID: result.value.publicID
+                        OT: '2023-06-09T14:39:21.000Z'
+                        latitude_value: 14.123
+                        longitude_value: 123.123
+                        depth_value: 1.1
+                        magnitude_value: 2.1
+                        type: M
+                        text: Quezon City, Philippines
+                        place: Unavailable
         '500':
           description: Internal server error
           content:
@@ -1125,10 +1097,10 @@ paths:
                   message:
                     type: string
                     example: Server error occured
-  "/messaging":
+  /messaging:
     get:
       tags:
-      - Messaging
+        - Messaging
       summary: SSE endpoint to stream SC_PICK or SC_EVENT messages to the client.
       description: |
         - This endpoint streams events to the client using Server-Sent Events (SSE).
@@ -1142,8 +1114,7 @@ paths:
             text/event-stream:
               schema:
                 type: string
-                description: The SSE data stream. Note that 'place' attribute can
-                  be Unavailable if geoserve api isn't online.
+                description: The SSE data stream. Note that 'place' attribute can be Unavailable if geoserve api isn't online.
               examples:
                 earthquakeEvent:
                   value: |
@@ -1171,21 +1142,20 @@ paths:
                       "timestamp": "2023-06-27T05:58:21.000Z"
                     }
                     "id": 1690534975472
-  "/messaging/restricted/new-event":
+  /messaging/restricted/new-event:
     post:
-      summary: Add new EQevent as message in SSE, entry in DB, and notif to subscribed
-        clients.
-      description: "!! Access to this endpoint is restricted to trusted network only,
-        this is done via the NGINX reverse-proxy (in deployment environment).\n"
+      summary: Add new EQevent as message in SSE, entry in DB, and notif to subscribed clients.
+      description: |
+        !! Access to this endpoint is restricted to trusted network only, this is done via the NGINX reverse-proxy (in deployment environment).
       tags:
-      - Messaging
+        - Messaging
       requestBody:
         description: Event data to be added
         required: true
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/Event"
+              $ref: '#/components/schemas/Event'
             example:
               eventType: NEW
               publicID: TEST4
@@ -1210,8 +1180,7 @@ paths:
                     example: responseCodes.GENERIC_SUCCESS
                   message:
                     type: string
-                    example: New event sent to SSE, added to DB, and published as
-                      notif (if >minMag)
+                    example: New event sent to SSE, added to DB, and published as notif (if >minMag)
         '500':
           description: Internal server error
           content:
@@ -1225,13 +1194,13 @@ paths:
                   message:
                     type: string
                     example: Server error occured
-  "/messaging/restricted/new-pick":
+  /messaging/restricted/new-pick:
     post:
       summary: Add new PICK as message to SSE.
-      description: "!! Access to this endpoint is restricted to trusted network only,
-        this is done via the NGINX reverse-proxy (in deployment environment).\n"
+      description: |
+        !! Access to this endpoint is restricted to trusted network only, this is done via the NGINX reverse-proxy (in deployment environment).
       tags:
-      - Messaging
+        - Messaging
       requestBody:
         description: Pick data from processor like SeisComP
         required: true
@@ -1248,7 +1217,7 @@ paths:
                   description: The station code of the device
                 timestamp:
                   type: string
-                  format: "$date-time"
+                  format: $date-time
                   description: The timestamp when the pick was recorded
             example:
               networkCode: AM
@@ -1281,13 +1250,12 @@ paths:
                   message:
                     type: string
                     example: Server error occured
-  "/notifications/subscribe":
+  /notifications/subscribe:
     post:
       summary: Subscribe to web-push notifications.
-      description: This endpoint should be accessed using client browser's webpush
-        API
+      description: This endpoint should be accessed using client browser's webpush API
       tags:
-      - Notifications
+        - Notifications
       requestBody:
         required: true
         content:
@@ -1318,8 +1286,8 @@ paths:
                       description: The P-256 Diffie-Hellman public key for the subscription.
                       example: BLuuTRceHGlpTdepbGlthyMlQM_I1WvqcLLONsg-zQ7aaAlRFO6DfmSSMGU
               required:
-              - endpoint
-              - keys
+                - endpoint
+                - keys
       responses:
         '200':
           description: Subscription already exists.

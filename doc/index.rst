@@ -37,7 +37,3 @@ Welcome to UPRI EarthquakeHub's documentation!
 
 ==========================
 
-.. automodule:: ehub-backend/my_module
-   :members:
-   :undoc-members:
-   :show-inheritance:

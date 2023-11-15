@@ -16,7 +16,7 @@ author = 'UPRI'
 extensions = ['myst_parser','sphinxcontrib.redoc']
 openapi_spec_path = ['doc/ehub-backend/api-docs/ehub-backend-api-docs.json']
 redoc = {
-    'spec-url': 'ehub-backend/api-docs/ehub-backend-api-docs.json',
+    'spec-url': 'doc/ehub-backend/api-docs/ehub-backend-api-docs.json',
 }
 
 

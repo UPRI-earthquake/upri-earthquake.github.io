@@ -11,4 +11,4 @@ EarthquakeHub Backend API
 =====================
 ======================
 
-.. openapi:: ehub-backend-api-docs.yml
+.. openapi:: ehub-backend-api-docs.ym

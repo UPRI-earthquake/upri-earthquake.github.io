@@ -1,3 +1,4 @@
+
 name: main
 
 on: [push, pull_request, workflow_dispatch]
@@ -10,26 +11,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
+      - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
-          pip install sphinx furo myst_parser sphinx_iframe
-          npm install -g redoc-cli
-
-      - name: Generate Redoc HTML
-        run: redoc-cli bundle -o _build/documentation.html doc/ehub-backend/api-docs/ehub-backend-api-docs.json.json
-
-      - name: Build Sphinx Documentation
-        run: sphinx-build doc _build
-
-      - name: Copy Redoc HTML to Sphinx Documentation
-        run: cp _build/documentation.html _build/html/
-
+          pip install sphinx furo myst_parser sphinxcontrib-openapi
+      - name: Sphinx build
+        run: |
+          sphinx-build doc _build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _build/html/
+          publish_dir: _build/
           force_orphan: true

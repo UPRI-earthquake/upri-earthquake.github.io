@@ -13,11 +13,9 @@ author = 'UPRI'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['myst_parser','sphinxcontrib.redoc']
+extensions = ['myst_parser','sphinxcontrib.httpdomain', 'sphinxcontrib.openapi']
 openapi_spec_path = ['doc/ehub-backend/api-docs/ehub-backend-api-docs.json']
-redoc = {
-    'spec-url': 'doc/ehub-backend/api-docs/ehub-backend-api-docs.json',
-}
+
 
 
 

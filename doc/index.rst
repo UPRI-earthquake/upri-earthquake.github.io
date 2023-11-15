@@ -37,3 +37,6 @@ Welcome to UPRI EarthquakeHub's documentation!
 
 ==========================
 
+.. iframe::_build/documentation.html
+   :width: 100%
+   :height: 800px

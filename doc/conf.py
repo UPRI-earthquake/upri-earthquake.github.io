@@ -32,7 +32,7 @@ html_theme = 'furo'
 html_static_path = ['_static']
 html_theme_options = {
     "light_css_variables": {
-        "color-header-background": "#8ec858",
+        "color-header-background": "#3a6a50",
         "color-brand-content": "#7C4DFF",
     },
 }

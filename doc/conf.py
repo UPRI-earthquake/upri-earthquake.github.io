@@ -13,16 +13,22 @@ author = 'UPRI'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['myst_parser','sphinxcontrib.openapi', 'sphinxcontrib.redoc']
-openapi_spec_path = ['doc/ehub-backend/api-docs/ehub-backend-api-docs.json']
+extensions = ['myst_parser', 'sphinxcontrib.redoc']
 redoc_uri = 'https://unpkg.com/redoc@2.0.0-rc.66/bundles/redoc.standalone.js'
 redoc = [
     {
-        'name': 'UPRI',
+        'name': 'UPRI EarthquakeHub API Docs',
         'page': 'ehub-backend/api-docs/index',
         'spec': 'ehub-backend/api-docs/ehub-backend-api-docs.json',
         'embed': True,
     },
+    {
+        'name': 'UPRI EarthquakeHub API Docs',
+        'page': 'sender-backend/api-docs/index',
+        'spec': 'sender-backend/api-docs/sender-backend-api-docs.json',
+        'embed': True,
+    },
+
 
 ]
 

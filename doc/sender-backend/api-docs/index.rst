@@ -11,4 +11,4 @@ Sender Backend API
 =====================
 ======================
 
-.. openapi:: sender-backend-api-docs.json
+.. openapi:: sender-backend-api-docs_open-api-2.0.json

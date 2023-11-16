@@ -20,7 +20,7 @@ redoc = [
     {
         'name': 'UPRI',
         'page': 'ehub-backend/api-docs/index',
-        'spec': 'doc/ehub-backend/api-docs/ehub-backend-api-docs.json',
+        'spec': 'ehub-backend/api-docs/ehub-backend-api-docs.json',
         'embed': True,
     },
 

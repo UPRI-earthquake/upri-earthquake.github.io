@@ -46,8 +46,12 @@ html_theme = 'furo'
 html_static_path = ['_static']
 html_theme_options = {
     "light_css_variables": {
+        ## Color
         "color-header-background": "#3a6a50",
-        "color-brand-content": "#d9e8e5",
         "color-header-text": "#d9e8e5",
+        "color-sidebar-background":"#e7fee0",
+        "color-sidebar-brand-text": "#e7efec",
+
+
     },
 }

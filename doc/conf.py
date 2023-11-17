@@ -49,6 +49,12 @@ html_theme_options = {
         ## Color
         "color-header-background": "#3a6a50",
         "color-header-text": "#d9e8e5",
+        "color-sidebar-link-text--top-level": "#022a1c",
+        "color-background-primary":"#fcfbf3",
+        "color-background-primary":"#f1f1e8",
+
+
+
 
     },
 }

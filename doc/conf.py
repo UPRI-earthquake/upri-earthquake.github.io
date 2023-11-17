@@ -49,9 +49,6 @@ html_theme_options = {
         ## Color
         "color-header-background": "#3a6a50",
         "color-header-text": "#d9e8e5",
-        "color-sidebar-background":"#e7fee0",
-        "color-sidebar-brand-text": "#e7efec",
-
 
     },
 }

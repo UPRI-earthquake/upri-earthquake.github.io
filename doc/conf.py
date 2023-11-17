@@ -50,7 +50,7 @@ html_theme_options = {
         "color-header-background": "#3a6a50",
         "color-header-text": "#d9e8e5",
         "color-sidebar-link-text--top-level": "#022a1c",
-        "color-background-primary":"linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)",
+        "color-background-primary":"#fcfbf3",
         "color-background-secondary":"#f1f1e8",
 
 

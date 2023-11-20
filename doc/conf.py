@@ -52,10 +52,10 @@ html_theme_options = {
         "color-sidebar-link-text--top-level": "#004c32",
         "color-background-primary":"#fcfbf3",
         "color-background-secondary":"#f1f1e8",
-        "color-link": "#0c8fff",
+        "color-link": "#222E50",
     },
 
-    "night_css_variables": {
+    "dark_css_variables": {
         ## Color
         "color-header-background": "#3a6a50",
         "color-header-text": "#d9e8e5",
@@ -64,3 +64,4 @@ html_theme_options = {
         "color-background-secondary":"#28292a",
     },
 }
+html_logo = "_build/html/assets/upri-logo.sgv"

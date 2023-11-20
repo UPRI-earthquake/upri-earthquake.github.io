@@ -49,7 +49,7 @@ html_theme_options = {
         ## Color
         "color-header-background": "#3a6a50",
         "color-header-text": "#d9e8e5",
-        "color-sidebar-link-text--top-level": "#004c32",
+        "color-sidebar-link-text--top-level": "#2962ff",
         "color-background-primary":"#fcfbf3",
         "color-background-secondary":"#f1f1e8",
         "color-link": "#222E50",
@@ -58,10 +58,10 @@ html_theme_options = {
     "dark_css_variables": {
         ## Color
         "color-header-background": "#3a6a50",
-        "color-header-text": "#d9e8e5",
-        "color-sidebar-link-text--top-level": "#4dbc5d",
+        "color-header-text": "#71ff86",
+        "color-sidebar-link-text--top-level": "#2962ff",
         "color-link": "#0c8fff",
         "color-background-secondary":"#28292a",
     },
 }
-html_logo = "_build/html/assets/upri-logo.sgv"
+html_logo = "_build/_static/upri-logo.svg"

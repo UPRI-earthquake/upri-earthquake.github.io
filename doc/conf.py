@@ -64,4 +64,4 @@ html_theme_options = {
         "color-background-secondary":"#28292a",
     },
 }
-html_logo = "_build/html/_static/14.png"
+html_logo = "_build/html/_static/upri-logo.png"

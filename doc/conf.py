@@ -46,6 +46,7 @@ html_theme = 'furo'
 html_title = <b>"UPRI EarthquakeHub documentation"</b>
 html_static_path = ['_static']
 html_theme_options = {
+    "announcement": "<em> 😋 Important</em> announcement!",
     "light_css_variables": {
         ## Color
         "color-header-background": "#f1f1e8",

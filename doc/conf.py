@@ -46,10 +46,9 @@ html_theme = 'furo'
 html_title = "UPRI EarthquakeHub documentation"
 html_static_path = ['_static']
 html_theme_options = {
-    "announcement": "<em> 😋 Important</em> announcement!",
     "light_css_variables": {
         ## Color
-        "color-header-background": "#f1f1e8",
+        "color-header-background": "#3a6a50",
         "color-header-text": "#fcfbf3",
         "color-sidebar-link-text--top-level": "#3a6a50",
         "color-background-primary":"#fcfbf3",
@@ -61,10 +60,10 @@ html_theme_options = {
     "dark_css_variables": {
         ## Color
         "color-header-background": "#3a6a50",
-        "color-header-text": "#fcfbf3",
+        "color-header-text": "#d9e8e5",
         "color-sidebar-link-text--top-level": "#f1f1e8",
         "color-link": "#00b0ff",
         "color-background-secondary":"#28292a",
     },
 }
-html_logo = "_build/html/_static/upri-logo.png"
+

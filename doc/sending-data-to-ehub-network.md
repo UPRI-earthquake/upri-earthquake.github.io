@@ -37,7 +37,5 @@ Make sure that you have already <a href="https://upri-earthquake.github.io/insta
 ### 3. Adding a Host
   ![image](_build/html/assets/sending-data/3.4.png)
 
-   After having linked your device, you are now ready to send data to any available server on the network. This step will also be done via the <a href="https://rs.local:3000" target="_blank">EarthquakeHub rShake client.</a> To do this, click `Add Server` and choose your target ringserver  input the following details of the host you want to send your Raspberry Shake data to:
-   > - Target ringserver's url
-   > - Hostname of the ringserver
+   After having linked your device, you are now ready to send data to any available server on the network. This step will also be done via the <a href="https://rs.local:3000" target="_blank">EarthquakeHub rShake client.</a> To do this, click `Add Server` and choose your target ringserver from the dropdown list displayed.
 

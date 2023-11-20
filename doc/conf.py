@@ -53,9 +53,14 @@ html_theme_options = {
         "color-background-primary":"#fcfbf3",
         "color-background-secondary":"#f1f1e8",
         "color-link": "#0c8fff",
+    },
 
-
-
-
+    "night_css_variables": {
+        ## Color
+        "color-header-background": "#3a6a50",
+        "color-header-text": "#d9e8e5",
+        "color-sidebar-link-text--top-level": "#4dbc5d",
+        "color-link": "#0c8fff",
+        "color-background-secondary":"#28292a",
     },
 }

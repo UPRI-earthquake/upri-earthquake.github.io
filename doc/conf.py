@@ -43,7 +43,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'furo'
-html_title = <b>"UPRI EarthquakeHub documentation"</b>
+html_title = "UPRI EarthquakeHub documentation"
 html_static_path = ['_static']
 html_theme_options = {
     "announcement": "<em> 😋 Important</em> announcement!",
@@ -61,7 +61,7 @@ html_theme_options = {
     "dark_css_variables": {
         ## Color
         "color-header-background": "#3a6a50",
-        "color-header-text": "#d9e8e5",
+        "color-header-text": "#fcfbf3",
         "color-sidebar-link-text--top-level": "#f1f1e8",
         "color-link": "#00b0ff",
         "color-background-secondary":"#28292a",

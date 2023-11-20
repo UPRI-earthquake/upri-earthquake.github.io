@@ -52,7 +52,7 @@ html_theme_options = {
         "color-sidebar-link-text--top-level": "#3a6a50",
         "color-background-primary":"#fcfbf3",
         "color-background-secondary":"#f1f1e8",
-        "color-link": "##2962ff",
+        "color-link": "#2962ff",
     },
 
     "dark_css_variables": {

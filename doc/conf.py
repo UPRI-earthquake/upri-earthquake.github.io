@@ -6,6 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+
 project = 'UPRI EarthquakeHub'
 copyright = '2023, UPRI'
 author = 'UPRI'
@@ -43,7 +44,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'furo'
-html_title = " 😋 UPRI EarthquakeHub Documentation"
+html_title = "UPRI EarthquakeHub Documentation"
 html_static_path = ['_static']
 html_theme_options = {
     "light_css_variables": {
@@ -61,7 +62,7 @@ html_theme_options = {
         ## Color
         "color-header-background": "#3a6a50",
         "color-header-text": "#d9e8e5",
-        "color-sidebar-link-text--top-level": "#f1f1e8",
+        "color-sidebar-link-text--top-level": "#3a6a50",
         "color-link": "#00b0ff",
         "color-background-secondary":"#28292a",
     },

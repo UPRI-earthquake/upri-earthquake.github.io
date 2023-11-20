@@ -60,8 +60,8 @@ html_theme_options = {
         "color-header-background": "#3a6a50",
         "color-header-text": "#d9e8e5",
         "color-sidebar-link-text--top-level": "#4dbc5d",
-        "color-link": "##2962ff",
+        "color-link": "3a6a50",
         "color-background-secondary":"#28292a",
     },
 }
-html_logo = "_build/html/_static/upri-logo.sgv"
+html_logo = "_build/html/_static/14.png"

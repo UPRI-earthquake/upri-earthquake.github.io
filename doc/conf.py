@@ -43,7 +43,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'furo'
-html_title = "UPRI EarthquakeHub"
+html_title = "UPRI EarthquakeHub Documentation"
 html_static_path = ['_static']
 html_theme_options = {
     "light_css_variables": {
@@ -54,7 +54,7 @@ html_theme_options = {
         "color-background-primary":"#fcfbf3",
         "color-background-secondary":"#f1f1e8",
         "color-link": "#225ebc",
-        "color-sidebar-item-background--current": "#f1f1e8"
+
     },
 
     "dark_css_variables": {

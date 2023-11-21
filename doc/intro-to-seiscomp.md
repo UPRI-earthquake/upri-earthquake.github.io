@@ -145,32 +145,32 @@ For database root password, you may enter your desired password
 MYSQL root password (input not echoed) []:
 ```
 ```
-    Drop existing database [no]:
-    Database name [seiscomp]:
-    Database hostname [localhost]:
+Drop existing database [no]:
+Database name [seiscomp]:
+Database hostname [localhost]:
 ```
 Specify the desired user and password for both read-write and read-only access parameters.
 
 ```bash
-    Database read-write user [sysop]:
-    Database read-write password [sysop]:
-    Database public hostname [localhost]:
-    Database read-only user [sysop]:
-    Database read-only password [sysop]:
+Database read-write user [sysop]:
+Database read-write password [sysop]:
+Database public hostname [localhost]:
+Database read-only user [sysop]:
+Database read-only password [sysop]:
 ```
 
 
 2. After addressing all questions, you'll need to make a final decision: proceed to create the initial configuration, return to the previous question, or exit without making any changes. Press <ENTER> to save the initial setup.
 
-    ```bash
-    Finished setup
-    --------------
+```bash
+Finished setup
+--------------
 
-    P) Proceed to apply configuration
-    B) Back to last parameter
-    Q) Quit without changes
-    Command? [P]:
-    ```
+P) Proceed to apply configuration
+B) Back to last parameter
+Q) Quit without changes
+Command? [P]:
+```
 
 ## Adding New Station
 In order to process seismic data within SeisComP, it's essential to define a data source, which is typically represented by a station. Follow these steps to add a new station to your SeisComP setup:
@@ -178,7 +178,7 @@ In order to process seismic data within SeisComP, it's essential to define a dat
 2. Once you have acquired the inventory data, the next step is to import it into SeisComP. Navigate to the terminal where SeisComP is installed and execute the following command:
 
 ```bash
-    ./seiscomp/bin/seiscomp exec import_inv fdsnxml ./inventory_CLL.xml
+./seiscomp/bin/seiscomp exec import_inv fdsnxml ./inventory_CLL.xml
 ```
 
 The following output should be shown:
@@ -198,12 +198,10 @@ The following output should be shown:
 
 ```bash
     seiscomp update-config
-    ```
-
+```
 
 ## Getting Real-time Data from a Remote Seedlink Server
 <a href="https://www.seiscomp.de/doc/base/tutorials/waveforms.html" target="_blank"> Refer to this link </a>
-
 
 ## Important concepts to know about seiscomp
 - <a href="https://www.seiscomp.de/doc/base/concepts.html#concepts" target="_blank">Reference to SeisComp</a>

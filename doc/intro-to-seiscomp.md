@@ -42,46 +42,49 @@ For some packages, documentations are already included in the downloaded seiscom
 ```
 
 You may check that all files are properly unpacked by running the `ls` command:
-
-    ```bash
-    ls seiscomp
-    bin  etc  include  lib  man  sbin  share
-    ```
-5. Execute the following commands to install dependencies and set up the environment:
-
-    ```bash
-    ./seiscomp/bin/seiscomp install-deps base
-    ```
-    ```{note}
-Depending on your Ubuntu version, additional steps may be required to address specific dependencies:
 ```
+ls seiscomp
+bin  etc  include  lib  man  sbin  share
+```
+5. Execute the following commands to install dependencies and set up the environment:
+```bash
+/seiscomp/bin/seiscomp install-deps base
+```
+
+```{note}
+Depending on your Ubuntu version, additional steps may be required to address specific dependencies:```
+
 - On Ubuntu 18: Install Python and related libraries:
-
 ```bash
-      sudo apt-get install python libqtgui4
-      ```
+sudo apt-get install python libqtgui4
+```
+
 - On Ubuntu 20 and newer: Ensure libpython3-dev is installed:
-
 ```bash
-      sudo apt-get install libpython3-dev
-      ```
+sudo apt-get install libpython3-dev
+```
+
 - Alternatively, for Mint 18 (Ubuntu 16.04):
 ```bash
       sudo apt-get update
       sudo apt-get install libxml2 libboost-filesystem1.58.0 libboost-iostreams1.58.0 libboost-thread1.58.0 libboost-program-options1.58.0 libboost-regex1.58.0 libboost-signals1.58.0 libboost-system1.58.0 libssl1.0.0 libncurses5 libmysqlclient20 libpq5 libpython2.7 python-numpy mysql-server mysql-client libqtgui4 libqt4-xml libqt4-opengl libqt4-sql-sqlite
-      ```
+```
+
 
 6. Configure the database. You may choose to use either MariaDB or a MySQL for the database.
+
 - For a MariaDB installation:
+
 ```bash
 ./seiscomp/bin/seiscomp install-deps mariadb-server
 ```
+
 ![image](_build/html/assets/intro-to-seiscomp/5.1.png)
 
 - For a MySQL installation:
 ```bash
 ./seiscomp/bin/seiscomp install-deps mysql-server
-```
+    ```
 
 ## Getting Started
 After installing seiscomp packages and configuring database, the next step is to setup seiscomp using `seiscomp setup` or the wizard from within scconfig.

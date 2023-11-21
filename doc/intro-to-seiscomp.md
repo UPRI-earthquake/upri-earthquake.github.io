@@ -117,13 +117,17 @@ In seiscomp setup default values are given in brackets [ ]:
           If you need to enter a value with a leading dot, escape it
           with backslash, e.g. "\.value".
     --------------------------------------------------------------------
-    ```
+```
+
+
+
 This will ask for initial settings. You may just leave the default values for the following details:
 
 ```bash
     Organization name []:
-    ```
-    ```
+```
+
+```
     Enable database storage [yes]:
     0) mysql
       MySQL server.
@@ -133,26 +137,31 @@ This will ask for initial settings. You may just leave the default values for th
         your own. The database schema is installed under share/db/postgresql.sql.
     Database backend [0]:
     Create database [yes]:
-    ```
-    For database root password, you may enter your desired password
-    ```bash
-    MYSQL root password (input not echoed) []:
-    ```
-    ```
+```
+
+
+For database root password, you may enter your desired password
+```bash
+MYSQL root password (input not echoed) []:
+```
+```
     Drop existing database [no]:
     Database name [seiscomp]:
     Database hostname [localhost]:
-    ```
-    Specify the desired user and password for both read-write and read-only access parameters.
-    ```bash
+```
+Specify the desired user and password for both read-write and read-only access parameters.
+
+```bash
     Database read-write user [sysop]:
     Database read-write password [sysop]:
     Database public hostname [localhost]:
     Database read-only user [sysop]:
     Database read-only password [sysop]:
-    ```
+```
+
 
 2. After addressing all questions, you'll need to make a final decision: proceed to create the initial configuration, return to the previous question, or exit without making any changes. Press <ENTER> to save the initial setup.
+
     ```bash
     Finished setup
     --------------
@@ -163,16 +172,18 @@ This will ask for initial settings. You may just leave the default values for th
     Command? [P]:
     ```
 
-
 ## Adding New Station
 In order to process seismic data within SeisComP, it's essential to define a data source, which is typically represented by a station. Follow these steps to add a new station to your SeisComP setup:
 1. You will need `inventory` of the new station to be added. This information is typically stored in `.yml` format. To acquire the inventory, you can refer to the guide on [how to fetch inventory using FDSNWS]().
 2. Once you have acquired the inventory data, the next step is to import it into SeisComP. Navigate to the terminal where SeisComP is installed and execute the following command:
-    ```bash
+
+```bash
     ./seiscomp/bin/seiscomp exec import_inv fdsnxml ./inventory_CLL.xml
-    ```
-    The following output should be shown:
-    ```bash
+```
+
+The following output should be shown:
+
+```bash
     Generating output to /home/user/seiscomp/etc/inventory/inventory_CLL.xml
     No inventory read from inventory db
     Create empty one
@@ -181,16 +192,17 @@ In order to process seismic data within SeisComP, it's essential to define a dat
      - converting into SeisComP-XML
     Finished processing
     Writing inventory to /home/user/seiscomp/etc/inventory/inventory_CLL.xml
-    ```
+```
+
 3. After successfully importing the inventory, update the SeisComP configuration by running:
-    ```bash
+
+```bash
     seiscomp update-config
     ```
 
+
 ## Getting Real-time Data from a Remote Seedlink Server
 <a href="https://www.seiscomp.de/doc/base/tutorials/waveforms.html" target="_blank"> Refer to this link </a>
-
-
 
 
 ## Important concepts to know about seiscomp

@@ -64,14 +64,13 @@ The content of the documentation are written in different files. These files are
 - ```system-overview.md``` - System Overview
 - ```ehub-commons.md``` - earthquake-hub-commons
 - ehub-backend/```overview.md``` -  earthquake-hub-backend
-
     **API Docs**
-    - ehub-backend/api-docs/ ```index.rst```
+    - ehub-backend/api-docs/ ```ehub-backend-api-docs.json```
+
+
 - sender-backend/```overview.md``` - sender-backend
-
-
     **API Docs**
-    - sender-backend/api-docs/ ```index.rst```
+    - sender-backend/api-docs/ ```sender-backend-api-docs.json```
 - ```ringserver.md``` - RingServer
 - ```skink2dali.md```- Slink2Dali
 

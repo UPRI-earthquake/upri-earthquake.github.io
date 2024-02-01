@@ -6,9 +6,9 @@ All rshake devices that is connected to the EarthquakeHub network will acquire t
    ```{note}
    Make sure to note down your device location inputs such as longitude, latitude, and elevation. You will need these details for the re-linking process.
    ```
-   ![image](_build/html/assets/sending-data/8.1.png)
+   ![image](_build/html/assets/acquiring-new-token/8.1.png)
 ### 2. Link your device again
    Click the “Link” button on the webpage. Input the device location details (longitude, latitude, elevation) that you noted down earlier when prompted then submit.
-   ![image](_build/html/assets/sending-data/8.2.png)
+   ![image](_build/html/assets/acquiring-new-token/8.2.png)
 ### 3. Connect to a ringserver
    Once your device is successfully linked, proceed to add a new ringserver to start streaming to the server again.

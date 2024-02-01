@@ -32,6 +32,7 @@ Welcome to UPRI EarthquakeHub's documentation!
    ehub-commons.md
    ehub-backend/overview.md
    sender-backend/overview.md
+   sender-frontend.md
    ringserver.md
    slink2dali.md
 

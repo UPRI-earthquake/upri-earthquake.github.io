@@ -17,6 +17,7 @@ Welcome to UPRI EarthquakeHub's documentation!
    connect-to-rshake.md
    installing-rshake-client.md
    sending-data-to-ehub-network.md
+   acquiring-new-token.md
    fdsnws.md
    intro-to-seiscomp.md
    dev-guide-contributing.md

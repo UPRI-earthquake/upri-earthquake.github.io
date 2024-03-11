@@ -19,7 +19,6 @@ Welcome to UPRI EarthquakeHub's documentation!
    sending-data-to-ehub-network.md
    acquiring-new-token.md
    fdsnws.md
-   getting-instrument-response-file.md
    intro-to-seiscomp.md
    dev-guide-contributing.md
    docker-cheatsheet.md

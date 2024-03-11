@@ -70,7 +70,7 @@ To get individual instrument-response-file using python:
   
 
   ```{admonition} Sample Output
-  ![Sample Output](_build/html/assets/_build/html/assets/getting-metadata-using-python/sample_output.png)
+  ![Sample Output](_build/html/assets/_build/html/assets/getting-metadata-using-python/Sample_output.png)
   PNG and XML file outputs are saved on the same directory where you run the script.
   
   ![Sample instrument-response-file of RE722 station in PNG format.](_build/html/assets/getting-metadata-using-python/RE722_inst_resp_file.png)

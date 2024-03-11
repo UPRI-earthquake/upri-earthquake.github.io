@@ -3,9 +3,9 @@ Programmatically Getting the Metadata
 
 ```{note}
 The “metadata” or “instrument response files” complement the raw waveform data, providing the information that seismologists use for data processing, including:
-  > - gains, overall sensitivity, poles, zeros and filters needed to deconvolve the data and arrive at true ground motion
-  > - latitude, longitude, elevation (which are obfuscated to ~1 km to protect user’s identities)instrument type
-  > - any and all changes over time (since May, 2019)
+  - gains, overall sensitivity, poles, zeros and filters needed to deconvolve the data and arrive at true ground motion
+  - latitude, longitude, elevation (which are obfuscated to ~1 km to protect user’s identities)instrument type
+  - any and all changes over time (since May, 2019)
 ```
 
 To get individual instrument-response-file using python:

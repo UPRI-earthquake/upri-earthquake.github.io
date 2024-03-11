@@ -68,7 +68,10 @@ To get individual instrument-response-file using python:
   ```
   After running the script, it will output a PNG file of the plot and an XML file of the instrument response information of the station specified in the script.
   
-  ![Output Sample](_build/html/assets/_build/html/assets/getting-metadata-using-python/output_sample.png)
+
+  ```{admonition} Example
+  ![Output Sample](_build/html/assets/_build/html/assets/getting-metadata-using-python/sample_output.png)
   
   ![Sample instrument-response-file of RE722 station in PNG format.](_build/html/assets/getting-metadata-using-python/RE722_inst_resp_file.png)
   Sample instrument-response-file of RE722 station in PNG format.
+  ```

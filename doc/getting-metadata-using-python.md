@@ -66,9 +66,9 @@ To get individual instrument-response-file using python:
   ```{note}
   To get the instrument response file of other station, just  change the value of the `stn` variable to your desired station name.
   ```
-4. Run the python script in terminal using the command:
+4. Run the python script in terminal using the command below. Specify the name of the station you want to get the metadata of by passing it as an argument in the command.
   ```bash
-  python3 get_insp_resp_file.py
+  python3 get_insp_resp_file.py <station_name>
   ```
   After running the script, it will output a PNG file of the plot and an XML file of the instrument response information of the station specified in the script.
   

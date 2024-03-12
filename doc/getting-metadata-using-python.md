@@ -68,7 +68,7 @@ To get individual instrument-response-file using python:
   ```
 4. Run the python script in terminal using the command below. Specify the name of the station you want to get the instrument response of by changing the <station_name> argument to the device’s station name. (Note: Only the station name is required. No need to specify the network name.)
   ```bash
-  python3 get_insp_resp_file.py <station_name>
+  python3 get_inst_resp_file.py <station_name>
   # i.e. python3 get_inst_resp_file.py RE722
   ```
   After running the script, it will output a PNG file of the plot and an XML file of the instrument response information of the station specified in the script.

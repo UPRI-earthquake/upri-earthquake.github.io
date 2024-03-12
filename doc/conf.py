@@ -46,7 +46,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'furo'
 html_title = "UPRI EarthquakeHub Documentation"
 html_favicon = '_build/html/_static/upri-favicon.ico'
-html_logo = '_build/html/_static/upri-logo-with-bg.png'
+html_logo = '_build/html/_static/upri-logo-92x92.png'
 html_static_path = ['_static']
 html_theme_options = {
     "light_css_variables": {

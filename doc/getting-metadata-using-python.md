@@ -52,10 +52,10 @@ To get individual instrument-response-file using python:
       print(f"- PNG plot: {station_name}_inst_resp_plot.png")
       print(f"- XML metadata: {station_name}_inst_resp_file.xml")
 
-  except Exception as e:
-      # Handle any exceptions that occur during execution
-      print(f"[\033[91m ERROR \033[0m] ", end='')
-      print(f"{e}")
+    except Exception as e:
+        # Handle any exceptions that occur during execution
+        print(f"[\033[91m ERROR \033[0m] ", end='')
+        print(f"{e}")
 
 
   parser = argparse.ArgumentParser(description="Retrieve and save instrument response files for a specified station.")

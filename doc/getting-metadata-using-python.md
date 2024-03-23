@@ -33,7 +33,7 @@ To get individual instrument-response-file using python:
 
   def main(station_name):
     try:
-      rs = Client('https://earthquake.science.upd.edu.ph')
+      rs = Client('https://stationview.raspberryshake.org', _discover_services=False)
 
       inv = rs.get_stations(network='AM', station=station_name, level='RESP')
 

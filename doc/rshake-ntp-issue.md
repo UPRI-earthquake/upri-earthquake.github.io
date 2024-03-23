@@ -25,7 +25,7 @@ The issue of incorrect time in RShake devices can be resolved by addressing the 
     - After adding the line, save your changes to the file.
 
     ```{note}
-    To save your your changes to the file press `Ctrl` + `X`. Then type `Y` when prompted to confirm your changes.
+    To save your your changes in nano editor press `Ctrl` + `X`. Then type `Y` when prompted to confirm your changes.
     ```
 
 4. **Restart the Device**

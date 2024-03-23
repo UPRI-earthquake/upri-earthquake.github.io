@@ -40,4 +40,12 @@ Welcome to UPRI EarthquakeHub's documentation!
    slink2dali.md
 
 ==========================
+======================
+.. toctree::
+   :maxdepth: 1
+   :caption: Issues
+
+   rshake-ntp-issue.md
+
+==========================
 

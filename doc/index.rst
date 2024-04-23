@@ -46,6 +46,7 @@ Welcome to UPRI EarthquakeHub's documentation!
    :caption: Issues
 
    rshake-ntp-issue.md
+   issues/blank-rs.local-page.md
 
 ==========================
 

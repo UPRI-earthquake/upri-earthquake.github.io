@@ -39,18 +39,21 @@ If you confirm that the device storage is fully utilized, we need to reinstall t
     ```
 
 2. **Restart the Device**
-    - Reboot your RShake device to apply the changes:
+    - After successful uninstallation, reboot your RShake device to apply the changes:
         ```bash
         sudo reboot
         ```
 
     ```{note}
-    After uninstalling the EarthquakeHub software packages, you need to reinstall it again and perform relinking of your device to your EarthquakeHub’s account and start streaming to the network again which are also documented in the following links [1](https://upri-earthquake.github.io/installing-rshake-client.html) and [2](https://upri-earthquake.github.io/sending-data-to-ehub-network.html).
+    After uninstalling the EarthquakeHub software packages, you need to reinstall the software packages again, then perform relinking of your device to your EarthquakeHub’s account and start streaming to the network again.
     ```
 
 3. Reinstall the EarthquakeHub software packages by running this command:
     ```bash
-    bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/main/uninstall.sh)
+    bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/main/install.sh)
+    ```
+    ```{note}
+    Refer to this [link](https://chrscbs.github.io/ehub_docu_ui_test/installing-rshake-client.html#run-the-installation-script) for installation of the software packages.
     ```
 
 4. Link you device to your EarthquakeHub account to start streaming to the EarthquakeHub Network again.

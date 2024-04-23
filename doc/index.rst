@@ -45,7 +45,7 @@ Welcome to UPRI EarthquakeHub's documentation!
    :maxdepth: 1
    :caption: Issues
 
-   rshake-ntp-issue.md
+   issues/rshake-ntp-issue.md
    issues/blank-rs.local-page.md
 
 ==========================

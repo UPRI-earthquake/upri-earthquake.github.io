@@ -3,7 +3,7 @@ Blank rs.local Page Due to 100% Utilization of Device Storage
 
 
 A common cause for the rs.local webpage displaying a blank page is the full utilization of the storage (read-only memory) on rshake devices. This documentation specifically applies to rshake devices connected to the UPRI seismic network. Full storage utilization can lead to non-operational docker containers, which results in the rs.local webpage failing to load, as shown in the screenshot below.
-![blank rs.local](_build/html/assets/issues/blank-rs.local-page/blank-rs.local-page.png)
+![image](_build/html/assets/issues/blank-rs.local-page/blank-rs.local-page.png)
 
 
 ## Investigation
@@ -18,7 +18,7 @@ If rs.local is showing a blank page, follow these steps to confirm if full utili
         docker ps -a
         ```
     - The output should look like this:
-        ![docker ps -a output](_build/html/assets/issues/blank-rs.local-page/docker-ps-output.png)
+        ![image](_build/html/assets/issues/blank-rs.local-page/docker-ps-output.png)
 
 3. **Check Device Storage Utilization**
     - Execute the command below to check the storage utilization:
@@ -26,7 +26,7 @@ If rs.local is showing a blank page, follow these steps to confirm if full utili
         df -h
         ```
     - The output of the command should look like this:
-        ![df -h output](_build/html/assets/issues/blank-rs.local-page/df-h-output.png)
+        ![image](_build/html/assets/issues/blank-rs.local-page/df-h-output.png)
     - If the output shows 100% usage (Use%) on the /dev/root directory, it confirms that the device is not operating correctly due to full utilization of device storage.
 
 
@@ -45,7 +45,7 @@ If you confirm that the device storage is fully utilized, we need to reinstall t
         ```
 
     ```{note}
-    After uninstalling the EarthquakeHub software packages, you need to reinstall it again and perform relinking of your device to your EarthquakeHub’s account and start streaming to the network again which are also documented in the following links <a href="https://upri-earthquake.github.io/installing-rshake-client.html" target="_blank">(1) and <a href="https://upri-earthquake.github.io/sending-data-to-ehub-network.html" target="_blank">(2).
+    After uninstalling the EarthquakeHub software packages, you need to reinstall it again and perform relinking of your device to your EarthquakeHub’s account and start streaming to the network again which are also documented in the following links [1](https://upri-earthquake.github.io/installing-rshake-client.html) and [2](https://upri-earthquake.github.io/sending-data-to-ehub-network.html).
     ```
 
 3. Reinstall the EarthquakeHub software packages by running this command:
@@ -53,4 +53,4 @@ If you confirm that the device storage is fully utilized, we need to reinstall t
     bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/main/uninstall.sh)
     ```
 
-4. <a href="https://upri-earthquake.github.io/sending-data-to-ehub-network.html#device-to-account-linking" target="_blank">Link your device<a> to your EarthquakeHub account to start streaming to the EarthquakeHub Network again.
+4. <a href="https://upri-earthquake.github.io/sending-data-to-ehub-network.html#device-to-account-linking" target="_blank">Link your device</a> to your EarthquakeHub account to start streaming to the EarthquakeHub Network again.

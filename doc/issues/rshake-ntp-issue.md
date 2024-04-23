@@ -13,7 +13,7 @@ The issue of incorrect time in RShake devices can be resolved by addressing the 
         nano /etc/ntp.conf
         ```
     - The file should look like this:
-        ![ntp.conf file contents](_build/html/assets/rshake-ntp-issue/ntp.conf-contents.png)
+        ![ntp.conf file contents](../_build/html/assets/issues/rshake-ntp-issue/ntp.conf-contents.png)
 
 3. **Add a New NTP Server**
     - Insert the following line into the file, just before the existing `server 1.debian.pool.ntp.org` line: 
@@ -21,7 +21,7 @@ The issue of incorrect time in RShake devices can be resolved by addressing the 
         server 0.asia.pool.ntp.org
         ```
     - Your edited file should look like this:
-        ![Edited ntp.conf file](_build/html/assets/rshake-ntp-issue/edited-ntp.conf-file.png)
+        ![Edited ntp.conf file](../_build/html/assets/issues/rshake-ntp-issue/edited-ntp.conf-file.png)
     - After adding the line, save your changes to the file.
 
     ```{note}

@@ -29,7 +29,7 @@ If rs.local is showing a blank page, follow these steps to confirm if full utili
         - The output of the command should look like the screenshot above. If the output shows `100%` usage (Use%) on the `/dev/root` directory, it confirms that the device is not operating correctly due to full utilization of device storage.
 
 
-## Resolution
+## Fix
 If you confirm that the device storage is fully utilized, we need to reinstall the EarthquakeHub software packages to free up space it utilizes. Please follow the troubleshooting steps provided in the next section of this guide to address and resolve the issue.
 
 1. **Uninstall the EarthquakeHub Software Packages**

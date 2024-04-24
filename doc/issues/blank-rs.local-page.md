@@ -26,7 +26,7 @@ If rs.local is showing a blank page, follow these steps to confirm if full utili
         df -h
         ```
         ![image](../_build/html/assets/issues/blank-rs.local-page/df-h-output.png)
-        - The output of the command should look like the screenshot above. If the output shows 100% usage (Use%) on the /dev/root directory, it confirms that the device is not operating correctly due to full utilization of device storage.
+        - The output of the command should look like the screenshot above. If the output shows `100%` usage (Use%) on the `/dev/root` directory, it confirms that the device is not operating correctly due to full utilization of device storage.
 
 
 ## Resolution

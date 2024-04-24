@@ -48,15 +48,16 @@ If you confirm that the device storage is fully utilized, we need to reinstall t
     After uninstalling the EarthquakeHub software packages, you need to reinstall the software packages again, then perform relinking of your device to your EarthquakeHub’s account and start streaming to the network again.
     ```
 
-3. Reinstall the EarthquakeHub software packages by running this command:
-    ```bash
-    bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/main/install.sh)
-    ```
+3. **Reinstall the EarthquakeHub Software Packages** 
+    - Run the command below in the terminal to perform reinstallation:
+        ```bash
+        bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/main/install.sh)
+        ```
     ```{note}
     Refer to this [link](https://chrscbs.github.io/ehub_docu_ui_test/installing-rshake-client.html#run-the-installation-script) for installation of the software packages.
     ```
 
-4. Link you device to your EarthquakeHub account to start streaming to the EarthquakeHub Network again.
+4. **Link you Device to Your EarthquakeHub Account to Start Streaming to the EarthquakeHub Network Again**
     ```{note}
     Refer to this [link](https://upri-earthquake.github.io/sending-data-to-ehub-network.html#device-to-account-linking) to perform account linking and starting stream to the network.
     ```

@@ -33,7 +33,7 @@ If rs.local is showing a blank page, follow these steps to confirm if full utili
 If you confirm that the device storage is fully utilized, we need to reinstall the EarthquakeHub software packages to free up space it utilizes. Please follow the troubleshooting steps provided in the next section of this guide to address and resolve the issue.
 
 1. **Uninstall the EarthquakeHub Software Packages**
-    - Run the command below to the terminal to perform uninstallation:
+    - Run the command below in the terminal to perform uninstallation:
         ```bash
         bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/main/uninstall.sh)
         ```

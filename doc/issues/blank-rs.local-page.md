@@ -13,7 +13,7 @@ If rs.local is showing a blank page, follow these steps to confirm if full utili
     - If you're unfamiliar with SSH (Secure Shell), refer to <a href="https://upri-earthquake.github.io/connect-to-rshake" target="_blank">this tutorial</a> for guide on connecting to your RShake device. 
 
 2. **Check Docker Containers**
-    - Run the command below to view all Docker containers along with their status and other pertinent information. Check if any of these three docker containers are not properly running `rsh-data-producer`, `rsh-data-consumer`, and `rsh-fe-config:v19`. If yes, proceed to the next check.
+    - Run the command below to view all Docker containers along with their status and other pertinent information. Check if any of these three docker containers are not properly running `rsh-data-producer`, `rsh-data-consumer`, and `rsh-fe-config:v19`. If the status is not `Up ...`, proceed to the next check.
         ```bash
         docker ps -a
         ```

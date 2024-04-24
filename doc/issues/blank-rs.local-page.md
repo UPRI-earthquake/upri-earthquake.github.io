@@ -17,7 +17,7 @@ If rs.local is showing a blank page, follow these steps to confirm if full utili
         ```bash
         docker ps -a
         ```
-    - The output should look like this:
+    - The output should look like this if your device is properly running all the docker containers:
     ![image](../_build/html/assets/issues/blank-rs.local-page/docker-ps-output.png)
 
 3. **Check Device Storage Utilization**

@@ -38,6 +38,7 @@ Welcome to UPRI EarthquakeHub's documentation!
    sender-frontend.md
    ringserver.md
    slink2dali.md
+   significant-eqs.md
 
 ==========================
 ======================

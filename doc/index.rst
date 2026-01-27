@@ -17,6 +17,7 @@ Welcome to UPRI EarthquakeHub's documentation!
    connect-to-rshake.md
    installing-rshake-client.md
    sending-data-to-ehub-network.md
+   updating-rshake-client.md
    acquiring-new-token.md
    fdsnws.md
    getting-metadata-using-python.md

@@ -51,4 +51,12 @@ Welcome to UPRI EarthquakeHub's documentation!
    issues/blank-rs.local-page.md
 
 ==========================
+======================
+.. toctree::
+   :maxdepth: 1
+   :caption: Release Notes
+
+   release-notes/latest-release.md
+
+==========================
 

@@ -13,7 +13,7 @@ Before you begin the installation, make sure you can access your Raspberry Shake
 In your SSH terminal, execute the following command:
 
 ```bash
-bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/main/install.sh)
+bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/dev/install.sh)
 ```
 
 

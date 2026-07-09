@@ -35,7 +35,7 @@ If you confirm that the device storage is fully utilized, we need to reinstall t
 1. **Uninstall the EarthquakeHub Software Packages**
     - Run the command below in the terminal to perform uninstallation:
         ```bash
-        bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/main/uninstall.sh)
+        bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/dev/uninstall.sh)
         ```
 
 2. **Restart the Device**
@@ -51,7 +51,7 @@ If you confirm that the device storage is fully utilized, we need to reinstall t
 3. **Reinstall the EarthquakeHub Software Packages** 
     - Run the command below in the terminal to perform reinstallation:
         ```bash
-        bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/main/install.sh)
+        bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/dev/install.sh)
         ```
     ```{note}
     Refer to this [link](https://chrscbs.github.io/ehub_docu_ui_test/installing-rshake-client.html#run-the-installation-script) for installation of the software packages.

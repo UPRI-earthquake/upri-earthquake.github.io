@@ -39,7 +39,7 @@ shakeme
 After logging in successfully, run the uninstall script:
 
 ```bash
-bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/rshake-alerts/uninstall.sh)
+bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/dev/uninstall.sh)
 ```
 
 ### Step 4: Install the latest client software
@@ -47,7 +47,7 @@ bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/rsh
 When the uninstall script finishes, run the installation script:
 
 ```bash
-bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/rshake-alerts/install.sh)
+bash <(curl https://raw.githubusercontent.com/UPRI-earthquake/sender-backend/dev/install.sh)
 ```
 
 ### Step 5: Reboot the Raspberry Shake

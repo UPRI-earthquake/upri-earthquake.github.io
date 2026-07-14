@@ -60,5 +60,9 @@ Welcome to UPRI EarthquakeHub's documentation!
    :caption: Release Notes
 
    release-notes/latest-release.md
+   release-notes/2026.md
+   release-notes/2025.md
+   release-notes/2024.md
+   release-notes/2023.md
 
 ==========================

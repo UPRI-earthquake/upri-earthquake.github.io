@@ -35,7 +35,7 @@ Lastly, this ring is treated as a shared memory between threads who write into a
 
     Being able to control which clients can connect to a server is a useful feature in server management. More so when you allow clients to write data into your server, it is necessary to discriminate among clients based on whether they have write permissions or not. Originally, RingServer can discriminate client connections via manually written IP addresses in the server configuration file (see original `TrustedIP` configuration on original documentation). However, in citizen science application, there is no way to identify user IP address pre-connection since IP addresses are often dynamic and hidden behind Network Address Translation (NAT).
 
-    To solve this problem we used JSON web tokens (JWT) and an [external Authentication API](https://alyssapatricia.github.io/ui/ehub-backend/api-docs/), to identify whether a client requesting to write data into the RingServer has permission or not. The way this works is:
+    To solve this problem we used JSON web tokens (JWT) and an [external Authentication API](https://upri-earthquake.github.io/ehub-backend/api-docs/), to identify whether a client requesting to write data into the RingServer has permission or not. The way this works is:
 
       a. We added the AUTHORIZATION command in the DataLink protocol, with the following format:
 

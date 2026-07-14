@@ -1,7 +1,7 @@
 Significant Earthquakes in UPRI Citizen Science Seismic Network
 ===============================================
 
-Welcome to the <a href="https://earthquake.science.upd.edu.ph/significant-eqs">Significant Earthquakes page</a> of the UPRI Citizen Science Seismic Network, offering detailed and timely information on major seismic events recorded across the Philippines from 2021 to the present. This page serves as a vital resource for researchers, enthusiasts, and the public, providing essential insights to enhance understanding, awareness, and preparedness in the face of seismic hazards.
+Welcome to the <a href="https://earthquake.up.edu.ph/significant-eqs">Significant Earthquakes page</a> of the UPRI Citizen Science Seismic Network, offering detailed and timely information on major seismic events recorded across the Philippines from 2021 to the present. This page serves as a vital resource for researchers, enthusiasts, and the public, providing essential insights to enhance understanding, awareness, and preparedness in the face of seismic hazards.
 
 The information available includes:
 - *Date and Time*: Precise records of when each seismic event occurred.
@@ -29,4 +29,3 @@ In addition to our network, the table below provides information on other FDSN d
 ```{note}
 Reference: https://www.fdsn.org/datacenters/
 ```
-

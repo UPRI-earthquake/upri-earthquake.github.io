@@ -15,7 +15,7 @@ Make sure that you have already <a href="https://upri-earthquake.github.io/insta
 
 
  To register an account go to
-<a href="https://earthquake.science.upd.edu.ph" target="_blank">earthquake-hub web app</a> and click the `Sign Up` button. Choose `citizen` as your Role, and provide the following required details:
+<a href="https://earthquake.up.edu.ph" target="_blank">earthquake-hub web app</a> and click the `Sign Up` button. Choose `citizen` as your Role, and provide the following required details:
 > - A valid email address
 > - Account password
 
@@ -38,4 +38,3 @@ Make sure that you have already <a href="https://upri-earthquake.github.io/insta
   ![image](_build/html/assets/sending-data/3.4.png)
 
    After having linked your device, you are now ready to send data to any available server on the network. This step will also be done via the <a href="https://rs.local:3000" target="_blank">EarthquakeHub rShake client.</a> To do this, click `Add Server` and choose your target ringserver from the dropdown list displayed.
-

@@ -105,7 +105,7 @@ If the device is not linked to an EarthquakeHub account:
 2. Enter the EarthquakeHub account credentials previously used for this device
 3. Fill in the required location details
 
-If you forgot the account password, go to the EarthquakeHub web app at <https://earthquake.science.upd.edu.ph>, open the account button at the top-right, then use the forgot password option.
+If you forgot the account password, go to the EarthquakeHub web app at <https://earthquake.up.edu.ph>, open the account button at the top-right, then use the forgot password option.
 
 <img width="2559" height="1405" alt="adding-ringserver" src="https://github.com/user-attachments/assets/1b136f44-dd1b-4e17-88b8-38c4c662c299" />
 

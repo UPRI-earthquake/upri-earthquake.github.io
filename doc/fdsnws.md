@@ -44,7 +44,7 @@ Here are the following information you can gather from ```station``` service
 ### Steps to Download Ground Motion Data
 
 To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
-1. Access the <a href="https://earthquake.science.upd.edu.ph/fdsnws/" target="_blank">UPRI Earthquake Hub SeisComP FDSNWS Web Service</a>
+1. Access the <a href="https://earthquake.up.edu.ph/fdsnws/" target="_blank">UPRI Earthquake Hub SeisComP FDSNWS Web Service</a>
 
 2. Choose the ```dataselect/``` web service
 ![access](_build/html/assets/fdsnws/4.1.jpg "access photo")
@@ -126,7 +126,7 @@ Clicking ```builder``` redirects you to this page:
 
 To obtain the Metadata, we will be using the ```station``` service.
 
-1. Access the <a href="https://earthquake.science.upd.edu.ph/fdsnws/" target="_blank">UPRI Earthquake Hub SeisComP FDSNWS Web Service</a>
+1. Access the <a href="https://earthquake.up.edu.ph/fdsnws/" target="_blank">UPRI Earthquake Hub SeisComP FDSNWS Web Service</a>
 2. Choose the ```station/``` web service
 3. Proceed by choosing ```1/```
 ![/1](_build/html/assets/fdsnws/4.6.jpg "/1")

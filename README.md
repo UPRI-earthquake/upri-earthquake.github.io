@@ -33,20 +33,20 @@ Congratulations! You are now have a copy of the project that is under your contr
 2. **Clone the Repository:** If you haven't already, clone the project's repository to your local machine using Git. You can do this by running the following command:
 
 ```
-git clone https://github.com/your-project/repository.git
+git clone https://github.com/UPRI-earthquake/upri-earthquake.github.io.git
 ```
 
 3. **Navigate to the Documentation Directory:** In this repository, the documentation files are stored in a folder named "doc".
 
 ```
-cd repository/doc
+cd upri-earthquake.github.io/doc
 ````
 
 4. **Open the Documentation:** Depending on the format, you can access the documentation using a web browser for HTML-based documentation, or a text editor for Markdown, RST or other text-based formats.
 
 ### 3. File Directory
 The content of the documentation are written in different files. These files are deployed in the ```index.rst``` file. Should you wish to modify the content, follow the steps below:
-1. Refer to the [Contributing Guide]() before making any changes.
+1. Refer to the [Contributing Guide](https://upri-earthquake.github.io/dev-guide-contributing.html) before making any changes.
 2.  Identify which part of the documentation you want to edit. You may find these files in the ```doc``` folder. You may use any text editor to configure the files. Refer to the list of Markdown files and their corresponding topics:
 
 **Tutorial**
@@ -73,21 +73,20 @@ The content of the documentation are written in different files. These files are
     **API Docs**
     - sender-backend/api-docs/ ```index.rst```
 - ```ringserver.md``` - RingServer
-- ```skink2dali.md```- Slink2Dali
+- ```slink2dali.md``` - Slink2Dali
 
-3. Save and Commit changes
-Detailed instructions written [here](https://alyssapatricia.github.io/ui/dev-guide-contributing.html)
+3. Save and commit changes. The source pages are wired through `doc/index.rst`.
 
 
 ### 4. Deploying on GitHub Pages
 To deploy your documentation on GitHub Pages, follow these steps:
 
-1. Configure GitHub Pages: In your Forked GitHub repository, go to the "Settings" tab and scroll down to the "GitHub Pages" section. Set the source branch to "gh-pages" and the "root" folder. Save the changes.
-2. Access the Published Documentation: After a few moments, your documentation will be available at the URL mentioned in the GitHub Pages settings, typically in the format: https://```<username>```.github.io/```<repository>```/.
+1. Configure GitHub Pages: In the UPRI repository, open **Settings → Pages** and follow the repository's configured deployment workflow. Do not change the publishing branch or folder unless the workflow is changed at the same time.
+2. Access the Published Documentation: The public site is [upri-earthquake.github.io](https://upri-earthquake.github.io/).
 
 
 ### 5. Contributing
-If you find any issues with the documentation or would like to contribute to its improvement, please refer to the [Contributing file](https://alyssapatricia.github.io/ui/dev-guide-contributing.html) in the repository.
+If you find any issues with the documentation or would like to contribute to its improvement, please refer to the [Contributing file](https://upri-earthquake.github.io/dev-guide-contributing.html) in the repository.
 It will provide guidance on how you can make updates or suggest improvements.
 
 
@@ -95,4 +94,3 @@ It will provide guidance on how you can make updates or suggest improvements.
 If you have any questions, encounter issues, or need support related to the project or its documentation, please reach out to our support team or open an issue on the project's repository.
 
 Thank you for using our project documentation. We hope it serves as a valuable resource for your work. If you have any suggestions for improvements or additional information, please don't hesitate to contribute or provide feedback. We appreciate your involvement in making this documentation even better.
-

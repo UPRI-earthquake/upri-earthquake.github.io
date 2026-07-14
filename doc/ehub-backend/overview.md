@@ -20,5 +20,4 @@ This is the link for the <a href="https://upri-earthquake.github.io/ehub-backend
 
 
 ## CONTRIBUTING.md
-This is the link for <a href="https://github.com/UPRI-earthquake/earthquake-hub-backend/blob/main/CONTRIBUTING.md" target="_blank">CONTRIBUTING.md</a>
-
+This is the link for <a href="https://github.com/UPRI-earthquake/earthquake-hub-backend/blob/dev/CONTRIBUTING.md" target="_blank">CONTRIBUTING.md</a>

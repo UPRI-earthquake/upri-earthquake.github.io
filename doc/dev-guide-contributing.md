@@ -5,9 +5,11 @@ Developer Guide\: Contributing
 ## Git Workflow
 For all repositories in the EarthquakeHub suite, the following guidelines are used for developer contributions. However, make sure to also check the *CONTRIBUTING.md* of the specific repository you're contributing to.
 
-## 1. Create New Branch from `dev`
+## 1. Create a branch from the repository's deployment baseline
 
-The `main` branch of a repository is the branch deployed to the servers, while the dev branch contains all latest developments in that are yet to be deployed. To add a new feature, create new branch on your local (clone or forked) repository based on the `dev` branch:
+Do not assume that every repository uses the same deployment branch. Check the repository's remote default branch and deployment workflow before creating a feature branch. In the current UPRI EarthquakeHub workspace, the documentation repository uses `main`, while the service repositories used by the deployment workflow use `dev`.
+
+For a service repository whose baseline is `dev`, create a new branch from `dev`:
 ```bash
 git checkout -b feature/new-feature
 ```

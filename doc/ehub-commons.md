@@ -3,7 +3,7 @@ earthquake-hub-commons
 
 ### What is the earthquake-hub-commons intended for
 This repository integrates all the essential programs necessary for hosting a citizen science network of ground motion sensors[^1]  It enables data transmission, archiving, and allows feeding the network data to earthquake detection software[^2].
-A version of this repository is deployed live on <a href="https://earthquake.science.upd.edu.ph" target="_blank">earthquake.science.upd.edu.ph.</a>
+A version of this repository is deployed live on <a href="https://earthquake.up.edu.ph" target="_blank">earthquake.up.edu.ph.</a>
 
 
 [^1]: such as but not limited to raspberryshakes
@@ -63,7 +63,7 @@ Certbot needs to be renewed <b> every three (3) months </b> to keep the certific
 
 
 
-7. **Configure ringserver:** Make sure that ringserver-configs/auth/secret.key exists (contains brgy token to AuthServer). Then set the *AuthServer* value in ringserver-configs/ring.conf to the AuthServer API address (i.e. http://172.21.0.3:5000 or https://earthquake.science.upd.edu.ph/api).
+7. **Configure ringserver:** Make sure that ringserver-configs/auth/secret.key exists (contains brgy token to AuthServer). Then set the *AuthServer* value in ringserver-configs/ring.conf to the AuthServer API address (i.e. http://172.21.0.3:5000 or https://earthquake.up.edu.ph/api).
    - You may use curl to request an accessToken using:
      ```bash
      curl -X POST -H "Content-Type: application/json" -d '{"username": "<USERNAME>","password": "<PASSWORD>","role": "brgy"}' https://<EARTHQUAKE-HUB-BACKEND-URL>/accounts/authenticate

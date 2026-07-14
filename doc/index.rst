@@ -19,6 +19,8 @@ Welcome to UPRI EarthquakeHub's documentation!
    sending-data-to-ehub-network.md
    updating-rshake-client.md
    acquiring-new-token.md
+   remote-tunnel.md
+   sender-health-and-updates.md
    fdsnws.md
    getting-metadata-using-python.md
    intro-to-seiscomp.md
@@ -40,6 +42,7 @@ Welcome to UPRI EarthquakeHub's documentation!
    ringserver.md
    slink2dali.md
    significant-eqs.md
+   web-application-features.md
 
 ==========================
 ======================
@@ -59,4 +62,3 @@ Welcome to UPRI EarthquakeHub's documentation!
    release-notes/latest-release.md
 
 ==========================
-

@@ -54,7 +54,7 @@ The content of the documentation are written in different files. These files are
 - ```connect-to-rshake.md``` - How to Connect to Your Raspberry Shake via SSH
 - ```installing-rshake-client.md``` - Installing EarthquakeHub Client on Raspberry Shake
 - ```sending-data-to-ehub-network.md``` - Sending Data to EarthquakeHub Network
-- ```fdsnws.md```How to Use FDSNWS to Download Ground Motion Data and Metadata
+- ```fdsnws.md``` - How to Use FDSNWS to Download Ground Motion Data and Metadata
 - ```intro-to-seiscomp.md``` - Introduction To SeisComp
 - ```dev-guide-contributing.md``` - Developer Guide: Contributing
 - ```docker-cheatsheet.md``` - Developer Guide: Docker Cheatsheet

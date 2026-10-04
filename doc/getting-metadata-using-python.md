@@ -4,7 +4,7 @@ Programmatically Getting the Metadata
 ```{note}
 The “metadata” or “instrument response files” complement the raw waveform data, providing the information that seismologists use for data processing, including:
   - gains, overall sensitivity, poles, zeros and filters needed to deconvolve the data and arrive at true ground motion
-  - latitude, longitude, elevation (which are obfuscated to ~1 km to protect user’s identities)instrument type
+  - latitude, longitude, elevation (which are obfuscated to ~1 km to protect users’ identities), and instrument type
   - any and all changes over time (since May, 2019)
 ```
 
@@ -33,7 +33,7 @@ To get individual instrument-response-file using python:
 
   def main(station_name):
     try:
-      rs = Client('https://stationview.raspberryshake.org', _discover_services=False)
+      rs = Client(base_url='https://data.raspberryshake.org/')
 
       inv = rs.get_stations(network='AM', station=station_name, level='RESP')
 
@@ -49,7 +49,7 @@ To get individual instrument-response-file using python:
       # Print a message indicating the successful retrieval and saving of the instrument response files
       print(f"[\033[92m OK \033[0m] ", end='')
       print(f"Instrument response files for station '{station_name}' have been successfully retrieved and saved")
-      print(f"- PNG plot: {station_name}_inst_resp_plot.png")
+      print(f"- PNG plot: {station_name}_inst_resp_file.png")
       print(f"- XML metadata: {station_name}_inst_resp_file.xml")
 
     except Exception as e:
@@ -64,7 +64,7 @@ To get individual instrument-response-file using python:
   main(args.station_name)
   ```
   ```{note}
-  To get the instrument response file of other station, just  change the value of the `stn` variable to your desired station name.
+  To get the instrument response file for another station, pass the desired station code as the `station_name` command-line argument.
   ```
 4. Run the python script in terminal using the command below. Specify the name of the station you want to get the instrument response of by changing the <station_name> argument to the device’s station name. (Note: Only the station name is required. No need to specify the network name.)
   ```bash

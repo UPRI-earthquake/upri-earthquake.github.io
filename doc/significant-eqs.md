@@ -23,7 +23,7 @@ In addition to our network, the table below provides information on other FDSN d
 | --- | --- | --- |
 | GEOFON | GEOFON Program | https://geofon.gfz-potsdam.de/fdsnws/ |
 | IRISDMC | IRIS Data Managment Center | https://service.iris.edu/fdsnws/ |
-| RASPISHAKE | Raspberry Shake Seismic Network | http://raspberryshake.org/fdsnws/ |
+| RASPISHAKE | Raspberry Shake Seismic Network | https://data.raspberryshake.org/fdsnws/ |
 | USGS | USGS Earthquake Hazards Program | https://earthquake.usgs.gov/fdsnws/event/1/ |
 
 ```{note}

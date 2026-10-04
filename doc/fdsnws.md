@@ -2,7 +2,7 @@ How to Use FDSNWS to Download Ground Motion Data and Station Metadata
 ===============================================
 
 ## Introduction
-**FDSNWS** (Federation of Digital Seismograph Networks Web Services) is a set of web services that allow users to access and retrieve seismic data from various seismological networks and data centers. This documentation will guide you through the process of using FDSNWS to download ground motion data and its metadeta from the UPRI EarthquakeHub Network. Understanding the distinction among these two is essential to make interpretations more significant. In the context of FDSNWS,
+**FDSNWS** (Federation of Digital Seismograph Networks Web Services) is a set of web services that allow users to access and retrieve seismic data from various seismological networks and data centers. This documentation will guide you through the process of using FDSNWS to download ground motion data and its metadata from the UPRI EarthquakeHub Network. Understanding the distinction between the two is essential to make interpretations more significant. In the context of FDSNWS,
 
 - **Data:** This is the actual seismic information you’re interested in: the measurement of the ground motion either in displacement, velocity, or acceleration
 
@@ -10,7 +10,7 @@ How to Use FDSNWS to Download Ground Motion Data and Station Metadata
 
 ## Service Overview
 
-FDSNWS provides various services for accessing different products of a seismic network.The service used for ground motion data is the ```dataselect``` service. While the ```station``` service is used to obtain the metadata.
+FDSNWS provides various services for accessing different products of a seismic network. The ```dataselect``` service provides ground-motion data, while the ```station``` service provides metadata.
 
 ### DataSelect
 This service  allows you to retrieve time series data from seismological instruments. In the context of seismology, time series data refers to recordings of ground motion or seismic activity ***over time.***
@@ -49,6 +49,13 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 2. Choose the ```dataselect/``` web service
 ![access](_build/html/assets/fdsnws/4.1.jpg "access photo")
 
+```{note}
+**Historical screenshot:** This image shows the retired
+`earthquake.science.upd.edu.ph` hostname. Use
+`https://earthquake.up.edu.ph/fdsnws/` for current FDSNWS access.
+```
+
+
 
 
 3. Proceed by choosing ```1/```
@@ -60,6 +67,13 @@ To obtain the Ground Motion Data, we will be using the ```dataselect``` service.
 ![builder](_build/html/assets/fdsnws/4.3.jpg "builder")
 Clicking ```builder``` redirects you to this page:
 ![builder query](_build/html/assets/fdsnws/4.4.jpg "builder query")
+
+```{note}
+**Historical screenshot:** This image shows the retired
+`earthquake.science.upd.edu.ph` hostname. Use
+`https://earthquake.up.edu.ph/fdsnws/` for current FDSNWS access.
+```
+
 
 5. Specify the parameters of the data you want to download.
   This includes:
@@ -73,7 +87,7 @@ Clicking ```builder``` redirects you to this page:
 
       Here are some references for the Station Naming Convention:
       ```{seealso}
-      - <a href="https://manual.raspberryshake.org/stationNamingConvention.html"> Raspberry Shake Station Naming Convention </a><
+      - <a href="https://manual.raspberryshake.org/stationNamingConvention.html" target="_blank">Raspberry Shake Station Naming Convention</a>
       - <a href="http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf" target="_blank"> SEEDManual: Channel Naming </a>
       ```
 
@@ -84,7 +98,7 @@ Clicking ```builder``` redirects you to this page:
         - ```endtime```: Specifies the end time of the data you want to retrieve
 
        ```{note}
-        - The time is formatted **YYYY-MM-DDTHH-MM-SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
+        - The time is formatted **YYYY-MM-DDTHH:MM:SS**. The date and time are separated by the "T". The time is in 24-Hour (military time format).
         -  For example, we want to obtain the data starting from  ```October 11, 2023 at 11:30pm``` till ```October 12, 2023 11:30 am``` start time should be  ```2023-10-11T23:30:00``` and end time should be ```2023-10-12T11:30:00```
 
         ```
@@ -112,11 +126,17 @@ Clicking ```builder``` redirects you to this page:
     - Station: R3B2D
     - Location: 00
     - Channel: EHZ
-    The values vary according the the network you want to extract data from.
+    The values vary according to the network you want to extract data from.
 
     ![10](_build/html/assets/fdsnws/4.10.jpg "10")
 
     ```
+
+```{note}
+**Historical screenshot:** This image shows the retired
+`earthquake.science.upd.edu.ph` hostname. Use
+`https://earthquake.up.edu.ph/fdsnws/` for current FDSNWS access.
+```
 
 
 6. After filling out the form, click the link to start downloading data through clicking the URL located at the bottom part of the page. Refer to the previous screenshot in Step 5.
@@ -137,6 +157,13 @@ To obtain the Metadata, we will be using the ```station``` service.
 ![builder](_build/html/assets/fdsnws/4.7.jpg "builder")
 Clicking ```builder``` redirects you to this page:
 ![builder query](_build/html/assets/fdsnws/4.8.jpg "builder query")
+
+```{note}
+**Historical screenshot:** This image shows the retired
+`earthquake.science.upd.edu.ph` hostname. Use
+`https://earthquake.up.edu.ph/fdsnws/` for current FDSNWS access.
+```
+
 
 
 
@@ -224,7 +251,7 @@ import matplotlib.pyplot as plt
 
 
 3. **Load your seismic data**
-You can use the obspy.read() function to load your existing seismic data file. ObsPy can read various formats, such as MiniSEED, SAC, and more. Here's an example of how to load a MiniSEED file:
+You can use the `obspy.read()` function to load your existing seismic data file. ObsPy can read formats such as miniSEED and SAC. Here's an example of how to load a miniSEED file:
 
 ```
 st = read('your_seismic_data.mseed')
@@ -237,7 +264,7 @@ Replace 'your_seismic_data.mseed' with your actual file name.
 
 
  ```{admonition} Example
- From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-12T11:30:00```, I've downloaded the MiniSeed data with the file name ```fdsnws.md```
+ From the retrieved data from date range ```2023-10-11T23:30:00``` and ```2023-10-12T11:30:00```, I've downloaded the miniSEED data with the file name ```fdsnws.mseed```
 
 ```
 
@@ -291,13 +318,13 @@ from obspy import read_inventory
 
 
 3. **Load your Station Metadata**
-You can use the obspy.read() function to load your existing seismic data file. ObsPy can read various formats, such as MiniSEED, SAC, and more. Here's an example of how to load a MiniSEED file:
+You can use the `obspy.read_inventory()` function to load an existing StationXML metadata file:
 
 ```
 inv = read_inventory("your_station_metadata.xml")
 ```
 
-Replace 'your_seismic_data.mseed' with your actual file name.
+Replace `your_station_metadata.xml` with your actual StationXML file name.
 
 
  ```{admonition} Example

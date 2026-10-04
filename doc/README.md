@@ -56,7 +56,7 @@ The content of the documentation are written in different files. These files are
 - ```sending-data-to-ehub-network.md``` - Sending Data to EarthquakeHub Network
 - ```updating-rshake-client.md``` - Updating the RShake Client
 - ```acquiring-new-token.md``` - Recovering an Expired Device Token
-- ```fdsnws.md```How to Use FDSNWS to Download Ground Motion Data and Metadata
+- ```fdsnws.md``` - How to Use FDSNWS to Download Ground Motion Data and Metadata
 - ```getting-metadata-using-python.md``` - Getting Station Metadata with Python
 - ```intro-to-seiscomp.md``` - Introduction To SeisComp
 - ```dev-guide-contributing.md``` - Developer Guide: Contributing

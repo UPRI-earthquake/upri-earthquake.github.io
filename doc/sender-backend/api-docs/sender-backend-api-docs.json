@@ -247,7 +247,7 @@
                           },
                           "url": {
                             "type": "string",
-                            "example": "https://earthquake.science.upd.edu.ph"
+                            "example": "https://earthquake.up.edu.ph"
                           }
                         }
                       }
@@ -304,7 +304,7 @@
                   }
                 },
                 "example": {
-                  "url": "https://earthquake.science.upd.edu.ph",
+                  "url": "https://earthquake.up.edu.ph",
                   "hostName": "UPRI's Ringserver"
                 }
               }

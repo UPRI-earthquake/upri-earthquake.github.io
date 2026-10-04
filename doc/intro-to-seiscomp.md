@@ -174,7 +174,7 @@ Command? [P]:
 
 ## Adding New Station
 In order to process seismic data within SeisComP, it's essential to define a data source, which is typically represented by a station. Follow these steps to add a new station to your SeisComP setup:
-1. You will need `inventory` of the new station to be added. This information is typically stored in `.yml` format. To acquire the inventory, you can refer to the guide on [how to fetch inventory using FDSNWS]().
+1. You will need the new station's inventory, typically in StationXML (`.xml`) format. To acquire the inventory, you can refer to the guide on [how to fetch inventory using FDSNWS](fdsnws.html#steps-to-download-station-metadata).
 2. Once you have acquired the inventory data, the next step is to import it into SeisComP. Navigate to the terminal where SeisComP is installed and execute the following command:
 
 ```bash

@@ -11,7 +11,14 @@ Make sure that you have already <a href="https://upri-earthquake.github.io/insta
 
 
 ### 1. Register a `citizen` Account
-   ![image](_build/html/assets/sending-data/3.1.png)
+   ![Historical EarthquakeHub registration screen](_build/html/assets/sending-data/3.1.png)
+
+   ```{note}
+   **Historical screenshot:** The address bar and interface in this image are
+   from an earlier EarthquakeHub release and show the retired
+   `earthquake.science.upd.edu.ph` hostname. Use
+   `https://earthquake.up.edu.ph` for the current public application.
+   ```
 
 
  To register an account go to

@@ -1,0 +1,32 @@
+2026 Release Notes
+==================
+
+## Hub web application and backend
+
+- Migrated service defaults and public integrations to ``earthquake.up.edu.ph``.
+- Added richer earthquake detail pages with direct event loading, stable public event IDs, source/catalog comparison, source provenance, and cached place enrichment.
+- Added candidate-station versus verified-recording-station states and FDSN-backed waveform availability checks.
+- Added community reports with moderation states, pagination, anonymous/public-safe posting, image validation, helpful votes, private issue reports, and contribution-event tracking.
+- Added cached GeoJSON overlay services for faults, plate boundaries, and the Philippine Area of Responsibility.
+- Improved password reset, refresh-token, account/device recovery, and device-link lifecycle handling.
+- Added administrator-only RShake alert routing and browser push-notification subscription management.
+
+## Sender client
+
+- Added sender health snapshots for network reachability, time synchronization, host resources, metrics, update state, watchdog state, disk alerts, token refresh state, and remote-tunnel state.
+- Added admin-only RShake alerts for disk pressure, token refresh, watchdog recovery, and related delivery outcomes.
+- Improved image-bundle update handling, digest tracking, rollback behavior, host-script synchronization, and watchdog recovery.
+- Added protected default-ringserver behavior and automatic default-ringserver restoration after device linking or startup.
+- Added reverse SSH-over-WebSocket support through ``wstunnel``, including automatic enrollment, operator SSH keys, path-prefix configuration, service status, and recovery tooling.
+
+## Deployed commons stack
+
+The deployed commons baseline is remote ``dep-improvements``.
+
+- Added the deployed ``wstunnel-server`` path behind nginx with restricted reverse-listener destinations and per-deployment WebSocket path prefixes.
+- Added edge hardening for suspicious routes, service-prefix normalization, crawler controls, security headers, no-store/noindex service responses, and static-asset caching.
+- Updated deployment defaults for the new public hostname, MongoDB 5.0, scoped token/email configuration, analytics settings, and SeisComP inventory-import workflows.
+
+## Release-note maintenance
+
+When adding an entry, include the approximate date, affected component, and whether the feature is deployed or development-only. Verify behavior against the relevant remote branch before publishing.
